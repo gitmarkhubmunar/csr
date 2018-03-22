@@ -6,6 +6,6 @@ import App from './App'
 import './styles.css'
 
 ReactDOM.render(
-  <App />,
-  document.getElementById('root')
+  	<App />,
+  	document.getElementById('root')
 )

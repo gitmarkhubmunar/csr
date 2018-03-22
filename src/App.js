@@ -1,3 +1,4 @@
+import isMobile from 'is-mobile';
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
