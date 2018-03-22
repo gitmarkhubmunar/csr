@@ -1,11 +1,22 @@
-import React, { Component } from 'react'
-import isMobile from 'is-mobile';
+import React from 'react'
 
-class Card extends Component {
+import CardStatistics from './CardStatistics'
+import CardTitleBar from './CardTitleBar'
+import CardVariables from './CardVariables'
+
+class Card extends React.Component {
     render () {
         return (
-            <div>
-                I am a card.
+            <div className="card">
+        		<CardTitleBar title="Liver Cancer" />
+        		<CardStatistics rate={72} />
+        		<CardVariables
+        			age={77}
+        			diagnosed="Jan 2016"
+        			grade="differentiated"
+        			sex="female"
+        			stage="3"
+        		/>
             </div>
         )
     }
