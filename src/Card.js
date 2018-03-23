@@ -6,11 +6,13 @@ import CardVariables from './CardVariables'
 
 class Card extends React.Component {
     render () {
+        const { switchQuestion } = this.props
         return (
             <div className="card">
         		<CardTitleBar title="Liver Cancer" />
-        		<CardStatistics rate={72} />
+        		<CardStatistics rate={25} />
         		<CardVariables
+                    switchQuestion={switchQuestion}
         			age={77}
         			diagnosed="Jan 2016"
         			grade="differentiated"

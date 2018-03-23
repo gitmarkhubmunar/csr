@@ -2,8 +2,9 @@ import isMobile from 'is-mobile';
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-import Home from './Home'
-import Card from './Card'
+import Header from './Header'
+import HomePage from './HomePage'
+import SurveyPage from './SurveyPage'
 
 class App extends React.Component {
 	render () {
@@ -11,19 +12,15 @@ class App extends React.Component {
 
 		// Render our custom home page component
 		const renderHomePage = (props) => {
-			return <Home {...props} />
-		}
-
-		// Render our custom client page component
-		const renderCardPage = (props) => {
-			return <Card {...props} />
+			return <HomePage {...props} />
 		}
 
 		return (
 		  <Router {...props}>
-		  	<div>
+		  	<div className="app">
+		  		<Header />
 		  		<Route exact path='/' render={renderHomePage} />
-			    <Route path='/card' render={renderCardPage} />
+			    <Route path='/card' component={SurveyPage} />
 			</div>
 		  </Router>
 		)
