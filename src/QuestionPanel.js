@@ -18,25 +18,89 @@ class QuestionPanel extends React.Component {
 
             if (activeQuestion === 'age') {
                 return <div className="flex-row">
-                    This is a new age thing
+                    <div className="input-button1">
+                        type in your age
+                    </div>
                 </div>
             }
 
             if (activeQuestion === 'stage') {
                 return <div className="flex-row">
-                    STAGE
+                    <div className="input-button1">
+                    1
+                    </div>
+                    <div style={{ flex: '0 0 1px', background: '#cacaca' }} />
+                    <div className="input-button1">   
+                        <div>2</div>
+                    </div>
+                    <div style={{ flex: '0 0 1px', background: '#cacaca' }} />
+                    <div className="input-button1">   
+                        <div>3</div>
+                    </div>
+                    <div style={{ flex: '0 0 1px', background: '#cacaca' }} />
+                    <div className="input-button1">   
+                        <div>4</div>
+                    </div>
+
                 </div>
             }
 
             if (activeQuestion === 'grade') {
-                return <div className="flex-row">
-                    GRADE
+                return <div className="flex-column">
+                    <div className="input-button1">
+                        undifferentiated
+                    </div>
+                    <div style={{ flex: '0 0 1px', background: '#cacaca' }} />
+                    <div className="input-button1">
+                        moderately undifferentiated
+                    </div>
+                    <div style={{ flex: '0 0 1px', background: '#cacaca' }} />
+                     <div className="input-button1">
+                        well-differentiated
+                    </div>
+
                 </div>
             }
 
             if (activeQuestion === 'diagnosed') {
-                return <div className="flex-row">
-                    DIAGNOSED
+                return <div>
+                <div>
+                    <div className="flex-row">
+                        <div className="input-button1">
+                        today
+                        </div>
+                        <div style={{ flex: '0 0 1px', background: '#cacaca' }} />
+                        <div className="input-button1">   
+                            <div>2</div>
+                            <div>time dur</div>
+                        </div>
+                        <div style={{ flex: '0 0 1px', background: '#cacaca' }} />
+                        <div className="input-button1">   
+                            <div>2</div>
+                            <div>time dur</div>
+                        </div>
+                        <div className="input-button1">   
+                            <div>2</div>
+                            <div>time dur</div>
+                        </div>
+                        <div className="input-button1">   
+                            <div>2</div>
+                            <div>time dur</div>
+                        </div>
+                        <div className="input-button1">   
+                            <div>2</div>
+                            <div>time dur</div>
+                        </div>
+                        <div className="input-button1">   
+                            <div>2</div>
+                            <div>time dur</div>
+                        </div>
+                        <div className="input-button1">   
+                            <div>2</div>
+                            <div>time dur</div>
+                        </div>
+                    </div>
+                  </div>  
                 </div>
             }
         };

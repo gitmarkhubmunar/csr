@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
 	font-family: 'SF UI Text', 'Arial';
+  color: #4C4C4C;
 }
 
 .app {
@@ -71,28 +72,125 @@ body {
   border-radius: 24px;
 }
 
+/* Dropdown */
+
+.dropdown-container {
+  display: inline-block;
+  position: relative;
+  user-select: none;
+}
+.dropdown {
+  background: white;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  list-style-type: none;
+  margin: 0 0 0 -40px;
+  padding: 0 40px;
+  position: absolute;
+  text-align: left;
+  /*width: 100%;*/
+}
+.dropdown.open {
+  border-color: #eaeaea;
+  z-index: 1;
+}
+.dropdown-container .selected {
+  border: 0px solid transparent;
+  color: purple;
+  border-bottom: 9px solid #E5D9E8;
+
+}
+.dropdown li {
+  color: #72CAFF;
+  white-space: nowrap;
+}
+.dropdown li:nth-of-type(1) {
+  color: orange;
+}
+.dropdown li:nth-of-type(2) {
+  color: green;
+}
+.dropdown li:nth-of-type(3) {
+  color: yellow;
+}
+.second-dropdown .selected {
+  color: red;
+}
+.caret {
+  display: inline-block;
+  width: 20px;
+  height: 50px;
+  fill: blue;
+  margin-top: 5px;
+  /*border: 1px solid grey;*/
+  margin-left: 15px;
+
+}
+.caret svg {
+  fill: blue;
+}
+
+.suggestion label {
+  display: block;
+  cursor: pointer;
+  background: red no-repeat;
+}
+
+input#menu {
+ display: none;
+}
+
+.link1 {
+  display: inline-block;
+  font-size: 18px;
+  margin: 5%;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.link2 {
+  display: inline-block;
+  font-size: 18px;
+  flex-wrap: wrap; 
+}
+
+.blurb-container{
+  display: inline-block;
+  width:100%;
+}
+
+/*Toggle effect /*/
+
+input:checked ~ drop-menu menu1 {
+  max-height: 100%;
+}
+
 /* Home page */
 
 .cancer-surival-rates-header {
   color: #4d0092;
   font-size: 20px;
   text-align: center;
-  padding: 40px 0;
+  padding: 15px 0;
   margin: 0;
 }
 
 .home-page-intro {
   font-size: 58px;
-  margin: 0 auto 80px auto;
+  margin: 10% auto 80px auto;
   width: 66%;
   text-align: center;
+  max-width: 60%;
+
 }
 
 .home-page-blurb {
-  font-size: 14px;
-  margin: 0 auto;
-  width: 30%;
-  text-align: justify-all;
+  font-size: 15px;
+  margin: 16% auto;
+  width: 45%;
+  text-align: center;
+  padding-bottom: 6%;
 }
 
 .margin {
@@ -103,23 +201,41 @@ body {
 
 .question-panel {
   flex: 1 auto;
-  background: yellow;
+  /*background: yellow;*/
   margin: 30px auto 0 auto;
   width: 382px;
   text-align: center;
 }
 
 .input-button1 {
-  background-color: grey;
-  color: white;
+  /*background-color: grey;*/
+  color: black;
   padding: 1em 1.5em;
   flex: 1 0 auto;
   margin: 10px;
 }
 
+.input-button2 {
+  background-color:blue;
+  stroke: red;
+  color: white;
+  margin: 5px;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+}
+
+.patient-type > li{
+  display: none;
+}
 
 /* Re-usable styles */
 
+.relative {
+  position: relative;
+}
 .flex-column {
   display: flex;
   flex-direction: column;
@@ -191,5 +307,53 @@ body {
 
 .full-height {
   height: 100%;
+}
+
+/*------------- // Media Queries // ------------*/
+
+@media screen and (max-width: 414px) {
+
+.bg-white {
+/*background: red;*/
+}
+
+.home-page-intro {
+  font-size: 55px;
+  margin: 18px 0 0 18px;
+  text-align: left;
+  max-width: 100%;
+  /*border: 1px solid red;*/
+  width: 100%;
+  letter-spacing: -0.06em;
+}
+
+.break {
+ word-wrap: break-word;
+ margin-top: 20px;
+/* color: yellow;
+ border: 1px solid white;
+ background: grey;*/
+ display: table;
+}
+
+.break2{
+ word-wrap: break-word;
+ margin-top: 20px ;
+ /*color: blue;*/
+ /*border: 1px solid white;*/
+ display: table;
+}
+
+
+.home-page-blurb {
+  font-size: 16px;
+  margin: 14% auto;
+  width: 80%;
+  text-align: center;
+  padding-bottom: 6%;
+}
+
+
+
 }
 
