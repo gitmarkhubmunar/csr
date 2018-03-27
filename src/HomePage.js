@@ -6,7 +6,7 @@ class HomePage extends React.Component {
     render () {
         return (
             <div style={{ height: '100vh '}} className="bg-purple">
-                <div className="bg-white">
+                <div className="home-page">
                     <div className="home-page-intro">
                         I am a&nbsp;
                         <Dropdown
@@ -25,20 +25,31 @@ class HomePage extends React.Component {
                         <Dropdown
                             className="second-dropdown"
                             list={[
+                                'uterine',
+                                'bladder',
+                                'brain',
                                 'breast',
                                 'colon',
+                                'liver',
+                                'lung',
+                                'melanoma',
+                                'ovarian',
+                                'pancreatic',
+                                'prostate',
+                                'rectal',
+                                'lymphoma',
                                 'stomach',
-                                'skin',
-                                'blood',
-                                'brain',
+                                'thyroid',
+                                
+
                             ]}
                         />          
                         &nbsp;<span className="break">cancer</span> survival rates.
                     </div>
                     <div className="home-page-blurb">
                         Personalized Cancer Survival Rates from the experts of <strong>Courage Health</strong>
-                        <div className="blurb-container">
-                        <div className="link1">About</div> <div className="link2">Blog</div>
+                        <div className="links">
+                            <a>About</a> <a>Blog</a>
                         </div>
                     </div>
                 </div>

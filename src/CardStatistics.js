@@ -13,17 +13,17 @@ class CardStatistics extends React.Component {
 		for (let t = 1; t <= totalHearts; t++) {
 			// Use the correct icon; by default it's the outline,
 			// but filled in when t <= filledHeartsCount.
-			let icon = 'ios-heart-outline'
+			let icon = <object className="variable-icon" data="/assets/emptyheart.svg" type="image/svg+xml" />
 			if (t <= filledHeartsCount) {
-				icon = 'ios-heart'
+				icon = <object className="variable-icon" data="/assets/heart.svg" type="image/svg+xml" />
 			}
 
 			// If t <= 5, put in first row; else put in second row.
 			if (t <= 5) {
-				iconArrayFirstRow.push(<Icon key={t} icon={icon} />)
+				iconArrayFirstRow.push(icon)
 			}
 			else {
-				iconArraySecondRow.push(<Icon key={t} icon={icon} />)
+				iconArraySecondRow.push(icon)
 			}
 		}
 

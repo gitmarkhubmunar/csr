@@ -1,0 +1,361 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"wo",
+				"word-wrap"
+			],
+			[
+				"paddi",
+				"padding-bottom"
+			],
+			[
+				"Do",
+				"Dropdown"
+			],
+			[
+				"render",
+				"renderModularInset"
+			],
+			[
+				"act",
+				"activeIndex"
+			],
+			[
+				"clien",
+				"clients"
+			],
+			[
+				"closeB",
+				"closeButtonShouldBeX"
+			],
+			[
+				"return",
+				"returnText"
+			],
+			[
+				"gridl",
+				"gridlogo"
+			],
+			[
+				"getT",
+				"getTriggerAssetDimensions"
+			],
+			[
+				"natura",
+				"naturalHeight"
+			],
+			[
+				"set",
+				"setImageSize"
+			],
+			[
+				"asset",
+				"assetStyle"
+			],
+			[
+				"read",
+				"readyToRenderTrigger"
+			],
+			[
+				"rest",
+				"restartTimer"
+			],
+			[
+				"trigger",
+				"triggerIndex"
+			],
+			[
+				"get",
+				"getTriggerAssets"
+			],
+			[
+				"tr",
+				"timerRunning"
+			],
+			[
+				"all",
+				"allTriggerAssets"
+			],
+			[
+				"current",
+				"currentClientTriggerAssets"
+			],
+			[
+				"currentC",
+				"currentClientRecent"
+			],
+			[
+				"client",
+				"clientTriggerAssets"
+			],
+			[
+				"star",
+				"startTriggerOn"
+			],
+			[
+				"trig",
+				"triggerIndex"
+			],
+			[
+				"renderImage",
+				"renderParticularImage"
+			],
+			[
+				"image",
+				"imageWidth"
+			],
+			[
+				"window",
+				"windowWidth"
+			],
+			[
+				"clen",
+				"clientClassName"
+			],
+			[
+				"class",
+				"className"
+			],
+			[
+				"curr",
+				"currentClient"
+			],
+			[
+				"des",
+				"description"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 119.0,
+		"last_filter": "install ",
+		"selected_items":
+		[
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 412.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/JeffMunar/Documents/Projects/csr"
+	],
+	"file_history":
+	[
+		"/Users/JeffMunar/Documents/Projects/csr/src/Header.js",
+		"/Users/JeffMunar/Documents/Projects/csr/src/CardTitleBar.js",
+		"/Users/JeffMunar/Documents/Projects/csr/src/CardStatistics.js",
+		"/Users/JeffMunar/Documents/Projects/csr/src/CardVariables.js",
+		"/Users/JeffMunar/Documents/Projects/csr/src/Card.js",
+		"/Users/JeffMunar/Documents/Projects/csr/src/SurveyPage.js",
+		"/Users/JeffMunar/Documents/Projects/csr/src/App.js",
+		"/Users/JeffMunar/Documents/Projects/csr/src/QuestionPanel.js",
+		"/Users/JeffMunar/Documents/Projects/csr/src/Dropdown.js",
+		"/Users/JeffMunar/Documents/Projects/csr/src/HomePage.js",
+		"/Users/JeffMunar/Documents/Projects/csr/src/styles.css",
+		"/Users/JeffMunar/Documents/Projects/csr/src/PastClientsPage.js",
+		"/Users/JeffMunar/Documents/Projects/csr/src/Nav.js",
+		"/Users/JeffMunar/Documents/Projects/csr/src/LogInBox.js",
+		"/Users/JeffMunar/Documents/Projects/csr/src/index.js",
+		"/Users/JeffMunar/Documents/Projects/csr/src/DisplayZone.js",
+		"/Users/JeffMunar/Documents/Projects/csr/src/ClientPage.js",
+		"/Users/JeffMunar/Documents/Projects/csr/src/clientData.js",
+		"/Users/JeffMunar/Documents/Projects/csr/.gitignore",
+		"/Users/JeffMunar/Documents/Projects/csr/package.json",
+		"/Users/JeffMunar/Documents/Projects/csr/README.md",
+		"/Applications/Adobe After Effects CC 2017/Plug-ins/MAXON CINEWARE AE/(CINEWARE Support)/bin/resource/modules/advanced render/c4d_symbols.h",
+		"/Applications/Adobe After Effects CC 2017/Plug-ins/MAXON CINEWARE AE/(CINEWARE Support)/bin/resource/modules/newman/c4d_symbols.h",
+		"/Users/JeffMunar/Documents/Projects/portfolio/src/clientData.js",
+		"/Users/JeffMunar/Documents/Projects/portfolio/src/DisplayZone.js",
+		"/Users/JeffMunar/Projects/portfolio/src/Nav.js",
+		"/Users/JeffMunar/Projects/portfolio/src/styles.css",
+		"/Users/JeffMunar/Projects/portfolio/src/LogInBox.js",
+		"/Users/JeffMunar/Projects/portfolio/src/DisplayZone.js",
+		"/Users/JeffMunar/Projects/portfolio/src/clientData.js",
+		"/Users/JeffMunar/Projects/portfolio/src/ClientPage.js",
+		"/Users/JeffMunar/Projects/portfolio/src/PastClientsPage.js",
+		"/Users/JeffMunar/Projects/nice-test/src/HomePage.js",
+		"/Users/JeffMunar/Projects/nice-test/src/styles.css",
+		"/Users/JeffMunar/.haiku/projects/TheVisual/smiley/designs/visual tongue _ test 2.sketch.contents/slices/Slice - top.svg",
+		"/Users/JeffMunar/Projects/nice-test/src/Nav.js",
+		"/Users/JeffMunar/Projects/nice-test/src/Product.js",
+		"/Users/JeffMunar/Projects/nice-test/build/assets/plastiki.card5.jpg",
+		"/Users/JeffMunar/Desktop/index.html",
+		"/Users/JeffMunar/Projects/nice-test/src/DisplayZone.js",
+		"/Users/JeffMunar/Projects/let-there-be/screens/HueScreen.js",
+		"/Users/JeffMunar/Projects/nice-test/.gitignore",
+		"/Users/JeffMunar/Projects/nice-test/public/index.html",
+		"/Users/JeffMunar/Projects/portfolio/public/robots.txt",
+		"/Users/JeffMunar/Projects/portfolio/public/index.html",
+		"/Users/JeffMunar/Projects/portfolio/src/HomePage.js",
+		"/Users/JeffMunar/Projects/portfolio/src/routes.js",
+		"/Users/JeffMunar/Projects/portfolio/src/clients.js",
+		"/Users/JeffMunar/Projects/portfolio/src/ProjectPage.js",
+		"/Users/JeffMunar/Projects/portfolio/src/greetings.txt",
+		"/Users/JeffMunar/Projects/portfolio/src/index.js",
+		"/Users/JeffMunar/Projects/portfolio/src/Presentation.js",
+		"/Users/JeffMunar/Projects/portfolio/src/Project.js",
+		"/Users/JeffMunar/Projects/portfolio/src/Home.js",
+		"/Users/JeffMunar/Projects/portfolio/src/App.js",
+		"/Users/JeffMunar/Projects/portfolio2/src/App.js",
+		"/Users/JeffMunar/Projects/portfolio2/package.json"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 27.0
+	},
+	"pinned_build_system": "",
+	"project": "csr.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -20,9 +20,9 @@ class Dropdown extends React.Component {
     render () {
         const { className, list } = this.props
         const { isOpen, selectedItem } = this.state
-        const finalClassName = 'dropdown-container ' + className
+        const combinedClassName = 'dropdown-container ' + className
         return (
-            <div className={finalClassName} onClick={this.toggleMenu}>
+            <div className={combinedClassName} onClick={this.toggleMenu}>
                 {isOpen &&
                     <ul className={isOpen ? 'dropdown open' : 'dropdown closed'}>
                         <div>

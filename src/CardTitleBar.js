@@ -13,7 +13,7 @@ class CardTitleBar extends React.Component {
         			{title}
         		</div>
         		<div style={{ flex: '0 0 20%', textAlign: 'right' }}>
-        		  <Icon color="white" icon="ios-share-alt" />
+        		  <object className="share-button" data="/assets/share.svg" type="image/svg+xml" />
         		</div>
             </div>
         )
