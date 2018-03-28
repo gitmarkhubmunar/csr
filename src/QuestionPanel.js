@@ -106,7 +106,7 @@ class QuestionPanel extends React.Component {
         };
 
         return <div className="question-panel">
-           {showQuestion(activeQuestion)}
+           <div className="question-controls">{showQuestion(activeQuestion)}</div>
         </div>
     }
 }

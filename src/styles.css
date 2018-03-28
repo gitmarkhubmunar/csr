@@ -214,12 +214,24 @@ input:checked ~ drop-menu menu1 {
   width: 100%;
 }
 
+.survey-page{
+	height: 100%;
+	background: yellow;
+}
+
 .question-panel {
   flex: 1 auto;
   /*background: yellow;*/
-  margin: 30px auto 0 auto;
-  width: 382px;
+  margin: 100px auto 0 auto;
+ /* width: 382px;*/
   text-align: center;
+  height: 100%;
+  background: grey;
+}
+
+.question-controls {
+	margin: 0 auto;
+	width: 382px;
 }
 
 .input-button1 {

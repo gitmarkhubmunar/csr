@@ -1,4 +1,4 @@
-import React from 'react'
+ import React from 'react'
 
 import Card from './Card'
 import QuestionPanel from './QuestionPanel'
@@ -21,7 +21,7 @@ class SurveyPage extends React.Component {
     render () {
         const { activeQuestion } = this.state
         return (
-            <div>
+            <div className="survey-page">
                 <Card switchQuestion={this.switchQuestion} />
                 <QuestionPanel activeQuestion={activeQuestion} />
             </div>
