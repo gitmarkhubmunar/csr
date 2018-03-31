@@ -9,7 +9,7 @@ class QuestionPanel extends React.Component {
                     <div className="input-button1">
                         <div>male</div>
                     </div>
-                    <div style={{ flex: '0 0 1px', background: '#cacaca' }} />
+                    <div className="survey-hairline" style={{ flex: '0 0 1px', background: 'white' }} />
                     <div className="input-button1">   
                         <div>female</div>
                     </div>
@@ -25,20 +25,20 @@ class QuestionPanel extends React.Component {
             }
 
             if (activeQuestion === 'stage') {
-                return <div className="flex-row">
-                    <div className="input-button1">
+                return <div className="flex-row stage-row">
+                    <div className="input-button-stage">
                     1
                     </div>
-                    <div style={{ flex: '0 0 1px', background: '#cacaca' }} />
-                    <div className="input-button1">   
+                    <div className="survey-hairline" style={{ flex: '0 0 1px', background: '#cacaca' }} />
+                    <div className="input-button-stage">   
                         <div>2</div>
                     </div>
-                    <div style={{ flex: '0 0 1px', background: '#cacaca' }} />
-                    <div className="input-button1">   
+                    <div className="survey-hairline" style={{ flex: '0 0 1px', background: '#cacaca' }} />
+                    <div className="input-button-stage">   
                         <div>3</div>
                     </div>
-                    <div style={{ flex: '0 0 1px', background: '#cacaca' }} />
-                    <div className="input-button1">   
+                    <div className="survey-hairline" style={{ flex: '0 0 1px', background: '#cacaca' }} />
+                    <div className="input-button-stage">   
                         <div>4</div>
                     </div>
 
@@ -47,15 +47,15 @@ class QuestionPanel extends React.Component {
 
             if (activeQuestion === 'grade') {
                 return <div className="flex-column">
-                    <div className="input-button1">
+                    <div className="input-button-grade">
                         undifferentiated
                     </div>
                     <div style={{ flex: '0 0 1px', background: '#cacaca' }} />
-                    <div className="input-button1">
+                    <div className="input-button-grade">
                         moderately undifferentiated
                     </div>
                     <div style={{ flex: '0 0 1px', background: '#cacaca' }} />
-                     <div className="input-button1">
+                     <div className="input-button-grade">
                         well-differentiated
                     </div>
 
@@ -66,39 +66,51 @@ class QuestionPanel extends React.Component {
                 return <div>
                 <div>
                     <div className="flex-row">
-                        <div className="input-button1">
+                        <div className="input-button-diagnosed">
+                        <div>.</div>
                         today
                         </div>
-                        <div style={{ flex: '0 0 1px', background: '#cacaca' }} />
-                        <div className="input-button1">   
-                            <div>2</div>
-                            <div>time dur</div>
+                        <div  style={{ flex: '0 0 1px', background: '#cacaca' }} />
+                        <div className="input-button-diagnosed">   
+                            <div className="diagnosed-number">2</div>
+                            <div className="time-unit"> days</div>
                         </div>
                         <div style={{ flex: '0 0 1px', background: '#cacaca' }} />
-                        <div className="input-button1">   
-                            <div>2</div>
-                            <div>time dur</div>
+                        <div className="input-button-diagnosed">   
+                            <div className="diagnosed-number">2</div>
+                            <div className="time-unit"> weeks</div>
                         </div>
-                        <div className="input-button1">   
-                            <div>2</div>
-                            <div>time dur</div>
+                        <div style={{ flex: '0 0 1px', background: '#cacaca' }} />
+                        <div className="input-button-diagnosed">   
+                            <div className="diagnosed-number">2</div>
+                            <div className="time-unit"> months</div>
                         </div>
-                        <div className="input-button1">   
-                            <div>2</div>
-                            <div>time dur</div>
+                        <div style={{ flex: '0 0 1px', background: '#cacaca' }} />
+                        <div className="input-button-diagnosed">   
+                            <div className="diagnosed-number">2</div>
+                            <div className="time-unit">months</div>
                         </div>
-                        <div className="input-button1">   
-                            <div>2</div>
-                            <div>time dur</div>
+                        <div style={{ flex: '0 0 1px', background: '#cacaca' }} />
+                        <div className="input-button-diagnosed">   
+                            <div className="diagnosed-number">2</div>
+                            <div className="time-unit">months</div>
                         </div>
-                        <div className="input-button1">   
-                            <div>2</div>
-                            <div>time dur</div>
+                        <div style={{ flex: '0 0 1px', background: '#cacaca' }} />
+                        <div className="input-button-diagnosed">   
+                            <div className="diagnosed-number">2</div>
+                            <div className="time-unit">months</div>
                         </div>
-                        <div className="input-button1">   
-                            <div>2</div>
-                            <div>time dur</div>
+                        <div style={{ flex: '0 0 1px', background: '#cacaca' }} />
+                        <div className="input-button-diagnosed">   
+                            <div className="diagnosed-number">2</div>
+                            <div className="time-unit">months</div>
                         </div>
+                        <div style={{ flex: '0 0 1px', background: '#cacaca' }} />
+                        <div className="input-button-diagnosed">   
+                            <div className="diagnosed-number">2</div>
+                            <div className="time-unit">years</div>
+                        </div>
+                        <div style={{ flex: '0 0 1px', background: '#cacaca' }} />
                     </div>
                   </div>  
                 </div>

@@ -41,19 +41,20 @@ class CardStatistics extends React.Component {
         <div className="statistics">
         		<div className="border-bottom flex-row">
         			<div
-        				className="purple padding-3"
+        				className="percentage purple padding-3"
         				style={{
-        					fontSize: '62px',
-        					flex: '0 1 35%'
+        					fontSize: '50px',
+        					flex: '0 1 30%',
+
+
                         }}
         			>
         				{rate}%
         			</div>
         			<div 
-                        className="font-size-3 padding-3"
+                        className="five-year font-size-3 padding-3"
                         style={{
-                            display: 'flex',
-                            alignItems: 'center',
+                            display: 'flex', 
                         }}
                     >
                             5 year survival rate
@@ -62,7 +63,7 @@ class CardStatistics extends React.Component {
         		<div className="border-bottom flex-row">
         			<div className="padding-3 font-size-1" style={{ flex: '0 1 35%' }}>
         				Given a group of <b>ten people</b> with the same type of cancer and profile</div>
-        			<div className="padding-3">
+        			<div className="icon-array">
         				{this.renderIconArray(rate)}
         			</div>
         		</div>
