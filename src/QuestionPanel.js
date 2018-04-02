@@ -18,7 +18,7 @@ class QuestionPanel extends React.Component {
 
             if (activeQuestion === 'age') {
                 return <div className="flex-row">
-                    <div className="input-button1">
+                    <div className="input-button-age">
                         type in your age
                     </div>
                 </div>

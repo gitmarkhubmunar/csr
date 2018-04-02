@@ -1,13 +1,19 @@
 import React from 'react'
 import Icon from 'react-ionicons'
+import Switch from 'react-toggle-switch'
 
 class CardTitleBar extends React.Component {
+    state = { isPatient: true }
+
 	render () {
 		const { title } = this.props;
+        const { isPatient } = this.state;
         return (
             <div className="title-bar bg-purple flex-row padding-2">
         		<div className="toggle" style={{ flex: '0 0 20%' }}>
-        			patient
+        			<Switch className="patient-switch" onClick={() => this.setState({ isPatient: !isPatient })} on={isPatient}>
+                    </Switch>
+                    <div>{isPatient === true ? 'Patient' : 'Doctor'}</div>
         		</div>
         		<div className="text-center" style={{ flex: '1 0 auto' }}>
         			{title}

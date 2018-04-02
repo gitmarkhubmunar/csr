@@ -13,9 +13,9 @@ class CardStatistics extends React.Component {
 		for (let t = 1; t <= totalHearts; t++) {
 			// Use the correct icon; by default it's the outline,
 			// but filled in when t <= filledHeartsCount.
-			let icon = <object className="variable-icon" data="/assets/emptyheart.svg" type="image/svg+xml" />
+			let icon = <object className="heart-icon" data="/assets/emptyheart.svg" type="image/svg+xml" />
 			if (t <= filledHeartsCount) {
-				icon = <object className="variable-icon" data="/assets/heart.svg" type="image/svg+xml" />
+				icon = <object className="heart-icon" data="/assets/heart.svg" type="image/svg+xml" />
 			}
 
 			// If t <= 5, put in first row; else put in second row.
@@ -35,41 +35,35 @@ class CardStatistics extends React.Component {
 		)
 	}
 
-    render () {
-    	const { rate } = this.props;
-        return (
-        <div className="statistics">
-        		<div className="border-bottom flex-row">
-        			<div
-        				className="percentage purple padding-3"
-        				style={{
-        					fontSize: '50px',
-        					flex: '0 1 30%',
-
-
-                        }}
-        			>
-        				{rate}%
-        			</div>
-        			<div 
-                        className="five-year font-size-3 padding-3"
-                        style={{
-                            display: 'flex', 
-                        }}
-                    >
-                            5 year survival rate
-                        </div>
-        		</div>
-        		<div className="border-bottom flex-row">
-        			<div className="padding-3 font-size-1" style={{ flex: '0 1 35%' }}>
-        				Given a group of <b>ten people</b> with the same type of cancer and profile</div>
-        			<div className="icon-array">
-        				{this.renderIconArray(rate)}
-        			</div>
-        		</div>
-            </div>
-        )
-    }
+	render () {
+		const { rate } = this.props;
+		return (
+			<div className="statistics">
+				<div className="border-bottom flex-row">
+					<div style={{ flex: '0 0 35%' }}>
+						<div className="percentage purple">
+							{rate}%
+						</div>
+					</div>
+					<div 
+						className="five-year font-size-3"
+						style={{ display: 'flex' }}
+					>
+							5 year survival rate
+					</div>
+				</div>
+				<div className="border-bottom flex-row">
+					<div style={{ flex: '0 0 35%', padding: '10px 0' }}>
+						<div  className="stat-copy">
+							Given a <b>group of ten people</b> with the same type of cancer and profile</div>
+						</div>
+					<div className="icon-array">
+						{this.renderIconArray(rate)}
+					</div>
+				</div>
+			</div>
+		)
+	}
 }
 
 export default CardStatistics

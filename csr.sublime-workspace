@@ -139,7 +139,16 @@
 			"file": "src/styles.css",
 			"settings":
 			{
-				"buffer_size": 5195,
+				"buffer_size": 11333,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/HomePage.js",
+			"settings":
+			{
+				"buffer_size": 2268,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -154,10 +163,29 @@
 			}
 		},
 		{
+			"contents": "import Icon from 'react-ionicons'\nimport React from 'react'\n\nclass CardStatistics extends React.Component {\n\trenderIconArray = (rate: number) => {\n\t\tconst totalHearts = 10;\n\t\tconst filledHeartsCount = Math.round(rate / 10);\n\n\t\t// For the first 4 (a.k.a. filledHeartsCount),\n\t\t// draw a filled heart. For the rest, draw a outline heart.\n\t\tconst iconArrayFirstRow = [];\n\t\tconst iconArraySecondRow = [];\n\t\tfor (let t = 1; t <= totalHearts; t++) {\n\t\t\t// Use the correct icon; by default it's the outline,\n\t\t\t// but filled in when t <= filledHeartsCount.\n\t\t\tlet icon = <object className=\"variable-icon\" data=\"/assets/emptyheart.svg\" type=\"image/svg+xml\" />\n\t\t\tif (t <= filledHeartsCount) {\n\t\t\t\ticon = <object className=\"variable-icon\" data=\"/assets/heart.svg\" type=\"image/svg+xml\" />\n\t\t\t}\n\n\t\t\t// If t <= 5, put in first row; else put in second row.\n\t\t\tif (t <= 5) {\n\t\t\t\ticonArrayFirstRow.push(icon)\n\t\t\t}\n\t\t\telse {\n\t\t\t\ticonArraySecondRow.push(icon)\n\t\t\t}\n\t\t}\n\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t<div>{iconArrayFirstRow}</div>\n\t\t\t\t<div>{iconArraySecondRow}</div>\n\t\t\t</div>\n\t\t)\n\t}\n\n    render () {\n    \tconst { rate } = this.props;\n        return (\n        <div className=\"statistics\">\n        \t\t<div className=\"border-bottom flex-row\">\n        \t\t\t<div\n        \t\t\t\tclassName=\"percentage purple padding-3\"\n        \t\t\t\tstyle={{\n        \t\t\t\t\tfontSize: '50px',\n        \t\t\t\t\tflex: '0 1 30%',\n\n\n                        }}\n        \t\t\t>\n        \t\t\t\t{rate}%\n        \t\t\t</div>\n        \t\t\t<div \n                        className=\"five-year font-size-3 padding-3\"\n                        style={{\n                            display: 'flex', \n                        }}\n                    >\n                            5 year survival rate\n                        </div>\n        \t\t</div>\n        \t\t<div className=\"border-bottom flex-row\">\n        \t\t\t<div className=\"padding-3 font-size-1\" style={{ flex: '0 1 35%' }}>\n        \t\t\t\tGiven a group of <b>ten people</b> with the same type of cancer and profile</div>\n        \t\t\t<div className=\"\">\n        \t\t\t\t{this.renderIconArray(rate)}\n        \t\t\t</div>\n        \t\t</div>\n            </div>\n        )\n    }\n}\n\nexport default CardStatistics\n",
 			"file": "src/CardStatistics.js",
+			"file_size": 2165,
+			"file_write_time": 131668714075846324,
 			"settings":
 			{
-				"buffer_size": 2189,
+				"buffer_size": 2155,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/QuestionPanel.js",
+			"settings":
+			{
+				"buffer_size": 5797,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/SurveyPage.js",
+			"settings":
+			{
+				"buffer_size": 710,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -183,14 +211,6 @@
 			"settings":
 			{
 				"buffer_size": 1457,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/HomePage.js",
-			"settings":
-			{
-				"buffer_size": 2268,
 				"line_ending": "Unix"
 			}
 		}
@@ -236,10 +256,13 @@
 	"expanded_folders":
 	[
 		"/Users/JeffMunar/Documents/Projects/csr",
+		"/Users/JeffMunar/Documents/Projects/csr/node_modules",
+		"/Users/JeffMunar/Documents/Projects/csr/node_modules/argparse",
 		"/Users/JeffMunar/Documents/Projects/csr/src"
 	],
 	"file_history":
 	[
+		"/Users/JeffMunar/Documents/Projects/csr/src/QuestionPanel.js",
 		"/Users/JeffMunar/Documents/Projects/csr/src/CardVariables.js",
 		"/Users/JeffMunar/Documents/Projects/csr/.gitignore",
 		"/Users/JeffMunar/Documents/Projects/csr/src/Dropdown.js",
@@ -249,7 +272,6 @@
 		"/Users/JeffMunar/Documents/Projects/csr/src/Card.js",
 		"/Users/JeffMunar/Documents/Projects/csr/src/SurveyPage.js",
 		"/Users/JeffMunar/Documents/Projects/csr/src/App.js",
-		"/Users/JeffMunar/Documents/Projects/csr/src/QuestionPanel.js",
 		"/Users/JeffMunar/Documents/Projects/csr/src/HomePage.js",
 		"/Users/JeffMunar/Documents/Projects/csr/src/styles.css",
 		"/Users/JeffMunar/Documents/Projects/csr/src/PastClientsPage.js",
@@ -300,7 +322,7 @@
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 26.0
 	},
 	"find_in_files":
 	{
@@ -314,6 +336,21 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"drop-down",
+			"dropdown",
+			"background",
+			"home-page-intro",
+			"kiro",
+			"font",
+			"font-style",
+			"stage",
+			"dotted",
+			"yellow",
+			"percentage",
+			"25px",
+			"0px",
+			"border",
+			"question",
 			"caret",
 			"purple",
 			"div.link1",
@@ -347,15 +384,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5195,
+						"buffer_size": 11333,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								375,
-								375
+								9880,
+								9880
 							]
 						],
 						"settings":
@@ -365,7 +402,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 11703.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -373,6 +410,36 @@
 				},
 				{
 					"buffer": 1,
+					"file": "src/HomePage.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2268,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								953,
+								968
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 165.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
 					"file": "src/Card.js",
 					"semi_transient": false,
 					"settings":
@@ -384,8 +451,8 @@
 						"selection":
 						[
 							[
-								598,
-								598
+								25,
+								25
 							]
 						],
 						"settings":
@@ -398,24 +465,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 3,
 					"file": "src/CardStatistics.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2189,
+						"buffer_size": 2155,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								941,
-								941
+								2008,
+								2008
 							]
 						],
 						"settings":
@@ -424,15 +491,75 @@
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 67.0,
-						"translation.y": 17.0,
+						"translation.x": 0.0,
+						"translation.y": 414.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 4,
+					"file": "src/QuestionPanel.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5797,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/SurveyPage.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 710,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								515,
+								515
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
 					"file": "src/CardVariables.js",
 					"semi_transient": false,
 					"settings":
@@ -444,8 +571,8 @@
 						"selection":
 						[
 							[
-								918,
-								998
+								123,
+								107
 							]
 						],
 						"settings":
@@ -456,14 +583,14 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 80.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 7,
 					"file": "src/CardTitleBar.js",
 					"semi_transient": false,
 					"settings":
@@ -489,11 +616,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 8,
 					"file": "src/Dropdown.js",
 					"semi_transient": false,
 					"settings":
@@ -519,37 +646,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "src/HomePage.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2268,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1559,
-								1559
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 113.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
