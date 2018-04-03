@@ -73,10 +73,19 @@ body {
   	align-items: center;
 }
 .patient-switch.switch {
-	background: #4d0092;
+	background: blue;
+	width: 80px;
 }
+
 .patient-switch.switch.on {
 	background: yellow;
+}
+
+
+.patient-switch.switch.on > .switch-toggle {
+	left: 53px;
+    -webkit-transition: left .2s ease-in-out;
+    transition: left .2s ease-in-out;
 }
 
 .variables {
@@ -88,13 +97,32 @@ body {
 	
 }
 
+.unanswered-row {
+	display: wrap;
+	margin: 5% 15% auto;
+ }
+
+.unanswered-button {
+	height: 24px;
+	display: flex;
+}
+
 .variable-switch-unanswered  {
-	flex: 0 0 30px;
-	border: dotted 1px red;
-	background: grey;
+ 	padding-top: 0px;
+ 	display: flex;
+ 	flex: 0 1 auto;
+
 }
 .variable-icon-unanswered {
-	width: 20px;
+	width: 15px;
+	flex: 1;
+}
+
+.topic-unanswered {
+	width: 100%;
+	color: black;
+	text-align: center;
+	font-weight: 600;
 }
 
 .variable-switch {
@@ -131,11 +159,26 @@ body {
 }
 
 .toggle {
-  background-color: grey;
-  margin: 6px;
-  padding: 3px 6px;
-  border-radius: 24px;
+	position: relative;
 }
+
+.role {
+	color: white;
+	font-size: 13px;
+	position: absolute;
+  	top: 7px;
+  	font-weight: 600;
+  	right: 12px;
+}
+
+.role.patient {
+	color: grey;
+	font-size: 13px;
+	font-weight: 600;
+	left: 9px;
+}
+
+
 
 .share-button {
 	width: 22px;

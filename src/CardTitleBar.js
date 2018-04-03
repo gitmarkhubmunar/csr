@@ -1,5 +1,5 @@
-import React from 'react'
 import Icon from 'react-ionicons'
+import React from 'react'
 import Switch from 'react-toggle-switch'
 
 class CardTitleBar extends React.Component {
@@ -11,9 +11,8 @@ class CardTitleBar extends React.Component {
         return (
             <div className="title-bar bg-purple flex-row padding-2">
         		<div className="toggle" style={{ flex: '0 0 20%' }}>
-        			<Switch className="patient-switch" onClick={() => this.setState({ isPatient: !isPatient })} on={isPatient}>
-                    </Switch>
-                    <div>{isPatient === true ? 'Patient' : 'Doctor'}</div>
+        			<Switch className="patient-switch" onClick={() => this.setState({ isPatient: !isPatient })} on={isPatient === true} />
+                    <div className={isPatient === true ? 'role patient' : 'role'}>{isPatient === true ? 'Patient' : 'Doctor'}</div>
         		</div>
         		<div className="text-center" style={{ flex: '1 0 auto' }}>
         			{title}
