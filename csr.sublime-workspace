@@ -139,7 +139,65 @@
 			"file": "src/styles.css",
 			"settings":
 			{
-				"buffer_size": 11333,
+				"buffer_size": 12322,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "import isMobile from 'is-mobile';\nimport React from 'react'\nimport { BrowserRouter as Router, Route } from 'react-router-dom'\n\nimport Header from './Header'\nimport HomePage from './HomePage'\nimport SurveyPage from './SurveyPage'\n\nclass App extends React.Component {\n\trender () {\n\t\tconst props = this.props\n\n\t\t// Render our custom home page component\n\t\tconst renderHomePage = (props) => {\n\t\t\treturn <HomePage {...props} />\n\t\t}\n\n\t\treturn (\n\t\t  <Router {...props}>\n\t\t  \t<div className=\"app\">\n\t\t  \t\t<Header />\n\t\t  \t\t<Route exact path='/' render={renderHomePage} />\n\t\t\t    <Route path='/card' component={SurveyPage} />\n\t\t\t</div>\n\t\t  </Router>\n\t\t)\n\t}\n}\n\nexport default App\n",
+			"file": "src/App.js",
+			"file_size": 667,
+			"file_write_time": 131662962702181834,
+			"settings":
+			{
+				"buffer_size": 667,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/QuestionPanel.js",
+			"settings":
+			{
+				"buffer_size": 5983,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/MessagingPanel.js",
+			"settings":
+			{
+				"buffer_size": 302,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/KeyQuestions.js",
+			"settings":
+			{
+				"buffer_size": 210,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/CardTitleBar.js",
+			"settings":
+			{
+				"buffer_size": 1041,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": " import React from 'react'\n\nimport Card from './Card'\nimport QuestionPanel from './QuestionPanel'\n\n\nconst questions = {\n    0: 'sex',\n    1: 'age',\n    2: 'stage',\n    3: 'grade',\n    4: 'diagnosed',\n};\n\nclass SurveyPage extends React.Component {\n    state = { activeQuestion: 'sex' }\n\n    switchQuestion = (nextQuestion: string) => {\n        this.setState({ activeQuestion: nextQuestion })\n    }\n\n    render () {\n        const { activeQuestion } = this.state\n        return (\n            <div className=\"survey-page\">\n                <Card switchQuestion={this.switchQuestion} />\n                <QuestionPanel activeQuestion={activeQuestion} />\n            </div>\n        )\n    }\n}\n\nexport default SurveyPage\n",
+			"file": "src/SurveyPage.js",
+			"file_size": 710,
+			"file_write_time": 131672870835710121,
+			"settings":
+			{
+				"buffer_size": 711,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -150,67 +208,6 @@
 			{
 				"buffer_size": 2268,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/Card.js",
-			"settings":
-			{
-				"buffer_size": 677,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "import Icon from 'react-ionicons'\nimport React from 'react'\n\nclass CardStatistics extends React.Component {\n\trenderIconArray = (rate: number) => {\n\t\tconst totalHearts = 10;\n\t\tconst filledHeartsCount = Math.round(rate / 10);\n\n\t\t// For the first 4 (a.k.a. filledHeartsCount),\n\t\t// draw a filled heart. For the rest, draw a outline heart.\n\t\tconst iconArrayFirstRow = [];\n\t\tconst iconArraySecondRow = [];\n\t\tfor (let t = 1; t <= totalHearts; t++) {\n\t\t\t// Use the correct icon; by default it's the outline,\n\t\t\t// but filled in when t <= filledHeartsCount.\n\t\t\tlet icon = <object className=\"variable-icon\" data=\"/assets/emptyheart.svg\" type=\"image/svg+xml\" />\n\t\t\tif (t <= filledHeartsCount) {\n\t\t\t\ticon = <object className=\"variable-icon\" data=\"/assets/heart.svg\" type=\"image/svg+xml\" />\n\t\t\t}\n\n\t\t\t// If t <= 5, put in first row; else put in second row.\n\t\t\tif (t <= 5) {\n\t\t\t\ticonArrayFirstRow.push(icon)\n\t\t\t}\n\t\t\telse {\n\t\t\t\ticonArraySecondRow.push(icon)\n\t\t\t}\n\t\t}\n\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t<div>{iconArrayFirstRow}</div>\n\t\t\t\t<div>{iconArraySecondRow}</div>\n\t\t\t</div>\n\t\t)\n\t}\n\n    render () {\n    \tconst { rate } = this.props;\n        return (\n        <div className=\"statistics\">\n        \t\t<div className=\"border-bottom flex-row\">\n        \t\t\t<div\n        \t\t\t\tclassName=\"percentage purple padding-3\"\n        \t\t\t\tstyle={{\n        \t\t\t\t\tfontSize: '50px',\n        \t\t\t\t\tflex: '0 1 30%',\n\n\n                        }}\n        \t\t\t>\n        \t\t\t\t{rate}%\n        \t\t\t</div>\n        \t\t\t<div \n                        className=\"five-year font-size-3 padding-3\"\n                        style={{\n                            display: 'flex', \n                        }}\n                    >\n                            5 year survival rate\n                        </div>\n        \t\t</div>\n        \t\t<div className=\"border-bottom flex-row\">\n        \t\t\t<div className=\"padding-3 font-size-1\" style={{ flex: '0 1 35%' }}>\n        \t\t\t\tGiven a group of <b>ten people</b> with the same type of cancer and profile</div>\n        \t\t\t<div className=\"\">\n        \t\t\t\t{this.renderIconArray(rate)}\n        \t\t\t</div>\n        \t\t</div>\n            </div>\n        )\n    }\n}\n\nexport default CardStatistics\n",
-			"file": "src/CardStatistics.js",
-			"file_size": 2165,
-			"file_write_time": 131668714075846324,
-			"settings":
-			{
-				"buffer_size": 2155,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/QuestionPanel.js",
-			"settings":
-			{
-				"buffer_size": 5797,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/SurveyPage.js",
-			"settings":
-			{
-				"buffer_size": 710,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/CardVariables.js",
-			"settings":
-			{
-				"buffer_size": 2177,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/CardTitleBar.js",
-			"settings":
-			{
-				"buffer_size": 682,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/Dropdown.js",
-			"settings":
-			{
-				"buffer_size": 1457,
 				"line_ending": "Unix"
 			}
 		}
@@ -256,20 +253,20 @@
 	"expanded_folders":
 	[
 		"/Users/JeffMunar/Documents/Projects/csr",
-		"/Users/JeffMunar/Documents/Projects/csr/node_modules",
-		"/Users/JeffMunar/Documents/Projects/csr/node_modules/argparse",
 		"/Users/JeffMunar/Documents/Projects/csr/src"
 	],
 	"file_history":
 	[
-		"/Users/JeffMunar/Documents/Projects/csr/src/QuestionPanel.js",
-		"/Users/JeffMunar/Documents/Projects/csr/src/CardVariables.js",
-		"/Users/JeffMunar/Documents/Projects/csr/.gitignore",
 		"/Users/JeffMunar/Documents/Projects/csr/src/Dropdown.js",
-		"/Users/JeffMunar/Documents/Projects/csr/src/Header.js",
+		"/Users/JeffMunar/Documents/Projects/csr/src/Card.js",
+		"/Users/JeffMunar/Documents/Projects/csr/src/CardVariables.js",
 		"/Users/JeffMunar/Documents/Projects/csr/src/CardTitleBar.js",
 		"/Users/JeffMunar/Documents/Projects/csr/src/CardStatistics.js",
-		"/Users/JeffMunar/Documents/Projects/csr/src/Card.js",
+		"/Users/JeffMunar/Documents/Projects/csr/node_modules/ajv-keywords/keywords/deepRequired.js",
+		"/Users/JeffMunar/Documents/Projects/csr/package.json",
+		"/Users/JeffMunar/Documents/Projects/csr/src/QuestionPanel.js",
+		"/Users/JeffMunar/Documents/Projects/csr/.gitignore",
+		"/Users/JeffMunar/Documents/Projects/csr/src/Header.js",
 		"/Users/JeffMunar/Documents/Projects/csr/src/SurveyPage.js",
 		"/Users/JeffMunar/Documents/Projects/csr/src/App.js",
 		"/Users/JeffMunar/Documents/Projects/csr/src/HomePage.js",
@@ -281,7 +278,6 @@
 		"/Users/JeffMunar/Documents/Projects/csr/src/DisplayZone.js",
 		"/Users/JeffMunar/Documents/Projects/csr/src/ClientPage.js",
 		"/Users/JeffMunar/Documents/Projects/csr/src/clientData.js",
-		"/Users/JeffMunar/Documents/Projects/csr/package.json",
 		"/Users/JeffMunar/Documents/Projects/csr/README.md",
 		"/Applications/Adobe After Effects CC 2017/Plug-ins/MAXON CINEWARE AE/(CINEWARE Support)/bin/resource/modules/advanced render/c4d_symbols.h",
 		"/Applications/Adobe After Effects CC 2017/Plug-ins/MAXON CINEWARE AE/(CINEWARE Support)/bin/resource/modules/newman/c4d_symbols.h",
@@ -322,7 +318,7 @@
 	],
 	"find":
 	{
-		"height": 26.0
+		"height": 39.0
 	},
 	"find_in_files":
 	{
@@ -336,6 +332,21 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"messagingPanel",
+			"cancer-survival-rates-header",
+			"cancer-survival-rates",
+			"cancer-survival",
+			"question-panel",
+			"blue",
+			"toggle",
+			"patient-switch",
+			"switch patient-switc",
+			".switch-toggle",
+			"switch-toggle",
+			"yellow",
+			"percentage",
+			"0 35%",
+			"re",
 			"drop-down",
 			"dropdown",
 			"background",
@@ -375,7 +386,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -384,15 +395,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11333,
+						"buffer_size": 12322,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9880,
-								9880
+								6358,
+								6358
 							]
 						],
 						"settings":
@@ -402,124 +413,33 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 11703.0,
+						"translation.y": 9030.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "src/HomePage.js",
+					"file": "src/App.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2268,
+						"buffer_size": 667,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								953,
-								968
+								613,
+								613
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 165.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/Card.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 677,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								25,
-								25
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/CardStatistics.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2155,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2008,
-								2008
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 414.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/QuestionPanel.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5797,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -529,20 +449,140 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "src/SurveyPage.js",
+					"buffer": 2,
+					"file": "src/QuestionPanel.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 710,
+						"buffer_size": 5983,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								515,
-								515
+								5839,
+								5821
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1402.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/MessagingPanel.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 302,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								302,
+								302
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/KeyQuestions.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 210,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								34,
+								34
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/CardTitleBar.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1041,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								628,
+								671
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/SurveyPage.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 711,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								597,
+								646
 							]
 						],
 						"settings":
@@ -559,51 +599,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "src/CardVariables.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2177,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								123,
-								107
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
 					"buffer": 7,
-					"file": "src/CardTitleBar.js",
+					"file": "src/HomePage.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 682,
+						"buffer_size": 2268,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								548,
-								536
+								463,
+								463
 							]
 						],
 						"settings":
@@ -616,37 +625,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "src/Dropdown.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1457,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1309,
-								1386
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -654,7 +633,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 26.0
+		"height": 25.0
 	},
 	"input":
 	{
@@ -695,7 +674,7 @@
 	"project": "csr.sublime-project",
 	"replace":
 	{
-		"height": 48.0
+		"height": 46.0
 	},
 	"save_all_on_build": true,
 	"select_file":

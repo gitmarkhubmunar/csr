@@ -60,9 +60,18 @@ body {
 	border-radius: 8px;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, .5);
 	height: 400px;
-	margin: 2% auto;
+	margin: 0 auto;
 	width: 382px;
 	background: white;
+}
+
+.courage-voice {
+	color: #551A8B;
+	font-size: 18px;
+	font-weight: 600;
+	text-align: center;
+  	padding: 70px 0 0 0;
+    letter-spacing: 0.03em;
 
 }
 
@@ -330,11 +339,16 @@ input:checked ~ drop-menu menu1 {
 .question-panel {
   flex: 1 auto;
   /*background: yellow;*/
-  margin: 100px auto 0 auto;
+  margin: 3% auto 0 auto;
  /* width: 382px;*/
   text-align: center;
   height: 100%;
   background: #8B8B8B;
+}
+
+.key-questions {
+	background: #551A8B;
+	height: 200px;
 }
 
 .percentage {
@@ -457,6 +471,10 @@ input:checked ~ drop-menu menu1 {
   display: none;
 }
 
+.messaging-panel {
+ background: #551A8B;
+}
+
 /* Re-usable styles */
 
 .relative {
@@ -474,26 +492,83 @@ input:checked ~ drop-menu menu1 {
 .flex-auto {
   flex: 1 auto;
 }
+
 .flex-wrap {
   flex-wrap: wrap;
 }
+
+.messaging {
+	font-weight: 600;
+	color: white;
+	padding: 16px 0 0 0;
+	margin: 0 auto;
+	width: 50%;
+	text-align: center;
+	letter-spacing: 0.0625em;
+}
+
+.flex-body {
+	display: flex;
+
+}
+
+.display-block{
+	display: block;
+}
+
+.share-wrapper {
+ display: flex;
+ margin: 20px 0;
+}
+
+.messaging-body-copy {
+	flex: 6;
+	font-weight: 100;
+	margin: 0 2% 0 25%;
+	text-align: center;
+	letter-spacing: 0.63px;
+	line-height: 18px;
+}
+
+.messaging-button {
+	flex: 2;
+	font-size: 20px;
+	font-weight: 600;
+	font-size: 1.25em;
+    padding: 0 2em;
+    line-height: 2.5em;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    display: inline-block;
+    margin: 0 25% 0 0;
+    cursor: pointer;
+    transition: all .5s ease 0;
+    background-image: none;
+    height: auto;
+    width: auto;
+    background-color: #999;
+}
+
 
 .text-center {
 	text-align: center;
 /*	border: 1px solid red;*/
 	font-size: 22px;
 	font-weight: 900;
-	letter-spacing: 1px;
+
 }
 
 .font-size-1 {
-	font-size: 15px;
+	font-size: 16px;
 }
 
 .font-size-2 {
-	font-size: 16px;
+	font-size: 20px;
 }
 .font-size-3 {
+	font-size: 14px;
 
 }
 
@@ -528,6 +603,10 @@ input:checked ~ drop-menu menu1 {
 
 .border-bottom {
 	border-bottom: 1px solid #dadada;
+}
+
+.white {
+	color: white;
 }
 
 .blue {
@@ -731,6 +810,49 @@ input:checked ~ drop-menu menu1 {
 		line-height: 1.4em;
 
 	}
+
+.share-wrapper {
+	 display: flex;
+	 margin: 20px 0;
+}
+
+.messaging {
+	width: 90%;
+}
+
+.messaging-body-copy {
+	flex: 6;
+	font-weight: 100;
+	margin: 0 2% 0 3%;
+	text-align: center;
+	letter-spacing: 0.63px;
+	line-height: 18px;
+}
+
+.messaging-button {
+	flex: 3;
+	font-weight: 600;
+	font-size: 14px;
+    padding: 0 0;
+    line-height: 50px;
+    vertical-align: middle;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    color: black;
+    display: inline-block;
+    margin: 0 4% 0 0;
+    cursor: pointer;
+    transition: all .5s ease 0;
+    background-image: none;
+    height: 50px;
+    width: auto;
+    background-color: #D8D8D8;
+}
+
+.messaging-panel {
+ background: #551A8B;
+}
 
 
 

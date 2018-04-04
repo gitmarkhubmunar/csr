@@ -1,7 +1,9 @@
  import React from 'react'
 
 import Card from './Card'
+import CourageVoice from './CourageVoice'
 import QuestionPanel from './QuestionPanel'
+
 
 const questions = {
     0: 'sex',
@@ -23,6 +25,7 @@ class SurveyPage extends React.Component {
         return (
             <div className="survey-page">
                 <Card switchQuestion={this.switchQuestion} />
+                <CourageVoice />
                 <QuestionPanel activeQuestion={activeQuestion} />
             </div>
         )
