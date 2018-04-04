@@ -1,8 +1,11 @@
 import React from 'react'
+import MessagingPanel from './MessagingPanel'
 
 class QuestionPanel extends React.Component {
+    state = { isFinished: true }
     render () {
         const { activeQuestion } = this.props
+        const { isFinished } = this.state;
         const showQuestion = (activeQuestion: string) => {
             if (activeQuestion === 'sex') {
                 return <div className="flex-row">
@@ -118,8 +121,9 @@ class QuestionPanel extends React.Component {
         };
 
         return <div className="question-panel">
-           <div className="question-controls">{showQuestion(activeQuestion)}</div>
-        </div>
+            {isFinished === true ? <MessagingPanel /> : <div className="question-controls">{showQuestion(activeQuestion)}</div>}
+           
+           </div>
     }
 }
 

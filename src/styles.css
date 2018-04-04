@@ -73,7 +73,7 @@ body {
   	align-items: center;
 }
 .patient-switch.switch {
-	background: blue;
+	background: #4A90E2;
 	width: 80px;
 }
 
@@ -282,7 +282,7 @@ input:checked ~ drop-menu menu1 {
 
 .cancer-surival-rates-header {
   color: #4d0092;
-  font-size: 30px;
+  font-size: 26px;
   text-align: center;
   padding: 0 0;
 }
@@ -438,6 +438,11 @@ input:checked ~ drop-menu menu1 {
  letter-spacing: .08em
 }
 
+.message {
+	width: 100%;
+	background: blue;
+}
+
 
 .survey-hairline {
 	margin: 4% 0px;
@@ -526,7 +531,7 @@ input:checked ~ drop-menu menu1 {
 }
 
 .blue {
-  color: #8DDBFF;
+  color: #4A90E2;
 }
 .grey {
 	color: #999;
@@ -672,7 +677,7 @@ input:checked ~ drop-menu menu1 {
 		margin-top: 20px;
 	}
 
-	.cancer-surival-rates-header {
+	.cancer-survival-rates-header {
 		color: #4d0092;
 		font-size: 20px;
 		text-align: center;
