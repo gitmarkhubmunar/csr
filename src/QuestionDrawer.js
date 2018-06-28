@@ -22,7 +22,7 @@ class QuestionDrawer extends React.Component {
                             <div className="topic-unanswered">sex</div>
                         </div>
                         <div className="input-area">
-                            <div>male</div>
+                            <div>male peen</div>
                             <div>female</div>
                         </div>
                     </div>
