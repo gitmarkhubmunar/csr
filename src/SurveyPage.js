@@ -2,8 +2,8 @@
 
 import Card from './Card'
 import CourageVoice from './CourageVoice'
+import QuestionDrawer from './QuestionDrawer'
 import QuestionPanel from './QuestionPanel'
-
 
 const questions = {
     0: 'sex',
@@ -25,6 +25,14 @@ class SurveyPage extends React.Component {
         return (
             <div className="survey-page">
                 <Card switchQuestion={this.switchQuestion} />
+                <QuestionDrawer
+                    age={77}
+                    diagnosed="Jan 2016"
+                    grade="differentiated"
+                    sex="female"
+                    stage="3"
+                    switchQuestion={this.switchQuestion}
+                />
                 <CourageVoice />
                 <QuestionPanel activeQuestion={activeQuestion} />
             </div>

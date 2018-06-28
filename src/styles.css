@@ -2,41 +2,39 @@
 @import '~react-toggle-switch/dist/css/switch.min.css';
 
 @font-face {
-font-family: 'Kiro';
-src: url(/fonts/Kiro-Extra-Bold.otf);
-font-style: normal;
-font-weight: 800;
+  font-family: 'Kiro';
+  src: url(/fonts/Kiro-Extra-Bold.otf);
+  font-style: normal;
+  font-weight: 800;
 }
 
 @font-face {
-font-family: 'Kiro';
-src: url(/fonts/Kiro-Extra-Bold-Italic.otf);
-font-style: italic;
-font-weight: 800;
+  font-family: 'Kiro';
+  src: url(/fonts/Kiro-Extra-Bold-Italic.otf);
+  font-style: italic;
+  font-weight: 800;
 }
 
 @font-face {
-font-family: 'Kiro';
-src: url(/fonts/Kiro-Bold.otf);
-font-style: normal;
-font-weight: 600;
+  font-family: 'Kiro';
+  src: url(/fonts/Kiro-Bold.otf);
+  font-style: normal;
+  font-weight: 600;
 }
 
 @font-face {
-font-family: 'Kiro';
-src: url(/fonts/Kiro-light.otf);
-font-style: normal;
-font-weight: 400;
+  font-family: 'Kiro';
+  src: url(/fonts/Kiro-light.otf);
+  font-style: normal;
+  font-weight: 400;
 }
 
 @font-face {
-font-family: 'Kiro';
-src: url(/fonts/Kiro-Thin.otf);
-font-style: normal;
-font-weight: 100;
+  font-family: 'Kiro';
+  src: url(/fonts/Kiro-Thin.otf);
+  font-style: normal;
+  font-weight: 100;
 }
-
-
 
 body {
 	margin: 0;
@@ -59,7 +57,6 @@ body {
   flex: 1 auto;
 	border-radius: 8px;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, .5);
-	height: 400px;
 	margin: 0 auto;
 	width: 100%;
 	background: white;
@@ -70,27 +67,24 @@ body {
 	font-size: 18px;
 	font-weight: 600;
 	text-align: center;
-  	padding: 70px 0 0 0;
-    letter-spacing: 0.03em;
-
+  padding: 70px 0 0 0;
+  letter-spacing: 0.03em;
 }
 
 .title-bar {
 	border-top-left-radius: 0px;
 	border-top-right-radius: 0px;
 	color: white;
-  	align-items: center;
+  align-items: center;
 }
+
 .patient-switch.switch {
 	background: #4A90E2;
 	width: 80px;
 }
-
 .patient-switch.switch.on {
 	background: yellow;
 }
-
-
 .patient-switch.switch.on > .switch-toggle {
 	left: 53px;
     -webkit-transition: left .2s ease-in-out;
@@ -109,23 +103,23 @@ body {
 .unanswered-row {
 	margin: 0 5px;
 	background: grey;
-    border: 2px solid green;
+  border: 2px solid green;
 }
 
 .customized-panel {
-    display: flex;
-    border: 3px solid green;
+  display: flex;
+  border: 3px solid green;
 }
 
 .input-area {
-    display: flex;
+  display: flex;
 	background: yellow;
 }
 
 .input-panel {
-    display: flex;
-    border: 2px solid blue;
-    width: 100%;
+  display: flex;
+  border: 2px solid blue;
+  width: 100%;
 }
 
 .unanswered-button {
@@ -141,20 +135,20 @@ body {
 }*/
 .variable-icon-unanswered {
 	display: flex ;
-    width: 15px;
+  width: 15px;
 }
 
 .topic-unanswered {
-    display: flex;
+  display: flex;
 	width: 100%;
-    background: red;
+  background: red;
 	color: black;
 	text-align: center;
 	font-weight: 600;
 }
 
-/*.variable-switch {
-  /*border-radius: 90px;*/
+./*variable-switch {
+  border-radius: 90px;
   background-color: #4d0092;
   border-radius: 24px;
   display: flex;
@@ -163,9 +157,8 @@ body {
   margin: 6px;
   padding: 10px;
   text-align: center;
-  width: 130px;*/
-/*}*/
-
+  width: 130px;
+}*/
 
 .variable-switch > div {
   display: flex;
@@ -213,8 +206,6 @@ body {
 	font-weight: 600;
 	left: 9px;
 }
-
-
 
 .share-button {
 	width: 22px;
@@ -391,18 +382,15 @@ input:checked ~ drop-menu menu1 {
 	line-height: 1.4;
 	padding: 15px;
 }
-.icon-array{
+.icon-array {
 	padding-top: 5px;
 	display: flex;
 	align-items: center;
 }
-.heart-icon{
+.heart-icon {
 	width: 38px;
 	margin: 3px 3px;
-
 }
-
-
 
 .question-controls {
 	margin: 0 auto;
@@ -417,15 +405,14 @@ input:checked ~ drop-menu menu1 {
   font-size: 16pt;
   color: white;
   letter-spacing: 2px;
-
 }
 
-.input-button-age{
+.input-button-age {
 	color: white;
 	font-size: 16pt;
 	margin-top: 4px;
 	padding: 1em 5em;
-  	flex: 1 0 40%;
+  flex: 1 0 40%;
 	border-bottom: 1px solid white;
 }
 
@@ -485,7 +472,6 @@ input:checked ~ drop-menu menu1 {
 	background: blue;
 }
 
-
 .survey-hairline {
 	margin: 4% 0px;
 }
@@ -500,29 +486,28 @@ input:checked ~ drop-menu menu1 {
 }
 
 .messaging-panel {
- background: #551A8B;
+  background: #551A8B;
 }
 
 /* Re-usable styles */
 
 .relative {
-  position: relative;
+    position: relative;
 }
 .flex-column {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 .flex-row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 .flex-auto {
-  flex: 1 auto;
+    flex: 1 auto;
 }
-
 .flex-wrap {
-  flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .messaging {
@@ -537,7 +522,6 @@ input:checked ~ drop-menu menu1 {
 
 .flex-body {
 	display: flex;
-
 }
 
 .display-block{
@@ -545,8 +529,8 @@ input:checked ~ drop-menu menu1 {
 }
 
 .share-wrapper {
- display: flex;
- margin: 20px 0;
+    display: flex;
+    margin: 20px 0;
 }
 
 .messaging-body-copy {
@@ -559,62 +543,55 @@ input:checked ~ drop-menu menu1 {
 }
 
 .messaging-button {
-	flex: 2;
-	font-size: 20px;
-	font-weight: 600;
-	font-size: 1.25em;
-    padding: 0 2em;
-    line-height: 2.5em;
-    outline: none;
-    border: none;
-    border-radius: 3px;
-    color: white;
-    display: inline-block;
-    margin: 0 25% 0 0;
-    cursor: pointer;
-    transition: all .5s ease 0;
-    background-image: none;
-    height: auto;
-    width: auto;
+    flex: 2;
+    font-size: 1.25em;
+    font-size: 20px;
+    font-weight: 600;
     background-color: #999;
+    background-image: none;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    height: auto;
+    line-height: 2.5em;
+    margin: 0 25% 0 0;
+    outline: none;
+    padding: 0 2em;
+    transition: all .5s ease 0;
+    width: auto;
 }
 
-
+.five-year {
+    letter-spacing: .2px;
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 28px;
+    flex: 0 0 auto;
+    /*border: 1px solid green;*/
+    color: black;
+    align-items: center;
+    line-height: .9;
+}
 .text-center {
 	text-align: center;
-/*	border: 1px solid red;*/
+    /*border: 1px solid red;*/
 	font-size: 22px;
 	font-weight: 900;
-
 }
-
 .font-size-1 {
 	font-size: 16px;
 }
-
 .font-size-2 {
 	font-size: 20px;
 }
 .font-size-3 {
 	font-size: 14px;
-
-}
-
-.five-year {
-	letter-spacing: .2px;
-  	white-space: nowrap;
-    font-weight: 600;
-	font-size: 28px;
-	flex: 0 0 auto;
-	/*border: 1px solid green;*/
-	color: black;
-	align-items: center;
-	line-height: .9;
 }
 .font-size-4 {
-	font-size: 30px;
+    font-size: 30px;
 }
-
 .padding-1 {
 	padding: 5px;
 }
@@ -624,11 +601,9 @@ input:checked ~ drop-menu menu1 {
 .padding-3 {
 	padding: 0 auto;
 }
-
 .padding-4 {
-  padding: 9% 3%;
+    padding: 9% 3%;
 }
-
 .border-bottom {
 	border-bottom: 1px solid #dadada;
 }
@@ -636,7 +611,6 @@ input:checked ~ drop-menu menu1 {
 .white {
 	color: white;
 }
-
 .blue {
   color: #4A90E2;
 }
@@ -650,11 +624,11 @@ input:checked ~ drop-menu menu1 {
 	background: #4d0092;
 }
 .bg-white {
-  background: white;
+    background: white;
 }
 
 .full-height {
-  height: 100%;
+    height: 100%;
 }
 
 /*------------- // Media Queries // ------------*/
@@ -695,70 +669,63 @@ input:checked ~ drop-menu menu1 {
 	}*/
 
 @media screen and (max-width: 1050px) {
-
 	.home-page {
-	margin: auto;
+    	margin: auto;
 	}
 
 	.home-page-intro {
-	  font-size: 65px;
-	  font-weight: 800;
-	  color: #4C4C4C;
-	  text-align: center;
-	  max-width: 80%;
-	  letter-spacing: -.02em;
-	  line-height: 1.2em;
+        font-size: 65px;
+        font-weight: 800;
+        color: #4C4C4C;
+        text-align: center;
+        max-width: 80%;
+        letter-spacing: -.02em;
+        line-height: 1.2em;
 	}
 
 	.home-page-blurb {
-	  font-size: 22px;
-	  margin: 0 auto;
-	  width: 40%;
-	  text-align: center;
-	  padding-bottom: 6%;
-}
-
+        font-size: 22px;
+        margin: 0 auto;
+        width: 40%;
+        text-align: center;
+        padding-bottom: 6%;
+    }
 }
 
 @media screen and (max-width: 800px) {
-
 	.home-page {
-	margin: auto;
+        margin: auto;
 	}
 
 	.home-page-intro {
-	  font-size: 65px;
-	  font-weight: 800;
-	  color: #4C4C4C;
-	  text-align: center;
-	  max-width: 90%;
-	  letter-spacing: -.02em;
-	  line-height: 1.2em;
+        font-size: 65px;
+        font-weight: 800;
+        color: #4C4C4C;
+        text-align: center;
+        max-width: 90%;
+        letter-spacing: -.02em;
+        line-height: 1.2em;
 	}
 
 	.home-page-blurb {
-	  font-size: 22px;
-	  margin: 0 auto;
-	  width: 60%;
-	  text-align: center;
-	  padding-bottom: 6%;
+        font-size: 22px;
+        margin: 0 auto;
+        width: 60%;
+        text-align: center;
+        padding-bottom: 6%;
+    }
 }
-
-}
-
 
 @media screen and (max-width: 500px) {
-
 	.home-page-intro {
-		font-size: 42px;
-		margin: 0px 0 0 15px;
-		text-align: left;
-		max-width: 100%;
-		/*border: 1px solid red;*/
-		width: 100%;
-		/*letter-spacing: .1em;*/
-		line-height: 1.2em;
-		
+        /*border: 1px solid red;*/
+        /*letter-spacing: .1em;*/
+        font-size: 42px;
+        line-height: 1.2em;
+        margin: 0px 0 0 15px;
+        max-width: 100%;
+        text-align: left;
+        width: 100%;
 	}
 
 	.break {
@@ -776,7 +743,6 @@ input:checked ~ drop-menu menu1 {
 		display: table;
 	}
 
-
 	.home-page-blurb {
 		font-size: 13px;
 		width: 70%;
@@ -790,6 +756,7 @@ input:checked ~ drop-menu menu1 {
 		text-align: center;
 		padding: 0 0;
 		/*border:dotted 1px red;*/
+    }
 }
 
 @media screen and (max-width: 0px){
@@ -819,15 +786,14 @@ input:checked ~ drop-menu menu1 {
 		padding: 0 0 0 0;
 	}
 
-  .home-page-intro {
-		font-size: 65px;
-		margin: 8% 0 20px 16px;
-		text-align: left;
-		max-width: 100%;
-
-		/*border: 1px solid red;*/
-		/*letter-spacing: .1em;*/
-		line-height: 1.1em;
+    .home-page-intro {
+        font-size: 65px;
+        margin: 8% 0 20px 16px;
+        text-align: left;
+        max-width: 100%;
+        /*border: 1px solid red;*/
+        /*letter-spacing: .1em;*/
+        line-height: 1.1em;
 	}
  
  	.home-page-blurb {
@@ -836,54 +802,50 @@ input:checked ~ drop-menu menu1 {
 		position: relative;
 		margin: 60px auto;
 		line-height: 1.4em;
-
 	}
 
-.share-wrapper {
-	 display: flex;
-	 margin: 20px 0;
-}
+    .share-wrapper {
+    	 display: flex;
+    	 margin: 20px 0;
+    }
 
-.messaging {
-	width: 90%;
-}
+    .messaging {
+    	width: 90%;
+    }
 
-.messaging-body-copy {
-	flex: 6;
-	font-weight: 100;
-	margin: 0 2% 0 3%;
-	text-align: center;
-	letter-spacing: 0.63px;
-	line-height: 18px;
-}
+    .messaging-body-copy {
+    	flex: 6;
+    	font-weight: 100;
+    	margin: 0 2% 0 3%;
+    	text-align: center;
+    	letter-spacing: 0.63px;
+    	line-height: 18px;
+    }
 
-.messaging-button {
-	flex: 3;
-	font-weight: 600;
-	font-size: 14px;
-    padding: 0 0;
-    line-height: 50px;
-    vertical-align: middle;
-    outline: none;
-    border: none;
-    border-radius: 3px;
-    color: black;
-    display: inline-block;
-    margin: 0 4% 0 0;
-    cursor: pointer;
-    transition: all .5s ease 0;
-    background-image: none;
-    height: 50px;
-    width: auto;
-    background-color: #D8D8D8;
-}
+    .messaging-button {
+        background-color: #D8D8D8;
+        background-image: none;
+        border-radius: 3px;
+        border: none;
+        color: black;
+        cursor: pointer;
+        display: inline-block;
+        flex: 3;
+        font-size: 14px;
+        font-weight: 600;
+        height: 50px;
+        line-height: 50px;
+        margin: 0 4% 0 0;
+        outline: none;
+        padding: 0 0;
+        transition: all .5s ease 0;
+        vertical-align: middle;
+        width: auto;
+    }
 
-.messaging-panel {
- background: #551A8B;
-}
-
-
-
+    .messaging-panel {
+        background: #551A8B;
+    }
 }
 
 @media screen and (max-width: 384px) {
@@ -903,9 +865,7 @@ input:checked ~ drop-menu menu1 {
 		position: relative;
 		margin: 25px auto;
 		line-height: 1.4em;
-
 	}
-
 }
 
 @media screen and (max-width: 375px) {
@@ -931,6 +891,7 @@ input:checked ~ drop-menu menu1 {
 		line-height: 1.4em;
 
 	}
+}
 
 @media screen and (max-width: 360px) {
 	.home-page-intro {
@@ -949,15 +910,14 @@ input:checked ~ drop-menu menu1 {
 		margin: 45px auto;
 		max-width: 100%;
 		line-height: 1.4em;
-
 	}
 
 	.second-dropdown{
 		margin-top: -20px;
 	}
+}
 
 @media screen and (max-width: 320px) {
-
 	.cancer-surival-rates-header {
 		color: #4d0092;
 		font-size: 16px;
@@ -975,7 +935,6 @@ input:checked ~ drop-menu menu1 {
 		line-height: 1em;
 	}
 
-
 	.break2 {
 		word-wrap: break-word;
 		margin-top: 0px ;
@@ -984,20 +943,14 @@ input:checked ~ drop-menu menu1 {
 		display: table;
 	}
 
-.home-page-blurb {
+    .home-page-blurb {
 		font-size: 14px;
 		text-align: center;
 		margin: 25px 16%;
 		line-height: 1.4em;
 	}
-.second-dropdown{
-		margin-top: -16px;
-}
-
-
-}
-}	
-}
-
+    .second-dropdown {
+    	margin-top: -16px;
+    }
 }
 
