@@ -15,7 +15,7 @@ class QuestionDrawer extends React.Component {
             <div className="variables">
                 <div onClick={() => switchQuestion('sex')} className="variable-switch-unanswered">
                     <div className="flex-row">
-                        <div>
+                        <div className="icon-label">
                             <div>
                                 <object className="variable-icon-unanswered" data="/assets/sex.svg" type="image/svg+xml" />
                             </div>
@@ -27,10 +27,15 @@ class QuestionDrawer extends React.Component {
                         </div>
                     </div>
                     <div className="flex-row">
-                        <div>
-                            <object className="variable-icon-unanswered" data="/assets/age.svg" type="image/svg+xml" />
+                        <div className="icon-label">
+                            <div>
+                                <object className="variable-icon-unanswered" data="/assets/age.svg" type="image/svg+xml" />
+                            </div>
+                            <div className="topic-unanswered">age</div>
                         </div>
-                        <div className="topic-unanswered">age</div>
+                        <div className="input-area">
+                            <div>age control goes here</div>
+                        </div>
                     </div>
                     <div className="flex-row">
                         <div>
