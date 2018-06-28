@@ -11,7 +11,7 @@ const questions = {
     2: 'stage',
     3: 'grade',
     4: 'diagnosed',
-};
+}
 
 class SurveyPage extends React.Component {
     state = { activeQuestion: 'sex' }

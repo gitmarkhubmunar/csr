@@ -40,6 +40,7 @@ class CardVariables extends React.Component {
                     <div className="input">{diagnosed}</div>
                 </div>
 
+
                    <div onClick={() => switchQuestion('sex')} className="variable-switch-unanswered">
 
 

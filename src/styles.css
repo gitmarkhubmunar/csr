@@ -61,7 +61,7 @@ body {
 	box-shadow: 0 2px 8px rgba(0, 0, 0, .5);
 	height: 400px;
 	margin: 0 auto;
-	width: 382px;
+	width: 100%;
 	background: white;
 }
 
@@ -76,8 +76,8 @@ body {
 }
 
 .title-bar {
-	border-top-left-radius: 8px;
-	border-top-right-radius: 8px;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
 	color: white;
   	align-items: center;
 }
@@ -107,34 +107,53 @@ body {
 }
 
 .unanswered-row {
-	display: wrap;
-	margin: 5% 15% auto;
- }
+	margin: 0 5px;
+	background: grey;
+    border: 2px solid green;
+}
+
+.customized-panel {
+    display: flex;
+    border: 3px solid green;
+}
+
+.input-area {
+    display: flex;
+	background: yellow;
+}
+
+.input-panel {
+    display: flex;
+    border: 2px solid blue;
+    width: 100%;
+}
 
 .unanswered-button {
 	height: 24px;
 	display: flex;
 }
 
-.variable-switch-unanswered  {
+/*.variable-switch-unanswered  {
  	padding-top: 0px;
  	display: flex;
  	flex: 0 1 auto;
 
-}
+}*/
 .variable-icon-unanswered {
-	width: 15px;
-	flex: 1;
+	display: flex ;
+    width: 15px;
 }
 
 .topic-unanswered {
+    display: flex;
 	width: 100%;
+    background: red;
 	color: black;
 	text-align: center;
 	font-weight: 600;
 }
 
-.variable-switch {
+/*.variable-switch {
   /*border-radius: 90px;*/
   background-color: #4d0092;
   border-radius: 24px;
@@ -144,8 +163,10 @@ body {
   margin: 6px;
   padding: 10px;
   text-align: center;
-  width: 130px;
-}
+  width: 130px;*/
+/*}*/
+
+
 .variable-switch > div {
   display: flex;
   flex: 1 1 auto;
@@ -165,6 +186,12 @@ body {
 .input {
   color: #FC4D97;
   text-align: center;
+}
+
+.input-unanswered {
+    display: flex;
+    border: 1px solid red;
+    width: 100%;
 }
 
 .toggle {
@@ -290,6 +317,7 @@ input:checked ~ drop-menu menu1 {
 /* Home page */
 
 .cancer-surival-rates-header {
+
   color: #4d0092;
   font-size: 26px;
   text-align: center;

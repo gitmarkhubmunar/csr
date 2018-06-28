@@ -121,7 +121,9 @@ class QuestionPanel extends React.Component {
         };
 
         return <div className="question-panel">
-            {isFinished === true ? <MessagingPanel /> : <div className="question-controls">{showQuestion(activeQuestion)}</div>}
+            {isFinished === false
+            
+             ? <MessagingPanel /> : <div className="question-controls">{showQuestion(activeQuestion)}</div>}
            
            </div>
     }

@@ -3,6 +3,7 @@ import React from 'react'
 import CardStatistics from './CardStatistics'
 import CardTitleBar from './CardTitleBar'
 import CardVariables from './CardVariables'
+import CustomizedQuestions from './CustomizedQuestions'
 
 class Card extends React.Component {
     render () {
@@ -10,15 +11,15 @@ class Card extends React.Component {
         return (
             <div className="card">
         		<CardTitleBar title="Liver Cancer" />
-        		<CardStatistics rate={25} />
-        		<CardVariables
+        		<CardStatistics rate={72} />
+                <CustomizedQuestions
                     switchQuestion={switchQuestion}
-        			age={77}
-        			diagnosed="Jan 2016"
-        			grade="differentiated"
-        			sex="female"
-        			stage="3"
-        		/>
+                    age={77}
+                    diagnosed="Jan 2016"
+                    grade="differentiated"
+                    sex="female"
+                    stage="3"
+                />
             </div>
         )
     }
