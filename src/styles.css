@@ -45,7 +45,6 @@ body {
 
 .app {
   height: 100vh;
-  overflow: hidden;
 }
 
 .home-page {
@@ -498,7 +497,7 @@ input:checked ~ drop-menu menu1 {
   margin: 4% 0px;
 }
 
-.container{
+.container {
   display: flex;
   flex-direction: row;
 }
@@ -508,11 +507,38 @@ input:checked ~ drop-menu menu1 {
 }
 
 .messaging-panel {
-  background: #551A8B;
+    background: #551A8B;
 }
 
 .faq {
-    background: purple;
+    background: #551A8B;
+    color: white;
+    padding: 10%;
+}
+.faq > h3 {
+    font-weight: normal;
+    font-size: 30px;
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+.faq-question {
+    padding: 10px 0;
+    border-bottom: 1px solid white;
+    align-items: center;
+}
+.faq-question:nth-of-type(1) {
+    border-top: 1px solid white;
+}
+.faq-question > div:nth-of-type(1) {
+    font-weight: bold;
+    font-size: 40px;
+}
+.faq-question > div:nth-of-type(2) {
+    flex: 1;
+    padding: 0 20px;
+}
+.faq-question > div:nth-of-type(3) {
+    font-size: 40px;
 }
 
 /* Re-usable styles */
