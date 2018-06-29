@@ -511,6 +511,10 @@ input:checked ~ drop-menu menu1 {
   background: #551A8B;
 }
 
+.faq {
+    background: purple;
+}
+
 /* Re-usable styles */
 
 .relative {
