@@ -117,6 +117,28 @@ body {
   width: 100%;
 }
 
+.button-u {
+  border: 2px solid grey;
+  border-radius: 14px;
+  padding: 14px 60px;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-stage {
+ display: grid;
+ grid-template-columns: 60px 60px 60px 60px;
+ grid-column-gap: 5%;
+}
+
+.button-stage div {
+  border: 2px solid grey;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
 .icon-label {
     max-width: 25%;
     min-width: 15%;
@@ -143,16 +165,19 @@ body {
 }*/
 .variable-icon-unanswered {
   display: flex ;
-  width: 15px;
+  width: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
 }
 
 .topic-unanswered {
-  display: flex;
-  width: 100%;
-  background: red;
+  align-items: center;
   color: black;
-  text-align: center;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center
 }
 
 ./*variable-switch {
