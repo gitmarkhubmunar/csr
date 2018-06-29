@@ -120,23 +120,12 @@ body {
 .button-u {
   border: 2px solid grey;
   border-radius: 14px;
-  padding: 14px 60px;
+  padding: 14px 20px;
   justify-content: center;
   align-items: center;
 }
-
-.button-stage {
- display: grid;
- grid-template-columns: 60px 60px 60px 60px;
- grid-column-gap: 5%;
-}
-
-.button-stage div {
-  border: 2px solid grey;
-  border-radius: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center
+.button-u ~ .button-u {
+  margin-left: 10px;
 }
 
 .icon-label {
@@ -535,6 +524,9 @@ input:checked ~ drop-menu menu1 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+.nowrap {
+    flex-wrap: nowrap;
 }
 .flex-auto {
     flex: 1 auto;
