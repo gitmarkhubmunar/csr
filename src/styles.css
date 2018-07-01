@@ -45,7 +45,6 @@ body {
 
 .app {
   height: 100vh;
-  overflow: hidden;
 }
 
 .home-page {
@@ -83,7 +82,7 @@ body {
   width: 80px;
 }
 .patient-switch.switch.on {
-  background: yellow;
+  background: lightgray;
 }
 .patient-switch.switch.on > .switch-toggle {
   left: 53px;
@@ -117,14 +116,26 @@ body {
   width: 100%;
 }
 
+.button-u {
+  border: 2px solid grey;
+  border-radius: 14px;
+  padding: 14px 20px;
+  justify-content: center;
+  align-items: center;
+}
+.button-u ~ .button-u {
+  margin-left: 10px;
+}
+
 .icon-label {
     max-width: 25%;
     min-width: 15%;
     padding: 20px;
+    background: light gray;
 }
 .input-area {
     align-items: center;
-    background: yellow;
+    background: light gray;
     display: flex;
     flex: 1;
     justify-content: center;
@@ -143,16 +154,19 @@ body {
 }*/
 .variable-icon-unanswered {
   display: flex ;
-  width: 15px;
+  width: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
 }
 
 .topic-unanswered {
-  display: flex;
-  width: 100%;
-  background: red;
+  align-items: center;
   color: black;
-  text-align: center;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center
 }
 
 ./*variable-switch {
@@ -254,6 +268,7 @@ body {
 .dropdown-container .selected {
   color: purple;
 }
+
 .dropdown-container .selected:before {
   border-bottom: 8px solid #E5D9E8;
   bottom: 0px;
@@ -359,9 +374,6 @@ input:checked ~ drop-menu menu1 {
   display: inline-block;
 }
 
-/*.statistics {
-  border: 1px solid red;
-}*/
 
 .question-panel {
   flex: 1 auto;
@@ -378,12 +390,31 @@ input:checked ~ drop-menu menu1 {
   height: 200px;
 }
 
+.statistic-line {
+  flex: 1;
+  background: white;
+
+}
+
 .percentage {
   font-size: 55px;
   letter-spacing: -0.01em;
   font-weight: 600;
-  padding: 15px;
+  padding: 20px;
+  text-align: center;
 }
+
+.survival-line {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 30px;
+    width: 100%;
+    flex-wrap: nowrap;
+
+}
+
 .stat-copy {
   font-size: 14px;
   max-width: 100%;
@@ -484,7 +515,7 @@ input:checked ~ drop-menu menu1 {
   margin: 4% 0px;
 }
 
-.container{
+.container {
   display: flex;
   flex-direction: row;
 }
@@ -494,7 +525,38 @@ input:checked ~ drop-menu menu1 {
 }
 
 .messaging-panel {
-  background: #551A8B;
+    background: #551A8B;
+}
+
+.faq {
+    background: #551A8B;
+    color: white;
+    padding: 10%;
+}
+.faq > h3 {
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    margin: 40px 0 20px 0;
+}
+.faq-question {
+    padding: 10px 0;
+    border-bottom: 1px solid white;
+    align-items: center;
+}
+.faq-question:nth-of-type(1) {
+    border-top: 1px solid white;
+}
+.faq-question > div:nth-of-type(1) {
+    font-weight: bold;
+    font-size: 40px;
+}
+.faq-question > div:nth-of-type(2) {
+    flex: 1;
+    padding: 0 20px;
+}
+.faq-question > div:nth-of-type(3) {
+    font-size: 40px;
 }
 
 /* Re-usable styles */
@@ -510,6 +572,9 @@ input:checked ~ drop-menu menu1 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+.nowrap {
+    flex-wrap: nowrap;
 }
 .flex-auto {
     flex: 1 auto;
@@ -628,8 +693,12 @@ input:checked ~ drop-menu menu1 {
 .purple {
   color: #4d0092;
 }
-.bg-purple {
-  background: #4d0092;
+
+.bg-green {
+    color: green;
+}
+.title-cancer-color {
+  background: green;
 }
 .bg-white {
     background: white;

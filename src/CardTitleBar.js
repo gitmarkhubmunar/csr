@@ -9,9 +9,9 @@ class CardTitleBar extends React.Component {
 		const { title } = this.props;
         const { isPatient } = this.state;
         return (
-            <div className="title-bar bg-purple flex-row padding-2">
-        		<div className="toggle" style={{ flex: '0 0 20%' }}>
-        			<Switch className="patient-switch" onClick={() => this.setState({ isPatient: !isPatient })} on={isPatient === true} />
+            <div className="title-bar title-cancer-color flex-row padding-2">
+        	<div className="toggle" style={{ flex: '0 0 20%' }}>
+        		<Switch className="patient-switch" onClick={() => this.setState({ isPatient: !isPatient })} on={isPatient === true} />
                     <div className={isPatient === true ? 'role patient' : 'role'}>{isPatient === true ? 'Patient' : 'Doctor'}</div>
         		</div>
         		<div className="text-center" style={{ flex: '1 0 auto' }}>
