@@ -24,7 +24,7 @@ class Faq extends React.Component {
             <h3>Questions for you to think about & discuss</h3>
             <div className="faq-question flex-row nowrap">
               <div>1</div>
-              <div>What's important to me? What are my priorities?</div>
+              <div>What’s important to me? What are my priorities?</div>
               <div>+</div>
             </div>
             <div className="faq-question flex-row nowrap">
@@ -37,9 +37,7 @@ class Faq extends React.Component {
               <div>Should I have a will or a living trust?</div>
               <div>+</div>
             </div>
-
-          </div>
-
+            </div>
         )
     }
 }

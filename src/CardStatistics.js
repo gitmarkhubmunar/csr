@@ -40,16 +40,12 @@ class CardStatistics extends React.Component {
 		return (
 			<div className="statistics">
 				<div className="border-bottom flex-row">
-					
 					<div className="statistic-line"> 
-								<div className="percentage bg-green">
-									{rate}%
-								</div>
-							</div>
-							<div 
-								className="survival-line"
-								style={{  }}
-							>
+						<div className="percentage bg-green">
+							{rate}%
+						</div>
+					</div>
+							<div className="survival-line" style={{  }}>
 								5 year survival rate
 							</div>
 				</div>
