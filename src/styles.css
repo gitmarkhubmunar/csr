@@ -99,13 +99,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: solid 2px purple;
 }
 
 .variable-row {
     width: 400px;
-    border: 1px solid red;
-
+    margin-top: 16px;
 }
 
 .unanswered-row {
@@ -126,22 +124,22 @@ body {
 }
 
 .button-u {
-  border: 2px solid grey;
+  border: 3px solid white;
   border-radius: 14px;
-  padding: 14px 20px;
+  padding: 14px 0;
   flex: 1;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  margin: 4px;
 }
 .button-u ~ .button-u {
-  margin-left: 10px;
 }
 
 .icon-label {
     max-width: 25%;
     min-width: 15%;
-    padding: 20px;
-    background: teal;
+    padding: 15px 0;
     flex-grow: 1;
     align-items: center;
 
@@ -408,17 +406,13 @@ input:checked ~ drop-menu menu1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: solid 2px purple;
 }
 
 .stat-header {
-  background: yellow;
   width: 400px;
-  border: solid 1px red;
 }
 
 .stat-viz {
-    border: solid 1px teal;
     width: 400px;
 }
 
