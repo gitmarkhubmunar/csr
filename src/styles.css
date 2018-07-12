@@ -91,12 +91,21 @@ body {
 }
 
 .variables {
-  font-weight: 200;
-  margin: 0 0;
-  color: #666;
-  font-size: 12px;
-  letter-spacing: .8px;
-  
+    font-weight: 200;
+    margin: 0 0;
+    color: #666;
+    font-size: 12px;
+    letter-spacing: .8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 2px purple;
+}
+
+.variable-row {
+    width: 400px;
+    border: 1px solid red;
+
 }
 
 .unanswered-row {
@@ -120,6 +129,7 @@ body {
   border: 2px solid grey;
   border-radius: 14px;
   padding: 14px 20px;
+  flex: 1;
   justify-content: center;
   align-items: center;
 }
@@ -131,7 +141,10 @@ body {
     max-width: 25%;
     min-width: 15%;
     padding: 20px;
-    background: light gray;
+    background: teal;
+    flex-grow: 1;
+    align-items: center;
+
 }
 .input-area {
     align-items: center;
@@ -139,6 +152,7 @@ body {
     display: flex;
     flex: 1;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .unanswered-button {
@@ -390,6 +404,24 @@ input:checked ~ drop-menu menu1 {
   height: 200px;
 }
 
+.statistics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 2px purple;
+}
+
+.stat-header {
+  background: yellow;
+  width: 400px;
+  border: solid 1px red;
+}
+
+.stat-viz {
+    border: solid 1px teal;
+    width: 400px;
+}
+
 .statistic-line {
   flex: 1;
   background: white;
@@ -402,6 +434,7 @@ input:checked ~ drop-menu menu1 {
   font-weight: 600;
   padding: 20px;
   text-align: center;
+  flex: 1;
 }
 
 .survival-line {

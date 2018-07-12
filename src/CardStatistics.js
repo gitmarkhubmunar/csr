@@ -39,21 +39,22 @@ class CardStatistics extends React.Component {
 		const { rate } = this.props;
 		return (
 			<div className="statistics">
-				<div className="border-bottom flex-row">
+				<div className="stat-header border-bottom flex-row">
 					<div className="statistic-line"> 
 						<div className="percentage bg-green">
 							{rate}%
 						</div>
 					</div>
-							<div className="survival-line" style={{  }}>
-								5 year survival rate
-							</div>
+					<div className="survival-line" style={{ }}>
+						5 year survival rate
+					</div>
 				</div>
-				<div className="border-bottom flex-row">
+				<div className="stat-viz border-bottom flex-row">
 					<div style={{ flex: '0 0 35%', padding: '10px 0' }}>
 						<div  className="stat-copy">
-							Given a <b>group of ten people</b> with the same type of cancer and profile</div>
+							Given a <b>group of ten people</b> with the same type of cancer and profile
 						</div>
+					</div>
 					<div className="icon-array">
 						{this.renderIconArray(rate)}
 					</div>

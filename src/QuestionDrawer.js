@@ -13,7 +13,7 @@ class QuestionDrawer extends React.Component {
         } = this.props
         return (
             <div className="variables">
-                <div className="flex-row nowrap">
+                <div className="variable-row flex-row nowrap">
                     <div className="icon-label">
                         <div>
                             <object className="variable-icon-unanswered" data="/assets/sex.svg" type="image/svg+xml" />
@@ -25,7 +25,7 @@ class QuestionDrawer extends React.Component {
                         <div className="button-u">female</div>
                     </div>
                 </div>
-                <div className="flex-row nowrap">
+                <div className="variable-row flex-row nowrap">
                     <div className="icon-label">
                         <div>
                             <object className="variable-icon-unanswered" data="/assets/age.svg" type="image/svg+xml" />
@@ -36,7 +36,7 @@ class QuestionDrawer extends React.Component {
                         <div>[ insert age slider ]</div>
                     </div>
                 </div>
-                <div className="flex-row nowrap">
+                <div className="variable-row flex-row nowrap">
                     <div className="icon-label">
                         <div>
                             <object className="variable-icon-unanswered" data="/assets/stage.svg" type="image/svg+xml" />
@@ -50,7 +50,7 @@ class QuestionDrawer extends React.Component {
                         <div className="button-u">4</div>
                     </div>
                 </div> 
-                <div className="flex-row nowrap">
+                <div className="variable-row flex-row nowrap">
                     <div className="icon-label">
                         <div>
                             <object className="variable-icon-unanswered" data="/assets/grade.svg" type="image/svg+xml" />
@@ -60,10 +60,10 @@ class QuestionDrawer extends React.Component {
                     <div className="input-area">
                         <div className="button-u">well</div>
                         <div className="button-u">moderately</div>
-                        <div className="button-u">moderately</div>
+                        <div className="button-u">poorly</div>
                     </div> 
                 </div>               
-                <div className="flex-row nowrap">
+                <div className="variable-row flex-row nowrap">
                     <div className="icon-label">
                         <div>
                             <object className="variable-icon-unanswered" data="/assets/diagnosed.svg" type="image/svg+xml" />
