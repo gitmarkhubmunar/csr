@@ -14,9 +14,9 @@ class Heart extends React.Component {
         // Adding position="absolute" to the Haku component fixes the problem, but shouldn’t be necessary.
         return (
             <div className="heart-container">
-                {kind === 'full' && <HeartFull position="absolute" sizing="contain" loop={false} />}
+                {kind === 'full' && <object className="heart-icon" data="/assets/heart.svg" type="image/svg+xml" />}
                 {kind === 'empty' && <object className="heart-icon" data="/assets/emptyheart.svg" type="image/svg+xml" />}
-                {kind === 'half' && <div>I'M HALF FULL</div>}
+                {kind === 'half' && <object className="heart-icon" data="/assets/hearthalffull.svg" type="image/svg+xml" />}
             </div>
         )
     }

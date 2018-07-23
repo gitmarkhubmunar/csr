@@ -496,6 +496,7 @@ input:checked ~ drop-menu menu1 {
   line-height: 1.4;
   padding: 15px;
 }
+
 .icon-array {
   padding-top: 5px;
   height: 0px;
@@ -1019,6 +1020,80 @@ input:checked ~ drop-menu menu1 {
     margin: 25px auto;
     line-height: 1.4em;
   }
+
+  .variable-row {
+    width: 375px;
+    margin-top: 16px;
+    padding-right: 4px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.icon-label {
+    max-width: 22%;
+    min-width: 15%;
+    padding: 15px 0 0 4px;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.stat-copy {
+  font-size: 14px;
+  max-width: 100%;
+  line-height: 1.4;
+  padding: 15px;
+  margin-left: 8px;
+}
+
+.input-area {
+    align-items: center;
+    background: light gray;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.button-u {
+  border: 3px solid grey;
+  border-radius: 14px;
+  padding: 14px 0;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0px 12px 0px 0px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+
+.input-field {
+    height: 35px;
+    width: 100%;
+    margin-right: 14px;
+}
+
+.heart-parent-container {
+  height: 30px;
+  margin-top: 16px;
+}
+
+.heart-first-row {
+  height: 44px;
+}
+
+.heart-container {
+  width: 44px;
+  height: 44px;
+  display: inline-block;
+  margin: 0 0 0 0;
+}
+
 }
 
 @media screen and (max-width: 375px) {
