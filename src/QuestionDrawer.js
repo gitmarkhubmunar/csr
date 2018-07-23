@@ -33,7 +33,7 @@ class QuestionDrawer extends React.Component {
                         <div className="topic-unanswered">age</div>
                     </div>
                     <div className="input-area">
-                        <div>[ insert age slider ]</div>
+                        <input className="input-field"/>
                     </div>
                 </div>
                 <div className="variable-row flex-row nowrap">
@@ -71,7 +71,7 @@ class QuestionDrawer extends React.Component {
                         <div className="topic-unanswered">diagnosed</div>
                     </div>
                     <div className="input-area">
-                        <div>[ insert diagnosed slider ]</div>
+                        <div>[ What does the back end need? How precise do you need to be? set metrics]</div>
                     </div>
                 </div>
             </div>

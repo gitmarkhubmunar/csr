@@ -1,6 +1,7 @@
 import Icon from 'react-ionicons'
 import React from 'react'
 import Switch from 'react-toggle-switch'
+import Toggle2 from '@haiku/thev1sual-toggle2/react';
 
 class CardTitleBar extends React.Component {
     state = { isPatient: true }
@@ -10,11 +11,11 @@ class CardTitleBar extends React.Component {
         const { isPatient } = this.state;
         return (
             <div className="title-bar title-cancer-color flex-row padding-2">
-        	<div className="toggle" style={{ flex: '0 0 20%' }}>
-        		<Switch className="patient-switch" onClick={() => this.setState({ isPatient: !isPatient })} on={isPatient === true} />
+            	<div className="toggle" style={{ flex: '0 0 20%' }}>
+            		<Switch className="patient-switch" onClick={() => this.setState({ isPatient: !isPatient })} on={isPatient === true} />
                     <div className={isPatient === true ? 'role patient' : 'role'}>{isPatient === true ? 'Patient' : 'Doctor'}</div>
-        		</div>
-        		<div className="text-center" style={{ flex: '1 0 auto' }}>
+            	</div>  
+                <div className="text-center" style={{ flex: '1 0 auto' }}>
         			{title}
         		</div>
         		<div style={{ flex: '0 0 20%', textAlign: 'right' }}>
@@ -26,3 +27,6 @@ class CardTitleBar extends React.Component {
 }
 
 export default CardTitleBar
+
+
+

@@ -1,6 +1,8 @@
 import Icon from 'react-ionicons'
 import React from 'react'
 
+import Heart from './Heart'
+
 class CardStatistics extends React.Component {
 	renderIconArray = (rate: number) => {
 		const totalHearts = 10;
@@ -13,9 +15,9 @@ class CardStatistics extends React.Component {
 		for (let t = 1; t <= totalHearts; t++) {
 			// Use the correct icon; by default it's the outline,
 			// but filled in when t <= filledHeartsCount.
-			let icon = <object className="heart-icon" data="/assets/emptyheart.svg" type="image/svg+xml" />
+			let icon = <Heart kind="empty" />
 			if (t <= filledHeartsCount) {
-				icon = <object className="heart-icon" data="/assets/heart.svg" type="image/svg+xml" />
+				icon = <Heart kind="full" />
 			}
 
 			// If t <= 5, put in first row; else put in second row.
@@ -28,9 +30,9 @@ class CardStatistics extends React.Component {
 		}
 
 		return (
-			<div>
-				<div>{iconArrayFirstRow}</div>
-				<div>{iconArraySecondRow}</div>
+			<div className="heart-parent-container">
+				<div className="heart-first-row">{iconArrayFirstRow}</div>
+				<div className="heart-second-row">{iconArraySecondRow}</div>
 			</div>
 		)
 	}
