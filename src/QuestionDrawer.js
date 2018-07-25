@@ -1,7 +1,11 @@
 import Icon from 'react-ionicons'
 import React from 'react'
 
+import Slider from 'rc-slider'
+import ButtonSurvey from './ButtonSurvey'
+
 class QuestionDrawer extends React.Component {
+
     render () {
         const {
             age,
@@ -21,8 +25,8 @@ class QuestionDrawer extends React.Component {
                         <div className="topic-unanswered">sex</div>
                     </div>
                     <div className="input-area">
-                        <div className="button-u">male</div>
-                        <div className="button-u">female</div>
+                        <ButtonSurvey className="button-u" name="male" />
+                        <ButtonSurvey className="button-u" name="female" />
                     </div>
                 </div>
                 <div className="variable-row flex-row nowrap">
@@ -44,10 +48,10 @@ class QuestionDrawer extends React.Component {
                         <div className="topic-unanswered">stage</div>
                     </div>
                     <div className="input-area">
-                        <div className="button-u">1</div>
-                        <div className="button-u">2</div>
-                        <div className="button-u">3</div>
-                        <div className="button-u">4</div>
+                        <ButtonSurvey className="button-u" name="1" />
+                        <ButtonSurvey className="button-u" name="2" />
+                        <ButtonSurvey className="button-u" name="3" />
+                        <ButtonSurvey className="button-u" name="4" />
                     </div>
                 </div> 
                 <div className="variable-row flex-row nowrap">
@@ -58,9 +62,9 @@ class QuestionDrawer extends React.Component {
                         <div className="topic-unanswered">grade</div>
                     </div>
                     <div className="input-area">
-                        <div className="button-u">well</div>
-                        <div className="button-u">moderately</div>
-                        <div className="button-u">poorly</div>
+                        <ButtonSurvey className="button-u" name="well" />
+                        <ButtonSurvey className="button-u" name="moderately" />
+                        <ButtonSurvey className="button-u" name="poorly" />
                     </div> 
                 </div>               
                 <div className="variable-row flex-row nowrap">
@@ -71,9 +75,15 @@ class QuestionDrawer extends React.Component {
                         <div className="topic-unanswered">diagnosed</div>
                     </div>
                     <div className="input-area">
-                        <div>[ What does the back end need? How precise do you need to be? set metrics]</div>
-                    </div>
-                </div>
+                        <ButtonSurvey className="button-u" name="this week" />
+                        <ButtonSurvey className="button-u" name="this month" />
+                        <ButtonSurvey className="button-u" name="6 Mos ago" />
+                        <ButtonSurvey className="button-u" name="1 Yr ago" />
+                     </div>
+                  
+
+
+                </div> 
             </div>
         )
     }

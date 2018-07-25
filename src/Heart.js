@@ -1,7 +1,7 @@
 import React from 'react'
 
 import HeartAnimation from '@haiku/thev1sual-heartanimation/react'
-import HeartFull from '@haiku/thev1sual-heartfull/react';
+import HeartFull from '@haiku/thev1sual-heartfull/react'
 
 class Heart extends React.Component {
     render () {
