@@ -80,9 +80,17 @@ class QuestionDrawer extends React.Component {
                         <ButtonSurvey className="button-u" name="6 Mos ago" />
                         <ButtonSurvey className="button-u" name="1 Yr ago" />
                      </div>
-                  
-
-
+                </div> 
+                <div className="variable-row flex-row nowrap">
+                    <div className="icon-label">
+                        <div>
+                            <object className="variable-icon-unanswered" data="/assets/diagnosed.svg" type="image/svg+xml" />
+                        </div>
+                        <div className="topic-unanswered">diagnosed</div>
+                    </div>
+                    <div className="input-area slider-container">
+                        <Slider value={1} />
+                    </div>
                 </div> 
             </div>
         )
