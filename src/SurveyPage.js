@@ -5,39 +5,49 @@ import CourageVoice from './CourageVoice'
 import QuestionDrawer from './QuestionDrawer'
 import Faq from './Faq'
 
-const questions = {
-    0: 'sex',
-    1: 'age',
-    2: 'stage',
-    3: 'grade',
-    4: 'diagnosed',
-}
-
 class SurveyPage extends React.Component {
-    state = { activeQuestion: 'sex' }
+    state = {
+        age: null,
+        cancerType: 'Liver',
+        diagnosed: null, // TODO: How is "diagnosed date" stored? Date? Number? Text?
+        grade: null,
+        rate: null,
+        sex: null,
+        stage: null,
+    }
 
-    switchQuestion = (nextQuestion: string) => {
-        this.setState({ activeQuestion: nextQuestion })
+    calculateCsr = () => {
+        // TODO: Connect to real survival-rate function/calculator.
+        const newRate = Math.round(Math.random(0, 1) * 100)
+        this.setState({ rate: newRate })
+    }
+
+    changeValue = (key, value) => {
+        this.setState({ [key]: value })
+        this.calculateCsr()
     }
 
     render () {
-        const { activeQuestion } = this.state
+        console.log('I was triggered during render')
+        const { age, cancerType, diagnosed, grade, rate, sex, stage } = this.state
         return (
             <div className="survey-page">
-                <Card switchQuestion={this.switchQuestion} />
+                <Card cancerType={cancerType} rate={rate} />
                 <QuestionDrawer
-                    age={77}
-                    diagnosed="Jan 2016"
-                    grade="differentiated"
-                    sex="female"
-                    stage="3"
-                    switchQuestion={this.switchQuestion}
+                    age={age}
+                    changeValue={this.changeValue}
+                    diagnosed={diagnosed}
+                    grade={grade} 
+                    sex={sex}
+                    stage={stage}
                 />
-                <Faq />
+                <Faq  />
                 <CourageVoice />
             </div>
         )
     }
 }
+
+
 
 export default SurveyPage

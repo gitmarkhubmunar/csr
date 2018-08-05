@@ -15,9 +15,9 @@ class CardStatistics extends React.Component {
 		for (let t = 1; t <= totalHearts; t++) {
 			// Use the correct icon; by default it's the outline,
 			// but filled in when t <= filledHeartsCount.
-			let icon = <Heart kind="empty" />
+			let icon = <Heart key={t} kind="empty" />
 			if (t <= filledHeartsCount) {
-				icon = <Heart kind="full" />
+				icon = <Heart key={t} kind="full" />
 			}
 
 			// If t <= 5, put in first row; else put in second row.
