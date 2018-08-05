@@ -13,9 +13,9 @@ class QuestionDrawer extends React.Component {
                 <div className="variable-row flex-row nowrap">
                     <div className="icon-label">
                         <div>
-                            <object className="variable-icon-unanswered" data="/assets/sex.svg" type="image/svg+xml" />
+                            <object className={sex === null ? 'variable-icon' : 'variable-icon answered'} data="/assets/sex.svg" type="image/svg+xml" />
                         </div>
-                        <div className="topic-unanswered">sex</div>
+                        <div className={sex === null ? 'variable-name' : 'variable-name answered'}>sex</div>
                     </div>
                     <div className="input-area">
                         <ButtonSurvey handleClick={() => changeValue('sex', 'male')} className="button-u" name="male" turnedOn={sex === 'male'} />
@@ -25,9 +25,9 @@ class QuestionDrawer extends React.Component {
                 <div className="variable-row flex-row nowrap">
                     <div className="icon-label">
                         <div>
-                            <object className="variable-icon-unanswered" data="/assets/age.svg" type="image/svg+xml" />
+                            <object className={age === null ? 'variable-icon' : 'variable-icon answered'} data="/assets/age.svg" type="image/svg+xml" />
                         </div>
-                        <div className="topic-unanswered">age</div>
+                        <div className={age === null ? 'variable-name' : 'variable-name answered'}>age</div>
                     </div>
                     <div className="input-area">
                         <input className="input-field" onBlur={(event) => changeValue('age', event.target.value)} initialValue={age} />
@@ -36,9 +36,9 @@ class QuestionDrawer extends React.Component {
                 <div className="variable-row flex-row nowrap">
                     <div className="icon-label">
                         <div>
-                            <object className="variable-icon-unanswered" data="/assets/stage.svg" type="image/svg+xml" />
+                            <object className={stage === null ? 'variable-icon' : 'variable-icon answered'} data="/assets/stage.svg" type="image/svg+xml" />
                         </div>
-                        <div className="topic-unanswered">stage</div>
+                        <div className={stage === null ? 'variable-name' : 'variable-name answered'}>stage</div>
                     </div>
                     <div className="input-area">
                         <ButtonSurvey handleClick={() => changeValue('stage', '1')} className="button-u" name="1" turnedOn={stage === '1'} />
@@ -50,9 +50,9 @@ class QuestionDrawer extends React.Component {
                 <div className="variable-row flex-row nowrap">
                     <div className="icon-label">
                         <div>
-                            <object className="variable-icon-unanswered" data="/assets/grade.svg" type="image/svg+xml" />
+                            <object className={grade === null ? 'variable-icon' : 'variable-icon answered'} data="/assets/grade.svg" type="image/svg+xml" />
                         </div>
-                        <div className="topic-unanswered">grade</div>
+                        <div className={grade === null ? 'variable-name' : 'variable-name answered'}>grade</div>
                     </div>
                     <div className="input-area">
                         <ButtonSurvey handleClick={() => changeValue('grade', '1')} className="button-u" name="well" turnedOn={grade === '1'} />
@@ -63,9 +63,9 @@ class QuestionDrawer extends React.Component {
                 <div className="variable-row flex-row nowrap">
                     <div className="icon-label">
                         <div>
-                            <object className="variable-icon-unanswered" data="/assets/diagnosed.svg" type="image/svg+xml" />
+                            <object className={diagnosed === null ? 'variable-icon' : 'variable-icon answered'} data="/assets/diagnosed.svg" type="image/svg+xml" />
                         </div>
-                        <div className="topic-unanswered">diagnosed</div>
+                        <div className={diagnosed === null ? 'variable-name' : 'variable-name answered'}>diagnosed</div>
                     </div>
                     <div className="input-area">
                         <ButtonSurvey className="button-u" name="this week" />
@@ -77,9 +77,9 @@ class QuestionDrawer extends React.Component {
                 <div className="variable-row flex-row nowrap">
                     <div className="icon-label">
                         <div>
-                            <object className="variable-icon-unanswered" data="/assets/diagnosed.svg" type="image/svg+xml" />
+                            <object className={sex === null ? 'variable-icon' : 'variable-icon answered'} data="/assets/diagnosed.svg" type="image/svg+xml" />
                         </div>
-                        <div className="topic-unanswered">diagnosed</div>
+                        <div className={sex === null ? 'variable-name' : 'variable-name answered'}>diagnosed</div>
                     </div>
                     <div className="input-area slider-container">
                         <Slider value={1} />

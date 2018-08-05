@@ -237,21 +237,30 @@ body {
   flex: 0 1 auto;
 
 }*/
-.variable-icon-unanswered {
+.variable-icon {
   display: flex ;
   width: 20px;
   display: block;
   margin-left: auto;
-  margin-right: auto; 
+  margin-right: auto;
+  opacity: .3;
+  transition: opacity .3s ease;
 }
-
-.topic-unanswered {
+.variable-icon.answered {
+  opacity: 1;
+}
+.variable-name {
   align-items: center;
   color: black;
   font-weight: 600;
   display: flex;
   align-items: center;
-  justify-content: center
+  justify-content: center;
+  opacity: .3;
+  transition: opacity .3s ease;
+}
+.variable-name.answered {
+  opacity: 1;
 }
 
 ./*variable-switch {
