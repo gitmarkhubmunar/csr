@@ -1,7 +1,6 @@
 import Icon from 'react-ionicons'
 import React from 'react'
 
-import Slider from 'rc-slider'
 import ButtonSurvey from './ButtonSurvey'
 
 class QuestionDrawer extends React.Component {
@@ -73,18 +72,7 @@ class QuestionDrawer extends React.Component {
                         <ButtonSurvey className="button-u" name="6 Mos ago" />
                         <ButtonSurvey className="button-u" name="1 Yr ago" />
                      </div>
-                </div> 
-                <div className="variable-row flex-row nowrap">
-                    <div className="icon-label">
-                        <div>
-                            <object className={sex === null ? 'variable-icon' : 'variable-icon answered'} data="/assets/diagnosed.svg" type="image/svg+xml" />
-                        </div>
-                        <div className={sex === null ? 'variable-name' : 'variable-name answered'}>diagnosed</div>
-                    </div>
-                    <div className="input-area slider-container">
-                        <Slider value={1} />
-                    </div>
-                </div> 
+                </div>
             </div>
         )
     }

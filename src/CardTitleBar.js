@@ -1,7 +1,6 @@
 import Icon from 'react-ionicons'
 import React from 'react'
 import Switch from 'react-toggle-switch'
-import Toggle2 from '@haiku/thev1sual-toggle2/react';
 
 class CardTitleBar extends React.Component {
     state = { isPatient: true }

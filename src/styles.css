@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Catamaran');
 @import '~react-toggle-switch/dist/css/switch.min.css';
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
+@import url('https://fonts.googleapis.com/css?family=Muli');
 
 
 
@@ -41,7 +43,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Kiro','Catamaran', 'SF UI Text', 'Arial';
+  font-family: 'Muli','Kiro','Catamaran', 'SF UI Text', 'Arial';
   color: #4C4C4C;
 }
 
@@ -99,7 +101,7 @@ body {
     margin: 0 0;
     color: #666;
     font-size: 12px;
-    letter-spacing: .8px;
+    letter-spacing: -.4px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -173,6 +175,9 @@ body {
   cursor: pointer;
   display: inline-block;
   position: relative;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  font-style: normal;
 }
 
 .button-survey:hover{
@@ -435,12 +440,13 @@ input:checked ~ drop-menu menu1 {
 
 /* Home page */
 
-.cancer-surival-rates-header {
+.cancer-survival-rates-header {
 
   color: #4d0092;
   font-size: 33px;
   text-align: center;
   padding: 0 0;
+  font-family: kiro;
 }
 
 .home-page-intro {
@@ -517,10 +523,11 @@ input:checked ~ drop-menu menu1 {
 .percentage {
   font-size: 55px;
   letter-spacing: -0.01em;
-  font-weight: 600;
+  font-weight: 900;
   padding: 20px;
   text-align: center;
   flex: 1;
+  font-weight: 900;
 }
 
 .survival-line {
@@ -528,9 +535,13 @@ input:checked ~ drop-menu menu1 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 30px;
+    font-size: 25px;
     width: 100%;
     flex-wrap: nowrap;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    font-style: normal;
+
 
 }
 
@@ -539,7 +550,17 @@ input:checked ~ drop-menu menu1 {
   max-width: 100%;
   line-height: 1.4;
   padding: 15px;
+  font-weight: 100;
+  letter-spacing: -.75px;
+  font-style: normal;
+  color: grey;
 }
+
+.bold-line{
+  font-weight: 900;
+  color: black;
+}
+
 .icon-array {
   padding-top: 22px;
   /*display: flex;*/
@@ -770,6 +791,8 @@ input:checked ~ drop-menu menu1 {
     /*border: 1px solid red;*/
   font-size: 22px;
   font-weight: 900;
+  letter-spacing: 1px;
+  font-weight: 100;
 }
 .font-size-1 {
   font-size: 16px;
@@ -951,7 +974,6 @@ input:checked ~ drop-menu menu1 {
 
   .cancer-survival-rates-header {
     color: #4d0092;
-    background: red;
     text-align: center;
     padding: 0 0;
     font-size: 26px;
@@ -969,20 +991,22 @@ input:checked ~ drop-menu menu1 {
     line-height: 1.1em;
   } 
 
-  .cancer-surival-rates-header {
+  .cancer-survival-rates-header {
     font-size: 20px;
     text-align: center;
+    font-family: kiro;
   }
 }
 
 
 
 @media screen and (max-width: 414px) {
-  .cancer-surival-rates-header {
+  .cancer-survival-rates-header {
     color: #4d0092;
     font-size: 22px;
     text-align: center;
     padding: 0 0 0 0;
+    font-family: kiro;
   }
 
     .home-page-intro {
@@ -1065,6 +1089,7 @@ input:checked ~ drop-menu menu1 {
   padding: 2px 0 0 30px;
   text-align: center;
   flex: 1;
+  font-weight: 900;
 
 }
 
@@ -1112,6 +1137,9 @@ input:checked ~ drop-menu menu1 {
   line-height: 1.4;
   padding: 15px;
   margin-left: 10px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  font-style: normal;
 
 }
 
@@ -1176,11 +1204,12 @@ width:100%;
 }
 
 @media screen and (max-width: 320px) {
-  .cancer-surival-rates-header {
+  .cancer-survival-rates-header {
     color: #4d0092;
     font-size: 16px;
     text-align: center;
     padding: 0 0 0 0;
+    font-family: kiro;
   }
 
   .home-page-intro {

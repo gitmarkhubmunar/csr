@@ -54,7 +54,7 @@ class CardStatistics extends React.Component {
 				<div className="stat-viz border-bottom flex-row">
 					<div style={{ flex: '0 0 35%', padding: '10px 0' }}>
 						<div  className="stat-copy">
-							Given a <b>group of ten people</b> with the same type of cancer and profile
+							Given a <a className="bold-line">group of ten people</a> with the same type of cancer and profile
 						</div>
 					</div>
 					<div className="icon-array">
