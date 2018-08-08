@@ -43,7 +43,7 @@ class SurveyPage extends React.Component {
                     stage={stage}
                 />
                 <Faq  />
-                <CourageVoice />
+            
             </div>
         )
     }
