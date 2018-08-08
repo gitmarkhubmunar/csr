@@ -96,16 +96,22 @@ body {
     transition: left .2s ease-in-out;
 }
 
+.drawer-tooltip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .variables {
     font-weight: 200;
-    margin: 0 0;
+    margin: 28px 0;
     color: #666;
     font-size: 12px;
     letter-spacing: -.4px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: light grey;
+    background: #E1E8F4;
 }
 
 .variable-row {
@@ -371,11 +377,11 @@ body {
   /*width: 100%;*/
 }
 .dropdown-container .selected {
-  color: purple;
+  /*color: purple;*/
 }
 
 .dropdown-container .selected:before {
-  border-bottom: 8px solid #E5D9E8;
+  /*border-bottom: 8px solid #E5D9E8;*/
   bottom: 0px;
   content: '';
   height: 0;
@@ -386,12 +392,36 @@ body {
 .dropdown li {
   padding: 0px 16px;
   color: #DFD0E3;
-  font-size: 20px;
+  /*font-size: 20px;*/
   letter-spacing: 0em;
   line-height: 1.4em;
   font-weight: 100;
   white-space: normal;
 }
+
+.title-dropdown {
+  display: inline-flex;
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.third-dropdown {
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.cancer-title {
+  flex: 0 0 auto;
+
+}
+
 /*.dropdown li:nth-of-type(1) {
 }
 .dropdown li:nth-of-type(2) {
@@ -400,10 +430,11 @@ body {
 }*/
 .caret {
   display: inline-block;
-  width: 20px;
+  width: 18px;
   height: 50px;
-  margin-top: 5px;
+  margin-top: 0px;
   margin-left: 15px;
+
 }
 .variable-icon {
   width: 20px;
@@ -477,7 +508,7 @@ input:checked ~ drop-menu menu1 {
 }
 
 .survey-page{
-  background: #F4F1F1;
+  background: #E1E8F4;
 }
 
 .stage-row{
@@ -789,10 +820,8 @@ input:checked ~ drop-menu menu1 {
 .text-center {
   text-align: center;
     /*border: 1px solid red;*/
-  font-size: 22px;
-  font-weight: 900;
+  /*font-size: 22px;*/
   letter-spacing: 1px;
-  font-weight: 100;
 }
 .font-size-1 {
   font-size: 16px;

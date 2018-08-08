@@ -5,6 +5,7 @@ import CourageVoice from './CourageVoice'
 import QuestionDrawer from './QuestionDrawer'
 import Faq from './Faq'
 
+
 class SurveyPage extends React.Component {
     state = {
         age: null,
@@ -33,8 +34,8 @@ class SurveyPage extends React.Component {
         return (
             <div className="survey-page">
                 <Card cancerType={cancerType} rate={rate} />
-                <QuestionDrawer
-                    age={age}
+                  <QuestionDrawer
+                    age={age} 
                     changeValue={this.changeValue}
                     diagnosed={diagnosed}
                     grade={grade} 
