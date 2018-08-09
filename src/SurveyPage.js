@@ -2,8 +2,8 @@ import React from 'react'
 
 import Card from './Card'
 import CourageVoice from './CourageVoice'
-import QuestionDrawer from './QuestionDrawer'
 import Faq from './Faq'
+import QuestionDrawer from './QuestionDrawer'
 
 class SurveyPage extends React.Component {
     state = {
@@ -34,10 +34,9 @@ class SurveyPage extends React.Component {
             <div className="survey-page">
                 <Card cancerType={cancerType} rate={rate} />
                 <QuestionDrawer
-                    height="50px"
                     age={age} 
                     changeValue={this.changeValue}
-                    diagnosed={this.state.diagnosed}
+                    diagnosed={diagnosed}
                     grade={grade} 
                     sex={sex}
                     stage={stage}

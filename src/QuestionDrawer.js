@@ -4,6 +4,8 @@ import ReactSlider from 'react-slider'
 
 import ButtonSurvey from './ButtonSurvey'
 
+const name = 'Jeff Mark'
+
 class QuestionDrawer extends React.Component {
     constructor(props) {
         super(props)
@@ -74,6 +76,7 @@ class QuestionDrawer extends React.Component {
                         <div className={diagnosed === 0 ? 'variable-name' : 'variable-name answered'}>diagnosed</div>
                     </div>
                     <div className="input-area">
+                        {name}
                         <ReactSlider
                             className="horizontal-slider bar"
                             defaultValue={diagnosed}
@@ -82,9 +85,9 @@ class QuestionDrawer extends React.Component {
                         >
                             <div>{nextDiagnosed}</div>
                         </ReactSlider>
-                        <div style={{ position: 'relative' }}>
-                            <div style={{ position: 'absolute', }}>Just recently</div>
-                            <div style={{ position: 'absolute', }}>2 months ago</div>
+                        <div style={{ position: 'relative', width: '100%' }}>
+                            <div style={{ position: 'absolute', left: 0 }}>Just recently</div>
+                            <div style={{ position: 'absolute', right: 0 }}>2 months ago</div>
                         </div>
                     </div>
                 </div>
