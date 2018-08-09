@@ -76,7 +76,6 @@ class QuestionDrawer extends React.Component {
                         <div className={diagnosed === 0 ? 'variable-name' : 'variable-name answered'}>diagnosed</div>
                     </div>
                     <div className="input-area">
-                        {name}
                         <ReactSlider
                             className="horizontal-slider bar"
                             value={nextDiagnosed}
