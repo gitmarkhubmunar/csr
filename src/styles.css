@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Catamaran');
 @import '~react-toggle-switch/dist/css/switch.min.css';
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+
 
 @font-face {
   font-family: 'Kiro';
@@ -39,9 +43,11 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Kiro','Catamaran', 'SF UI Text', 'Arial';
+  font-family: 'Muli','Kiro','Catamaran', 'SF UI Text', 'Arial';
   color: #4C4C4C;
 }
+
+
 
 .app {
   height: 100vh;
@@ -54,7 +60,7 @@ body {
 
 .card {
   flex: 1 auto;
-  border-radius: 8px;
+  /*border-radius: 8px;*/
   box-shadow: 0 2px 8px rgba(0, 0, 0, .5);
   margin: 0 auto;
   width: 100%;
@@ -90,13 +96,27 @@ body {
     transition: left .2s ease-in-out;
 }
 
+.drawer-tooltip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .variables {
-  font-weight: 200;
-  margin: 0 0;
-  color: #666;
-  font-size: 12px;
-  letter-spacing: .8px;
-  
+    font-weight: 200;
+    margin: 28px 0;
+    color: #666;
+    font-size: 12px;
+    letter-spacing: -.4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #E1E8F4;
+}
+
+.variable-row {
+    width: 400px;
+    margin-top: 16px;
 }
 
 .unanswered-row {
@@ -117,28 +137,104 @@ body {
 }
 
 .button-u {
-  border: 2px solid grey;
+  border: 3px solid grey;
   border-radius: 14px;
-  padding: 14px 20px;
+  padding: 14px 0;
+  flex: 1;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  margin: 4px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
 }
+
+.button-u:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    border: 3px solid purple;
+    border-radius: 14px;
+
+}
+
+.button-u:focus {
+    outline: none;
+    background: red;
+}
+
 .button-u ~ .button-u {
-  margin-left: 10px;
+}
+
+.button-survey {
+  border: 3px solid grey;
+  border-radius: 14px;
+  padding: 14px 0;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 4px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  font-style: normal;
+}
+
+.button-survey:hover{
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  border: 3px solid purple;
+  border-radius: 14px;
+}
+
+.button-survey.active {
+   background-color: green;
+   color:white;
+   border: 3px solid green;
 }
 
 .icon-label {
     max-width: 25%;
     min-width: 15%;
-    padding: 20px;
-    background: light gray;
+    padding: 15px 0;
+    flex-grow: 1;
+    align-items: center;
+
 }
+
+.heart-parent-container {
+  height: 0px;
+}
+
+.heart-first-row {
+  height: 44px;
+}
+
+.heart-container {
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+}
+.heart-container svg {
+  height: 45px;
+}
+
 .input-area {
     align-items: center;
     background: light gray;
     display: flex;
     flex: 1;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .unanswered-button {
@@ -152,21 +248,30 @@ body {
   flex: 0 1 auto;
 
 }*/
-.variable-icon-unanswered {
+.variable-icon {
   display: flex ;
   width: 20px;
   display: block;
   margin-left: auto;
-  margin-right: auto; 
+  margin-right: auto;
+  opacity: .3;
+  transition: opacity .3s ease;
 }
-
-.topic-unanswered {
+.variable-icon.answered {
+  opacity: 1;
+}
+.variable-name {
   align-items: center;
   color: black;
   font-weight: 600;
   display: flex;
   align-items: center;
-  justify-content: center
+  justify-content: center;
+  opacity: .3;
+  transition: opacity .3s ease;
+}
+.variable-name.answered {
+  opacity: 1;
 }
 
 ./*variable-switch {
@@ -211,6 +316,12 @@ body {
 
 .toggle {
   position: relative;
+}
+
+.toggle2 {
+  height: 35px;
+  width: 120px;
+  
 }
 
 .role {
@@ -266,11 +377,11 @@ body {
   /*width: 100%;*/
 }
 .dropdown-container .selected {
-  color: purple;
+  /*color: purple;*/
 }
 
 .dropdown-container .selected:before {
-  border-bottom: 8px solid #E5D9E8;
+  /*border-bottom: 8px solid #E5D9E8;*/
   bottom: 0px;
   content: '';
   height: 0;
@@ -281,12 +392,36 @@ body {
 .dropdown li {
   padding: 0px 16px;
   color: #DFD0E3;
-  font-size: 20px;
+  /*font-size: 20px;*/
   letter-spacing: 0em;
   line-height: 1.4em;
   font-weight: 100;
   white-space: normal;
 }
+
+.title-dropdown {
+  display: inline-flex;
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.third-dropdown {
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.cancer-title {
+  flex: 0 0 auto;
+
+}
+
 /*.dropdown li:nth-of-type(1) {
 }
 .dropdown li:nth-of-type(2) {
@@ -295,13 +430,19 @@ body {
 }*/
 .caret {
   display: inline-block;
-  width: 20px;
+  width: 18px;
   height: 50px;
-  margin-top: 5px;
+  margin-top: 0px;
   margin-left: 15px;
+
 }
 .variable-icon {
   width: 20px;
+}
+
+.input-field {
+    height: 35px;
+    width: 100%;
 }
 
 .suggestion label {
@@ -330,12 +471,13 @@ input:checked ~ drop-menu menu1 {
 
 /* Home page */
 
-.cancer-surival-rates-header {
+.cancer-survival-rates-header {
 
   color: #4d0092;
-  font-size: 26px;
+  font-size: 33px;
   text-align: center;
   padding: 0 0;
+  font-family: kiro;
 }
 
 .home-page-intro {
@@ -366,8 +508,7 @@ input:checked ~ drop-menu menu1 {
 }
 
 .survey-page{
-  height: 100%;
-  background: #F4F1F1;
+  background: #E1E8F4;
 }
 
 .stage-row{
@@ -390,6 +531,20 @@ input:checked ~ drop-menu menu1 {
   height: 200px;
 }
 
+.statistics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-header {
+  width: 400px;
+}
+
+.stat-viz {
+    width: 400px;
+}
+
 .statistic-line {
   flex: 1;
   background: white;
@@ -399,9 +554,11 @@ input:checked ~ drop-menu menu1 {
 .percentage {
   font-size: 55px;
   letter-spacing: -0.01em;
-  font-weight: 600;
+  font-weight: 900;
   padding: 20px;
   text-align: center;
+  flex: 1;
+  font-weight: 900;
 }
 
 .survival-line {
@@ -409,9 +566,13 @@ input:checked ~ drop-menu menu1 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 30px;
+    font-size: 25px;
     width: 100%;
     flex-wrap: nowrap;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    font-style: normal;
+
 
 }
 
@@ -420,15 +581,24 @@ input:checked ~ drop-menu menu1 {
   max-width: 100%;
   line-height: 1.4;
   padding: 15px;
+  font-weight: 100;
+  letter-spacing: -.75px;
+  font-style: normal;
+  color: grey;
 }
+
+.bold-line{
+  font-weight: 900;
+  color: black;
+}
+
 .icon-array {
-  padding-top: 5px;
-  display: flex;
-  align-items: center;
+  padding-top: 22px;
+  /*display: flex;*/
+  /*align-items: center;*/
 }
 .heart-icon {
-  width: 38px;
-  margin: 3px 3px;
+  width: 42px;
 }
 
 .question-controls {
@@ -650,8 +820,8 @@ input:checked ~ drop-menu menu1 {
 .text-center {
   text-align: center;
     /*border: 1px solid red;*/
-  font-size: 22px;
-  font-weight: 900;
+  /*font-size: 22px;*/
+  letter-spacing: 1px;
 }
 .font-size-1 {
   font-size: 16px;
@@ -706,6 +876,10 @@ input:checked ~ drop-menu menu1 {
 
 .full-height {
     height: 100%;
+}
+
+.slider-container{
+  background: red;
 }
 
 /*------------- // Media Queries // ------------*/
@@ -829,10 +1003,9 @@ input:checked ~ drop-menu menu1 {
 
   .cancer-survival-rates-header {
     color: #4d0092;
-    font-size: 20px;
     text-align: center;
     padding: 0 0;
-    /*border:dotted 1px red;*/
+    font-size: 26px;
     }
 }
 
@@ -847,20 +1020,22 @@ input:checked ~ drop-menu menu1 {
     line-height: 1.1em;
   } 
 
-  .cancer-surival-rates-header {
+  .cancer-survival-rates-header {
     font-size: 20px;
     text-align: center;
+    font-family: kiro;
   }
 }
 
 
 
 @media screen and (max-width: 414px) {
-  .cancer-surival-rates-header {
+  .cancer-survival-rates-header {
     color: #4d0092;
     font-size: 22px;
     text-align: center;
     padding: 0 0 0 0;
+    font-family: kiro;
   }
 
     .home-page-intro {
@@ -936,6 +1111,29 @@ input:checked ~ drop-menu menu1 {
     line-height: 1.1em;
   }
 
+  .percentage {
+  font-size: 55px;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+  padding: 2px 0 0 30px;
+  text-align: center;
+  flex: 1;
+  font-weight: 900;
+
+}
+
+.survival-line {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 30px;
+    width: 100%;
+    flex-wrap: nowrap;
+    margin-left: 10px;
+
+}
+
   .home-page-blurb {
     font-size: 18px;
     text-align: center;
@@ -943,6 +1141,43 @@ input:checked ~ drop-menu menu1 {
     margin: 25px auto;
     line-height: 1.4em;
   }
+
+  .variable-row {
+    width: 375px;
+    margin-top: 16px;
+}
+
+.icon-label {
+    max-width: 18%;
+    min-width: 15%;
+    padding: 15px 0;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.input-field {
+    height: 35px;
+    width: 91%;
+}
+
+.stat-copy {
+  font-size: 14px;
+  max-width: 100%;
+  line-height: 1.4;
+  padding: 15px;
+  margin-left: 10px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  font-style: normal;
+
+}
+
+.border-bottom {
+border-bottom: 1px solid #BABABA;
+width:100%;
+}
+
+
 }
 
 @media screen and (max-width: 375px) {
@@ -968,6 +1203,9 @@ input:checked ~ drop-menu menu1 {
     line-height: 1.4em;
 
   }
+
+
+
 }
 
 @media screen and (max-width: 360px) {
@@ -995,11 +1233,12 @@ input:checked ~ drop-menu menu1 {
 }
 
 @media screen and (max-width: 320px) {
-  .cancer-surival-rates-header {
+  .cancer-survival-rates-header {
     color: #4d0092;
     font-size: 16px;
     text-align: center;
     padding: 0 0 0 0;
+    font-family: kiro;
   }
 
   .home-page-intro {
@@ -1030,4 +1269,117 @@ input:checked ~ drop-menu menu1 {
       margin-top: -16px;
     }
 }
+
+
+
+.vertical-slider {
+    height: 380px;
+    width: 50px;
+    border: 1px solid grey;
+}
+
+.handle {
+  font-size: 0.9em;
+  text-align: center;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.handle.active {
+  background-color: grey;
+}
+
+.bar {
+  position: relative;
+  background: #ddd;
+}
+
+.bar.bar-1 {
+  background: #f00;
+}
+
+.bar.bar-2 {
+  background: #0f0;
+}
+
+.horizontal-slider {
+  width: 100%;
+  max-width: 500px;
+  height: 50px;
+  border: 1px solid grey;
+}
+
+.vertical-slider {
+  height: 380px;
+  width: 50px;
+  border: 1px solid grey;
+}
+
+.handle {
+  font-size: 0.9em;
+  text-align: center;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.handle.active {
+  background-color: grey;
+}
+
+.bar {
+  position: relative;
+  background: #ddd;
+}
+
+.bar.bar-1 {
+  background: #f00;
+}
+
+.bar.bar-2 {
+  background: #0f0;
+}
+
+.horizontal-slider .bar {
+  top: 20px;
+  height: 10px;
+}
+
+.horizontal-slider .handle {
+  top: 1px;
+  width: 50px;
+  height: 48px;
+  line-height: 48px;
+}
+
+.slider-tick-button {
+  cursor: pointer;
+  position: absolute;
+  text-align: center;
+  width: 40px;
+  margin-left: -20px;
+}
+.slider-tick-button::before {
+  position: absolute;
+  content: ' ';
+  height: 7px;
+  width: 1px;
+  background: #777;
+  left: 50%;
+  top: -6px;
+}
+
+
+
+/*.diagnosed-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin: 40px 15px;
+    border: 1px solid blue;
+}*/
+
+
 

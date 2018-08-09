@@ -1,19 +1,27 @@
 {
-  "name": "othersite",
+  "name": "CSR",
+  "description": "Cancer survival rates site.",
   "version": "0.0.1",
   "private": true,
   "devDependencies": {
     "react-scripts": "0.9.0"
   },
   "dependencies": {
+    "@haiku/thev1sual-heartanimation": "0.0.16",
+    "@haiku/thev1sual-heartfull": "0.0.2",
+    "@haiku/thev1sual-toggle2": "0.0.1",
     "classnames": "^2.2.5",
     "is-mobile": "^0.2.2",
+    "rc-slider": "^8.6.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-ionicons": "^2.1.6",
+    "react-rangeslider": "^2.2.0",
     "react-router-dom": "^4.0.0",
-    "react-toggle-switch": "^3.0.4",
-    "react-typist": "^1.1.0"
+    "react-slider": "^0.11.2",
+    "react-switch": "^3.0.4",
+    "react-tippy": "^1.2.2",
+    "react-toggle-switch": "^3.0.4"
   },
   "scripts": {
     "start": "react-scripts start",

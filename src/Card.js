@@ -7,8 +7,8 @@ class Card extends React.Component {
     render () {
         return (
             <div className="card">
-        		<CardTitleBar title="Liver Cancer" />
-        		<CardStatistics rate={72} />
+        		<CardTitleBar title={this.props.cancerType + ' Cancer'} />
+        		<CardStatistics rate={this.props.rate} />
             </div>
         )
     }

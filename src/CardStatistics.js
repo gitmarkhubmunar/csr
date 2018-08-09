@@ -1,6 +1,8 @@
 import Icon from 'react-ionicons'
 import React from 'react'
 
+import Heart from './Heart'
+
 class CardStatistics extends React.Component {
 	renderIconArray = (rate: number) => {
 		const totalHearts = 10;
@@ -13,9 +15,9 @@ class CardStatistics extends React.Component {
 		for (let t = 1; t <= totalHearts; t++) {
 			// Use the correct icon; by default it's the outline,
 			// but filled in when t <= filledHeartsCount.
-			let icon = <object className="heart-icon" data="/assets/emptyheart.svg" type="image/svg+xml" />
+			let icon = <Heart key={t} kind="empty" />
 			if (t <= filledHeartsCount) {
-				icon = <object className="heart-icon" data="/assets/heart.svg" type="image/svg+xml" />
+				icon = <Heart key={t} kind="full" />
 			}
 
 			// If t <= 5, put in first row; else put in second row.
@@ -28,9 +30,9 @@ class CardStatistics extends React.Component {
 		}
 
 		return (
-			<div>
-				<div>{iconArrayFirstRow}</div>
-				<div>{iconArraySecondRow}</div>
+			<div className="heart-parent-container">
+				<div className="heart-first-row">{iconArrayFirstRow}</div>
+				<div className="heart-second-row">{iconArraySecondRow}</div>
 			</div>
 		)
 	}
@@ -39,21 +41,22 @@ class CardStatistics extends React.Component {
 		const { rate } = this.props;
 		return (
 			<div className="statistics">
-				<div className="border-bottom flex-row">
+				<div className="stat-header border-bottom flex-row">
 					<div className="statistic-line"> 
 						<div className="percentage bg-green">
 							{rate}%
 						</div>
 					</div>
-							<div className="survival-line" style={{  }}>
-								5 year survival rate
-							</div>
+					<div className="survival-line" style={{ }}>
+						5 year survival rate
+					</div>
 				</div>
-				<div className="border-bottom flex-row">
+				<div className="stat-viz border-bottom flex-row">
 					<div style={{ flex: '0 0 35%', padding: '10px 0' }}>
 						<div  className="stat-copy">
-							Given a <b>group of ten people</b> with the same type of cancer and profile</div>
+							Given a <a className="bold-line">group of ten people</a> with the same type of cancer and profile
 						</div>
+					</div>
 					<div className="icon-array">
 						{this.renderIconArray(rate)}
 					</div>
