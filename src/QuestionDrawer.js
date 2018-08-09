@@ -1,5 +1,6 @@
 import Icon from 'react-ionicons'
 import React from 'react'
+import ReactSlider from 'react-slider'
 
 import ButtonSurvey from './ButtonSurvey'
 
@@ -67,10 +68,10 @@ class QuestionDrawer extends React.Component {
                         <div className={diagnosed === null ? 'variable-name' : 'variable-name answered'}>diagnosed</div>
                     </div>
                     <div className="input-area">
-                        <ButtonSurvey className="button-u" name="this week" />
-                        <ButtonSurvey className="button-u" name="this month" />
-                        <ButtonSurvey className="button-u" name="6 Mos ago" />
-                        <ButtonSurvey className="button-u" name="1 Yr ago" />
+                        
+                     
+                
+                     <ReactSlider className="horizontal-slider bar" defaultValue={90} />
                      </div>
                 </div>
             </div>
