@@ -77,11 +77,15 @@ class QuestionDrawer extends React.Component {
                         <ReactSlider
                             className="horizontal-slider bar"
                             defaultValue={diagnosed}
-                            onChange={(value) => this.setState({ nextDiagnosed: value })}
                             onAfterChange={(value) => changeValue('diagnosed', value)}
+                            onChange={(value) => this.setState({ nextDiagnosed: value })}
                         >
                             <div>{nextDiagnosed}</div>
                         </ReactSlider>
+                        <div style={{ position: 'relative' }}>
+                            <div style={{ position: 'absolute', }}>Just recently</div>
+                            <div style={{ position: 'absolute', }}>2 months ago</div>
+                        </div>
                     </div>
                 </div>
             </div>

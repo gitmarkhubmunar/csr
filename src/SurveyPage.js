@@ -1,4 +1,4 @@
- import React from 'react'
+import React from 'react'
 
 import Card from './Card'
 import CourageVoice from './CourageVoice'
@@ -33,21 +33,18 @@ class SurveyPage extends React.Component {
         return (
             <div className="survey-page">
                 <Card cancerType={cancerType} rate={rate} />
-                  <QuestionDrawer
+                <QuestionDrawer
                     age={age} 
                     changeValue={this.changeValue}
-                    diagnosed={diagnosed}
+                    diagnosed={this.state.diagnosed}
                     grade={grade} 
                     sex={sex}
                     stage={stage}
                 />
-                <Faq  />
-            
+                <Faq />
             </div>
         )
     }
 }
-
-
 
 export default SurveyPage
