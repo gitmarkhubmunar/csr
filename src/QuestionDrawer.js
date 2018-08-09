@@ -4,16 +4,17 @@ import ReactSlider from 'react-slider'
 
 import ButtonSurvey from './ButtonSurvey'
 
-const name = 'Jeff Mark'
-
 class QuestionDrawer extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = { nextDiagnosed: props.diagnosed }
+    // constructor (props) {
+    //     super(props)
+    //     this.state = { nextDiagnosed: props.diagnosed }
+    // }
+
+    componentWillMount () {
+        this.setState({ nextDiagnosed: this.props.diagnosed })
     }
 
     render () {
-        console.log(this.props);
         const { age, changeValue, diagnosed, grade, sex, stage } = this.props
         const { nextDiagnosed } = this.state
         return (
