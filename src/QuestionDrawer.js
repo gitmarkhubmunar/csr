@@ -5,13 +5,12 @@ import ReactSlider from 'react-slider'
 import ButtonSurvey from './ButtonSurvey'
 
 class QuestionDrawer extends React.Component {
-    // constructor (props) {
-    //     super(props)
-    //     this.state = { nextDiagnosed: props.diagnosed }
-    // }
-
     componentWillMount () {
         this.setState({ nextDiagnosed: this.props.diagnosed })
+    }
+
+    componentWillReceiveProps (nextProps) {
+        this.setState({ nextDiagnosed: nextProps.diagnosed })
     }
 
     render () {
@@ -39,7 +38,7 @@ class QuestionDrawer extends React.Component {
                         <div className={age === null ? 'variable-name' : 'variable-name answered'}>age</div>
                     </div>
                     <div className="input-area">
-                        <input className="input-field" onBlur={(event) => changeValue('age', event.target.value)} initialValue={age} />
+                        <input className="input-field" onBlur={(event) => changeValue('age', event.target.value)} defaultValue={age} />
                     </div>
                 </div>
                 <div className="variable-row flex-row nowrap">
@@ -80,15 +79,18 @@ class QuestionDrawer extends React.Component {
                         {name}
                         <ReactSlider
                             className="horizontal-slider bar"
-                            defaultValue={diagnosed}
+                            value={nextDiagnosed}
+                            max={24}
                             onAfterChange={(value) => changeValue('diagnosed', value)}
                             onChange={(value) => this.setState({ nextDiagnosed: value })}
                         >
                             <div>{nextDiagnosed}</div>
                         </ReactSlider>
                         <div style={{ position: 'relative', width: '100%' }}>
-                            <div style={{ position: 'absolute', left: 0 }}>Just recently</div>
-                            <div style={{ position: 'absolute', right: 0 }}>2 months ago</div>
+                            <div className="slider-tick-button" style={{ left: '8%' }} onClick={() => changeValue('diagnosed', 0)}>Just recently</div>
+                            <div className="slider-tick-button" style={{ left: '17%' }} onClick={() => changeValue('diagnosed', 3)}>3 months ago</div>
+                            <div className="slider-tick-button" style={{ left: '50%' }} onClick={() => changeValue('diagnosed', 12)}>1 year ago</div>
+                            <div className="slider-tick-button" style={{ left: '92%' }} onClick={() => changeValue('diagnosed', 24)}>2 years ago</div>
                         </div>
                     </div>
                 </div>
