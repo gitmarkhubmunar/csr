@@ -5,9 +5,15 @@ import ReactSlider from 'react-slider'
 import ButtonSurvey from './ButtonSurvey'
 
 class QuestionDrawer extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = { nextDiagnosed: props.diagnosed }
+    }
+
     render () {
         console.log(this.props);
         const { age, changeValue, diagnosed, grade, sex, stage } = this.props
+        const { nextDiagnosed } = this.state
         return (
             <div className="variables">
                 <div className="variable-row flex-row nowrap">
@@ -63,16 +69,20 @@ class QuestionDrawer extends React.Component {
                 <div className="variable-row flex-row nowrap">
                     <div className="icon-label">
                         <div>
-                            <object className={diagnosed === null ? 'variable-icon' : 'variable-icon answered'} data="/assets/diagnosed.svg" type="image/svg+xml" />
+                            <object className={diagnosed === 0 ? 'variable-icon' : 'variable-icon answered'} data="/assets/diagnosed.svg" type="image/svg+xml" />
                         </div>
-                        <div className={diagnosed === null ? 'variable-name' : 'variable-name answered'}>diagnosed</div>
+                        <div className={diagnosed === 0 ? 'variable-name' : 'variable-name answered'}>diagnosed</div>
                     </div>
                     <div className="input-area">
-                        
-                     
-                
-                     <ReactSlider className="horizontal-slider bar" defaultValue={90} />
-                     </div>
+                        <ReactSlider
+                            className="horizontal-slider bar"
+                            defaultValue={diagnosed}
+                            onChange={(value) => this.setState({ nextDiagnosed: value })}
+                            onAfterChange={(value) => changeValue('diagnosed', value)}
+                        >
+                            <div>{nextDiagnosed}</div>
+                        </ReactSlider>
+                    </div>
                 </div>
             </div>
         )

@@ -5,12 +5,11 @@ import CourageVoice from './CourageVoice'
 import QuestionDrawer from './QuestionDrawer'
 import Faq from './Faq'
 
-
 class SurveyPage extends React.Component {
     state = {
         age: null,
         cancerType: 'Liver',
-        diagnosed: null, // TODO: How is "diagnosed date" stored? Date? Number? Text?
+        diagnosed: 0, // Assuming this is time since diagnosis in months.
         grade: null,
         rate: null,
         sex: null,
