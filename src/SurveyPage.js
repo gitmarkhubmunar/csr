@@ -34,6 +34,7 @@ class SurveyPage extends React.Component {
             <div className="survey-page">
                 <Card cancerType={cancerType} rate={rate} />
                 <QuestionDrawer
+                    height="50px"
                     age={age} 
                     changeValue={this.changeValue}
                     diagnosed={this.state.diagnosed}
