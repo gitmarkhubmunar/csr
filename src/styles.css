@@ -48,7 +48,6 @@ body {
 }
 
 
-
 .app {
   height: 100vh;
 }
@@ -377,7 +376,7 @@ body {
   /*width: 100%;*/
 }
 .dropdown-container .selected {
-  /*color: purple;*/
+  font-weight:400;
 }
 
 .dropdown-container .selected:before {
@@ -443,6 +442,8 @@ body {
 .input-field {
     height: 35px;
     width: 100%;
+    border:none;
+    outline: 0;
 }
 
 .suggestion label {
@@ -554,11 +555,11 @@ input:checked ~ drop-menu menu1 {
 .percentage {
   font-size: 55px;
   letter-spacing: -0.01em;
-  font-weight: 900;
+  font-weight: 500;
   padding: 20px;
   text-align: center;
   flex: 1;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .survival-line {
@@ -588,7 +589,7 @@ input:checked ~ drop-menu menu1 {
 }
 
 .bold-line{
-  font-weight: 900;
+  font-weight: 700;
   color: black;
 }
 
@@ -701,16 +702,42 @@ input:checked ~ drop-menu menu1 {
 .faq {
     background: #551A8B;
     color: white;
-    padding: 10%;
+    padding: 5% 18%;
 }
+
 .faq > h3 {
-    font-weight: bold;
+    font-weight: 600;
     font-size: 24px;
     text-align: center;
-    margin: 40px 0 20px 0;
+    margin: 0px 0 20px 0;
 }
+
+.question-row {
+  flex-direction: row;
+}
+
+.number-bullet{
+  flex: .25;
+  text-align: center
+}
+
+.suggestions {
+  flex: 3;
+  /*background: grey;*/
+}
+
+.expand-icon {
+  /*background: red;*/
+  flex: .25;
+  text-align: center
+}
+
+.question-header {
+  padding-top: 50px;
+}
+
 .faq-question {
-    padding: 10px 0;
+    padding: 4px 0;
     border-bottom: 1px solid white;
     align-items: center;
 }
@@ -864,9 +891,6 @@ input:checked ~ drop-menu menu1 {
   color: #4d0092;
 }
 
-.bg-green {
-    color: green;
-}
 .title-cancer-color {
   background: green;
 }
@@ -881,6 +905,99 @@ input:checked ~ drop-menu menu1 {
 .slider-container{
   background: red;
 }
+ 
+.courage-panel {
+  display: flex-column;
+  padding: 4% 10%;
+  background: #f0f0f0;
+}
+
+.logo-container {
+  flex: 1;
+}
+
+.logo-container img {
+  width: 70px;
+  float: right;
+  margin-right: 30px;
+}
+
+.ch-description {
+  width: 500px;
+  font-size: 14px;
+  line-height: 20px
+}
+
+.description-container {
+  flex: 3;
+}
+
+.cta-container {
+  flex: 2;
+}
+
+.ch-cta {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.footer-container {
+  flex: 1;
+  flex-direction: column;
+  background: grey;
+  padding: 2% 10%;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+}
+
+.footer-container div {
+  /*border: 1px dotted red;*/
+}
+
+.links-container {
+  display: flex;
+  flex: 4;
+  margin: 6px 0;
+}
+
+.box-1 {
+  flex-direction: column;
+  flex:2;
+}
+
+.box-2 {
+  margin-right: 16px
+  /*flex:1;*/
+}
+
+.box-3 {
+  margin-right: 16px
+  /*flex:1;*/
+}
+
+.box-4 {
+  margin-right: 16px
+  /*flex:1;*/
+}
+
+
+
+.footer-button {
+  flex: 2;
+  width: 200px;
+  height: 40px;
+}
+
+.test-square {
+  width: 800px;
+  background: yellow;
+}
+
+
+
 
 /*------------- // Media Queries // ------------*/
 
@@ -1118,7 +1235,7 @@ input:checked ~ drop-menu menu1 {
   padding: 2px 0 0 30px;
   text-align: center;
   flex: 1;
-  font-weight: 900;
+  font-weight: 400;
 
 }
 
@@ -1270,44 +1387,13 @@ width:100%;
     }
 }
 
-
-
-.vertical-slider {
-    height: 380px;
-    width: 50px;
-    border: 1px solid grey;
-}
-
-.handle {
-  font-size: 0.9em;
-  text-align: center;
-  background-color: black;
-  color: white;
-  cursor: pointer;
-}
-
-.handle.active {
-  background-color: grey;
-}
-
-.bar {
-  position: relative;
-  background: #ddd;
-}
-
-.bar.bar-1 {
-  background: #f00;
-}
-
-.bar.bar-2 {
-  background: #0f0;
-}
+/* CSS Slider for Question Panel*/
 
 .horizontal-slider {
   width: 100%;
   max-width: 500px;
   height: 50px;
-  border: 1px solid grey;
+  /*border: 1px solid grey;*/
 }
 
 .vertical-slider {
@@ -1319,18 +1405,23 @@ width:100%;
 .handle {
   font-size: 0.9em;
   text-align: center;
-  background-color: black;
-  color: white;
+  /*background-color: black;*/
+  color: grey;
   cursor: pointer;
+  border: 3px solid grey;
+  border-radius: 14px;
+  flex: 1;
+  margin: -3px;
 }
 
 .handle.active {
-  background-color: grey;
+  background-color: green;
+  color: white;
 }
 
 .bar {
   position: relative;
-  background: #ddd;
+  background: #efefef;
 }
 
 .bar.bar-1 {
@@ -1354,16 +1445,19 @@ width:100%;
 }
 
 .slider-tick-button {
+  display: flex;
   cursor: pointer;
   position: absolute;
   text-align: center;
-  width: 40px;
+  width: 50px;
   margin-left: -20px;
+
 }
+
 .slider-tick-button::before {
   position: absolute;
   content: ' ';
-  height: 7px;
+  height: 4px;
   width: 1px;
   background: #777;
   left: 50%;

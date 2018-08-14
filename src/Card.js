@@ -5,10 +5,17 @@ import CardTitleBar from './CardTitleBar'
 
 class Card extends React.Component {
     render () {
+        const { changeValue, rate, selectedCancerType } = this.props
         return (
             <div className="card">
-        		<CardTitleBar title={this.props.cancerType + ' Cancer'} />
-        		<CardStatistics rate={this.props.rate} />
+        		<CardTitleBar
+                    changeValue={changeValue}
+                    selectedCancerType={selectedCancerType}
+                />
+        		<CardStatistics
+                    rate={rate}
+                    selectedCancerType={selectedCancerType}
+                />
             </div>
         )
     }
