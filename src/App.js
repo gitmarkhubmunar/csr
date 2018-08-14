@@ -2,6 +2,8 @@ import isMobile from 'is-mobile'
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
+import Faq from './Faq'
+import FaqDoctor from './FaqDoctor'
 import AlternateMessage from './AlternateMessage'
 import CourageHealthPanel from './CourageHealthPanel'
 import Footer from './Footer'
@@ -24,6 +26,8 @@ class App extends React.Component {
 		  		<Header />
 		  		<Route exact path='/' render={renderHomePage} />
 			    <Route path='/card' component={SurveyPage} />
+			    <Faq />
+			    <FaqDoctor />
 			    <AlternateMessage />
 			    <CourageHealthPanel />
 			    <Footer />

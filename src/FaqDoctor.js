@@ -1,10 +1,10 @@
 import React from 'react'
 
-class Faq extends React.Component {
+class FaqDoctor extends React.Component {
     render () {
         return (
-          <div className="faq">
-            <h3>Questions to ask your doctor</h3>
+          <div className="faq doctor-bg-color">
+            <h3>Questions to ask your patient</h3>
             <div className="question-row">
               <div className="faq-question flex-row nowrap">
                 <div className="number-bullet">1</div>
@@ -44,4 +44,4 @@ class Faq extends React.Component {
     }
 }
 
-export default Faq
+export default FaqDoctor

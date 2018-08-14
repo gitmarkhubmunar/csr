@@ -44,8 +44,8 @@ class SurveyPage extends React.Component {
                     grade={grade} 
                     sex={sex}
                     stage={stage}
+                    selectedCancerType={selectedCancerType}
                 />
-                <Faq />
             </div>
         )
     }

@@ -29,7 +29,7 @@ render () {
           <div>
             <div style={wrapperStyle}>
               <p>Slider with custom handle</p>
-              <Slider min={0} max={20} defaultValue={3} handle={handle} />
+              <Slider min={0} max={20} defaultValue={3} handle={handle} handle.active={color} />
             </div>
             <div style={wrapperStyle}>
               <p>Range with custom handle</p>
