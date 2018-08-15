@@ -3,8 +3,8 @@ import Icon from 'react-ionicons'
 import React from 'react'
 import ReactSlider from 'react-slider'
 
-import CancerTypes from './data/CancerTypes'
 import ButtonSurvey from './ButtonSurvey'
+import CancerTypes from './data/CancerTypes'
 
 class QuestionDrawer extends React.Component {
     componentWillMount () {
@@ -20,7 +20,6 @@ class QuestionDrawer extends React.Component {
         const { nextDiagnosed } = this.state
         const selectedCancer = _.find(CancerTypes, { id: selectedCancerType })
         const color = selectedCancer.colors[0]
-        console.log(color)
         return (
             <div className="variables">
                 <div className="variable-row flex-row nowrap">

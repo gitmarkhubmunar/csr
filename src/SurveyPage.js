@@ -28,7 +28,6 @@ class SurveyPage extends React.Component {
     }
 
     render () {
-        console.log('I was triggered during render')
         const { age, diagnosed, grade, rate, sex, selectedCancerType, stage } = this.state
         return (
             <div className="survey-page">
@@ -46,6 +45,7 @@ class SurveyPage extends React.Component {
                     stage={stage}
                     selectedCancerType={selectedCancerType}
                 />
+                <Faq />
             </div>
         )
     }

@@ -24,6 +24,7 @@ class CardStatistics extends React.Component {
 			let icon = <Heart key={t} kind="empty" />
 			if (t <= filledHeartsCount) {
 				icon = <Heart color={color} key={t} kind="full" />
+				icon = <Heart key={t} kind="full" />
 			}
 
 			// If t <= 5, put in first row; else put in second row.

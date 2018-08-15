@@ -3,8 +3,8 @@ import Icon from 'react-ionicons'
 import React from 'react'
 import Switch from 'react-toggle-switch'
 
-import Dropdown from './Dropdown'
 import CancerTypes from './data/CancerTypes'
+import Dropdown from './Dropdown'
 
 class CardTitleBar extends React.Component {
     state = { isPatient: true }
@@ -42,6 +42,3 @@ class CardTitleBar extends React.Component {
 }
 
 export default CardTitleBar
-
-
-
