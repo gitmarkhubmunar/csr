@@ -1,6 +1,7 @@
+*.sublime-workspace
+*.sublime-project
 .DS_Store
-*.sublime*
-package-lock.json
+csr.sublime-workspace
 node_modules/
-*.sublime*
+package-lock.json
 package-lock.json
