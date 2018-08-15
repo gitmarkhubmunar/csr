@@ -2,5 +2,5 @@
 *.sublime*
 package-lock.json
 node_modules/
-
+*.sublime*
 package-lock.json
