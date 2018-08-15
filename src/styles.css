@@ -76,6 +76,9 @@ body {
 }
 
 .title-bar {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-gap: 1em;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   color: white;
@@ -83,14 +86,17 @@ body {
 }
 
 .patient-switch.switch {
-  background: #4A90E2;
-  width: 80px;
+  position: absolute;
+  background: #E1E8F4;
+  width: 50px;
+  background: grey;
+
 }
 .patient-switch.switch.on {
-  background: lightgray;
+  background: yellow;
 }
 .patient-switch.switch.on > .switch-toggle {
-  left: 53px;
+  left: 23px;
     -webkit-transition: left .2s ease-in-out;
     transition: left .2s ease-in-out;
 }
@@ -309,35 +315,43 @@ body {
     width: 100%;
 }
 
-.toggle {
-  position: relative;
+.toggle-container {
+  display: flex;
+  flex: .5 0;
+  flex-direction: row-reverse;
 }
 
 .toggle2 {
   height: 35px;
-  width: 120px;
-  
+  width: 100px;
 }
 
 .role {
-  color: white;
-  font-size: 13px;
-  position: absolute;
-    top: 7px;
-    font-weight: 600;
-    right: 12px;
+display: inline-flex;
+color: #999999;
+padding-top: 30px;
+font-size: 13px;
+font-weight: 200;
+font-style: italic;
+letter-spacing: .02rem;
 }
 
 .role.patient {
-  color: grey;
+  color: #999999;
+  padding-top: 30px;
   font-size: 13px;
-  font-weight: 600;
-  left: 9px;
+  font-weight: 200;
+  font-style: italic;
+  letter-spacing: .02rem;
+}
+
+.share-container {
+  flex: .45;
 }
 
 .share-button {
-  width: 22px;
-  margin-right: 10px;
+  flex: 2;
+  width: 30px;
 }
 
 /* Dropdown */
@@ -396,7 +410,7 @@ body {
 
 .title-dropdown {
   display: inline-flex;
-  flex: 1 0 auto;
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -563,11 +577,11 @@ input:checked ~ drop-menu menu1 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 25px;
+    font-size: 24px;
     width: 100%;
     flex-wrap: nowrap;
     font-weight: 500;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
     font-style: normal;
 
 
@@ -707,7 +721,7 @@ input:checked ~ drop-menu menu1 {
 
 .faq > h3 {
     font-weight: 600;
-    font-size: 24px;
+    font-size: 22px;
     text-align: center;
     margin: 0px 0 20px 0;
 }
@@ -907,10 +921,16 @@ input:checked ~ drop-menu menu1 {
 }
  
 .courage-panel {
-  display: flex-column;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-gap: 1em;
   padding: 4% 10%;
   background: #f0f0f0;
 }
+
+.courage-panel > div:nth-child(odd){
+  background:#ddd;
+  })
 
 .logo-container {
   flex: 1;
@@ -919,13 +939,12 @@ input:checked ~ drop-menu menu1 {
 .logo-container img {
   width: 70px;
   float: right;
-  margin-right: 30px;
 }
 
 .ch-description {
-  width: 500px;
-  font-size: 14px;
-  line-height: 20px
+  max-width: 480px;
+  font-size: 11px;
+  line-height: 20px;
 }
 
 .description-container {
@@ -937,13 +956,15 @@ input:checked ~ drop-menu menu1 {
 }
 
 .ch-cta {
-  font-size: 14px;
-  letter-spacing: 1px;
+  font-size: 11px;
+  letter-spacing: .5px;
+  line-height: 1.5;
+
 }
 
 .footer-container {
-  flex: 1;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
   background: grey;
   padding: 2% 10%;
   font-size: 14px;
@@ -983,6 +1004,16 @@ input:checked ~ drop-menu menu1 {
   /*flex:1;*/
 }
 
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.c-blue {
+  color: #508fcc;
+}
+
 
 
 .footer-button {
@@ -995,6 +1026,53 @@ input:checked ~ drop-menu menu1 {
   width: 800px;
   background: yellow;
 }
+
+.patient-alt-container {
+}
+
+.patient-alt-container-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+
+.patient-alt-container-grid > div{
+  background: #eee;
+  padding: 1em;
+}
+
+.nested > div {
+  display: grid;
+  border: 1px red solid;
+  margin: 30px 0 0 0;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.patient-alt-container-grid > div:nth-child(odd){
+  background:#ddd;
+  })
+
+.alt-header {
+  margin: 30px 0 0 0;
+  font-size: 28px;
+  font-weight: 600;
+  background: red;
+}
+
+.alt-copy {
+  margin: 10px 0 0 0;
+  max-width: 420px;
+  text-align: center;
+  color: #737373;
+}
+
+.alt-image {
+  margin: 20px 0 30px 0;
+}
+
+
+
+
 
 
 

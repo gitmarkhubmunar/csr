@@ -15,11 +15,13 @@ class CardTitleBar extends React.Component {
         const selectedCancer = _.find(CancerTypes, { id: selectedCancerType })
         const color = selectedCancer.colors[0]
         return (
-            <div className="title-bar flex-row padding-2" style={{ background: color }}>
-            	<div className="toggle" style={{ flex: '0 0 20%' }}>
-            		<Switch className="patient-switch" onClick={() => this.setState({ isPatient: !isPatient })} on={isPatient === true} />
-                    <div className={isPatient === true ? 'role patient' : 'role'}>{isPatient === true ? 'Patient' : 'Doctor'}</div>
-            	</div> 
+            <div className="title-bar padding-2" style={{ background: color }}>
+                <div className="toggle-container">
+                	<div className="toggle" >
+                		<Switch className="patient-switch" onClick={() => this.setState({ isPatient: !isPatient })} on={isPatient === true} />
+                        <div className={isPatient === true ? 'role patient' : 'role'}>{isPatient === true ? 'Patient' : 'Doctor'}</div>
+                	</div> 
+                </div>
                 <div className="title-dropdown">
                     <Dropdown
                         className="third-dropdown text-center cancer-title"
@@ -31,10 +33,9 @@ class CardTitleBar extends React.Component {
                         selectedItem={selectedCancer.name}
                     />
                 </div>
-
-        		<div style={{ flex: '0 0 20%', textAlign: 'right' }}>
-        		  <object className="share-button" data="/assets/share.svg" type="image/svg+xml" />
-        		</div>
+                <div className="share-container" style={{ }}>
+                  <object className="share-button" data="/assets/share.svg" type="image/svg+xml" />
+                </div>
             </div>
         )
     }

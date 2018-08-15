@@ -1,28 +1,40 @@
+// Bladder 
+// Breast  
+// Colon     
+// Lung    
+// Melanoma    
+// Pancreas    
+// Prostate    
+// Rectal  
+// Stomach Ovary
+// Uterine
+
+
 const CancerTypes = [
     {
         id: 'bladder',
         name: 'Bladder Cancer',
-        colors: ['orange', 'purple', 'green'],
+        colors: ['#FABC3C', '#740070', '#0F1B47'],
     },
     {
         id: 'brain',
         name: 'Brain Cancer',
-        colors: ['grey'],
+        colors: ['#444444'],
     },
     {
         id: 'breast',
         name: 'Breast Cancer',
-        colors: ['grey'],
+        colors: ['#F87DB3'],
     },
     {
         id: 'colon',
         name: 'Colon Cancer',
-        colors: ['darkblue'],  
+        colors: ['#23395B'],  
     },
     {
         id: 'liver',
         name: 'Liver Cancer',
-        colors: ['green'],    
+        colors: ['#0E402D'],    
     },
     {
         id: 'melanoma',
@@ -32,42 +44,42 @@ const CancerTypes = [
     {
         id: 'ovarian',
         name: 'Ovarian Cancer',
-        colors: ['teal'],
+        colors: ['#3ECFCD'],
     },
      {
         id: 'pancreatic',
         name: 'Pancreatic Cancer',
-        colors: ['blue'],
+        colors: ['#4E2572'],
     },
     {
         id: 'prostate',
         name: 'Prostate Cancer',
-        colors: ['lightblue'],
+        colors: ['#4FCAFF'],
     },
     {
         id: 'rectal',
         name: 'Rectal Cancer',
-        colors: ['darkblue'],
+        colors: ['#4F759B'],
     },
     {
         id: 'lymphoma',
         name: 'Lymphoma',
-        colors: ['limegreen'],  
+        colors: ['#D7FF75'],  
     },
     {
         id: 'stomach',
         name: 'Stomach Cancer',
-        colors: ['lavender'],    
+        colors: ['#CACFE3'],    
     },
     {
         id: 'thyroid',
         name: 'Thyroid Cancer',
-        colors: ['teal', 'pink'],   
+        colors: ['#008080', '#FFC0CB', '0000FF'],   
     },
     {
-        id: 'uterine',
+        id: 'uterine corpus',
         name: 'Uterine Cancer',
-        colors: ['purple'],
+        colors: ['#F99768'],
     },
     {
         id: 'generic',
