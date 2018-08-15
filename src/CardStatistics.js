@@ -1,10 +1,16 @@
+import _ from 'lodash'
 import Icon from 'react-ionicons'
 import React from 'react'
 
+import CancerTypes from './data/CancerTypes'
 import Heart from './Heart'
 
 class CardStatistics extends React.Component {
-	renderIconArray = (rate: number) => {
+	renderIconArray = () => {
+		const { rate, selectedCancerType } = this.props
+		const selectedCancer = _.find(CancerTypes, { id: selectedCancerType })
+		const color = selectedCancer.colors[0]
+
 		const totalHearts = 10;
 		const filledHeartsCount = Math.round(rate / 10);
 
@@ -17,7 +23,7 @@ class CardStatistics extends React.Component {
 			// but filled in when t <= filledHeartsCount.
 			let icon = <Heart key={t} kind="empty" />
 			if (t <= filledHeartsCount) {
-				icon = <Heart key={t} kind="full" />
+				icon = <Heart color={color} key={t} kind="full" />
 			}
 
 			// If t <= 5, put in first row; else put in second row.
@@ -38,12 +44,14 @@ class CardStatistics extends React.Component {
 	}
 
 	render () {
-		const { rate } = this.props;
+		const { rate, selectedCancerType } = this.props
+		const selectedCancer = _.find(CancerTypes, { id: selectedCancerType })
+		const color = selectedCancer.colors[0]
 		return (
 			<div className="statistics">
 				<div className="stat-header border-bottom flex-row">
 					<div className="statistic-line"> 
-						<div className="percentage bg-green">
+						<div className="percentage" style={{ color: color }}>
 							{rate}%
 						</div>
 					</div>
@@ -58,7 +66,7 @@ class CardStatistics extends React.Component {
 						</div>
 					</div>
 					<div className="icon-array">
-						{this.renderIconArray(rate)}
+						{this.renderIconArray()}
 					</div>
 				</div>
 			</div>

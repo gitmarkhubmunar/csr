@@ -1,18 +1,17 @@
- import React from 'react'
+import React from 'react'
 
 import Card from './Card'
 import CourageVoice from './CourageVoice'
-import QuestionDrawer from './QuestionDrawer'
 import Faq from './Faq'
-
+import QuestionDrawer from './QuestionDrawer'
 
 class SurveyPage extends React.Component {
     state = {
         age: null,
-        cancerType: 'Liver',
-        diagnosed: null, // TODO: How is "diagnosed date" stored? Date? Number? Text?
+        diagnosed: 0, // Assuming this is time since diagnosis in months.
         grade: null,
         rate: null,
+        selectedCancerType: 'liver',
         sex: null,
         stage: null,
     }
@@ -30,25 +29,26 @@ class SurveyPage extends React.Component {
 
     render () {
         console.log('I was triggered during render')
-        const { age, cancerType, diagnosed, grade, rate, sex, stage } = this.state
+        const { age, diagnosed, grade, rate, sex, selectedCancerType, stage } = this.state
         return (
             <div className="survey-page">
-                <Card cancerType={cancerType} rate={rate} />
-                  <QuestionDrawer
-                    age={age} 
+                <Card
+                    changeValue={this.changeValue}
+                    rate={rate}
+                    selectedCancerType={selectedCancerType}
+                />
+                <QuestionDrawer
+                    age={age}
                     changeValue={this.changeValue}
                     diagnosed={diagnosed}
                     grade={grade} 
                     sex={sex}
                     stage={stage}
+                    selectedCancerType={selectedCancerType}
                 />
-                <Faq  />
-            
             </div>
         )
     }
 }
-
-
 
 export default SurveyPage

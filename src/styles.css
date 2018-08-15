@@ -48,7 +48,6 @@ body {
 }
 
 
-
 .app {
   height: 100vh;
 }
@@ -77,6 +76,9 @@ body {
 }
 
 .title-bar {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-gap: 1em;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   color: white;
@@ -84,14 +86,17 @@ body {
 }
 
 .patient-switch.switch {
-  background: #4A90E2;
-  width: 80px;
+  position: absolute;
+  background: #E1E8F4;
+  width: 50px;
+  background: grey;
+
 }
 .patient-switch.switch.on {
-  background: lightgray;
+  background: yellow;
 }
 .patient-switch.switch.on > .switch-toggle {
-  left: 53px;
+  left: 23px;
     -webkit-transition: left .2s ease-in-out;
     transition: left .2s ease-in-out;
 }
@@ -163,7 +168,6 @@ body {
 
 .button-u:focus {
     outline: none;
-    background: red;
 }
 
 .button-u ~ .button-u {
@@ -192,14 +196,11 @@ body {
   -o-transition: all .4s ease-in-out;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
-  border: 3px solid purple;
   border-radius: 14px;
 }
 
 .button-survey.active {
-   background-color: green;
-   color:white;
-   border: 3px solid green;
+  color: white;
 }
 
 .icon-label {
@@ -314,35 +315,43 @@ body {
     width: 100%;
 }
 
-.toggle {
-  position: relative;
+.toggle-container {
+  display: flex;
+  flex: .5 0;
+  flex-direction: row-reverse;
 }
 
 .toggle2 {
   height: 35px;
-  width: 120px;
-  
+  width: 100px;
 }
 
 .role {
-  color: white;
-  font-size: 13px;
-  position: absolute;
-    top: 7px;
-    font-weight: 600;
-    right: 12px;
+display: inline-flex;
+color: #999999;
+padding-top: 30px;
+font-size: 13px;
+font-weight: 200;
+font-style: italic;
+letter-spacing: .02rem;
 }
 
 .role.patient {
-  color: grey;
+  color: #999999;
+  padding-top: 30px;
   font-size: 13px;
-  font-weight: 600;
-  left: 9px;
+  font-weight: 200;
+  font-style: italic;
+  letter-spacing: .02rem;
+}
+
+.share-container {
+  flex: .45;
 }
 
 .share-button {
-  width: 22px;
-  margin-right: 10px;
+  flex: 2;
+  width: 30px;
 }
 
 /* Dropdown */
@@ -377,7 +386,7 @@ body {
   /*width: 100%;*/
 }
 .dropdown-container .selected {
-  /*color: purple;*/
+  font-weight:400;
 }
 
 .dropdown-container .selected:before {
@@ -401,7 +410,7 @@ body {
 
 .title-dropdown {
   display: inline-flex;
-  flex: 1 0 auto;
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -443,6 +452,8 @@ body {
 .input-field {
     height: 35px;
     width: 100%;
+    border:none;
+    outline: 0;
 }
 
 .suggestion label {
@@ -554,11 +565,11 @@ input:checked ~ drop-menu menu1 {
 .percentage {
   font-size: 55px;
   letter-spacing: -0.01em;
-  font-weight: 900;
+  font-weight: 500;
   padding: 20px;
   text-align: center;
   flex: 1;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .survival-line {
@@ -566,11 +577,11 @@ input:checked ~ drop-menu menu1 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 25px;
+    font-size: 24px;
     width: 100%;
     flex-wrap: nowrap;
     font-weight: 500;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
     font-style: normal;
 
 
@@ -588,7 +599,7 @@ input:checked ~ drop-menu menu1 {
 }
 
 .bold-line{
-  font-weight: 900;
+  font-weight: 700;
   color: black;
 }
 
@@ -699,18 +710,48 @@ input:checked ~ drop-menu menu1 {
 }
 
 .faq {
-    background: #551A8B;
+    background: #542e89;
     color: white;
-    padding: 10%;
+    padding: 5% 18%;
 }
+
+.doctor-bg-color {
+    background: #508fcc;
+}
+
 .faq > h3 {
-    font-weight: bold;
-    font-size: 24px;
+    font-weight: 600;
+    font-size: 22px;
     text-align: center;
-    margin: 40px 0 20px 0;
+    margin: 0px 0 20px 0;
 }
+
+.question-row {
+  flex-direction: row;
+}
+
+.number-bullet{
+  flex: .25;
+  text-align: center
+}
+
+.suggestions {
+  flex: 3;
+  /*background: grey;*/
+}
+
+.expand-icon {
+  /*background: red;*/
+  flex: .25;
+  text-align: center
+}
+
+.question-header {
+  padding-top: 50px;
+}
+
 .faq-question {
-    padding: 10px 0;
+    padding: 4px 0;
     border-bottom: 1px solid white;
     align-items: center;
 }
@@ -719,14 +760,14 @@ input:checked ~ drop-menu menu1 {
 }
 .faq-question > div:nth-of-type(1) {
     font-weight: bold;
-    font-size: 40px;
+    font-size: 26px;
 }
 .faq-question > div:nth-of-type(2) {
     flex: 1;
     padding: 0 20px;
 }
 .faq-question > div:nth-of-type(3) {
-    font-size: 40px;
+    font-size: 30px;
 }
 
 /* Re-usable styles */
@@ -864,9 +905,6 @@ input:checked ~ drop-menu menu1 {
   color: #4d0092;
 }
 
-.bg-green {
-    color: green;
-}
 .title-cancer-color {
   background: green;
 }
@@ -881,6 +919,163 @@ input:checked ~ drop-menu menu1 {
 .slider-container{
   background: red;
 }
+ 
+.courage-panel {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-gap: 1em;
+  padding: 4% 10%;
+  background: #f0f0f0;
+}
+
+.courage-panel > div:nth-child(odd){
+  background:#ddd;
+  })
+
+.logo-container {
+  flex: 1;
+}
+
+.logo-container img {
+  width: 70px;
+  float: right;
+}
+
+.ch-description {
+  max-width: 480px;
+  font-size: 11px;
+  line-height: 20px;
+}
+
+.description-container {
+  flex: 3;
+}
+
+.cta-container {
+  flex: 2;
+}
+
+.ch-cta {
+  font-size: 11px;
+  letter-spacing: .5px;
+  line-height: 1.5;
+
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  background: grey;
+  padding: 2% 10%;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+}
+
+.footer-container div {
+  /*border: 1px dotted red;*/
+}
+
+.links-container {
+  display: flex;
+  flex: 4;
+  margin: 6px 0;
+}
+
+.box-1 {
+  flex-direction: column;
+  flex:2;
+}
+
+.box-2 {
+  margin-right: 16px
+  /*flex:1;*/
+}
+
+.box-3 {
+  margin-right: 16px
+  /*flex:1;*/
+}
+
+.box-4 {
+  margin-right: 16px
+  /*flex:1;*/
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.c-blue {
+  color: #508fcc;
+}
+
+
+
+.footer-button {
+  flex: 2;
+  width: 200px;
+  height: 40px;
+}
+
+.test-square {
+  width: 800px;
+  background: yellow;
+}
+
+.patient-alt-container {
+}
+
+.patient-alt-container-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+
+.patient-alt-container-grid > div{
+  background: #eee;
+  padding: 1em;
+}
+
+.nested > div {
+  display: grid;
+  border: 1px red solid;
+  margin: 30px 0 0 0;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.patient-alt-container-grid > div:nth-child(odd){
+  background:#ddd;
+  })
+
+.alt-header {
+  margin: 30px 0 0 0;
+  font-size: 28px;
+  font-weight: 600;
+  background: red;
+}
+
+.alt-copy {
+  margin: 10px 0 0 0;
+  max-width: 420px;
+  text-align: center;
+  color: #737373;
+}
+
+.alt-image {
+  margin: 20px 0 30px 0;
+}
+
+
+
+
+
+
+
 
 /*------------- // Media Queries // ------------*/
 
@@ -1118,7 +1313,7 @@ input:checked ~ drop-menu menu1 {
   padding: 2px 0 0 30px;
   text-align: center;
   flex: 1;
-  font-weight: 900;
+  font-weight: 400;
 
 }
 
@@ -1270,44 +1465,13 @@ width:100%;
     }
 }
 
-
-
-.vertical-slider {
-    height: 380px;
-    width: 50px;
-    border: 1px solid grey;
-}
-
-.handle {
-  font-size: 0.9em;
-  text-align: center;
-  background-color: black;
-  color: white;
-  cursor: pointer;
-}
-
-.handle.active {
-  background-color: grey;
-}
-
-.bar {
-  position: relative;
-  background: #ddd;
-}
-
-.bar.bar-1 {
-  background: #f00;
-}
-
-.bar.bar-2 {
-  background: #0f0;
-}
+/* CSS Slider for Question Panel*/
 
 .horizontal-slider {
   width: 100%;
   max-width: 500px;
   height: 50px;
-  border: 1px solid grey;
+  /*border: 1px solid grey;*/
 }
 
 .vertical-slider {
@@ -1319,18 +1483,23 @@ width:100%;
 .handle {
   font-size: 0.9em;
   text-align: center;
-  background-color: black;
-  color: white;
+  /*background-color: black;*/
+  color: grey;
   cursor: pointer;
+  border: 3px solid grey;
+  border-radius: 14px;
+  flex: 1;
+  margin: -3px;
 }
 
 .handle.active {
-  background-color: grey;
+  background-color: green;
+  color: white;
 }
 
 .bar {
   position: relative;
-  background: #ddd;
+  background: #efefef;
 }
 
 .bar.bar-1 {
@@ -1351,6 +1520,26 @@ width:100%;
   width: 50px;
   height: 48px;
   line-height: 48px;
+}
+
+.slider-tick-button {
+  display: flex;
+  cursor: pointer;
+  position: absolute;
+  text-align: center;
+  width: 50px;
+  margin-left: -20px;
+
+}
+
+.slider-tick-button::before {
+  position: absolute;
+  content: ' ';
+  height: 4px;
+  width: 1px;
+  background: #777;
+  left: 50%;
+  top: -6px;
 }
 
 

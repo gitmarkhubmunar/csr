@@ -1,16 +1,12 @@
+import _ from 'lodash'
 import React from 'react'
 
 class Dropdown extends React.Component {
-    constructor (props) {
-        super(props)
-        this.state = {
-            isOpen: false,
-            selectedItem: this.props.list[0],
-        }
-    }
+    state = { isOpen: false }
 
     selectItem = (item: string) => {
-        this.setState({ selectedItem: item })
+        // this.setState({ selectedItem: item })
+        this.props.onSelect(item)
     }
 
     toggleMenu = () => {
@@ -18,8 +14,8 @@ class Dropdown extends React.Component {
     }
 
     render () {
-        const { className, list } = this.props
-        const { isOpen, selectedItem } = this.state
+        const { className, list, selectedItem } = this.props
+        const { isOpen } = this.state
         const combinedClassName = 'dropdown-container ' + className
         return (
             <div className={combinedClassName} onClick={this.toggleMenu}>
@@ -29,7 +25,7 @@ class Dropdown extends React.Component {
                             {list.map((item, i) => {
                                 return (
                                     <li key={i} onClick={() => this.selectItem(item)}>
-                                        {item}
+                                        <nobr>{item}</nobr>
                                     </li>
                                 )
                             })}
