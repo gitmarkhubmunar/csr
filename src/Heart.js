@@ -1,13 +1,12 @@
 import React from 'react'
 import Icon from 'react-ionicons'
 
-
 // import HeartAnimation from '@haiku/thev1sual-heartanimation/react'
 // import HeartFull from '@haiku/thev1sual-heartfull/react'
 
 class Heart extends React.Component {
     render () {
-        const { kind } = this.props;
+        const { color, kind } = this.props;
         // When using the default Haiku statement: <HeartAnimation sizing="contain" loop={true} />
         // For some reason subsequent elements (e.g. sibling inline-block <div> elements) do not lay out correctly;
         // it seems the Haiku component inlines a height property corresponding to a graphical element in the animation,
@@ -24,13 +23,16 @@ class Heart extends React.Component {
 
         return (
             <div className="heart-container">
-                {kind === 'full' && <Icon icon="ios-man"  fontSize="35px" color="green"/>}
-                {kind === 'empty' && <Icon icon="ios-man" fontSize="35px" color="grey"/>}
-                {kind === 'half' && <Icon icon="ios-man"  fontSize="35px" color="blue"/>}
+                {kind === 'full' && <Icon icon="ios-man"  fontSize="35px" color={color} />}
+                {kind === 'empty' && <Icon icon="ios-man" fontSize="35px" color={color} />}
+                {kind === 'half' && <Icon icon="ios-man"  fontSize="35px" color={color} />}
             </div>
         )
     }
+}
 
+Heart.defaultProps = {
+    color: 'lightgrey'
 }
 
 export default Heart

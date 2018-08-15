@@ -8,10 +8,10 @@ import QuestionDrawer from './QuestionDrawer'
 class SurveyPage extends React.Component {
     state = {
         age: null,
-        cancerType: 'Liver',
         diagnosed: 0, // Assuming this is time since diagnosis in months.
         grade: null,
         rate: null,
+        selectedCancerType: 'liver',
         sex: null,
         stage: null,
     }
@@ -28,18 +28,22 @@ class SurveyPage extends React.Component {
     }
 
     render () {
-        console.log('I was triggered during render')
-        const { age, cancerType, diagnosed, grade, rate, sex, stage } = this.state
+        const { age, diagnosed, grade, rate, sex, selectedCancerType, stage } = this.state
         return (
             <div className="survey-page">
-                <Card cancerType={cancerType} rate={rate} />
+                <Card
+                    changeValue={this.changeValue}
+                    rate={rate}
+                    selectedCancerType={selectedCancerType}
+                />
                 <QuestionDrawer
-                    age={age} 
+                    age={age}
                     changeValue={this.changeValue}
                     diagnosed={diagnosed}
                     grade={grade} 
                     sex={sex}
                     stage={stage}
+                    selectedCancerType={selectedCancerType}
                 />
                 <Faq />
             </div>

@@ -3,12 +3,10 @@ import Tooltip from 'rc-tooltip';
 import Slider from 'rc-slider';
 
 class Slider extends React.Component {
-render () {
-
+  render () {
         const createSliderWithTooltip = Slider.createSliderWithTooltip;
         const Range = createSliderWithTooltip(Slider.Range);
         const Handle = Slider.Handle;
-
         const handle = (props) => {
           const { value, dragging, index, ...restProps } = props;
           return (
@@ -36,7 +34,8 @@ render () {
               <Range min={0} max={20} defaultValue={[3, 10]} tipFormatter={value => `${value}%`} />
             </div>
           </div>
-
+        )
+    }
 }
 
 export default Slider
