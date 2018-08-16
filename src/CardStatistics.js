@@ -6,6 +6,7 @@ import CancerTypes from './data/CancerTypes'
 import Heart from './Heart'
 
 class CardStatistics extends React.Component {
+
 	renderIconArray = () => {
 		const { rate, selectedCancerType } = this.props
 		const selectedCancer = _.find(CancerTypes, { id: selectedCancerType })
@@ -36,9 +37,9 @@ class CardStatistics extends React.Component {
 		}
 
 		return (
-			<div className="heart-parent-container">
-				<div className="heart-first-row">{iconArrayFirstRow}</div>
-				<div className="heart-second-row">{iconArraySecondRow}</div>
+			<div className="icon-parent-container">
+				<div className="icon-first-row">{iconArrayFirstRow}</div>
+				<div className="icon-second-row">{iconArraySecondRow}</div>
 			</div>
 		)
 	}
@@ -49,26 +50,34 @@ class CardStatistics extends React.Component {
 		const color = selectedCancer.colors[0]
 		return (
 			<div className="statistics">
-				<div className="stat-header border-bottom flex-row">
-					<div className="statistic-line"> 
-						<div className="percentage" style={{ color: color }}>
-							{rate}%
+				<div></div>
+					<div className="stat-title-container">
+						<div className="stat-header border-bottom flex-row">
+							
+							<div className="statistic-container center"> 
+								<div className="percentage" style={{ color: color }}>
+									{rate}%
+								</div>
+							<div className="survival-line" style={{ }}>
+								5 year survival rate
+							</div>
+							</div>
+							
+						</div>
+						<div className="stat-viz-container">
+							<div className="stat-viz border-bottom">
+								<div  className="stat-copy">
+										Given a <a className="bold-line">group of ten people</a> with the same type of cancer and profile
+								</div>
+								<div className="icon-array">
+										{this.renderIconArray()}
+									</div>
+							
+									</div>
+
 						</div>
 					</div>
-					<div className="survival-line" style={{ }}>
-						5 year survival rate
-					</div>
-				</div>
-				<div className="stat-viz border-bottom flex-row">
-					<div style={{ flex: '0 0 35%', padding: '10px 0' }}>
-						<div  className="stat-copy">
-							Given a <a className="bold-line">group of ten people</a> with the same type of cancer and profile
-						</div>
-					</div>
-					<div className="icon-array">
-						{this.renderIconArray()}
-					</div>
-				</div>
+				<div></div>
 			</div>
 		)
 	}

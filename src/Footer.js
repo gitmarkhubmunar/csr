@@ -9,8 +9,8 @@ class Footer extends React.Component {
         return (
 
         <div className="footer-container">   
-            <div>
-                <div className="box-1">©2018 Courage Health. All rights reserved.</div>
+            <div></div>
+            <div className="box-1">©2018 Courage Health. All rights reserved.
                 <div className="footer-links">
                     <div className="links-container">
                         <div className="box-2">About Us</div>
@@ -18,8 +18,9 @@ class Footer extends React.Component {
                         <div className="box-4">Terms of Use</div>
                     </div>
                 </div>
-                <div className="footer-button"> Select Cancer </div>
             </div>
+            <div className="footer-button"> Select Cancer </div>
+            
         </div>
         )
     }
