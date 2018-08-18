@@ -51,12 +51,15 @@ body {
 /*----------------Main----------------*/
 
 .card {
-  flex: 1 auto;
   /*border-radius: 8px;*/
-  box-shadow: 0 2px 8px rgba(0, 0, 0, .5);
-  margin: 0 auto;
-  width: 100%;
   background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .5);
+  flex: 1 auto;
+  margin: 0 auto;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 11;
 }
 
 .courage-voice {
@@ -267,20 +270,20 @@ letter-spacing: .02rem;
   padding: 15px 0 15px 0;
   }
 
-.heart-parent-container {
+/*.heart-parent-container {
   height: 0px;
 }
-
+*/
 .icon-first-row {
 }
 
 .heart-container {
   display: inline-block;
 }
-.heart-container svg {
+/*.heart-container svg {
   width: 105%;
   height: 400%;
-}
+}*/
 
 .input-area {
     align-items: center;
@@ -1511,10 +1514,10 @@ input:checked ~ drop-menu menu1 {
 .heart-container {
   display: inline-block;
 }
-.heart-container svg {
+./*heart-container svg {
   width: 105%;
   height: 400%;
-}
+}*/
 
 
 /*STATISTICS SECTION END    / / / / / / / /*/
