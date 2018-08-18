@@ -383,13 +383,12 @@ letter-spacing: .02rem;
   text-align: left;
   background-color: #3B0082;
   min-width: 100px;
-  width: 99%;
+/*  width: 99%;*/
   max-width: 60vw;
 }
 .dropdown.open {
   border-color: #eaeaea;
   z-index: 1;
-  /*width: 100%;*/
 }
 .dropdown-container .selected {
   font-weight:400;
@@ -1518,7 +1517,7 @@ input:checked ~ drop-menu menu1 {
   text-align: left;
   background-color: #3B0082;
   min-width: 100px;
-  width: 99%;
+ /* width: 99%;*/
   max-width: 60vw;
 }
 .dropdown.open {
@@ -1526,7 +1525,6 @@ input:checked ~ drop-menu menu1 {
   z-index: 1;
   font-size: 20px;
   max-width: auto;
-  /*width: 100%;*/
 }
 .dropdown-container .selected {  /
   letter-spacing: -.25px;
@@ -2059,13 +2057,13 @@ letter-spacing: .02rem;
   text-align: left;
   background-color: #3B0082;
   min-width: 100px;
-  width: 99%;
+ /* width: 100%;*/
   max-width: 60vw;
 }
 .dropdown.open {
   border-color: #eaeaea;
   z-index: 1;
-  /*width: 100%;*/
+
 }
 
 
