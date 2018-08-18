@@ -7,18 +7,15 @@ import CancerTypes from './data/CancerTypes'
 import Dropdown from './Dropdown'
 
 class CardTitleBar extends React.Component {
-    state = { isPatient: true }
-
-	render () {
-		const { changeValue, selectedCancerType } = this.props
-        const { isPatient } = this.state
+    render () {
+		const { changeValue, isPatient, selectedCancerType } = this.props
         const selectedCancer = _.find(CancerTypes, { id: selectedCancerType })
         const color = selectedCancer.colors[0]
         return (
             <div className="title-bar padding-2" style={{ background: color }}>
                 <div className="toggle-container">
                 	<div className="toggle" >
-                		<Switch className="patient-switch" onClick={() => this.setState({ isPatient: !isPatient })} on={isPatient === true} />
+                		<Switch className="patient-switch" onClick={() => changeValue('isPatient', !isPatient)} on={isPatient === true} />
                         <div className={isPatient === true ? 'role patient' : 'role'}>{isPatient === true ? 'Patient' : 'Doctor'}</div>
                 	</div> 
                 </div>

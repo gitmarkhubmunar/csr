@@ -14,7 +14,7 @@ import SurveyPage from './SurveyPage'
 class App extends React.Component {
 	render () {
 		const props = this.props
-
+		//<AlternateMessage />
 		// Render our custom home page component
 		const renderHomePage = (props) => {
 			return <HomePage {...props} />
@@ -26,11 +26,6 @@ class App extends React.Component {
 		  		<Header />
 		  		<Route exact path='/' render={renderHomePage} />
 			    <Route path='/card' component={SurveyPage} />
-			    <Faq />
-			    <FaqDoctor />
-			    <AlternateMessage />
-			    <CourageHealthPanel />
-			    <Footer />
 			</div>
 		  </Router>
 		)

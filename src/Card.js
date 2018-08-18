@@ -8,23 +8,23 @@ import NoCalcDoctor from './NoCalcDoctor'
 
 class Card extends React.Component {
     // <NoCalcPatientGrid />
-    //             <NoCalcDoctor />
+    // <NoCalcDoctor />
     render () {
-        const { changeValue, rate, selectedCancerType } = this.props
+        const { changeValue, isPatient, rate, selectedCancerType } = this.props
         return (
             <div className="card">
                 <div className="title-bar-container">
-            		    <CardTitleBar className="card-title-bar"
+            		<CardTitleBar
+                        className="card-title-bar"
                         changeValue={changeValue}
+                        isPatient={isPatient}
                         selectedCancerType={selectedCancerType}
                     />
                 </div>
-
-        		    <CardStatistics
+        		<CardStatistics
                     rate={rate}
                     selectedCancerType={selectedCancerType}
                 />
-                
             </div>
         )
     }

@@ -21,8 +21,8 @@ class QuestionDrawer extends React.Component {
         const selectedCancer = _.find(CancerTypes, { id: selectedCancerType })
         const color = selectedCancer.colors[0]
         return (
-            <div className="variables">
-                <div className="variable-row flex-row nowrap">
+            <div className="question-drawer variables">
+                <div className="variable-row flex-row">
                     <div className="icon-label">
                         <div>
                             <object className={sex === null ? 'variable-icon' : 'variable-icon answered'} data="/assets/sex.svg" type="image/svg+xml" />
@@ -34,7 +34,7 @@ class QuestionDrawer extends React.Component {
                         <ButtonSurvey color={color} handleClick={() => changeValue('sex', 'female')} className="button-u" name="female" turnedOn={sex === 'female'} />
                     </div>
                 </div>
-                <div className="variable-row flex-row nowrap">
+                <div className="variable-row flex-row">
                     <div className="icon-label">
                         <div>
                             <object className={age === null ? 'variable-icon' : 'variable-icon answered'} data="/assets/age.svg" type="image/svg+xml" />
@@ -45,7 +45,7 @@ class QuestionDrawer extends React.Component {
                         <input className="input-field" onBlur={(event) => changeValue('age', event.target.value)} defaultValue={age} />
                     </div>
                 </div>
-                <div className="variable-row flex-row nowrap">
+                <div className="variable-row flex-row">
                     <div className="icon-label">
                         <div>
                             <object className={stage === null ? 'variable-icon' : 'variable-icon answered'} data="/assets/stage.svg" type="image/svg+xml" />
@@ -59,7 +59,7 @@ class QuestionDrawer extends React.Component {
                         <ButtonSurvey color={color} handleClick={() => changeValue('stage', '4')} className="button-u" name="4" turnedOn={stage === '4'} />
                     </div>
                 </div> 
-                <div className="variable-row flex-row nowrap">
+                <div className="variable-row flex-row">
                     <div className="icon-label">
                         <div>
                             <object className={grade === null ? 'variable-icon' : 'variable-icon answered'} data="/assets/grade.svg" type="image/svg+xml" />
@@ -72,7 +72,7 @@ class QuestionDrawer extends React.Component {
                         <ButtonSurvey color={color} handleClick={() => changeValue('grade', '3')} className="button-u" name="poorly" turnedOn={grade === '3'} />
                     </div> 
                 </div>               
-                <div className="variable-row flex-row nowrap">
+                <div className="variable-row flex-row">
                     <div className="icon-label">
                         <div>
                             <object className={diagnosed === 0 ? 'variable-icon' : 'variable-icon answered'} data="/assets/diagnosed.svg" type="image/svg+xml" />

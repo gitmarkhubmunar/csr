@@ -1,55 +1,52 @@
 import React from 'react'
 
 import Dropdown from './Dropdown'
+import CancerTypes from './data/CancerTypes'
+
+const PeopleTypes = [
+    'warrior',
+    'patient',
+    'doctor',
+    'caregiver',
+    'family member',
+    'friend',
+]
 
 class HomePage extends React.Component {
+    state = { selectedCancerName: CancerTypes[0].name, selectedPeopleType: PeopleTypes[0] }
+
     render () {
+        const { selectedCancerName, selectedPeopleType } = this.state
         return (
             <div style={{ height: '100vh '}} className="bg-purple">
                 <div className="home-page">
-                    <div className="home-page-intro">
-                        I am a&nbsp;
-                        <Dropdown
-                            className="first-dropdown"
-                            list={[
-                                'warrior',
-                                'patient',
-                                'doctor',
-                                'caregiver',
-                                'family member',
-                                'friend',
-                            ]}
-                        />
+                    <div className="hp-intro-container">
+                     <div className="home-page-intro">
+                            I am a&nbsp;
+                            <Dropdown
+                                className="first-dropdown"
+                                list={PeopleTypes}
+                                onSelect={name => this.setState({ selectedPeopleType: name })}
+                                selectedItem={selectedPeopleType}
+                            />
 
-                        &nbsp;<span className="break2">searching for</span> answers on&nbsp;
-                        <Dropdown
-                            className="second-dropdown"
-                            list={[
-                                'uterine',
-                                'bladder',
-                                'brain',
-                                'breast',
-                                'colon',
-                                'liver',
-                                'lung',
-                                'melanoma',
-                                'ovarian',
-                                'pancreatic',
-                                'prostate',
-                                'rectal',
-                                'lymphoma',
-                                'stomach',
-                                'thyroid',
-                                
-
-                            ]}
-                        />          
+                            &nbsp;<span className="break2">searching for</span> answers on&nbsp;
+                            <Dropdown
+                                className="second-dropdown"
+                                list={CancerTypes.map(type => type.name)}
+                                onSelect={name => this.setState({ selectedCancerName: name })}
+                                selectedItem={selectedCancerName}
+                            />     
                         &nbsp;<span className="break">cancer</span> survival rates.
                     </div>
-                    <div className="home-page-blurb">
-                        Personalized Cancer Survival Rates from the experts of <strong>Courage Health</strong>
+                    </div>
+                    
+                    <div className="home-page-blurb-container">
+                        <div className="blurb-copy">
+                            Personalized Cancer Survival Rates from the experts of Courage Health
+                        </div>
                         <div className="links">
-                            <a>About</a> <a>Blog</a>
+                            <a className="about-link">About</a> <a className="blog-link">Blog</a>
                         </div>
                     </div>
                 </div>

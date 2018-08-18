@@ -51,14 +51,14 @@ class CardStatistics extends React.Component {
 		return (
 			<div className="statistics">
 				<div></div>
-					<div className="stat-title-container">
+					<div className="stat-whole-container">
 						<div className="stat-header border-bottom flex-row">
 							
 							<div className="statistic-container center"> 
 								<div className="percentage" style={{ color: color }}>
 									{rate}%
 								</div>
-							<div className="survival-line" style={{ }}>
+							<div className="survival-line">
 								5 year survival rate
 							</div>
 							</div>

@@ -13,11 +13,13 @@ class CourageHealthPanel extends React.Component {
                 </div>
                 
                 <div className="ch-description">
-                    Vivamus varius imperdiet ante, eu accumsan lectus suscipit non. Pellentesque eu sapien a diam viverra tincidunt et eu felis. Sed laoreet mattis quam at mattis. 
+                     
+                    More than numbers, <a>Courage Health</a> is about the conversation between patients and their 
+                    doctors about living life on their terms. 
                 </div>    
             <div className="cta-container">
                     <div className="ch-cta">
-                         <div>VISIT OUR SITE AT: <a> Courage.Health </a></div>
+                         <div className="cta-copy">VISIT OUR SITE AT: <a> Courage.Health </a></div>
                     </div>
                 </div>
             </div>
