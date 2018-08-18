@@ -4,12 +4,18 @@ import Dropdown from './Dropdown'
 import CancerTypes from './data/CancerTypes'
 
 const PeopleTypes = [
-    'warrior',
     'patient',
     'doctor',
     'caregiver',
-    'family member',
+    'cousin',
+    'warrior',
     'friend',
+    'brother',
+    'sister',
+    'mother',
+    'father',
+    'lover',
+
 ]
 
 class HomePage extends React.Component {
