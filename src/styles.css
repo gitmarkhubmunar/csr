@@ -151,19 +151,6 @@ letter-spacing: .02rem;
   align-items: center;
 }
 
-.variables {
-    display: grid;
-    grid-template-columns: 1fr 1fr 4fr  1fr 1fr;
-    /*font-weight: 400;*/
-    /*margin: 28px 0;*/
-    color: #666;
-    /*font-size: 12px;*/
-    letter-spacing: -.4px;
-    flex-direction: column;
-    /*background: #E1E8F4;*/
-    margin: 40px 0 60px 0;
-}
-
 .variable-row {
     /*width: 400px; possibly for mobile?*/
     align-items: center;
@@ -940,11 +927,7 @@ input:checked ~ drop-menu menu1 {
     display: flex;
     flex-direction: column;
 }
-.flex-row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
+
 .nowrap {
     flex-wrap: nowrap;
 }
@@ -1286,22 +1269,16 @@ input:checked ~ drop-menu menu1 {
     border: 1px solid grey;
 }
 
-.handle {
-  font-size: 0.9em;
-  text-align: center;
-  background-color: black;
-  color: white;
-  cursor: pointer;
-}
+
 
 .handle.active {
   background-color: grey;
 }
 
-.bar {
+/*.bar {
   position: relative;
   background: #ddd;
-}
+}*/
 
 .bar.bar-1 {
   background: #f00;
@@ -1311,12 +1288,41 @@ input:checked ~ drop-menu menu1 {
   background: #0f0;
 }
 
+/*currently using*/
 .horizontal-slider {
   width: 100%;
   max-width: 500px;
-  height: 50px;
-  border: 1px solid grey;
+  height: 8px;
+/*  border: 1px solid grey;*/
 }
+
+/*white*/
+/*currently using*/
+.bar {background: #ffffff ;
+}
+/*
+using*/
+
+/*currently using*/
+.horizontal-slider .handle {
+  top: 11px;
+  width: 28px;
+  height: 28px;
+  line-height: 26px;
+}
+
+.handle > .handle-0 {
+  width: 10px;
+  height: 10px;
+ /* background: red;*/
+}
+
+.handle.active {
+  background-color: green;
+  color: white;
+}
+
+
 
 .vertical-slider {
   height: 380px;
@@ -1325,14 +1331,17 @@ input:checked ~ drop-menu menu1 {
 }
 
 .handle {
-  font-size: 0.9em;
+  font-size: 1em;
+  font-weight: 800;
   text-align: center;
-  color: grey;
+   color: #4C4C4C;
   cursor: pointer;
-  border: 3px solid grey;
-  border-radius: 14px;
-  flex: 1;
-  margin: -3px;
+  border: 4px solid grey;
+ /* flex: 1;*/
+  /*margin: -3px;*/
+  border-radius: 50%;
+  background: white;
+  margin-top: -24px;
 }
 
 .handle.active {
@@ -1340,11 +1349,11 @@ input:checked ~ drop-menu menu1 {
   color: white;
 }
 
-.bar {
+/*.bar {
   position: relative;
   background: #efefef;
 }
-
+*/
 .bar.bar-1 {
   background: #f00;
 }
@@ -1358,12 +1367,7 @@ input:checked ~ drop-menu menu1 {
   height: 10px;
 }
 
-.horizontal-slider .handle {
-  top: 1px;
-  width: 50px;
-  height: 48px;
-  line-height: 48px;
-}
+
 
 .slider-tick-button {
   display: flex;
@@ -1701,6 +1705,7 @@ letter-spacing: -.08px;
 
 
 
+
    /*TITLEBAR SECTION  END ----------------------------------- **/
 
       /*STAT HEADER  START ----------------------------------- **/
@@ -1748,6 +1753,8 @@ letter-spacing: -.08px;
   grid-column: 2/3;
   text-align: center;
   justify-content: center;
+  /*background: red;*/
+  width: 120px;
 }
 
 .survival-line {
@@ -1837,69 +1844,65 @@ letter-spacing: -.08px;
 /*STAT VISUAL ICON / COPY + ARRAY  END ----------------------------------- **/
 
 
-
-
-
-
-
-
-
-  
-
-./*heart-container svg {
-  width: 105%;
-  height: 400%;
-}*/
-
-
-/*STATISTICS SECTION END    / / / / / / / /*/
-
-/*SURVEY QUESTIONS START/  / / / / / / / / / / / / / / //*/
-
-.survey-page{
-  background: #E1E8F4; /*doctor's color?*/
-}
-
+/* QUESTION DRAWER  START ---------------------------------------------------**/
 .question-drawer-container {
   display: grid;
-  grid-template-columns: 1fr 20fr 1fr;
+  grid-template-columns: 1em 1fr 1em auto 1em;
+  padding: 6px 0 40px 0;
+  /*set grid*/
 }
 
 .question-drawer {
-  grid-column: 1/3;
+  /*grid-column: 1/3;
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr;*/
+  /*background: blue;*/
 
 }
 
-.stage-row {
-  display: inline-block;
+.variables {
+    /mobile*/
+    /*font-weight: 400;*/
+    /*margin: 28px 0;*/
+    color: #666;
+    /*font-size: 12px;*/
+   /* letter-spacing: -.4px;*/
+    /*flex-direction: column;*/
+    /*background: #E1E8F4;*/
+  /*  margin: 40px 0 60px 0;*/
+   /* background: yellow;*/
+    grid-column: 1/8;
+}
+
+.variable-row {
+    align-items: center;
+    grid-column: 1/4;
+    /*margin: 8px 16px 0 16px;*/
+    /*margin: 10px 0;*/
+    /*border: 1px solid white;*/
+} 
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .icon-label {
-    max-width: 1%;
-    height: 50px;
+    max-width: 2%;
+    height: 45px;
     /*min-width: %;*/
-    padding: 0px 20px 0 0;
+    padding: 0 20px 0 8px;
     align-items: start;
-}
-
-.input-area {
-    align-items: center;
-    background: light gray;
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    flex-wrap: wrap;
-    grid-column: 1/2;
-    margin: 12px 0;
+   /* background: red;*/
+    float: left;
 }
 
 .variable-name {
   align-items: center;
   font-size: .8em;
   color: black;
-  font-weight: 100;
+  font-weight: 800;
   display: flex;
   margin: 2px;
   align-items: center;
@@ -1908,46 +1911,10 @@ letter-spacing: -.08px;
   transition: opacity .3s ease;
 }
 
-.variable-row {
-    align-items: center;
-    grid-column: 1/4;
-    margin: 8px 16px 0 16px;
-    /*margin: 10px 0;
-*/}   
-
-
-.input-field {
-    height: 35px;
-    width: 100%;
-    border:none;
-    outline: 0;
-}
-
-.unanswered-button {
-  height: 24px;
-  display: flex;
-}
-
-
-.question-panel {
-  flex: 1 auto;
-  /*background: yellow;*/
-  margin: 3% auto 0 auto;
- /* width: 382px;*/
-  text-align: center;
-  height: 100%;
-  background: #8B8B8B;
-
-}
-
-.key-questions {
-  background: #551A8B;
-  height: 200px;
-}
-
 .button-survey {
   font-size: .8em;
-  border: 3px solid grey;
+  letter-spacing: -.4px;
+  border: 4px solid #ffffff;
   border-radius: 14px;
   padding: 14px 0;
   flex: 1;
@@ -1959,259 +1926,25 @@ letter-spacing: -.08px;
   display: inline-block;
   position: relative;
   font-weight: 900;
-  letter-spacing: -.9pt;
+  /*letter-spacing: -.pt;*/
   font-style: normal;
 }
 
-/* react slider */
 
-.vertical-slider {
-    height: 380px;
-    width: 50px;
-    border: 1px solid grey;
-}
+/* QUESTION DRAWER  END ---------------------------------------------------**/
 
-.handle {
-  font-size: 0.9em;
-  text-align: center;
-  background-color: black;
-  color: white;
-  cursor: pointer;
-}
+/* FAQ SECTION  START  ---------------------------------------------------**/
 
-.handle.active {
-  background-color: grey;
-}
-
-.bar {
-  position: relative;
-  background: #ddd;
-}
-
-.bar.bar-1 {
-  background: #f00;
-}
-
-.bar.bar-2 {
-  background: #0f0;
-}
-
-.horizontal-slider {
-  width: 100%;
-  max-width: 500px;
-  height: 50px;
-  border: 1px solid grey;
-}
-
-.vertical-slider {
-  height: 380px;
-  width: 50px;
-  border: 1px solid grey;
-}
-
-.handle {
-  font-size: 0.9em;
-  text-align: center;
-  color: grey;
-  cursor: pointer;
-  border: 3px solid grey;
-  border-radius: 14px;
-  flex: 1;
-  margin: -3px;
-}
-
-.handle.active {
-  background-color: green;
-  color: white;
-}
-
-.bar {
-  position: relative;
-  background: #efefef;
-}
-
-.bar.bar-1 {
-  background: #f00;
-}
-
-.bar.bar-2 {
-  background: #0f0;
-}
-
-.horizontal-slider .bar {
-  top: 20px;
-  height: 10px;
-}
-
-.horizontal-slider .handle {
-  top: 1px;
-  width: 50px;
-  height: 48px;
-  line-height: 48px;
-
-}
-
-.slider-tick-button {
-  display: flex;
-  cursor: pointer;
-  position: absolute;
-  text-align: center;
-  width: 40px;
-  margin: 8px 0 0 -15px;
-  font-size: 9px;
-  width: 20px;
-  line-height: 11px;
-/*  border: 1px solid red;*/
-
-}
-
-.slider-tick-button::before {
-  position: absolute;
-  content: ' ';
-  height: 1px;
-  cursor: pointer;
-  position: absolute;
-  text-align: center;
-  width: 0px;
-  margin-left: 15px;
-}
-.slider-tick-button::before {
-  position: absolute;
-  content: ' ';
-  height: 2px;
-  width: 1px;
-  background: grey;
-  left: 0;
-  top: 0px;
-}
-
-/*SURVEY QUESTIONS END/  / / / / / / / / / / / / / / //*/
-
-
-
-/*TITLEBAR SECTION START     / / / / / / / /*/
-
-.patient-switch.switch {
-  position: absolute;
-  background: #E1E8F4;
-  width: 50px;
-
-}
-.patient-switch.switch.on {
-  background: #4d0092;;
-}
-.patient-switch.switch.on > .switch-toggle {
-  left: 23px;
-    -webkit-transition: left .2s ease-in-out;
-    transition: left .2s ease-in-out;
-}
-
-.drawer-tooltip {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/*Dropdown container   / / / / / / / / */
-
-.dropdown-container {
-  display: inline-block;
-  position: relative;
-  user-select: none;
-  white-space: nowrap;
-}
-.dropdown {
-  background: white;
-  border-radius: 2px;
-  border: 1px solid transparent;
-  cursor: pointer;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  /*margin: 0 0 0 -40px;*/
-  /*padding: 0 40px;*/
-  position: absolute;
-  top: 73px;
-  text-align: left;
-  background-color: #3B0082;
-  min-width: 100px;
- /* width: 100%;*/
-  max-width: 60vw;
-}
-.dropdown.open {
-  border-color: #eaeaea;
-  z-index: 1;
-
+.faq {
+    display: grid;
+    grid-template-columns: 1fr 16fr 1fr;
+    background: #542e89;
+    /*color: white;
+    padding: 0 0%;*/
 }
 
 
-.dropdown-container .selected:before {
-  /*border-bottom: 8px solid #E5D9E8;*/
-  bottom: 0px;
-  content: '';
-  height: 0;
-  left: 0;
-  position: absolute;
-  width: 100%;
-}
-.dropdown li {
-  padding: 0px 16px;
-  color: #DFD0E3;
-  /*font-size: 20px;*/
-  letter-spacing: 0em;
-  line-height: 1.4em;
-  font-weight: 100;
-  white-space: normal;
-}
-
-.title-dropdown {
-  grid-column: 4/6;
-  /*display: inline-flex;
-  flex: 1;
-  display: flex;*/
-  justify-content: center;
-  align-items: center;
-}
-
-.third-dropdown {
-  display: inline-block;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 22px;
-  font-weight: 900;
-  background: none;
-}
-
-.cancer-title {
-  flex: 0 0 auto;
-
-}
-
-
-
-.variable-icon {
-  width: 28px;
-}
-
-.suggestion label {
-  display: block;
-  cursor: pointer;
-  background: red no-repeat;
-}
-
-input#menu {
- display: none;
-}
-
-
-
-
-
-      /*TITLEBAR SECTION END   / / / / / / / /*/
-
-    /*FAQ SECTION START     / / / / / / / /*/
+/* FAQ SECTION  END ---------------------------------------------------**/
 
     .faq {
     display: grid;
@@ -2311,7 +2044,7 @@ input#menu {
 }
 
 .faq-question {
-    padding: 15px 0;
+    padding: 1em 0;
     border-bottom: 1px solid white;
     align-items: center;
 }
@@ -2329,6 +2062,306 @@ input#menu {
 .faq-question > div:nth-of-type(3) {
     /*font-size: 30px;*/
 }
+
+
+
+
+  
+
+./*heart-container svg {
+  width: 105%;
+  height: 400%;
+}*/
+
+
+/*STATISTICS SECTION END    / / / / / / / /*/
+
+/*SURVEY QUESTIONS START/  / / / / / / / / / / / / / / //*/
+
+.survey-page{
+  background: #E1E8F4; /*doctor's color?*/
+}
+
+
+.stage-row {
+  display: inline-block;
+}
+
+
+.input-area {
+    align-items: center;
+    background: light gray;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    flex-wrap: wrap;
+    grid-column: 1/2;
+    margin: 12px 0;
+}
+
+
+
+
+.input-field {
+    height: 35px;
+    width: 100%;
+    border:none;
+    outline: 0;
+}
+
+.unanswered-button {
+  height: 24px;
+  display: flex;
+}
+
+
+.question-panel {
+  flex: 1 auto;
+  /*background: yellow;*/
+  margin: 3% auto 0 auto;
+ /* width: 382px;*/
+  text-align: center;
+  height: 100%;
+  background: #8B8B8B;
+
+}
+
+.key-questions {
+  background: #551A8B;
+  height: 200px;
+}
+
+
+
+/* react slider */
+
+.vertical-slider {
+    height: 380px;
+    width: 50px;
+    border: 1px solid grey;
+}
+
+
+
+.handle.active {
+  background-color: grey;
+}
+
+/*.bar {
+  position: relative;
+  background: #ddd;
+}*/
+
+.bar.bar-1 {
+  background: #f00;
+}
+
+.bar.bar-2 {
+  background: #0f0;
+}
+
+/*.horizontal-slider {
+  width: 100%;
+  max-width: 500px;
+  height: 50px;
+  border: 1px solid grey;
+}*/
+
+.vertical-slider {
+  height: 380px;
+  width: 50px;
+  border: 1px solid grey;
+}
+
+
+
+
+.bar.bar-1 {
+  background: #f00;
+}
+
+.bar.bar-2 {
+  background: #0f0;
+}
+
+/*.horizontal-slider .bar {
+  top: 20px;
+  height: 10px;
+}*/
+
+/*.horizontal-slider .handle {
+  top: 1px;
+  width: 50px;
+  height: 48px;
+  line-height: 48px;
+
+}*/
+
+.slider-tick-button {
+  display: flex;
+  cursor: pointer;
+  position: absolute;
+  text-align: center;
+  margin: 16px 0 0 -20px;
+  padding: 0 0 0 20px;
+  font-size: 9px;
+  width: 30px;
+  line-height: 10px;
+  /*background: red;*/
+/*  border: 1px solid red;*/
+
+}
+
+.slider-tick-button::before {
+  position: absolute;
+  content: ' ';
+  height: 3px;
+  cursor: pointer;
+  position: absolute;
+  text-align: center;
+  width: 0px;
+  margin-left: 33px;
+}
+.slider-tick-button::before {
+  position: absolute;
+  content: ' ';
+  height: 3px;
+  width: 1px;
+  background: grey;
+  left: 0;
+  top: -6px;
+}
+
+/*SURVEY QUESTIONS END/  / / / / / / / / / / / / / / //*/
+
+
+
+/*TITLEBAR SECTION START     / / / / / / / /*/
+
+.patient-switch.switch {
+  position: absolute;
+  background: #E1E8F4;
+  width: 50px;
+
+}
+.patient-switch.switch.on {
+  background: #4d0092;;
+}
+.patient-switch.switch.on > .switch-toggle {
+  left: 23px;
+    -webkit-transition: left .2s ease-in-out;
+    transition: left .2s ease-in-out;
+}
+
+.drawer-tooltip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Dropdown container   / / / / / / / / */
+
+.dropdown-container {
+  display: inline-block;
+  position: relative;
+  user-select: none;
+  white-space: nowrap;
+}
+.dropdown {
+  background: white;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  /*margin: 0 0 0 -40px;*/
+  /*padding: 0 40px;*/
+  position: absolute;
+  top: 73px;
+  text-align: left;
+  background-color: #3B0082;
+  min-width: 100px;
+ /* width: 100%;*/
+  max-width: 60vw;
+}
+.dropdown.open {
+  border-color: #eaeaea;
+  z-index: 1;
+
+}
+
+
+.dropdown-container .selected:before {
+  /*border-bottom: 8px solid #E5D9E8;*/
+  bottom: 0px;
+  content: '';
+  height: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+.dropdown li {
+  padding: 0px 1em;
+  font-size: 2.3em;
+  color: #DFD0E3;
+  /*font-size: 20px;*/
+  letter-spacing: 0em;
+  line-height: 1.6em;
+  font-weight: 400;
+  white-space: normal;
+}
+
+.title-dropdown {
+  grid-column: 4/6;
+  /*display: inline-flex;
+  flex: 1;
+  display: flex;*/
+  justify-content: center;
+  align-items: center;
+}
+
+.third-dropdown {
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+ /* font-size: em;*/
+  font-weight: 900;
+  background: none;
+}
+
+.cancer-title {
+  flex: 0 0 auto;
+
+}
+
+
+
+.variable-icon {
+  width: 28px;
+}
+
+.suggestion label {
+  display: block;
+  cursor: pointer;
+  background: red no-repeat;
+}
+
+input#menu {
+ display: none;
+}
+
+
+
+
+
+      /*TITLEBAR SECTION END   / / / / / / / /*/
+
+    /*FAQ SECTION START     / / / / / / / /*/
+
+
 
     /*FAQ SECTION END     / / / / / / / /*/
 

@@ -90,10 +90,10 @@ class QuestionDrawer extends React.Component {
                             <div>{nextDiagnosed}</div>
                         </ReactSlider>
                         <div style={{ position: 'relative', width: '100%' }}>
-                            <div className="slider-tick-button" style={{ left: '0%' }} onClick={() => changeValue('diagnosed', 0)}>Today</div>
+                            <div className="slider-tick-button" style={{ left: '3%' }} onClick={() => changeValue('diagnosed', 0)}>Today</div>
                             <div className="slider-tick-button" style={{ left: '30%' }} onClick={() => changeValue('diagnosed', 3)}>3 mos ago</div>
-                            <div className="slider-tick-button" style={{ left: '65%' }} onClick={() => changeValue('diagnosed', 12)}>1 yr ago</div>
-                            <div className="slider-tick-button" style={{ left: '98%' }} onClick={() => changeValue('diagnosed', 24)}>2 yrs ago</div>
+                            <div className="slider-tick-button" style={{ left: '60%' }} onClick={() => changeValue('diagnosed', 12)}>1 yr ago</div>
+                            <div className="slider-tick-button" style={{ left: '90%' }} onClick={() => changeValue('diagnosed', 24)}>2 yrs ago</div>
                         </div>
                     </div>
                 </div>
