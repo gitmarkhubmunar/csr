@@ -24,7 +24,8 @@ class HomePage extends React.Component {
     render () {
         const { selectedCancerName, selectedPeopleType } = this.state
         return (
-            <div style={{ height: '100vh '}} className="home-page-container">
+            <div style={{ height: '100vh'}} className="home-page-container">
+            <div className="border-grey-bottom "></div>
                 <div className="home-page">
                     <div className="hp-grid">
                      <div className="hp-headline-container">

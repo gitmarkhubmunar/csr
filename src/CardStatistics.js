@@ -52,7 +52,7 @@ class CardStatistics extends React.Component {
 			<div className="statistics">
 				<div></div>
 					<div className="stat-whole-container">
-						<div className="stat-header border-bottom flex-row">
+						<div className="stat-header border-bottom-alt flex-row">
 							
 							<div className="statistic-container center"> 
 								<div className="percentage" style={{ color: color }}>
@@ -65,7 +65,7 @@ class CardStatistics extends React.Component {
 							
 						</div>
 						<div className="stat-viz-container">
-							<div className="stat-viz border-bottom">
+							<div className="stat-viz">
 								<div  className="stat-copy">
 										Given a <a className="bold-line">group of ten people</a> with the same type of cancer and profile
 								</div>
