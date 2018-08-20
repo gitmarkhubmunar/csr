@@ -24,10 +24,10 @@ class HomePage extends React.Component {
     render () {
         const { selectedCancerName, selectedPeopleType } = this.state
         return (
-            <div style={{ height: '100vh '}} className="bg-purple">
+            <div style={{ height: '100vh '}} className="home-page-container">
                 <div className="home-page">
-                    <div className="hp-intro-container">
-                     <div className="home-page-intro">
+                    <div className="hp-grid">
+                     <div className="hp-headline-container">
                             I am a&nbsp;
                             <Dropdown
                                 className="first-dropdown"
