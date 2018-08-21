@@ -4,7 +4,10 @@ import React from 'react'
 import ReactSlider from 'react-slider'
 
 import ButtonSurvey from './ButtonSurvey'
+
+// import ReactSliderAge from './ReactSliderAge'
 import CancerTypes from './data/CancerTypes'
+
 
 class QuestionDrawer extends React.Component {
     componentWillMount () {
@@ -15,9 +18,21 @@ class QuestionDrawer extends React.Component {
         this.setState({ nextDiagnosed: nextProps.diagnosed })
     }
 
+     componentWillMount () {
+        this.setState({ nextAge: this.props.age })
+    }
+
+    componentWillReceiveProps (nextProps) {
+        this.setState({ nextAge: nextProps.age })
+    }
+    // <div className="input-area">
+    //                     <input className="input-field" onBlur={(event) => changeValue('age', event.target.value)} defaultValue={age} />
+    //                 </div>
+
     render () {
         const { age, changeValue, diagnosed, grade, selectedCancerType, sex, stage } = this.props
         const { nextDiagnosed } = this.state
+        const { nextAge } = this.state
         const selectedCancer = _.find(CancerTypes, { id: selectedCancerType })
         const color = selectedCancer.colors[0]
         return (
@@ -39,11 +54,31 @@ class QuestionDrawer extends React.Component {
                         <div>
                             <object className={age === null ? 'variable-icon' : 'variable-icon answered'} data="/assets/age.svg" type="image/svg+xml" />
                         </div>
+
                         <div className={age === null ? 'variable-name' : 'variable-name answered'}>age</div>
                     </div>
+
                     <div className="input-area">
-                        <input className="input-field" onBlur={(event) => changeValue('age', event.target.value)} defaultValue={age} />
+                        
+                        <ReactSlider
+                            className="horizontal-slider bar"
+                            value={nextAge}
+                            max={100}
+                            onAfterChange={(value) => changeValue('age', value)}
+                            onChange={(value) => this.setState({ nextAge: value })}
+                        >
+                            <div>{nextAge}</div>
+                        </ReactSlider>
+                        <div style={{ position: 'relative', width: '100%' }}>
+                            <div className="slider-tick-button" style={{ left: '5%' }} onClick={() => changeValue('diagnosed', 0)}>1</div>
+                            <div className="slider-tick-button" style={{ left: '30%' }} onClick={() => changeValue('diagnosed', 3)}></div>
+                            <div className="slider-tick-button" style={{ left: '60%' }} onClick={() => changeValue('diagnosed', 12)}></div>
+                            <div className="slider-tick-button" style={{ left: '94%' }} onClick={() => changeValue('diagnosed', 24)}>100</div>
+                        </div>
                     </div>
+
+
+
                 </div>
                 <div className="variable-row flex-row">
                     <div className="icon-label">
