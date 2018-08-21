@@ -19,7 +19,7 @@ class CourageHealthPanel extends React.Component {
                 </div>    
             <div className="cta-container">
                     <div className="ch-cta">
-                         <div className="cta-copy">VISIT OUR SITE AT: <a> Courage.Health </a></div>
+                         <div className="cta-copy">Visit our site at: <a> Courage.Health </a></div>
                     </div>
                 </div>
             </div>

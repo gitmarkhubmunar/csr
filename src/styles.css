@@ -680,7 +680,7 @@ input:checked ~ drop-menu menu1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: #757780;
+    color: #555555;
 }
 
 
@@ -809,11 +809,13 @@ input:checked ~ drop-menu menu1 {
 
 .topic-cell > h3{
   text-align: center;
+  font-size: 1.6em;
   margin: 0px 0;
   padding-top: 40px;
-  padding-bottom: 20px;
+  padding-bottom: 26px;
   color: white;
-  font-weight: 600;
+  font-weight: 800;
+  line-height: 1.25em;
 }
 
 .faq > div {
@@ -843,7 +845,10 @@ input:checked ~ drop-menu menu1 {
 
 .number-bullet {
   flex: .25;
-  text-align: center
+  font-size: 1.1em;
+  text-align: center;
+  font-weight: 700;
+  color: white;
 }
 
 .content-margin {
@@ -892,6 +897,10 @@ input:checked ~ drop-menu menu1 {
   /*background: red;*/
   flex: .25;
   text-align: center;
+  font-size: 1.1em;
+  text-align: center;
+  font-weight: 700;
+  color: white;
 }
 
 .question-header {
@@ -899,9 +908,12 @@ input:checked ~ drop-menu menu1 {
 }
 
 .faq-question {
+    font-size: 1.2em;
     padding: 15px 0;
     border-bottom: 1px solid white;
     align-items: center;
+    line-height: 1.3em;
+    font-weight: 600;
 }
 .faq-question:nth-of-type(1) {
     /*border-top: 1px solid white;*/
@@ -1079,14 +1091,14 @@ input:checked ~ drop-menu menu1 {
   background: red;
 }
  
-.courage-panel {
+/*.courage-panel {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   background: #f0f0f0;
   grid-column-gap: 1em;
   grid-row-gap: 1em;
 }
-
+*/
 .ch-elements {
   grid-column: 3/7;
   display:grid;
@@ -1105,13 +1117,14 @@ input:checked ~ drop-menu menu1 {
 
 .ch-description {
   grid-column: 2/6;
+  font-weight: 500;
   font-size: 13px;
   line-height: 16px;
   padding: 50px 0;
 }
 
 .ch-description > a {
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .description-container {
@@ -1331,7 +1344,7 @@ using*/
 }
 
 .handle {
-  font-size: 1em;
+  font-size: .7em;
   font-weight: 800;
   text-align: center;
    color: #4C4C4C;
@@ -1749,23 +1762,25 @@ letter-spacing: -.08px;
 .percentage {
   font-size: 3.1rem;
   font-weight: 900;
-  letter-spacing: -0.07em;
+  letter-spacing: -0.02em;
   /*margin-left: 40px;*/
   grid-column: 2/3;
   text-align: center;
   justify-content: center;
   /*background: red;*/
   width: 120px;
+  margin-left: 8px;
 }
 
 .survival-line {
   /*grid-column: 5/7;*/
   font-size: 1.3rem;
-  width: 120px;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  color: #757780;
+  width: 125px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #555555;
   line-height: 22px;
+  margin-left: -2px;
   /*border:1px solid red;*/
 }
 
@@ -1806,6 +1821,7 @@ letter-spacing: -.08px;
 
 .stat-copy > a {
   font-weight: 700;
+  color: #555555;
 }
 
 .icon-array {
@@ -1893,7 +1909,7 @@ letter-spacing: -.08px;
     max-width: 2%;
     height: 45px;
     /*min-width: %;*/
-    padding: 0 20px 0 8px;
+    padding: 0 20px 0 12px;
     align-items: start;
    /* background: red;*/
     float: left;
@@ -1949,6 +1965,17 @@ letter-spacing: -.08px;
 
 /* FAQ SECTION  END ---------------------------------------------------**/
 
+/* COURAGE PANEL SECTION  START  ---------------------------------------------------**/
+
+
+
+
+
+
+
+
+/* COURAGE PANEL END ---------------------------------------------------**/
+
     .faq {
     display: grid;
     grid-template-columns: 1fr 16fr 1fr;
@@ -1961,10 +1988,13 @@ letter-spacing: -.08px;
 
 .topic-cell > h3{
   text-align: center;
-  margin: 50px 0 0 0;
+  font-size: 1.6em;
+  margin: 0px 0;
   padding-top: 40px;
-  padding-bottom: 20px;
-  padding: 0 30px;
+  padding-bottom: 12px;
+  color: white;
+  font-weight: 800;
+  line-height: 1.25em;
 }
 
 .faq > div {
@@ -1978,12 +2008,12 @@ letter-spacing: -.08px;
   background: #B3CCD3;
 }
 
-.faq > h3 {
+/*.faq > h3 {
     font-weight: 600;
     font-size: 22px;
     text-align: center;
     margin: 0px 0 20px 0;
-}
+}*/
 
 .question-row {
   flex-direction: row;
@@ -2040,6 +2070,7 @@ letter-spacing: -.08px;
   /*background: red;*/
   flex: .25;
   text-align: center;
+  font-size: 1.2em;
 }
 
 .question-header {
@@ -2408,7 +2439,7 @@ input#menu {
 
 .ch-description > a {
   color: black;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .description-container {
@@ -2430,7 +2461,7 @@ input#menu {
 }
 
 .cta-copy > a {
-  font-weight: 800;
+  font-weight: 700;
   color: black;
 }
 
