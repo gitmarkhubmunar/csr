@@ -16,7 +16,8 @@ class CourageHealthPanel extends React.Component {
                      
                     More than numbers, <a>Courage Health</a> is about the conversation between patients and their 
                     doctors about living life on their terms. 
-                </div>    
+                </div> 
+                   
             <div className="cta-container">
                     <div className="ch-cta">
                          <div className="cta-copy">Visit our site at: <a> Courage.Health </a></div>

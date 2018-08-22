@@ -25,27 +25,28 @@ class HomePage extends React.Component {
         const { selectedCancerName, selectedPeopleType } = this.state
         return (
             <div style={{ height: '100vh'}} className="home-page-container">
-            <div className="border-grey-bottom "></div>
+                <div className="border-grey-bottom "></div>
                 <div className="home-page">
                     <div className="hp-grid">
-                     <div className="hp-headline-container">
-                            I am a&nbsp;
-                            <Dropdown
-                                className="first-dropdown"
-                                list={PeopleTypes}
-                                onSelect={name => this.setState({ selectedPeopleType: name })}
-                                selectedItem={selectedPeopleType}
-                            />
+                        <div className="hp-headline-container">
+                                I am a&nbsp;
+                                <Dropdown
+                                    className="first-dropdown"
+                                    list={PeopleTypes}
+                                    onSelect={name => this.setState({ selectedPeopleType: name })}
+                                    selectedItem={selectedPeopleType}
+                                />
 
-                            &nbsp;<span className="break2">searching for</span> answers on&nbsp;
-                            <Dropdown
-                                className="second-dropdown"
-                                list={CancerTypes.map(type => type.name)}
-                                onSelect={name => this.setState({ selectedCancerName: name })}
-                                selectedItem={selectedCancerName}
-                            />     
-                        &nbsp;<span className="break">cancer</span> survival rates.
-                    </div>
+                                &nbsp;<span className="break2">searching for</span> answers on&nbsp;
+                                <Dropdown
+                                    className="second-dropdown"
+                                    list={CancerTypes.map(type => type.name)}
+                                    onSelect={name => this.setState({ selectedCancerName: name })}
+                                    selectedItem={selectedCancerName}
+                                />     
+                            &nbsp;<span className="break">cancer</span> survival rates.
+                            <a href="/card" className="go-button">Go</a>
+                        </div>
                     </div>
                     
                     <div className="home-page-blurb-container">

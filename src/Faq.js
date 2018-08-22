@@ -9,7 +9,7 @@ class Faq extends React.Component {
           <div></div>
             <div className="topic-cell">
                 <h3>Questions to ask your doctor</h3>
-                <div className="faq-question flex-row nowrap">
+                <div className="faq-question flex-row nowrap border-bottom-white">
                     <div className="number-bullet">1</div>
                     <div className="suggestions">
                     Can you verify my stage and grade?
@@ -17,7 +17,7 @@ class Faq extends React.Component {
                     <div className="expand-icon"></div>
                 </div>
 
-                <div className="faq-question flex-row nowrap">
+                <div className="faq-question flex-row nowrap border-bottom-white">
                     <div className="number-bullet">2</div>
                     <div className="suggestions">
                     What is your estimate of my survival rate for 1, 3, and 5 years?
@@ -25,7 +25,7 @@ class Faq extends React.Component {
                     <div className="expand-icon"></div>
                 </div>
 
-                <div className="faq-question flex-row nowrap">
+                <div className="faq-question flex-row nowrap border-bottom-white ">
                     <div className="number-bullet">3</div>
                     <div className="suggestions">
                     Is there anything I can do to improve my prognosis (outlook)?
@@ -40,6 +40,7 @@ class Faq extends React.Component {
                   number={1}
                   title="What’s important to me? What are my priorities?"
                   content="Lorem ipsum."
+                  contentImage={ '../assets/ch.logo.icon.svg'  }
                 />
                 
                 <FaqQuestion

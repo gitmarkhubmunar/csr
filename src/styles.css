@@ -49,8 +49,25 @@ body {
   color: #4C4C4C;
 }
 
+a {
+  text-decoration: none;
+}
+a:active {
+  color: inherit;
+}
+
 
 /*----------------Main----------------*/
+
+.go-button {
+  display: inline-block;
+  background: grey;
+  color: white;
+  padding: 0 .75em;
+  margin: 0 0 0 0.25em;
+  border-radius: 24px;
+  float: right; 
+}
 
 .card {
   /*border-radius: 8px;*/
@@ -564,11 +581,9 @@ input:checked ~ drop-menu menu1 {
   width: 100%;
 }
 
-.survey-page{
-  background: #E1E8F4; /*doctor's color?*/
-}
 
 .question-drawer-container {
+  background: #f2f2f2;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
 }
@@ -803,9 +818,6 @@ input:checked ~ drop-menu menu1 {
     padding: 0 0%;
 }
 
-.topic-cell {
-  padding: 0 0 60px 0;
-}
 
 .topic-cell > h3{
   text-align: center;
@@ -875,18 +887,7 @@ input:checked ~ drop-menu menu1 {
     color: white;
 }
 
-.collapsible-content {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1;
-    font-size: 1em;
-    color: red;
-    margin: 15px 0;
-    /*padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: #f1f1f1;*/
-}
+
 
 .collapsible-content p {
   display: flex;
@@ -905,16 +906,20 @@ input:checked ~ drop-menu menu1 {
 
 .question-header {
   padding-top: 50px;
+
+
 }
 
-.faq-question {
+/*.faq-question {
     font-size: 1.2em;
     padding: 15px 0;
     border-bottom: 1px solid white;
     align-items: center;
     line-height: 1.3em;
     font-weight: 600;
-}
+    background: yellow;
+}*/
+
 .faq-question:nth-of-type(1) {
     /*border-top: 1px solid white;*/
 }
@@ -1062,6 +1067,9 @@ input:checked ~ drop-menu menu1 {
   border-bottom: 1px solid #aaaaaa;
 }
 
+ .border-bottom-white {
+  border-bottom: 1px solid white;
+ } 
 
 .white {
   color: white;
@@ -1956,35 +1964,17 @@ letter-spacing: -.08px;
 
 .faq {
     display: grid;
-    grid-template-columns: 1fr 16fr 1fr;
+    grid-template-columns: 1em 1fr 16fr 1fr 1em;
     background: #542e89;
     /*color: white;
     padding: 0 0%;*/
+    border: 3px solid red;
 }
 
-
-/* FAQ SECTION  END ---------------------------------------------------**/
-
-/* COURAGE PANEL SECTION  START  ---------------------------------------------------**/
-
-
-
-
-
-
-
-
-/* COURAGE PANEL END ---------------------------------------------------**/
-
-    .faq {
-    display: grid;
-    grid-template-columns: 1fr 16fr 1fr;
-    background: #542e89;
-    /*color: white;
-    padding: 0 0%;*/
+.topic-cell {
+  grid-column: 2/5;
+  padding: 0 0 60px 0;
 }
-
-
 
 .topic-cell > h3{
   text-align: center;
@@ -1994,8 +1984,73 @@ letter-spacing: -.08px;
   padding-bottom: 12px;
   color: white;
   font-weight: 800;
-  line-height: 1.25em;
+  line-height: 1.1em;
+  border: 1px solid green;
 }
+
+/*expanded container mobile*/
+
+
+.collapsible-img {
+  /*display: flex;*/
+  width: 150px;
+  height: 65px;
+  grid-column: 6/9;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  /*border: 1px solid red;*/
+  /*background: yellow;*/
+}
+
+.collapsible-content {
+    /*grid-column: 1/5;*/
+    font-size: .95em;
+    font-weight: 600;
+    color: white;
+    /*margin: 1em 0;*/
+    line-height: 1.3em;
+    /*flex: 1;*/
+}
+
+
+.expanded-container {
+  display: flex;
+  flex: 1;
+  grid-column: 1/12;
+
+}
+
+.expanded-content {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid white;
+}
+
+.collapsible-img {
+  align-self: flex-end;
+}
+.collapsible-img img {
+  max-width: 110px;
+}
+
+
+.faq-question {
+    font-size: 1.2em;
+    padding: 15px 0;
+    border-bottom: 1px solid white;
+    align-items: center;
+    line-height: 1.3em;
+    font-weight: 600;
+    background: blue;
+}
+
+.collapsible-container {
+  display: grid;
+ /* grid-template-columns: 1em 1fr 1fr 1fr 1fr 1em 1fr 1em;*/
+}
+
+
 
 .faq > div {
 }
@@ -2029,10 +2084,6 @@ letter-spacing: -.08px;
   text-align: center;
 }
 
-.collapsible-container {
-  display: flex;
-}
-
 .element-container {
   display: flex;
   flex-wrap: wrap;
@@ -2048,23 +2099,20 @@ letter-spacing: -.08px;
     color: grey;
 }
 
-.collapsible-content {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1;
-    font-size: 1em;
-    color: white;
-    margin: 15px 0;
-    /*padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: #f1f1f1;*/
-}
 
-.collapsible-content p {
+
+
+/*.collapsible-content p {
   display: flex;
   flex-wrap: nowrap;
 }
+
+.collapsible-content-container {
+  /*background: yellow;*/
+ /* grid-column: 7/9;*/
+/*}*/
+*/
+
 
 .expand-icon {
   /*background: red;*/
@@ -2077,11 +2125,12 @@ letter-spacing: -.08px;
   padding-top: 50px;
 }
 
-.faq-question {
+/*iphone*/
+/*.faq-question {
     padding: 1em 0;
     border-bottom: 1px solid white;
     align-items: center;
-}
+}*/
 .faq-question:nth-of-type(1) {
     /*border-top: 1px solid white;*/
 }
@@ -2098,6 +2147,21 @@ letter-spacing: -.08px;
 }
 
 
+
+
+
+/* FAQ SECTION  END ---------------------------------------------------**/
+
+/* COURAGE PANEL SECTION  START  ---------------------------------------------------**/
+
+
+
+
+
+
+
+
+/* COURAGE PANEL END ---------------------------------------------------**/
 
 
   
@@ -2423,7 +2487,7 @@ input#menu {
 
 .logo-container > img {
   margin-top: 4px;
-  width: 55px;
+  width: 48px;
   align-self: center;
 }
 
