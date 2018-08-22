@@ -61,11 +61,14 @@ a:active {
 
 .go-button {
   display: inline-block;
+  font-size: .25em;
+  font-weight: 700;
+  letter-spacing: .2px;
   background: grey;
   color: white;
-  padding: 0 .75em;
-  margin: 0 0 0 0.25em;
-  border-radius: 24px;
+  padding: 0 2.1em;
+  margin: 0 0 0 0 0;
+  border-radius: 15px;
   float: right; 
 }
 
@@ -394,6 +397,7 @@ letter-spacing: .02rem;
 .dropdown.open {
   border-color: #eaeaea;
   z-index: 1;
+/*  color: red;*/
 }
 .dropdown-container .selected {
   font-weight:400;
@@ -1078,7 +1082,7 @@ input:checked ~ drop-menu menu1 {
   color: #4A90E2;
 }
 .grey {
-  color: #999;
+  color: #999999;
 }
 .purple {
   color: #4d0092;
@@ -1483,13 +1487,15 @@ using*/
 }
 
 .home-page-blurb-container {
-  grid-column: 1/3;
+  grid-column: 1/4;
   grid-row: 3/4;
-  margin-top: 20px;
+  margin-top: 1.8em;
+/*  border: 1px solid red;*/
+
 }
 
 .home-page-blurb-container > div {
-  font-size: 1rem;
+  font-size: .8rem;
  /* font-weight: 500;*/
   color: #9f9f9f;
   text-align: center;
@@ -1515,6 +1521,7 @@ using*/
   user-select: none;
   white-space: nowrap;
   margin: 0 0;
+  padding: 0 6px;
   background: #f0eaf6;
   max-width: auto;
 }
@@ -1542,8 +1549,18 @@ border-color: #eaeaea;
 z-index: 1;
 background-color: #3B0082;
 max-width: 60vw;
-
+font-size: .2em;
 }
+
+.dropdown.open {
+border-color: #eaeaea;
+z-index: 1;
+background-color: #3B0082;
+max-width: 60vw;
+font-size: .2em;
+}
+
+
 .dropdown-container .selected {
 font-size: 1em;
 font-weight: 700;
@@ -1685,6 +1702,7 @@ iphone 6*/
   font-size: 22px;
   font-weight: 900;
   background: none;
+
 }
 
 .text-center {
@@ -1699,11 +1717,14 @@ iphone 6*/
 
 .caret {
   /*iphone 6*/
+  position: absolute;
   display: inline-block;
-  width: 14px;
-  height: 50px;
+  width: .33em;
+  height: 65px;
+  padding: 0 0 0 0;
   margin-top: 0px;
   margin-left: 8px;
+/*  background: red;*/
 }
 
 .dropdown-container .selected {
@@ -1968,7 +1989,6 @@ letter-spacing: -.08px;
     background: #542e89;
     /*color: white;
     padding: 0 0%;*/
-    border: 3px solid red;
 }
 
 .topic-cell {
@@ -1985,7 +2005,6 @@ letter-spacing: -.08px;
   color: white;
   font-weight: 800;
   line-height: 1.1em;
-  border: 1px solid green;
 }
 
 /*expanded container mobile*/
@@ -1993,38 +2012,62 @@ letter-spacing: -.08px;
 
 .collapsible-img {
   /*display: flex;*/
-  width: 150px;
-  height: 65px;
+  width: 140px;
+  height: 82px;
   grid-column: 6/9;
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
   /*border: 1px solid red;*/
-  /*background: yellow;*/
 }
-
-.collapsible-content {
-    /*grid-column: 1/5;*/
-    font-size: .95em;
-    font-weight: 600;
-    color: white;
-    /*margin: 1em 0;*/
-    line-height: 1.3em;
-    /*flex: 1;*/
-}
-
 
 .expanded-container {
   display: flex;
   flex: 1;
   grid-column: 1/12;
-
 }
 
 .expanded-content {
+  /*keep just as container*/
   display: flex;
   flex-direction: row;
-  border: 1px solid white;
+}
+
+.collapsible-content {
+    /*grid-column: 1/5;*/
+    font-size: 1.05em;
+    font-weight: 700;
+    color: white;
+    /*margin: 1em 0;*/
+    line-height: 1.3em;
+    /*flex: 1;*/
+    margin: 1em 0;
+  }
+
+.prog-icon {
+  width: 80px;
+  float: right;
+
+}
+
+.site-time-container {
+  display: flex;
+  color: #b3b3b3;
+}
+
+.site-ref {
+  font-size: .8em;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: .4px;
+}
+
+.time {
+  font-size: .8em;
+  margin-left: .9em;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: -.05px;
 }
 
 .collapsible-img {
@@ -2042,7 +2085,6 @@ letter-spacing: -.08px;
     align-items: center;
     line-height: 1.3em;
     font-weight: 600;
-    background: blue;
 }
 
 .collapsible-container {
@@ -2428,11 +2470,31 @@ letter-spacing: -.08px;
  /* font-size: em;*/
   font-weight: 900;
   background: none;
+  margin-left: -8px;
 }
+
+.third-dropdown > .caret {
+  display: flex;
+  margin-left: 70px;
+  width: .5em;
+}
+
+
+.third-dropdown .open {
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+ /* font-size: em;*/
+  font-weight: 900;
+  margin-left: -8px;
+  font-size: .4em;
+}
+
 
 .cancer-title {
   flex: 0 0 auto;
-
 }
 
 

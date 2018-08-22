@@ -45,7 +45,7 @@ class HomePage extends React.Component {
                                     selectedItem={selectedCancerName}
                                 />     
                             &nbsp;<span className="break">cancer</span> survival rates.
-                            <a href="/card" className="go-button">Go</a>
+                            <a href="/card" className="go-button">Calculate Your Rate</a>
                         </div>
                     </div>
                     

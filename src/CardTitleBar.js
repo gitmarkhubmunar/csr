@@ -19,7 +19,7 @@ class CardTitleBar extends React.Component {
                         <div className={isPatient === true ? 'role patient' : 'role'}>{isPatient === true ? 'Patient' : 'Doctor'}</div>
                 	</div> 
                 </div>
-                <div className="title-dropdown">
+                <div className="title-dropdown third-dropdown">
                     <Dropdown
                         className="third-dropdown text-center cancer-title"
                         list={CancerTypes.map(type => type.name)}

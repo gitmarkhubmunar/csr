@@ -1,5 +1,6 @@
 import React from 'react'
 
+import ExpandedContent from './ExpandedContent'
 import FaqQuestion from './FaqQuestion'
 
 class Faq extends React.Component {
@@ -35,28 +36,65 @@ class Faq extends React.Component {
 
 
                 <h3 className="question-header">Questions for you to think about & discuss</h3>
+            <FaqQuestion
+              className="border-bottom-white"
+              number={1}
+              title="Do I want my wishes for end of life known in writing? (Advanced Directive?)" 
+              content={
+                <div>
+                  <div className="expanded-container">
+                    <ExpandedContent
+                    siteRef="cancer.org"
+                    time="10 min" 
+                    className="expanded-content"
+                    content="How to set up an advance directive so that it works when you need it" 
+                    image={<img src="../assets/advanced.directive.jpg" />} />
+                  </div>
+                </div>
+                      }/>
+              <FaqQuestion
+              className="border-bottom-white"
+              number={2}
+              title="What's important to me? What are my priorities?" 
+              content={
+                <div>
+                  <div className="expanded-container">
+                    <ExpandedContent
+                    siteRef="faucibus a in magna"
+                    time="1 min" 
+                    className="expanded-content"
+                    content=" Praesent in felis lacinia eros dictum." 
+                    image={<img src="../assets/advanced.directive.jpg" />} />
+                  </div>
+                </div>
+                      }/>
 
-                <FaqQuestion
-                  number={1}
-                  title="What’s important to me? What are my priorities?"
-                  content="Lorem ipsum."
-                  contentImage={ '../assets/ch.logo.icon.svg'  }
-                />
-                
-                <FaqQuestion
-                  number={2}
-                  title="Do I want my wishes for end of life known in writing (advanced directive?)" 
-                  content="Lorem ipsum."
-                />
+              <FaqQuestion
+              className="border-bottom-white"
+              number={3}
+              title="Should I have a will or living trust?" 
+              content={
+                <div>
+                  <div className="expanded-container">
+                    <ExpandedContent
+                    siteRef="Nulla"
+                    time="et min" 
+                    className="expanded-content"
+                    content="Sed at eleifend diam.  Venenatis tincidunt gravida." 
+                    image={<img src="../assets/advanced.directive.jpg" />} />
+                  </div>
+                </div>
+                      }/>
+            </div>
+            <div>
 
-                <FaqQuestion
-                  number={3}
-                  title="Should I have a will or a living trust?" 
-                  content="Lorem ipsum."
-                />
-              </div>
+            </div>
+
+
           </div>
-        )
+
+
+)
     }
 }
 
