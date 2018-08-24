@@ -4,6 +4,7 @@ import React from 'react'
 import ReactSlider from 'react-slider'
 
 import ButtonSurvey from './ButtonSurvey'
+import FaqQuestion from './FaqQuestion'
 
 // import ReactSliderAge from './ReactSliderAge'
 import CancerTypes from './data/CancerTypes'

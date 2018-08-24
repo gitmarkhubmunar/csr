@@ -11,6 +11,7 @@
     "@haiku/thev1sual-heartfull": "0.0.2",
     "@haiku/thev1sual-toggle2": "0.0.1",
     "classnames": "^2.2.5",
+    "informed": "^1.10.4",
     "is-mobile": "^0.2.2",
     "rc-slider": "^8.6.1",
     "react": "^15.4.2",

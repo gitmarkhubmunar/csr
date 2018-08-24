@@ -2,6 +2,7 @@ import React from 'react'
 
 import ExpandedContent from './ExpandedContent'
 import FaqQuestion from './FaqQuestion'
+import ShareCard from './ShareCard'
 
 class Faq extends React.Component {
     render () {
@@ -89,6 +90,7 @@ class Faq extends React.Component {
             <div>
 
             </div>
+           
 
 
           </div>

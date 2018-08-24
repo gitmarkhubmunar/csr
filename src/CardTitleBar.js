@@ -8,7 +8,7 @@ import Dropdown from './Dropdown'
 
 class CardTitleBar extends React.Component {
     render () {
-		const { changeValue, isPatient, selectedCancerType } = this.props
+		const { changeValue, isPatient, selectedCancerType, toggleShareCard } = this.props
         const selectedCancer = _.find(CancerTypes, { id: selectedCancerType })
         const color = selectedCancer.colors[0]
         return (
@@ -30,8 +30,13 @@ class CardTitleBar extends React.Component {
                         selectedItem={selectedCancer.name}
                     />
                 </div>
-                <div className="share-container" style={{ }}>
-                  <object className="share-button" data="/assets/share.svg" type="image/svg+xml" />
+                <div className="share-container">
+                    <object
+                        className="share-button"
+                        data="/assets/share.svg"
+                        type="image/svg+xml"
+                    />
+                    <div className="share-button-transparent" onClick={() => toggleShareCard()} />
                 </div>
             </div>
         )

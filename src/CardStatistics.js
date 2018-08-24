@@ -4,6 +4,8 @@ import React from 'react'
 
 import CancerTypes from './data/CancerTypes'
 import Heart from './Heart'
+import FeedbackSlot from './FeedbackSlot'
+import CardMessaging from './CardMessaging'
 
 class CardStatistics extends React.Component {
 
@@ -45,39 +47,73 @@ class CardStatistics extends React.Component {
 	}
 
 	render () {
-		const { rate, selectedCancerType } = this.props
+		const {
+            age,
+            changeValue,
+            diagnosed,
+            grade,
+            isPatient,
+            rate,
+            sex,
+            selectedCancerType,
+            stage
+        } = this.props
 		const selectedCancer = _.find(CancerTypes, { id: selectedCancerType })
 		const color = selectedCancer.colors[0]
+		const hasAnsweredAnyQuestion = age || diagnosed || grade || sex || stage
 		return (
 			<div className="statistics">
-				<div></div>
-					<div className="stat-whole-container">
-						<div className="stat-header border-bottom-alt flex-row">
-							
-							<div className="statistic-container center"> 
-								<div className="percentage" style={{ color: color }}>
-									{rate}%
-								</div>
+				<div />
+				<div className="stat-whole-container">
+					<div className="stat-header border-bottom-alt flex-row">						
+						<div className="statistic-container center"> 
+							<div className="percentage" style={{ color: color }}>
+								{rate}%
+							</div>
 							<div className="survival-line">
 								5 year survival rate
 							</div>
-							</div>
-							
-						</div>
-						<div className="stat-viz-container">
-							<div className="stat-viz">
-								<div  className="stat-copy">
-										Given a <a className="bold-line">group of ten people</a> with the same type of cancer and profile
-								</div>
-								<div className="icon-array">
-										{this.renderIconArray()}
-									</div>
-							
-									</div>
-
 						</div>
 					</div>
-				<div></div>
+					<div className="stat-viz-container border-bottom-alt">
+						<div className="stat-viz">
+							<div  className="stat-copy">
+								Given a <a className="bold-line">group of ten people</a> with the same type of cancer and profile
+							</div>
+							<div className="icon-array">
+								{this.renderIconArray()}
+							</div>
+						</div>
+					</div>
+					{hasAnsweredAnyQuestion ?
+						<div className="feedback-row">
+							<div className="profile">your profile</div>
+							<FeedbackSlot
+								variable="sex"
+								input={sex}
+							/>
+							<FeedbackSlot
+								variable="age"
+								input={age}
+							/>
+							<FeedbackSlot
+								variable="stage"
+								input={stage}
+							/>
+							<FeedbackSlot
+								variable="grade"
+								input={grade}
+							/>
+							<FeedbackSlot
+								variable="diagnosed"
+								input={diagnosed}
+							/>
+						</div>
+						:
+						<CardMessaging />
+					}
+				</div>
+				<div />
 			</div>
 		)
 	}

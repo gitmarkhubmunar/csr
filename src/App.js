@@ -27,6 +27,7 @@ class App extends React.Component {
 		  		<Route exact path='/' render={renderHomePage} />
 			    <Route path='/card' component={SurveyPage} />
 			</div>
+			
 		  </Router>
 		)
 	}

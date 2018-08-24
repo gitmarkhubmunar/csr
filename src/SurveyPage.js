@@ -8,7 +8,6 @@ import QuestionDrawer from './QuestionDrawer'
 import CourageHealthPanel from './CourageHealthPanel'
 import Footer from './Footer'
 
-
 class SurveyPage extends React.Component {
     state = {
         age: null,
@@ -54,10 +53,15 @@ class SurveyPage extends React.Component {
         return (
             <div className="survey-page">
                 <Card
+                    age={age}
                     changeValue={this.changeValue}
+                    diagnosed={diagnosed}
+                    grade={grade} 
                     isPatient={isPatient}
                     rate={rate}
                     selectedCancerType={selectedCancerType}
+                    sex={sex}
+                    stage={stage}
                 />
                 <div className={questionDrawerContainerClassName}> 
                     <QuestionDrawer
@@ -65,15 +69,13 @@ class SurveyPage extends React.Component {
                         changeValue={this.changeValue}
                         diagnosed={diagnosed}
                         grade={grade} 
+                        selectedCancerType={selectedCancerType}
                         sex={sex}
                         stage={stage}
-                        selectedCancerType={selectedCancerType}
                     />
                 </div>
-                
                 {isPatient === false && <FaqDoctor />}
                 {isPatient === true && <Faq />}
-
                 <CourageHealthPanel />
                 <Footer />
             </div>
