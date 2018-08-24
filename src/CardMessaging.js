@@ -12,13 +12,9 @@ class CardMessaging extends React.Component {
       return ( 
         <div className="feedback-row">
               
-              <div className="answers">
-                <div className="slot-container">
-              </div>
-              <div className="slot-container">
-              <div className="slot-messaging"> Input personalized data down below to calculate your survival rate.</div>
-              </div>
-              </div>
+              <div className="messaging-container">
+                <div className="slot-messaging"> Put in personalized data down below to calculate your survival rate.</div>
+             </div>
             </div>
      )
     }

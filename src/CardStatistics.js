@@ -56,11 +56,13 @@ class CardStatistics extends React.Component {
             rate,
             sex,
             selectedCancerType,
-            stage
+            stage,
+            toggleShareCard,
         } = this.props
 		const selectedCancer = _.find(CancerTypes, { id: selectedCancerType })
 		const color = selectedCancer.colors[0]
 		const hasAnsweredAnyQuestion = age || diagnosed || grade || sex || stage
+		const hasAnsweredAllQuestions = age && diagnosed && grade && sex && stage
 		return (
 			<div className="statistics">
 				<div />
@@ -87,7 +89,12 @@ class CardStatistics extends React.Component {
 					</div>
 					{hasAnsweredAnyQuestion ?
 						<div className="feedback-row">
-							<div className="profile">your profile</div>
+					{ hasAnsweredAllQuestions ? 
+						<div className="share-now" onClick={() => toggleShareCard()}>SHARE</div>
+						:
+						<div className="profile">your profile</div>
+					
+					}
 							<FeedbackSlot
 								variable="sex"
 								input={sex}

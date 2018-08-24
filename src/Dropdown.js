@@ -25,7 +25,7 @@ class Dropdown extends React.Component {
                             {list.map((item, i) => {
                                 return (
                                     <li key={i} onClick={() => this.selectItem(item)}>
-                                        <nobr>{item}</nobr>
+                                        <nobr >{item}</nobr>
                                     </li>
                                 )
                             })}

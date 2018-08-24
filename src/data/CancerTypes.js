@@ -15,6 +15,7 @@ const CancerTypes = [
         id: 'bladder',
         name: 'Bladder Cancer',
         colors: ['#FABC3C', '#740070', '#0F1B47'],
+        contrastColor: 'black',
     },
     {
         id: 'brain',
@@ -64,12 +65,14 @@ const CancerTypes = [
     {
         id: 'lymphoma',
         name: 'Lymphoma',
-        colors: ['#D7FF75'],  
+        colors: ['#D7FF75'],
+        contrastColor: 'black',  
     },
     {
         id: 'stomach',
         name: 'Stomach Cancer',
-        colors: ['#CACFE3'],    
+        colors: ['#CACFE3'], 
+        contrastColor: 'black',   
     },
     {
         id: 'thyroid',

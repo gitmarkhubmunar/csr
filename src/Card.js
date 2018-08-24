@@ -1,4 +1,8 @@
 import React from 'react'
+import {
+  Tooltip,
+} from 'react-tippy';
+
 
 import CardStatistics from './CardStatistics'
 import CardTitleBar from './CardTitleBar'
@@ -32,6 +36,7 @@ class Card extends React.Component {
         const { showShareCard } = this.state
         return (
             <div className="card">
+        
                 <div className="title-bar-container">
             		<CardTitleBar
                         changeValue={changeValue}
@@ -50,6 +55,7 @@ class Card extends React.Component {
                     selectedCancerType={selectedCancerType}
                     sex={sex}
                     stage={stage}
+                    toggleShareCard={this.toggleShareCard}
                 />
                 {showShareCard && <ShareCard />}
             </div>
