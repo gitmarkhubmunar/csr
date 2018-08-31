@@ -9,7 +9,7 @@ class FeedbackSlot extends React.Component {
 	  return (   
 		  <div className="answers">
 			<div className="slot-container">
-			  <div>{variable}</div>
+			  <div className="variable">{variable}</div>
 			  <div className="slot-input">{input}</div>
 			</div>
 		  </div>

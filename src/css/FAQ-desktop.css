@@ -1,0 +1,202 @@
+
+/*FAQ /   --Desktop--------- START ----------------------------------- **/
+
+
+.faq {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    background: #542e89;
+    color: #cacaca;
+    padding: 0 0%;
+}
+
+.topic-cell {
+/* border: 1px solid yellow;*/
+}
+
+.topic-cell > h3{
+  text-align: center;
+  font-size: 2em;
+  margin: 0px 0;
+  padding-top: 40px;
+  padding-bottom: 26px;
+  color: white;
+  font-weight: 800;
+  line-height: 1.25em;
+}
+
+.faq > h3 {
+    font-weight: 600;
+    font-size: 22px;
+    text-align: center;
+    margin: 0px 0 20px 0;
+}
+
+
+.question-row {
+  flex-direction: row;
+}
+
+.number-bullet {
+  flex: .25;
+  font-size: 1.1em;
+  text-align: center;
+  font-weight: 700;
+  color: white;
+}
+
+.content-margin {
+  flex: .25;
+  text-align: center;
+}
+
+/*.collapsible-container {
+  display: grid;
+  grid-template-columns: 1em 1fr 1fr 1em;
+  grid-gap: 1em;
+  background: teal;
+}*/
+
+
+/*expanded container desktop*/
+
+/*.expanded-container {
+  display: flex;
+  flex: 1;
+  grid-column: 1/12;
+}*/
+
+/*.expanded-content {*/
+  /*keep just as container*/
+/*  display: flex;
+  flex-direction: row;
+}*/
+
+/*.collapsible-content {
+    grid-column:  2/2;
+    width: 270px;
+    font-size: 1.09em;
+    font-weight: 700;
+    color: white;*/
+/*    /*margin: 1em 0;*/
+/*    line-height: 1.3em;*/
+    /*flex: 1;*/
+/*    margin: 1em 0;*/
+
+  }*/
+
+/*  .prog-icon {
+  width: 80px;
+  float: right;
+
+}*/
+
+/*.site-time-container {
+  display: flex;
+  color: #b3b3b3;
+  width: 300px;
+}*/
+
+.site-ref {
+  font-size: .8em;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: .4px;
+}
+
+.time {
+  font-size: .8em;
+  margin-left: .9em;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: -.05px;
+}
+
+.collapsible-img {
+  display: grid;
+  align-self: flex-end;
+  margin-bottom: 2em;
+/*  border: 1px solid green;*/
+
+}
+.collapsible-img img {
+  max-width: 260px;
+}
+
+.collapsible-img {
+ /* border: 10px solid green;*/
+}
+
+.element-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.suggestions-flat {
+  flex-wrap: wrap;
+  flex: 2;
+  color: white;
+}
+
+
+
+.suggestions {
+  flex-wrap: wrap;
+  flex: 2;
+  color: white;
+  /*background: grey;*/
+}
+
+.active, .suggestions:hover {
+    color: white;
+}
+
+
+
+.collapsible-content p {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.expand-icon {
+  /*background: red;*/
+  flex: .25;
+  text-align: center;
+  font-size: 1.1em;
+  text-align: center;
+  font-weight: 700;
+  color: white;
+}
+
+.question-header {
+  padding-top: 50px;
+}
+
+.faq-question {
+    display: flex;
+    font-size: 1.3em;
+    padding: 15px 0;
+   /* border-bottom: 1px solid white;*/
+    align-items: center;
+    line-height: 1.3em;
+    font-weight: 600;
+}
+
+
+
+.faq-question:nth-of-type(1) {
+    /*border-top: 1px solid white;*/
+}
+.faq-question > div:nth-of-type(1) {
+    /*font-weight: bold;
+    font-size: 26px;*/
+}
+.faq-question > div:nth-of-type(2) {
+    flex: 1;
+    padding: 0 0;
+}
+.faq-question > div:nth-of-type(3) {
+    /*font-size: 30px;*/
+}
+
+/*FAQ /   --Desktop--------- END ----------------------------------- **/

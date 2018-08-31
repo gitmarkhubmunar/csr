@@ -33,7 +33,7 @@ class Dropdown extends React.Component {
                     </ul>
                 }
                 <span className="selected">{selectedItem}</span>
-                <object className="caret" data="/assets/dropdown.svg" type="image/svg+xml" />
+                <object className="caret-hp" data="/assets/dropdown.svg" type="image/svg+xml" />
             </div>        
         )
     }

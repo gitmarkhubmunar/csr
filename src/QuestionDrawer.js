@@ -30,6 +30,12 @@ class QuestionDrawer extends React.Component {
     //                     <input className="input-field" onBlur={(event) => changeValue('age', event.target.value)} defaultValue={age} />
     //                 </div>
 
+    //<div className="slider-tick-button" style={{ left: '30%' }} onClick={() => changeValue('diagnosed', 3)}></div>
+                            //<div className="slider-tick-button" style={{ left: '60%' }} onClick={() => changeValue('diagnosed', 12)}></div>
+
+    // <div className="slider-tick-button" style={{ left: '30%' }} onClick={() => changeValue('diagnosed', 3)}>3 mos ago</div>
+                            //<div className="slider-tick-button" style={{ left: '60%' }} onClick={() => changeValue('diagnosed', 12)}>1 yr ago</div>
+
     render () {
         const { age, changeValue, diagnosed, grade, selectedCancerType, sex, stage } = this.props
         const { nextDiagnosed } = this.state
@@ -64,17 +70,17 @@ class QuestionDrawer extends React.Component {
                         <ReactSlider
                             className="horizontal-slider bar"
                             value={nextAge}
-                            max={100}
+                            min={18}
+                            max={92}
                             onAfterChange={(value) => changeValue('age', value)}
                             onChange={(value) => this.setState({ nextAge: value })}
                         >
                             <div>{nextAge}</div>
                         </ReactSlider>
                         <div style={{ position: 'relative', width: '100%' }}>
-                            <div className="slider-tick-button" style={{ left: '5%' }} onClick={() => changeValue('diagnosed', 0)}>1</div>
-                            <div className="slider-tick-button" style={{ left: '30%' }} onClick={() => changeValue('diagnosed', 3)}></div>
-                            <div className="slider-tick-button" style={{ left: '60%' }} onClick={() => changeValue('diagnosed', 12)}></div>
-                            <div className="slider-tick-button" style={{ left: '94%' }} onClick={() => changeValue('diagnosed', 24)}>100</div>
+                            <div className="slider-tick-button" style={{ left: '5%' }} onClick={() => changeValue('diagnosed', 0)}>18</div>
+                            
+                            <div className="slider-tick-button" style={{ left: '94%' }} onClick={() => changeValue('diagnosed', 24)}>92</div>
                         </div>
                     </div>
 
@@ -95,7 +101,7 @@ class QuestionDrawer extends React.Component {
                         <ButtonSurvey color={color} handleClick={() => changeValue('stage', '4')} className="button-u" name="4" turnedOn={stage === '4'} />
                     </div>
                 </div> 
-                <div className="variable-row flex-row">
+                <div className="variable-row flex-row grade">
                     <div className="icon-label">
                         <div>
                             <object className={grade === null ? 'variable-icon' : 'variable-icon answered'} data="/assets/grade.svg" type="image/svg+xml" />
@@ -126,10 +132,9 @@ class QuestionDrawer extends React.Component {
                             <div>{nextDiagnosed}</div>
                         </ReactSlider>
                         <div style={{ position: 'relative', width: '100%' }}>
-                            <div className="slider-tick-button" style={{ left: '3%' }} onClick={() => changeValue('diagnosed', 0)}>Today</div>
-                            <div className="slider-tick-button" style={{ left: '30%' }} onClick={() => changeValue('diagnosed', 3)}>3 mos ago</div>
-                            <div className="slider-tick-button" style={{ left: '60%' }} onClick={() => changeValue('diagnosed', 12)}>1 yr ago</div>
-                            <div className="slider-tick-button" style={{ left: '90%' }} onClick={() => changeValue('diagnosed', 24)}>2 yrs ago</div>
+                            <div className="slider-tick-button" style={{ left: '0%' }} onClick={() => changeValue('diagnosed', 0)}>Within past month</div>
+                           
+                            <div className="slider-tick-button" style={{ left: '90%' }} onClick={() => changeValue('diagnosed', 24)}>3 years ago”</div>
                         </div>
                     </div>
                 </div>

@@ -16,10 +16,14 @@ class CardTitleBar extends React.Component {
         return (
             <div className="title-bar padding-2" style={{ background: color }}>
                 <div className="toggle-container">
-                	<div className="toggle" >
-                		<Switch className="patient-switch" onClick={() => changeValue('isPatient', !isPatient)} on={isPatient === true} />
-                        <div style={{ color: contrastColor }} className={isPatient === true ? 'role patient' : 'role'}>{isPatient === true ? 'Patient' : 'Doctor'} </div>
-                	</div> 
+                    <div className="toggle" >
+                        <Switch className="patient-switch" 
+                        onClick={() => changeValue('isPatient', !isPatient)} 
+                        on={isPatient === true} />
+                        <div style={{ color: contrastColor }} 
+                        className={isPatient === true ? 'role patient' : 'role'}>{isPatient === true ? 'Patient' : 'Doctor'} </div>
+                    </div> 
+
                 </div>
                 <div className="title-dropdown third-dropdown">
                     <Dropdown

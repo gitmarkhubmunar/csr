@@ -15,15 +15,19 @@ class App extends React.Component {
 	render () {
 		const props = this.props
 		//<AlternateMessage />
-		// Render our custom home page component
-		const renderHomePage = (props) => {
+		// Render our custom home page component 
+		// I took the header out 
+
+		
+				const renderHomePage = (props) => {
 			return <HomePage {...props} />
 		}
+
 
 		return (
 		  <Router {...props}>
 		  	<div className="app">
-		  		<Header />
+		  		
 		  		<Route exact path='/' render={renderHomePage} />
 			    <Route path='/card' component={SurveyPage} />
 			</div>

@@ -8,7 +8,7 @@ class FaqDoctor extends React.Component {
 		return (
 			<div className="faq doctor-bg-color">
 				<div className="topic-cell">
-					<h3>Questions to ask your patient</h3>
+					<h3>Additional resources</h3>
 					<FaqQuestion
 						className="border-bottom-white"
 						number={1}

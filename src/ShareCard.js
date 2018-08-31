@@ -11,13 +11,17 @@ class ShareCard extends React.Component {
     render () {
       return ( 
         <div className="share-panel">
-          <div className="feedback-panel">It takes Courage to get these results.</div>
+        <div className="close-modal">
+           <div>X </div>
+           </div>
+          <div className="feedback-panel">Share this information with others.</div>
           <div className="share-card">
-              <div className="share-header">Share your card with this link</div>
+              <div className="share-header">Click copy and paste in an email, SMS, etc.</div>
                 <div className="link-box" >
                 <div className="link"> https://this.stat.card/4cfmEgpOOZk </div>
-                <div className="copy-button"> COPY </div>
+                
               </div>
+              <div className="copy-button"> COPY </div>
           </div>
 
         </div>

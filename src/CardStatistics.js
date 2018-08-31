@@ -9,6 +9,42 @@ import CardMessaging from './CardMessaging'
 
 class CardStatistics extends React.Component {
 
+
+	// <div className="desktop-grid-container">
+	// 				{hasAnsweredAnyQuestion ?
+	// 					<div className="feedback-row">
+	// 				{ hasAnsweredAllQuestions ? 
+	// 					<div className="share-now" onClick={() => toggleShareCard()}>SHARE</div>
+	// 					:
+	// 					<div className="profile">your profile</div>
+					
+	// 				}
+	// 						<FeedbackSlot
+	// 							variable="sex"
+	// 							input={sex}
+	// 						/>
+	// 						<FeedbackSlot
+	// 							variable="age"
+	// 							input={age}
+	// 						/>
+	// 						<FeedbackSlot
+	// 							variable="stage"
+	// 							input={stage}
+	// 						/>
+	// 						<FeedbackSlot
+	// 							variable="grade"
+	// 							input={grade}
+	// 						/>
+	// 						<FeedbackSlot
+	// 							variable="diagnosed"
+	// 							input={diagnosed}
+	// 						/>
+	// 					</div>
+	// 					:
+	// 					<CardMessaging />
+	// 				}
+	// 			</div>
+
 	renderIconArray = () => {
 		const { rate, selectedCancerType } = this.props
 		const selectedCancer = _.find(CancerTypes, { id: selectedCancerType })
@@ -67,18 +103,18 @@ class CardStatistics extends React.Component {
 			<div className="statistics">
 				<div />
 				<div className="stat-whole-container">
-					<div className="stat-header border-bottom-alt flex-row">						
+					<div className="stat-header flex-row ">						
 						<div className="statistic-container center"> 
 							<div className="percentage" style={{ color: color }}>
 								{rate}%
 							</div>
 							<div className="survival-line">
-								5 year survival rate
+								5 year conditional survival rate
 							</div>
 						</div>
 					</div>
-					<div className="stat-viz-container border-bottom-alt">
-						<div className="stat-viz">
+					<div className="stat-viz-container">
+						<div className="stat-viz border-bottom-alt border-top-alt">
 							<div  className="stat-copy">
 								Given a <a className="bold-line">group of ten people</a> with the same type of cancer and profile
 							</div>
@@ -87,40 +123,9 @@ class CardStatistics extends React.Component {
 							</div>
 						</div>
 					</div>
-					{hasAnsweredAnyQuestion ?
-						<div className="feedback-row">
-					{ hasAnsweredAllQuestions ? 
-						<div className="share-now" onClick={() => toggleShareCard()}>SHARE</div>
-						:
-						<div className="profile">your profile</div>
-					
-					}
-							<FeedbackSlot
-								variable="sex"
-								input={sex}
-							/>
-							<FeedbackSlot
-								variable="age"
-								input={age}
-							/>
-							<FeedbackSlot
-								variable="stage"
-								input={stage}
-							/>
-							<FeedbackSlot
-								variable="grade"
-								input={grade}
-							/>
-							<FeedbackSlot
-								variable="diagnosed"
-								input={diagnosed}
-							/>
-						</div>
-						:
-						<CardMessaging />
-					}
-				</div>
+			
 				<div />
+				</div>
 			</div>
 		)
 	}
