@@ -8,11 +8,16 @@ import FaqQuestion from './FaqQuestion'
 
 
 class ShareCard extends React.Component {
+
+clicked(){
+  console.log('fuck. where do I go from her')
+}
+
     render () {
       return ( 
         <div className="share-panel">
         <div className="close-modal">
-           <div>X </div>
+           <div onClick={this.clicked}>X </div>
            </div>
           <div className="feedback-panel">Share this information with others.</div>
           <div className="share-card">

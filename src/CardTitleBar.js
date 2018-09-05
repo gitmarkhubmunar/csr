@@ -42,7 +42,8 @@ class CardTitleBar extends React.Component {
                         data="/assets/share.svg"
                         type="image/svg+xml"
                     />
-                    <div className="share-button-transparent" onClick={() => toggleShareCard()} />
+                    <div className="share-button-transparent" 
+                    onClick={() => toggleShareCard()} />
                 </div>
             </div>
         )

@@ -78,7 +78,7 @@ const PeopleTypes = [
 
                                   <div className="home-page-blurb-container">
                         <div className="blurb-copy">
-                            Personalized cancer survival rates from the experts at <a href>Courage Health</a>
+                            Personalized cancer survival rates from the experts at <a href="http://courage.health">Courage Health</a>
                         </div>
                         <div className="links">
                             <a className="about-link">About</a> <a className="blog-link">Blog</a>
