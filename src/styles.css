@@ -1841,6 +1841,14 @@ iphone 6*/
   align-items: center;
 }
 
+
+.cancer-ribbon {
+  width: .5em;
+/*  background: white;*/
+ /* margin-right: .3em;*/
+  background: red;
+
+}
 .third-dropdown {
   /*display: inline-block;*/
   /*display: flex;*/
