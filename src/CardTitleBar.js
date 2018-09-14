@@ -12,7 +12,8 @@ class CardTitleBar extends React.Component {
 		const { changeValue, isPatient, selectedCancerType, toggleShareCard } = this.props
         const selectedCancer = _.find(CancerTypes, { id: selectedCancerType })
         const color = selectedCancer.colors[0]
-        const contrastColor = selectedCancer.contrastColor || 'white' 
+        const contrastColor = selectedCancer.contrastColor || 'white'
+        const cancerRibbon = selectedCancer.ribbonFile 
         return (
             <div className="title-bar padding-2" style={{ background: color }}>
                 <div className="toggle-container">
@@ -26,6 +27,7 @@ class CardTitleBar extends React.Component {
 
                 </div>
                 <div className="title-dropdown third-dropdown">
+
                     <Dropdown
                         className="third-dropdown text-center cancer-title"
                         list={CancerTypes.map(type => type.name)}

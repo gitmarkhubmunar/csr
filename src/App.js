@@ -26,11 +26,22 @@ class App extends React.Component {
 
 		return (
 		  <Router {...props}>
-		  	<div className="app">
-		  		
-		  		<Route exact path='/' render={renderHomePage} />
-			    <Route path='/card' component={SurveyPage} />
-			</div>
+			  <div>
+
+			  	// toggle the visibility with the following element using javascript and the css style "display: none"
+
+				// div className="blackout">
+				// div className="blackout-modal">
+				// ugh.
+				/// div>
+				/// div>
+
+			  	<div className="app">
+			  		
+			  		<Route exact path='/' render={renderHomePage} />
+				    <Route path='/card' component={SurveyPage} />
+				</div>
+			  </div>
 			
 		  </Router>
 		)

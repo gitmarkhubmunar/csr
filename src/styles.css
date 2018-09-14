@@ -336,7 +336,6 @@ letter-spacing: .02rem;
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 22px;
   font-weight: 900;
 }
 
@@ -374,11 +373,37 @@ input#menu {
  display: none;
 }
 
+
+
+.ribbon {
+  display: flex;
+  width: 5px;
+  height: 10px;
+  background: red;
+  background-image: url('/assets/ribbon.bladder.svg');
+}
+
 /*Toggle effect /*/
 
 
+.blackout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  background: rgba(0,0,0,0.9);
+  z-index: 100;
+}
 
-
+.blackout-modal {
+  background: white;
+  width: 100px;
+  height: 100px;
+  margin: 1em auto;
+  padding: 1em;
+}
 
 
 /*grid layout color template */
@@ -1841,24 +1866,37 @@ iphone 6*/
   align-items: center;
 }
 
+.ribbon-and-dropdown {
+  display: flex;
+}
+
+.select-ribbon-dropdown {
+  display: flex;
+}
+
+.select-ribbon {
+  display: flex;
+  width: 1.2em;
+  height: 1.2em;
+}
+
 
 .cancer-ribbon {
-  width: .5em;
-/*  background: white;*/
+  width: 1em;
+  background: white;
  /* margin-right: .3em;*/
   background: red;
-
 }
+
 .third-dropdown {
   /*display: inline-block;*/
   /*display: flex;*/
   justify-content: center;
- /* align-items: center;*/
+  align-items: center;
   color: white;
-  font-size: 22px;
   font-weight: 900;
   background: none;
-
+  flex-wrap:nowrap;
 }
 
 .text-center {
@@ -2898,7 +2936,7 @@ line-height: .85em;
 
 .third-dropdown {
   display: inline-block;
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
   color: white;
@@ -2919,11 +2957,11 @@ line-height: .85em;
   display: flex;
   justify-content: center;
   align-items: center;
+  /*text-align-last:center;*/
   color: white;
- /* font-size: em;*/
+  font-size: .9em;
   font-weight: 900;
-  margin-left: -8px;
-  font-size: .4em;
+/*  margin-left: -8px;*/
 }
 
 
@@ -2944,7 +2982,7 @@ line-height: .85em;
 }
 
 input#menu {
- display: none;
+third-dropdown .open display: none;
 }
 
 

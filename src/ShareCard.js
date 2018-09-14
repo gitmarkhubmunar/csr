@@ -10,7 +10,7 @@ import FaqQuestion from './FaqQuestion'
 class ShareCard extends React.Component {
 
 clicked(){
-  console.log('fuck. where do I go from her')
+  console.log('blackout')
 }
 
     render () {

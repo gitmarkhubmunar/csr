@@ -7,6 +7,7 @@ class Dropdown extends React.Component {
     selectItem = (item: string) => {
         // this.setState({ selectedItem: item })
         this.props.onSelect(item)
+        // this.props.setState({ // something about the ribbon? })
     }
 
     toggleMenu = () => {
@@ -14,27 +15,31 @@ class Dropdown extends React.Component {
     }
 
     render () {
-        const { className, list, selectedItem } = this.props
+        const { className, list, selectedItem, } = this.props
         const { isOpen } = this.state
         const combinedClassName = 'dropdown-container ' + className
         return (
-            <div className={combinedClassName} onClick={this.toggleMenu}>
-                {isOpen &&
-                    <ul className={isOpen ? 'dropdown open' : 'dropdown closed'}>
-                        <div>
-                            {list.map((item, i) => {
-                                return (
-                                    <li key={i} onClick={() => this.selectItem(item)}>
-                                        <nobr >{item}</nobr>
-                                    </li>
-                                )
-                            })}
-                        </div>
-                    </ul>
-                }
-                <span className="selected">{selectedItem}</span>
-                <object className="caret-hp" data="/assets/dropdown-white.svg" type="image/svg+xml" />
-            </div>        
+            <section className="ribbon-and-dropdown">
+                  <div className="select-ribbon-dropdown">
+                      <object
+                        className="select-ribbon"
+                        data="/assets/ribbon.ureterurinary.svg"
+                        type="image/svg+xml"
+                        />
+
+                        <select className='dropdown-select open'>
+                        {list.map((item, i) => {
+                            return (
+                                <option value={i} key={i} onClick={() => this.selectItem(item)}>
+                                    {item}
+
+                                </option>
+
+                            )
+                        })}
+                    </select>
+                </div>   
+            </section>     
         )
     }
 }
