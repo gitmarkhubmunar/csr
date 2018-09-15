@@ -74,9 +74,9 @@ class CardStatistics extends React.Component {
 		}
 
 		return (
-			<div className="icon-parent-container">
-				<div className="icon-first-row">{iconArrayFirstRow}</div>
-				<div className="icon-second-row">{iconArraySecondRow}</div>
+			<div className="icon-array">
+				<div className="icon-array-row">{iconArrayFirstRow}</div>
+				<div className="icon-array-row">{iconArraySecondRow}</div>
 			</div>
 		)
 	}
@@ -100,26 +100,26 @@ class CardStatistics extends React.Component {
 		const hasAnsweredAllQuestions = age && diagnosed && grade && sex && stage
 		return (
 			<div className="statistics">
-				<div className="statistics-container content-container">
-					<div className="statistics-header">						
-						<div className="statistics-container center"> 
-							<div className="percentage" style={{ color: color }}>
-								{rate}%
-							</div>
-							<div className="survival-line">
-								5 year conditional survival rate
-							</div>
+				<div className="content-container">
+					<div className="statistics-container statistics-header">						
+						<div className="statistics-copy">
+							5 year conditional survival rate
+						</div>
+						<div className="percentage" style={{ color: color }}>
+							{rate ?
+								<span>{rate}%</span>
+								:
+								<span style={{ color: '#ccc', fontWeight: '100' }}>
+									…
+								</span>
+							}
 						</div>
 					</div>
-					<div className="statistics-viz-container">
-						<div className="statistics-viz border-bottom-alt border-top-alt">
-							<div  className="statistics-copy">
-								Given a <a className="bold-line">group of ten people</a> with the same type of cancer and profile
-							</div>
-							<div className="icon-array">
-								{this.renderIconArray()}
-							</div>
+					<div className="statistics-container statistics-viz border-top-alt">
+						<div  className="statistics-copy">
+							Given a <a className="bold-line">group of ten people</a> with the same type of cancer and profile
 						</div>
+						{this.renderIconArray()}
 					</div>
 				</div>
 			</div>
