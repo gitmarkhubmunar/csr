@@ -9,7 +9,6 @@ import CardMessaging from './CardMessaging'
 
 class CardStatistics extends React.Component {
 
-
 	// <div className="desktop-grid-container">
 	// 				{hasAnsweredAnyQuestion ?
 	// 					<div className="feedback-row">
@@ -84,27 +83,26 @@ class CardStatistics extends React.Component {
 
 	render () {
 		const {
-            age,
-            changeValue,
-            diagnosed,
-            grade,
-            isPatient,
-            rate,
-            sex,
-            selectedCancerType,
-            stage,
-            toggleShareCard,
-        } = this.props
+	        age,
+	        changeValue,
+	        diagnosed,
+	        grade,
+	        isPatient,
+	        rate,
+	        selectedCancerType,
+	        sex,
+	        stage,
+	        toggleShareCard,
+	    } = this.props
 		const selectedCancer = _.find(CancerTypes, { id: selectedCancerType })
 		const color = selectedCancer.colors[0]
 		const hasAnsweredAnyQuestion = age || diagnosed || grade || sex || stage
 		const hasAnsweredAllQuestions = age && diagnosed && grade && sex && stage
 		return (
 			<div className="statistics">
-				<div />
-				<div className="stat-whole-container">
-					<div className="stat-header flex-row ">						
-						<div className="statistic-container center"> 
+				<div className="statistics-container content-container">
+					<div className="statistics-header">						
+						<div className="statistics-container center"> 
 							<div className="percentage" style={{ color: color }}>
 								{rate}%
 							</div>
@@ -113,9 +111,9 @@ class CardStatistics extends React.Component {
 							</div>
 						</div>
 					</div>
-					<div className="stat-viz-container">
-						<div className="stat-viz border-bottom-alt border-top-alt">
-							<div  className="stat-copy">
+					<div className="statistics-viz-container">
+						<div className="statistics-viz border-bottom-alt border-top-alt">
+							<div  className="statistics-copy">
 								Given a <a className="bold-line">group of ten people</a> with the same type of cancer and profile
 							</div>
 							<div className="icon-array">
@@ -123,8 +121,6 @@ class CardStatistics extends React.Component {
 							</div>
 						</div>
 					</div>
-			
-				<div />
 				</div>
 			</div>
 		)

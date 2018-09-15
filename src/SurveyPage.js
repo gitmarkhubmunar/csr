@@ -28,9 +28,8 @@ class SurveyPage extends React.Component {
 
     changeValue = (key, value) => {
         this.setState({ [key]: value })
-        // Don't calculate a new rate when switching patient > doctor view.
         if (key === 'isPatient') {
-            return
+            return // Don't calculate when switching between patient/doctor view.
         }
         this.calculateCsr()
     }
