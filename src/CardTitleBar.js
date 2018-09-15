@@ -14,13 +14,12 @@ class CardTitleBar extends React.Component {
         const color = selectedCancer.colors[0]
         const contrastColor = selectedCancer.contrastColor || 'white'
         const ribbon = selectedCancer.ribbonFile
-        console.log({selectedCancerType, color})
         return (
             <div className="title-bar" style={{ background: color }}>
-                <div className="toggle-container">
+                <div className="toggle-switch-container">
                     <div className="toggle" >
                         <Switch
-                            className="patient-switch" 
+                            className="toggle-switch" 
                             onClick={() => changeValue('isPatient', !isPatient)} 
                             on={isPatient === true}
                         />
@@ -39,6 +38,14 @@ class CardTitleBar extends React.Component {
                         }}
                         selectedItem={selectedCancer.name}
                     />
+                    {ribbon &&
+                        <object
+                            className="ribbon"
+                            data={`/assets/${ribbon}`}
+                            style={{ background: 'rgba(255,255,255,.2)', padding: 10 }}
+                            type="image/svg+xml"
+                        />
+                    }
                 </div>
                 <div className="share-container">
                     <object

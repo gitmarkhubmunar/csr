@@ -48,8 +48,8 @@ body {
 
 a {
   text-decoration: none;
-}share-panel
-a:active {
+}
+.share-panel a:active {
   color: inherit;
 }
 
@@ -89,8 +89,8 @@ a:active {
     transition: all .5s ease;
 }
 
-.toggle-container {
-    grid-column: 2/2;
+.toggle-switch-container {
+    grid-column: 2/3;
 }
 
 .toggle2 {
@@ -136,16 +136,16 @@ a:active {
   top: 0;
 }
 
-.patient-switch.switch {
+.toggle-switch.switch {
   position: absolute;
   background: #E1E8F4;
   width: 50px;
 
 }
-.patient-switch.switch.on {
+.toggle-switch.switch.on {
   background: #4d0092;;
 }
-.patient-switch.switch.on > .switch-toggle {
+.toggle-switch.switch.on > .switch-toggle {
   left: 23px;
     -webkit-transition: left .2s ease-in-out;
     transition: left .2s ease-in-out;
@@ -282,15 +282,6 @@ select.dropdown::-ms-expand {
     margin: 0;
     padding: 0;
 }
-.dropdown.open {
-  border-color: #eaeaea;
-  z-index: 1;
-/*  color: red;*/
-}
-.dropdown-container .selected {
-  font-weight: 400;
-}
-
 .dropdown-container .selected:before {
   /*border-bottom: 8px solid #E5D9E8;*/
   bottom: 0px;
@@ -312,15 +303,24 @@ select.dropdown::-ms-expand {
 
 .title-dropdown-container {
     grid-column: 3/5;
+    display: flex;
+    flex-direction: row;
 }
 .title-dropdown {
-    font-size: 30px;
+    box-sizing: border-box;
     color: white;
+    font-family: 'Muli';
+    font-size: 30px;
     font-weight: 900;
+    text-align: center;
+    text-align-last: center;
 }
-
-.cancer-title {
-    flex: 0 0 auto;
+.title-dropdown option {
+    /*text-align: left;*/
+}
+.ribbon {
+    width: 30px;
+    height: 80px;
 }
 
 .caret {
@@ -348,23 +348,6 @@ select.dropdown::-ms-expand {
   background: red no-repeat;
 }
 
-input#menu {
- display: none;
-}
-
-
-
-.ribbon {
-  display: flex;
-  width: 5px;
-  height: 10px;
-  background: red;
-  background-image: url('/assets/ribbon.bladder.svg');
-}
-
-/*Toggle effect /*/
-
-
 .blackout {
   position: absolute;
   top: 0;
@@ -384,9 +367,15 @@ input#menu {
   padding: 1em;
 }
 
+.app {
+  -webkit-overflow-scrolling: touch;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 100vw;
+}
 
 /*grid layout color template */
-
 
 /*.home-page > div {
   display: grid;
@@ -399,10 +388,6 @@ input#menu {
 }*/
 
 /******* Home page **********/
-
-.app {
-  height: 100vh;
-}
 
 /*.home-page {
   display: grid;
@@ -1508,8 +1493,6 @@ using*/
 
 @media screen and (max-width: 375px) {
 
-    /* HEADER SECTION      / / / / / / / /*/
-
     .cancer-survival-rates-header {
         color: #4d0092;
         font-size: 1.1em;
@@ -1517,77 +1500,55 @@ using*/
         font-family: kiro;
     }
 
-    /*STAT SECTION      / / / / / / / /*/
+    .break {
+        margin:  0 0 0 -10px;
+        padding: 0 0 0 0;
+    }
 
-     /*HOMEPAGE SECTION  START --------------------------------- **/
-
-      /*Margin Reset for mobile*/
-      .break {
-      margin:  0 0 0 -10px;
-      padding: 0 0 0 0;
-      }
-
-      .break2{
-      margin:  0 0 0 -10px;
-      }
-
-      /*Margin Reset for mobile*/
-
-    .home-page {
-      /*background: red;*/
-
-    /*  grid-auto-rows: minmax (100px, auto);*/
+    .break2{
+        margin:  0 0 0 -10px;
     }
 
     .hp-grid {  
-      display: grid;
-      grid-template-columns: 1em auto 1em;
-      grid-template-rows: 1fr 3em 3em 3em 3em 3em;
-      grid-gap: 1em;
+        display: grid;
+        grid-template-columns: 1em auto 1em;
+        grid-template-rows: 1fr 3em 3em 3em 3em 3em;
+        grid-gap: 1em;
     }
 
     .hp-headline-container {
-      /*border: 1px solid black;*/
-      display: grid;
-      grid-column: 2/2;
-      grid-row: 1/2;
-      padding: 0 0 0 0;
-    /*  margin-top: 0px;*/
-      font-size: 2.5rem;
-      font-weight: 500;
-      color: #4C4C4C;
-      text-align: left;
-      letter-spacing: -.03em;
-      line-height: 1.125em;
-      text-align: left;
-      margin-top: 1em;
+        color: #4C4C4C;
+        display: grid;
+        font-size: 2.5rem;
+        font-weight: 500;
+        grid-column: 2/2;
+        grid-row: 1/2;
+        letter-spacing: -.03em;
+        line-height: 1.125em;
+        margin-top: 1em;
+        padding: 0 0 0 0;
+        text-align: left;
+        text-align: left;
     }
 
     .second-dropdown {
-      color: black;
-      text-align: left;
-      padding: 0px 0 0 8px;
-      font-size: 2.3em;
-      overflow: wrap;
-      grid-column: 2/2;
-      grid-row: 2/2;
-      display: flex;
-      display: flex;
-     /* justify-content: center;*/
-      align-items: center;
-      /*display: inline-block;*/
-
-
-
-    /*  overflow: hidden;
-      text-overflow: ellipsis;*/
+        align-items: center;
+        color: black;
+        display: flex;
+        display: flex;
+        font-size: 2.3em;
+        grid-column: 2/2;
+        grid-row: 2/2;
+        overflow: wrap;
+        padding: 0px 0 0 8px;
+        text-align: left;
     }
 
     .header2 {
-      font-size: 1.2rem;
-      grid-column: 2/2;
-      grid-row: 3/3;
-      margin: 1em  0 0;
+        font-size: 1.2rem;
+        grid-column: 2/2;
+        grid-row: 3/3;
+        margin: 1em  0 0;
         display: flex;
     }
 
@@ -1600,14 +1561,10 @@ using*/
       margin-top: 1em;
     }*/
 
-    .toggle-container-hp{
+    .toggle-switch-container-hp {
       margin: 0em 1em;
       display: flex;
 
-    }
-
-    .toggle-container {
-        grid-column: 1/2;
     }
 
     .go-button {
@@ -1681,39 +1638,25 @@ using*/
       background: #f0eaf6;
       max-width: 96%;
     }
-
-    /*.first-dropdown {
-      color: black;
-      border: 1px solid white;
-      text-align: left;
-    }
-    */
-
     .selected {
-      font-weight: 600;
-      font-style: normal;
-      display: flex;
-
+        font-weight: 600;
+        font-style: normal;
+        display: flex;
     }
-
-
     .dropdown.open {
-    border-color: #eaeaea;
-    z-index: 1;
-    background-color: #3B0082;
-    max-width: 60vw;
-    font-size: .2em;
+        border-color: #eaeaea;
+        z-index: 1;
+        background-color: #3B0082;
+        max-width: 60vw;
+        font-size: .2em;
     }
-
     .dropdown.open {
-    border-color: #eaeaea;
-    z-index: 1;
-    background-color: #3B0082;
-    max-width: 60vw;
-    font-size: .2em;
+        border-color: #eaeaea;
+        z-index: 1;
+        background-color: #3B0082;
+        max-width: 60vw;
+        font-size: .2em;
     }
-
-
     .dropdown-container .selected {
         font-size: 1em;
         font-weight: 700;
@@ -1722,29 +1665,23 @@ using*/
         color: white;
     }
 
-     /*HOMEPAGE SECTION  END ----------------------------------- **/
+    /* TITLE BAR */
 
-         /* / / /  / / START ----------------------------------- **//* SURVEY PAGE ----------------------------------- **/
-
-      /*TITLEBAR SECTION  START ----------------------------------- **/
-
-
-
-    /*  toggle */
-
-    .patient-switch.switch {
-      position: absolute;
-      background: #E1E8F4;
-      width: 50px;
-
+    .title-bar {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: .125em;
     }
-    .patient-switch.switch.on {
-      background: #4d0092;;
+    .title-dropdown-container {
+        grid-column: 5/14;
     }
-    .patient-switch.switch.on > .switch-toggle {
-      left: 23px;
-        -webkit-transition: left .2s ease-in-out;
-        transition: left .2s ease-in-out;
+    .title-dropdown {
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: -0.2px;
+        max-width: 35vw;
+    }
+    .share-container {
+        grid-column: 15;
     }
 
     .drawer-tooltip {
@@ -1777,34 +1714,6 @@ using*/
       letter-spacing: .02rem;
     }
 
-    .ribbon-and-dropdown {
-      display: flex;
-    }
-
-    .select-ribbon-dropdown {
-      display: flex;
-    }
-
-    .select-ribbon {
-      display: flex;
-      width: 1.2em;
-      height: 1.2em;
-    }
-
-
-    .cancer-ribbon {
-      width: 1em;
-      background: white;
-     /* margin-right: .3em;*/
-      background: red;
-    }
-
-    .text-center {
-      text-align: center;
-        /*border: 1px solid red;*/
-      letter-spacing: 1px;
-    }
-
     .caret {
       /*iphone 6*/
      /* position: absolute;*/
@@ -1834,17 +1743,6 @@ using*/
     letter-spacing: -.08px;
     /*display: inline-block;*/
     display: flex;
-    }
-
-
-    .share-container {
-      grid-column: 8/8;
-      /*flex: .45;*/
-    }
-
-    .share-button {
-      flex: 2;
-      width: 30px;
     }
 
 
@@ -2747,16 +2645,16 @@ using*/
 
     /*TITLEBAR SECTION START     / / / / / / / /*/
 
-    .patient-switch.switch {
+    .toggle-switch.switch {
       position: absolute;
       background: #E1E8F4;
       width: 50px;
 
     }
-    .patient-switch.switch.on {
+    .toggle-switch.switch.on {
       background: #4d0092;;
     }
-    .patient-switch.switch.on > .switch-toggle {
+    .toggle-switch.switch.on > .switch-toggle {
       left: 23px;
         -webkit-transition: left .2s ease-in-out;
         transition: left .2s ease-in-out;
@@ -2789,12 +2687,6 @@ using*/
       font-weight: 400;
       white-space: normal;
     }
-
-    .cancer-title {
-      flex: 0 0 auto;
-    }
-
-
 
     .variable-icon {
       width: 28px;
