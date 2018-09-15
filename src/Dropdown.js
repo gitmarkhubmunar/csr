@@ -15,31 +15,19 @@ class Dropdown extends React.Component {
     }
 
     render () {
-        const { className, list, selectedItem, } = this.props
+        const { className, list, selectedItem } = this.props
         const { isOpen } = this.state
-        const combinedClassName = 'dropdown-container ' + className
+        const combinedClassName = 'dropdown ' + className
         return (
-            <section className="ribbon-and-dropdown">
-                  <div className="select-ribbon-dropdown">
-                      <object
-                        className="select-ribbon"
-                        data="/assets/ribbon.ureterurinary.svg"
-                        type="image/svg+xml"
-                        />
-
-                        <select className='dropdown-select open'>
-                        {list.map((item, i) => {
-                            return (
-                                <option value={i} key={i} onClick={() => this.selectItem(item)}>
-                                    {item}
-
-                                </option>
-
-                            )
-                        })}
-                    </select>
-                </div>   
-            </section>     
+            <select
+                className={combinedClassName}
+                defaultValue={selectedItem}
+                onChange={event => this.selectItem(event.target.value)}
+            >
+                {list.map((item, i) => {
+                    return <option key={i} value={item}>{item}</option>
+                })}
+            </select>
         )
     }
 }

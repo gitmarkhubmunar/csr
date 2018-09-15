@@ -1,8 +1,5 @@
 import React from 'react'
-import {
-  Tooltip,
-} from 'react-tippy';
-
+import { Tooltip } from 'react-tippy';
 
 import CardStatistics from './CardStatistics'
 import CardTitleBar from './CardTitleBar'
@@ -12,8 +9,6 @@ import NoCalcDoctor from './NoCalcDoctor'
 import ShareCard from './ShareCard'
 
 class Card extends React.Component {
-    // <NoCalcPatientGrid />
-    // <NoCalcDoctor />
     state = { showShareCard: false }
 
     toggleShareCard = () => {
@@ -36,15 +31,12 @@ class Card extends React.Component {
         const { showShareCard } = this.state
         return (
             <div className="card">
-        
-                <div className="title-bar-container">
-            		<CardTitleBar
-                        changeValue={changeValue}
-                        isPatient={isPatient}
-                        selectedCancerType={selectedCancerType}
-                        toggleShareCard={this.toggleShareCard}
-                    />
-                </div>
+                <CardTitleBar
+                    changeValue={changeValue}
+                    isPatient={isPatient}
+                    selectedCancerType={selectedCancerType}
+                    toggleShareCard={this.toggleShareCard}
+                />
         		<CardStatistics
                     age={age}
                     changeValue={this.changeValue}
@@ -58,8 +50,7 @@ class Card extends React.Component {
                     toggleShareCard={this.toggleShareCard}
                 />
                 {showShareCard && <ShareCard />}
-            </div>
-            
+            </div>  
         )
     }
 }

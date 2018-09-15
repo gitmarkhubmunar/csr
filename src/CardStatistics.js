@@ -9,7 +9,6 @@ import CardMessaging from './CardMessaging'
 
 class CardStatistics extends React.Component {
 
-
 	// <div className="desktop-grid-container">
 	// 				{hasAnsweredAnyQuestion ?
 	// 					<div className="feedback-row">
@@ -75,56 +74,53 @@ class CardStatistics extends React.Component {
 		}
 
 		return (
-			<div className="icon-parent-container">
-				<div className="icon-first-row">{iconArrayFirstRow}</div>
-				<div className="icon-second-row">{iconArraySecondRow}</div>
+			<div className="icon-array">
+				<div className="icon-array-row">{iconArrayFirstRow}</div>
+				<div className="icon-array-row">{iconArraySecondRow}</div>
 			</div>
 		)
 	}
 
 	render () {
 		const {
-            age,
-            changeValue,
-            diagnosed,
-            grade,
-            isPatient,
-            rate,
-            sex,
-            selectedCancerType,
-            stage,
-            toggleShareCard,
-        } = this.props
+	        age,
+	        changeValue,
+	        diagnosed,
+	        grade,
+	        isPatient,
+	        rate,
+	        selectedCancerType,
+	        sex,
+	        stage,
+	        toggleShareCard,
+	    } = this.props
 		const selectedCancer = _.find(CancerTypes, { id: selectedCancerType })
 		const color = selectedCancer.colors[0]
 		const hasAnsweredAnyQuestion = age || diagnosed || grade || sex || stage
 		const hasAnsweredAllQuestions = age && diagnosed && grade && sex && stage
 		return (
 			<div className="statistics">
-				<div />
-				<div className="stat-whole-container">
-					<div className="stat-header flex-row ">						
-						<div className="statistic-container center"> 
-							<div className="percentage" style={{ color: color }}>
-								{rate}%
-							</div>
-							<div className="survival-line">
-								5 year conditional survival rate
-							</div>
+				<div className="content-container">
+					<div className="statistics-container statistics-header">						
+						<div className="statistics-copy">
+							5 year conditional survival rate
+						</div>
+						<div className="percentage" style={{ color: color }}>
+							{rate ?
+								<span>{rate}%</span>
+								:
+								<span style={{ color: '#ccc', fontWeight: '100' }}>
+									…
+								</span>
+							}
 						</div>
 					</div>
-					<div className="stat-viz-container">
-						<div className="stat-viz border-bottom-alt border-top-alt">
-							<div  className="stat-copy">
-								Given a <a className="bold-line">group of ten people</a> with the same type of cancer and profile
-							</div>
-							<div className="icon-array">
-								{this.renderIconArray()}
-							</div>
+					<div className="statistics-container statistics-viz border-top-alt">
+						<div  className="statistics-copy">
+							Given a <a className="bold-line">group of ten people</a> with the same type of cancer and profile
 						</div>
+						{this.renderIconArray()}
 					</div>
-			
-				<div />
 				</div>
 			</div>
 		)
