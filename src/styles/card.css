@@ -27,13 +27,14 @@
     line-height: 1.05;
 }
 .percentage {
-  font-size: 3.5em;
-  font-weight: 900;
-  letter-spacing: -0.01em;
-  line-height: 0.9;
+    font-size: 3.5em;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    line-height: 0.9;
 }
 .icon-array-row {
     margin-bottom: -0.5em;
+    white-space: nowrap;
 }
 .heart-container {
     display: inline-block;
@@ -43,8 +44,8 @@
     height: 3.5em;
 }
 .bold-line {
-  font-weight: 700;
-  color: black;
+    font-weight: 700;
+    color: black;
 }
 .share-now {
     align-items: center;
