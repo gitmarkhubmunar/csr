@@ -15,7 +15,7 @@ class CardTitleBar extends React.Component {
         const contrastColor = selectedCancer.contrastColor || 'white'
         const ribbon = selectedCancer.ribbonFile
         return (
-            <div className="title-bar" style={{ background: color }}>
+            <div className="title-bar bg-blue">
                 <div className="title-bar-container content-container">
                     <div className="toggle-switch-container">
                         <div className="toggle" >

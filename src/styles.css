@@ -107,6 +107,18 @@ a {
 .blue {
     color: #508fcc;
 }
+.bg-white {
+    background-color: white;
+}
+.bg-grey {
+    background-color: #999999;
+}
+.bg-purple {
+    background-color: #4d0092;
+}
+.bg-blue {
+    background-color: #508fcc;
+}
 
 /* General Courage and component styles */
 
