@@ -98,17 +98,14 @@ a {
 .white {
     color: white;
 }
-.blue {
-    color: #4A90E2;
-}
 .grey {
     color: #999999;
 }
 .purple {
     color: #4d0092;
 }
-.c-blue {
-  color: #508fcc;
+.blue {
+    color: #508fcc;
 }
 
 /* General Courage and component styles */
