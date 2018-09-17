@@ -4,36 +4,27 @@
     border: 1px solid grey;
 }
 
-.handle.active {
-    background-color: grey;
-}
 
 
 /* + + + +slider DIAGNOSED + + + */
-/*currently using*/
 .horizontal-slider {
   width: 100%;
   max-width: 500px;
   height: 8px;
-/*  border: 1px solid grey;*/
+
 }
 
-/*white*/
-/*currently using*/
-.bar {background: #ffffff ;
+.bar {
+    background: #ffffff;
 }
-/*
-using*/
 
-/*currently using*/
 .horizontal-slider .handle {
-    /*  line-height: px;*/
     height: 28px;
     top: 11px;
     width: 28px;
 }
 .handle > .handle-0 {
-    /* background: red;*/
+
     height: 10px;
     width: 10px;
 }
@@ -42,9 +33,11 @@ using*/
     margin-top: -28px;
 }
 .handle.active {
-    background-color: green;
+    background-color: grey;
     color: black;
 }
+
+
 .vertical-slider {
     border: 1px solid grey;
     height: 380px;
@@ -106,16 +99,6 @@ using*/
         width: 50px;
     }
 
-    .handle.active {
-        background-color: grey;
-    }
-
-    .bar.bar-1 {
-        background: #f00;
-    }
-    .bar.bar-2 {
-        background: #0f0;
-    }
 
     .vertical-slider {
     border: 1px solid grey;
