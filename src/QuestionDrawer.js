@@ -111,11 +111,16 @@ class QuestionDrawer extends React.Component {
                     <div className="variable-row">
                         <div className="icon-label">
                             <div>
-                                <object className={diagnosed === 0 ? 'variable-icon' : 'variable-icon answered'} data="/assets/diagnosed.svg" type="image/svg+xml" />
+                                <object
+                                    className={diagnosed === 0 ? 'variable-icon' : 'variable-icon answered'}
+                                    data="/assets/diagnosed.svg"
+                                    style={{ paddingLeft: 5 }}
+                                    type="image/svg+xml"
+                                />
                             </div>
-                            <div className={diagnosed === 0 ? 'variable-name' : 'variable-name answered'}>diagnosed</div>
+                            <div className={diagnosed === 0 ? 'variable-name' : 'variable-name answered'}>diagnosis<br />date</div>
                         </div>
-                        <div className="input-area">
+                        <div className="input-area diagnosis">
                             <ReactSlider
                                 className="horizontal-slider bar"
                                 value={nextDiagnosed}
@@ -123,11 +128,15 @@ class QuestionDrawer extends React.Component {
                                 onAfterChange={(value) => changeValue('diagnosed', value)}
                                 onChange={(value) => this.setState({ nextDiagnosed: value })}
                             >
-                                <div>{nextDiagnosed}</div>
+                                <div className="label">
+                                    {nextDiagnosed >= 1 && nextDiagnosed}
+                                    {nextDiagnosed && nextDiagnosed >= 1 &&
+                                        <span style={{ fontSize: '.8em' }}><br />{nextDiagnosed >= 2 ? 'months' : 'month'} ago</span>
+                                    }
+                                </div>
                             </ReactSlider>
                             <div style={{ position: 'relative', width: '100%' }}>
                                 <div className="slider-tick-button" style={{ left: '0%' }} onClick={() => changeValue('diagnosed', 0)}>Within past month</div>
-                               
                                 <div className="slider-tick-button" style={{ left: '90%' }} onClick={() => changeValue('diagnosed', 24)}>3 years ago”</div>
                             </div>
                         </div>

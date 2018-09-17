@@ -10,14 +10,18 @@ import Footer from './Footer'
 
 class SurveyPage extends React.Component {
     state = {
-        age: null,
-        diagnosed: 0, // Assuming this is time since diagnosis in months.
-        grade: null,
+        age: 30,
+        diagnosed: 3, // Assuming this is time since diagnosis in months.
+        grade: '1',
         isPatient: true,
         rate: null,
         selectedCancerType: 'liver',
         sex: null,
-        stage: null,
+        stage: '1',
+    }
+
+    componentDidMount = () => {
+        this.calculateCsr()
     }
 
     calculateCsr = () => {

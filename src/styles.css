@@ -154,27 +154,6 @@ a {
     margin-right: auto;
 }
 
-/* Blackout */
-
-.blackout {
-    background: rgba(0,0,0,0.9);
-    bottom: 0;
-    display: block;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 100;
-}
-
-.blackout-modal {
-    background: white;
-    height: 100px;
-    margin: 1em auto;
-    padding: 1em;
-    width: 100px;
-}
-
 /* MessagingPanel */
 
 .messaging-panel {
