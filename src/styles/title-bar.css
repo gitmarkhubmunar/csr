@@ -11,7 +11,6 @@
     grid-gap: 1em;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
-
 .toggle-switch-container {
     grid-column: 1/2;
 }
@@ -45,7 +44,6 @@
     font-style: italic;
     letter-spacing: .02rem;
 }
-
 .title-dropdown-container {
     grid-column: 2/5;
     display: flex;
@@ -53,26 +51,25 @@
     align-items: center;
 }
 .title-dropdown {
+    font-size: 24px;
+    font-weight: 900;
+}
+select.title-dropdown {
+    text-align: center;
+    text-align-last: center;
     box-sizing: border-box;
     color: white;
     font-family: 'Muli';
-    font-size: 24px;
-    font-weight: 900;
-    text-align: center;
-    text-align-last: center;
 }
-
 .share-container {
     grid-column: 8/8;
     position: relative;
     text-align: right;
 }
-
 .ribbon {
     width: 30px;
     height: 80px;
 }
-
 .share-button {
     width: 30px;
 }

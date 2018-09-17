@@ -1,5 +1,6 @@
 import _ from 'lodash'
-import Mobile from 'is-mobile'
+import Icon from 'react-ionicons'
+import CheckMobile from 'is-mobile'
 import React from 'react'
 
 class Dropdown extends React.Component {
@@ -17,7 +18,7 @@ class Dropdown extends React.Component {
         const { className, list, selectedItem } = this.props
         const { isOpen } = this.state
         const combinedClassName = 'dropdown ' + className
-        const isMobile = Mobile()
+        const isMobile = CheckMobile()
 
         if (isMobile) {
             return (
@@ -33,9 +34,9 @@ class Dropdown extends React.Component {
             )
         }
         return (
-            <div className={combinedClassName} onClick={this.toggleMenu}>
+            <div className={combinedClassName + ' desktop'} onClick={this.toggleMenu}>
                 {isOpen &&
-                    <ul className={isOpen ? 'dropdown open' : 'dropdown closed'}>
+                    <ul className={isOpen ? 'open' : 'closed'}>
                         {list.map((item, i) => {
                             return (
                                 <li key={i} onClick={() => this.selectItem(item)}>
@@ -45,12 +46,8 @@ class Dropdown extends React.Component {
                         })}
                     </ul>
                 }
-                <span className="selected">{selectedItem}</span>
-                <object
-                    className="caret-hp"
-                    data="/assets/dropdown.svg"
-                    type="image/svg+xml"
-                />
+                <div className="selected">{selectedItem}</div>
+                <Icon className="caret" icon="ios-arrow-down" />
             </div>        
         )
     }
