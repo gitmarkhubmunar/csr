@@ -34,46 +34,50 @@ const PeopleTypes = [
   //<switch className="yes-no-switch"/>
   // selectedPeopleType: PeopleTypes[0]
 
+
 class HomePage extends React.Component {
-    state = { selectedCancerName: CancerTypes[0].name, selectedPeopleType: PeopleTypes[0], isPatient: true, }
+    state = {
+        isPatient: true,
+        selectedCancerType: CancerTypes[_.random(0, CancerTypes.length - 1)].id,
+        selectedPeopleType: PeopleTypes[0],
+    }
     
     render () {
-        const { changeValue, isPatient, selectedCancerType, toggleShareCard, contrastColor } = this.props
-        const { selectedCancerName, selectedPeopleType } = this.state
+        const { isPatient, selectedCancerType, selectedPeopleType } = this.state
+        const selectedCancer = _.find(CancerTypes, { id: selectedCancerType })
         
         return (
-            <div style={{ height: '100vh'}} className="home-page-container">
-                <div className="border-grey-bottom "></div>
-                <div className="home-page">
-                    <div className="hp-grid">
-                        <div className="hp-headline-container">
-                            I’m looking for answers on survival rates for:&nbsp;
-                        </div>        
-                        <Dropdown
-                            className="second-dropdown"
-                            list={CancerTypes.map(type => type.name)}
-                            onSelect={name => this.setState({ selectedCancerName: name })}
-                            selectedItem={selectedCancerName}
-                        />
-                        <div className="header2">Heathcare professional?</div>
-                        <div className="toggle-container-hp">
-                            <div className="toggle" >
-                                <Switch
-                                    className="patient-switch" 
-                                    onClick={() => changeValue('isPatient', !isPatient)} 
-                                    on={isPatient === true}
-                                />
-                                <div style={{ color: contrastColor }} className={isPatient === true ? 'role patient' : 'role'}>{isPatient === true ? 'Yes' : 'No'} </div>
-                            </div> 
-                        </div>
+            <div className="home-page-container">
+                <div className="home-page content-container">
+                    <h2>I’m looking for answers on survival rates for</h2>     
+                    <Dropdown
+                        className="title-dropdown text-center cancer-title"
+                        list={CancerTypes.map(type => type.name)}
+                        onSelect={name => {
+                            const id = _.find(CancerTypes, { name: name }).id
+                            this.setState({ selectedCancerType: id })
+                        }}
+                        selectedItem={selectedCancer.name}
+                    />
+                    <div>
                         <div className="go-button">Go</div>
-                        <div className="home-page-blurb-container">
-                            <div className="blurb-copy">
-                                Personalized cancer survival rates from the experts at <a href="http://courage.health">Courage Health</a>
-                            </div>
-                            <div className="links">
-                                <a className="about-link">About</a> <a className="blog-link">Blog</a>
-                            </div>
+                    </div>
+
+                    <h3>Heathcare professional?</h3>
+                    <div className="toggle-container">
+                        <Switch
+                            onClick={() => this.setState({ isPatient: !isPatient })} 
+                            on={isPatient === false}
+                        />
+                        <div className="role">{isPatient === true ? 'No' : 'Yes'}</div>
+                    </div>
+
+                    <div className="home-page-blurb">
+                        <div className="blurb-copy">
+                            Personalized cancer survival rates from the experts at <a href="http://courage.health">Courage Health</a>
+                        </div>
+                        <div className="links">
+                            <a className="about-link">About</a> <a className="blog-link">Blog</a>
                         </div>
                     </div>
                 </div>
