@@ -73,7 +73,7 @@ class QuestionDrawer extends React.Component {
                                 onAfterChange={(value) => changeValue('age', value)}
                                 onChange={(value) => this.setState({ nextAge: value })}
                             >
-                                <div> {nextAge}</div>
+                                <div>{nextAge}</div>
                             </ReactSlider>
                             <div style={{ position: 'relative', width: '100%' }}>
                                 <div className="slider-tick-button" style={{ left: '5%' }} onClick={() => changeValue('diagnosed', 0)}>18</div>
