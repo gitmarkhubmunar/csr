@@ -30,7 +30,7 @@ class QuestionPanel extends React.Component {
             if (activeQuestion === 'stage') {
                 return <div className="flex-row stage-row">
                     <div className="input-button-stage">
-                    1
+                        <div>1</div>
                     </div>
                     <div className="survey-hairline" style={{ flex: '0 0 1px', background: '#cacaca' }} />
                     <div className="input-button-stage">   
