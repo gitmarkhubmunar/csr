@@ -29,7 +29,7 @@ class CardTitleBar extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className="title-dropdown-container">
+                    <div className="title-dropdown-container relative">
                         <Dropdown
                             className="title-dropdown text-center cancer-title"
                             list={CancerTypes.map(type => type.name)}
@@ -39,16 +39,9 @@ class CardTitleBar extends React.Component {
                             }}
                             selectedItem={selectedCancer.name}
                         />
-                        {ribbon &&
-                            <object
-                                className="ribbon"
-                                data={`/assets/${ribbon}`}
-                                type="image/svg+xml"
-                            />
-                        }
                     </div>
                     <div className="share-container">
-                        <Icon icon="ios-open-outline" fontSize="76%" style={{ fill: 'white' }}/>
+                        <Icon icon="ios-open-outline" fontSize="2rem" style={{ fill: 'white' }}/>
                         <div className="share-button-transparent" onClick={() => toggleShareCard()} />
                     </div>
                 </div>

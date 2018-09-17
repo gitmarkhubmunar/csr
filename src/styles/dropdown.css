@@ -37,6 +37,7 @@
     left: -15px;
     position: absolute;
     top: 5px;
+    z-index: 1001;
 }
 .dropdown ul li {
     color: #999;
@@ -48,8 +49,5 @@
 .caret {
     margin-left: .25em;
     margin-top: .15em;
-    fill: #999;
-}
-.title-bar .dropdown .caret {
-    fill: white;
+    fill: #bbb;
 }
