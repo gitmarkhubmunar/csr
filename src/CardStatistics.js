@@ -3,9 +3,10 @@ import Icon from 'react-ionicons'
 import React from 'react'
 
 import CancerTypes from './data/CancerTypes'
-import Heart from './Heart'
-import FeedbackSlot from './FeedbackSlot'
 import CardMessaging from './CardMessaging'
+import FeedbackSlot from './FeedbackSlot'
+import Heart from './Heart'
+import Ribbon from './Ribbon'
 
 class CardStatistics extends React.Component {
 
@@ -48,7 +49,6 @@ class CardStatistics extends React.Component {
 		const { rate, selectedCancerType } = this.props
 		const selectedCancer = _.find(CancerTypes, { id: selectedCancerType })
 		const color = selectedCancer.colors[0]
-
 		const totalHearts = 10;
 		const filledHeartsCount = Math.round(rate / 10);
 
@@ -101,19 +101,14 @@ class CardStatistics extends React.Component {
 		return (
 			<div className="statistics">
 				<div className="content-container">
-					<div className="statistics-container statistics-header">						
-						<div className="statistics-copy">
+					<div className="statistics-container statistics-header relative">						
+						<div className="percentage" style={{ color: color }}>
+							{rate && <span>{rate}%</span>}
+						</div>
+						<div className="statistics-copy big">
 							5 year conditional survival rate
 						</div>
-						<div className="percentage" style={{ color: color }}>
-							{rate ?
-								<span>{rate}%</span>
-								:
-								<span style={{ color: '#ccc', fontWeight: '100' }}>
-									…
-								</span>
-							}
-						</div>
+						<Ribbon selectedCancerType={selectedCancerType} />
 					</div>
 					<div className="statistics-container statistics-viz border-top-alt">
 						<div  className="statistics-copy">

@@ -11,6 +11,7 @@
 @import url('./styles/question-drawer.css');
 @import url('./styles/share-card.css');
 @import url('./styles/slider.css');
+@import url('./styles/dropdown.css');
 @import url('./styles/title-bar.css');
 
 html {
@@ -45,6 +46,12 @@ a {
     flex-direction: row;
 }
 .flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.center-all {
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -97,17 +104,26 @@ a {
 .white {
     color: white;
 }
-.blue {
-    color: #4A90E2;
-}
 .grey {
     color: #999999;
 }
 .purple {
     color: #4d0092;
 }
-.c-blue {
-  color: #508fcc;
+.blue {
+    color: #508fcc;
+}
+.bg-white {
+    background-color: white;
+}
+.bg-grey {
+    background-color: #999999;
+}
+.bg-purple {
+    background-color: #4d0092;
+}
+.bg-blue {
+    background-color: #508fcc;
 }
 
 /* General Courage and component styles */
@@ -134,71 +150,8 @@ a {
     letter-spacing: 0.03em;
 }
 .content-container {
-    max-width: 540px;
     margin-left: auto;
     margin-right: auto;
-}
-
-/* Dropdown */
-
-.dropdown-container {
-    display: inline-block;
-    position: relative;
-    user-select: none;
-    white-space: nowrap;
-}
-.dropdown {
-    background: transparent;
-    border: 0;
-    cursor: pointer;
-    margin: 0;
-    outline: none;
-    padding: 0;
-}
-.dropdown-container .selected:before {
-    /*border-bottom: 8px solid #E5D9E8;*/
-    bottom: 0px;
-    content: '';
-    height: 0;
-    left: 0;
-    position: absolute;
-    width: 100%;
-}
-.dropdown li {
-    color: #DFD0E3;
-    font-weight: 100;
-    letter-spacing: 0em;
-    line-height: 1.4em;
-    padding: 0px 16px;
-    white-space: normal;
-}
-.caret {
-    display: inline-block;
-    height: 50px;
-    margin-left: 15px;
-    margin-top: 0px;
-    width: 18px;
-}
-
-/* Blackout */
-
-.blackout {
-    background: rgba(0,0,0,0.9);
-    bottom: 0;
-    display: block;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 100;
-}
-
-.blackout-modal {
-    background: white;
-    height: 100px;
-    margin: 1em auto;
-    padding: 1em;
-    width: 100px;
 }
 
 /* MessagingPanel */
@@ -255,87 +208,14 @@ a {
     height: 200px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 570px) {
     .content-container {
         padding-left: 15px;
         padding-right: 15px;
     }
-
-    /* Dropdown */
-
-    .dropdown-container {
-        background: #f0eaf6;
-        display: flex;
-        margin: 0 0 0 0;
-        max-width: 96%;
-        user-select: none;
-        white-space: nowrap;
-    }
-    .selected {
-        display: flex;
-        font-style: normal;
-        font-weight: 600;
-    }
-    .dropdown.open {
-        background-color: #3B0082;
-        border-color: #eaeaea;
-        font-size: .2em;
-        max-width: 60vw;
-        z-index: 1;
-    }
-    .dropdown.open {
-        background-color: #3B0082;
-        border-color: #eaeaea;
-        font-size: .2em;
-        max-width: 60vw;
-        z-index: 1;
-    }
-    .dropdown-container .selected {
-        color: white;
-        font-size: 1em;
-        font-style: normal;
-        font-weight: 700;
-        letter-spacing: -.08px;
-    }
-    .caret {
-        display: grid;
-        display: inline-block;
-        grid-column: 1/1;
-        width: .33em;
-    }
-    .caret-hp {
-        display: inline-block;
-        margin: 0 0 0 12px;
-        padding: 0 0 0 0;
-        width: .5em;
-    }
-    .dropdown-container .selected {
-        display: flex;
-        font-size: .85em;
-        font-style: normal;
-        font-weight: 700;
-        letter-spacing: -.08px;
-    }
-    .dropdown-container .selected:before {
-        bottom: 0px;
-        content: '';
-        height: 0;
-        left: 0;
-        position: absolute;
-        width: 100%;
-    }
-    .dropdown li {
-        color: #DFD0E3;
-        font-size: 2.3em;
-        font-weight: 400;
-        letter-spacing: 0em;
-        line-height: 1.6em;
-        padding: 0px 1em;
-        white-space: normal;
-    }
-    .suggestion label {
-        background: red no-repeat;
-        cursor: pointer;
-        display: block;
+}
+@media screen and (min-width: 570px) {
+    .content-container {
+        max-width: 540px;
     }
 }

@@ -8,12 +8,11 @@
     width: 100%;
     z-index: 11;
 }
-
 .statistics-container {
     align-items: center;
     display: grid;
     grid-gap: 5%;
-    grid-template-columns: 25% auto;
+    grid-template-columns: 25% auto 10%;
     padding-bottom: 1em;
     padding-top: 1em;
 }
@@ -22,6 +21,10 @@
     font-weight: 200;
     letter-spacing: -.25px;
     line-height: 1.2em;
+}
+.statistics-copy.big {
+    font-size: 1.7em;
+    line-height: 1.05;
 }
 .percentage {
   font-size: 3.5em;
@@ -39,17 +42,11 @@
     width: 3.5em;
     height: 3.5em;
 }
-
 .bold-line {
   font-weight: 700;
   color: black;
 }
-
-
 .share-now {
-    -ms-flex-align: center;
-    -ms-flex-pack: center;
-    /*    border: 4px solid #ffffff;*/
     align-items: center;
     background: #E1E8F4;
     border-radius: 14px;
@@ -67,44 +64,35 @@
     position: relative;
     text-align: center;
 }
+.ribbon {
+    align-self: self-end;
+    width: 100%;
+    max-height: 50px;
+}
 
 @media screen and (max-width: 480px) {
     .share-now {
-        -ms-flex-align: center;
-        -ms-flex-pack: center;
-        /*    border: 4px solid #ffffff;*/
-        align-items: center;
-        background: #E1E8F4;
-        border-radius: 14px;
-        color: black;
-        cursor: pointer;
-        display: inline-block;
         font-size: .6em;
-        font-style: normal;
-        font-weight: 900;
-        justify-content: center;
-        letter-spacing: -.1px;
         margin: 4px 0 0 0;
         padding: 5px 3px;
-        position: relative;
-        text-align: center;
     }
     .statistics-container {
-        align-items: center;
-        display: grid;
-        grid-gap: 5%;
-        grid-template-columns: 30% auto;
+        grid-template-columns: 30% auto 10%;
         padding-bottom: 20px;
         padding-top: 20px;
     }
     .statistics-copy {
         font-size: 14px;
     }
+    .statistics-copy.big {
+        font-size: 20px;
+        line-height: 1.05;
+    }
     .percentage {
       font-size: 3em;
     }
     .heart-container svg {
-        width: 2em;
-        height: 2em;
+        width: 2.1em;
+        height: 2.1em;
     }
 }

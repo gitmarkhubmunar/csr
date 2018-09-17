@@ -1,3 +1,6 @@
+.question-drawer {
+    padding-bottom: 3em;
+}
 .question-drawer-container {
     background: #f2f2f2;
 }
@@ -22,12 +25,12 @@
 }
 .variable-name {
     align-items: center;
-    align-items: center;
     color: black;
     display: flex;
     font-weight: 600;
     justify-content: center;
     opacity: .3;
+    text-align: center;
     transition: opacity .3s ease;
 }
 .variable-name.answered {
@@ -126,6 +129,13 @@
     height: 35px;
     outline: 0;
     width: 100%;
+}
+.diagnosis .handle .label {
+    bottom: 2.5em;
+    left: calc(-3.5em + 14px);
+    position: absolute;
+    text-align: center;
+    width: 7em;
 }
 
 @media screen and (max-width: 480px) {

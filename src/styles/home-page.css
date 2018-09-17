@@ -1,158 +1,58 @@
-/*.home-page > div {
-    align-items: center;
-    background: #eee;
-    display: grid;
-}
-.home-page > div:nth-child(odd){
-    background: #ddd;
-}*/
-
-/******* Home page **********/
-
-/*.home-page {
-    display: grid;
-    grid-auto-rows: minmax(100px, auto);
-    grid-column-gap: 1em;
-    grid-row-gap: 1em;
-    grid-template-columns: 1fr 3fr 1fr;
-}*/
-
-.cancer-survival-rates-header {
+.home-page h2 {
     color: #4d0092;
-    font-family: kiro;
     font-size: 33px;
     font-weight: 800;
-    padding: 18px 0 18px 0;
-    text-align: center;
 }
-
-/*.hp-intro-container {
-    grid-column: 2/3;
-    grid-row: 3/4;
-}*/
-
-/*.home-page-intro {
-    color: #4C4C4C;
-    font-size: 65px;
-    font-weight: 800;
-    letter-spacing: -.02em;
-    line-height: 1.2em;
-    text-align: center;
-}*/
-
-.home-page-blurb-container {
-    font-size: 1.5em;
-    grid-column: 2/3;
-    grid-row: 5/6;
-    grid-template-columns: 1fr 1fr;
-    margin: 0;
-    text-align: center;
-}
-.links {
-    display: grid;
-    font-weight: 800;
-    grid-column: 1/3;
-    grid-gap: 25%;
-    grid-template-columns: 1fr 1fr;
-}
-.links a {
- /* display: flex;*/
-}
-.about-link {
-  justify-self: end;
-}
-.blog-link {
-  grid-column: 2/3;
-  justify-self: start;
-}
-.break {
-    margin:  0 0 0 -10px;
-    padding: 0 0 0 0;
-}
-.break2{
-    margin:  0 0 0 -10px;
-}
-.hp-grid {  
-    display: grid;
-    grid-template-columns: 1em auto 1em;
-    grid-template-rows: 1fr 3em 3em 3em 3em 3em;
-    grid-gap: 1em;
-}
-.hp-headline-container {
-    color: #4C4C4C;
-    display: grid;
-    font-size: 2.5rem;
-    font-weight: 500;
-    grid-column: 2/2;
-    grid-row: 1/2;
-    letter-spacing: -.03em;
-    line-height: 1.125em;
-    margin-top: 1em;
-    padding: 0 0 0 0;
-    text-align: left;
-    text-align: left;
-}
-.second-dropdown {
-    align-items: center;
-    color: black;
-    display: flex;
-    display: flex;
-    font-size: 2.3em;
-    grid-column: 2/2;
-    grid-row: 2/2;
-    overflow: wrap;
-    padding: 0px 0 0 8px;
-    text-align: left;
-}
-.header2 {
-    font-size: 1.2rem;
+.home-page h3 {
+    font-size: .8em;
     grid-column: 2/2;
     grid-row: 3/3;
-    margin: 1em  0 0;
+    margin: 5em 0 0 0;
     display: flex;
 }
-.toggle-switch-container-hp {
-    display: flex;
-    margin: 0em 1em;
+.home-page .dropdown {
+    color: black;
+    font-size: 2.6em;
+}
+.home-page .dropdown .caret {
+    font-size: 2.4em;
 }
 .go-button {
-    background: grey;
+    background: #4d0092;
     border-radius: 22px;
     color: white;
+    cursor: pointer;
     display: inline-block;
-    float: right; 
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 700;
-    grid-column: 2/2;
-    grid-row: 5/6;
     letter-spacing: .2px;
-    margin: 0 20%;
-    padding: 0 2.1em;
+    margin: .5em 0 0 0;
+    padding: 0 2em;
     text-align: center;
 }
-.yes-no-switch {
-    background: red;
+.toggle-container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-top: .5em;
 }
-.home-page-blurb-container {
+.toggle-container .role {
+    padding: 0 0 0 .5em;
+}
+.home-page-blurb {
+    margin-top: 5em;
     grid-column: 1/4;
     grid-row: 6/6;
 }
-.home-page-blurb-container > div {
-    /*  border: 1px solid red;*/
-    /* font-weight: 500;*/
+.home-page-blurb > div {
     color: #9f9f9f;
     font-size: .8rem;
     letter-spacing: -.01em;
     line-height: 1.4em;
-    margin: 0 15%;
+    margin: 0 18%;
     text-align: center;
 }
 .links {
-    /*  background: teal;*/
-    /*  display: grid;*/
-    /*  margin-top: 10px;*/
-    /* grid-child*/
-    /*grid-parent-nest*/
     font-weight: 700;
     grid-column: 1/3;
     grid-gap: 25%;
@@ -160,9 +60,30 @@
     padding: 1em;
 }
 .blurb-copy {
-    /*  background: yellow;*/
-    color:#CCCCCC;
+    color: #ccc;
     grid-column: 1/4;
     grid-row: 1/1;
     padding-top: 20px;
+}
+
+@media screen and (max-width: 570px) {
+    .home-page h2 {
+        font-size: 1.5em;
+    }
+    .home-page h3 {
+        font-size: .8em;
+    }
+    .home-page .dropdown {
+        font-size: 1.5em;
+        width: calc(100% + 10px);
+        text-align-last: left;
+        text-align: left;
+        border-bottom: 1px solid #bababa;
+        padding: 5px 0;
+        border-radius: 0;
+        margin-left: -5px;
+    }
+    .go-button {
+        font-size: 1.5em;
+    }
 }

@@ -15,7 +15,7 @@ class CardTitleBar extends React.Component {
         const contrastColor = selectedCancer.contrastColor || 'white'
         const ribbon = selectedCancer.ribbonFile
         return (
-            <div className="title-bar" style={{ background: color }}>
+            <div className="title-bar bg-blue">
                 <div className="title-bar-container content-container">
                     <div className="toggle-switch-container">
                         <div className="toggle" >
@@ -29,7 +29,7 @@ class CardTitleBar extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className="title-dropdown-container">
+                    <div className="title-dropdown-container relative">
                         <Dropdown
                             className="title-dropdown text-center cancer-title"
                             list={CancerTypes.map(type => type.name)}
@@ -39,21 +39,9 @@ class CardTitleBar extends React.Component {
                             }}
                             selectedItem={selectedCancer.name}
                         />
-                        {ribbon &&
-                            <object
-                                className="ribbon"
-                                data={`/assets/${ribbon}`}
-                                style={{ background: 'rgba(255,255,255,.2)', padding: 10 }}
-                                type="image/svg+xml"
-                            />
-                        }
                     </div>
                     <div className="share-container">
-                        <object
-                            className="share-button"
-                            data="/assets/share.svg"
-                            type="image/svg+xml"
-                        />
+                        <Icon icon="ios-open-outline" fontSize="2rem" style={{ fill: 'white' }}/>
                         <div className="share-button-transparent" onClick={() => toggleShareCard()} />
                     </div>
                 </div>
