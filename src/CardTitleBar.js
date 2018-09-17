@@ -48,11 +48,7 @@ class CardTitleBar extends React.Component {
                         }
                     </div>
                     <div className="share-container">
-                        <object
-                            className="share-button"
-                            data="/assets/share.svg"
-                            type="image/svg+xml"
-                        />
+                        <Icon icon="ios-open-outline" fontSize="76%" style={{ fill: 'white' }}/>
                         <div className="share-button-transparent" onClick={() => toggleShareCard()} />
                     </div>
                 </div>
