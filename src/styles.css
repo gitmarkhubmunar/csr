@@ -46,6 +46,12 @@ a {
     flex-direction: row;
 }
 .flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.center-all {
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -144,7 +150,6 @@ a {
     letter-spacing: 0.03em;
 }
 .content-container {
-    max-width: 540px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -224,9 +229,14 @@ a {
     height: 200px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 570px) {
     .content-container {
         padding-left: 15px;
         padding-right: 15px;
+    }
+}
+@media screen and (min-width: 570px) {
+    .content-container {
+        max-width: 540px;
     }
 }

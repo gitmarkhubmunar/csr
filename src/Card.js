@@ -49,7 +49,7 @@ class Card extends React.Component {
                     stage={stage}
                     toggleShareCard={this.toggleShareCard}
                 />
-                {showShareCard && <ShareCard />}
+                {showShareCard && <ShareCard onClose={this.toggleShareCard} />}
             </div>  
         )
     }
