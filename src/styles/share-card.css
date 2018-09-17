@@ -1,10 +1,19 @@
-.share-card {
-    background: #E6F0F2;
+.blackout {
+    background: rgba(0, 0, 0, .8);
     bottom: 0;
     left: 0;
     position: fixed;
     right: 0;
     top: 0;
+}
+
+.share-card {
+    background: #E6F0F2;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 20%;
 }
 .share-card-content-container {
     padding-bottom: 20%;
