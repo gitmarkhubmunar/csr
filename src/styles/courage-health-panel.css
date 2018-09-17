@@ -1,0 +1,133 @@
+/*COURAGE PANEL /   --Desktop--------- START ----------------------------------- **/
+
+/* Re-usable styles */
+
+.courage-panel {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  /*  background: #f0f0f0;*/
+  /*  background: red;*/
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+  background: white;
+
+}
+
+.ch-description {
+  grid-column: 4/4;
+  font-weight: 500;
+  font-size: 1em;
+  line-height: 1.2em;
+  padding: 50px 0;
+/*  border: 1px solid white;*/
+  width: 350px;
+}
+
+.ch-description > a {
+  font-weight: 700;
+}
+
+.description-container {
+}
+
+.logo-container {
+  display: grid;
+  grid-column: 3/3;
+  width: 50px;
+/*  justify-self: center;*/
+}
+
+.logo-container > img {
+  margin-top: 55px;
+  width: 34px;
+}
+
+.cta-container {
+  display: grid;
+  display: grid;
+  padding-top: 50px;
+  grid-column: 6/9;
+  width: 130px;
+}
+
+.cta-copy {
+  /*display: grid;
+  grid-column: 2/3;*/
+}
+
+
+.ch-cta > div {
+  font-size: 1rem;
+  letter-spacing: .5px;
+}
+
+.ch-elements {
+  grid-column: 2/8;
+  display:grid;
+  grid-template-columns: repeat(8, 1fr);
+ /* background: yellow;*/
+}
+
+
+
+
+.courage-panel {
+    background: #f0f0f0;
+    display: grid;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.ch-elements {
+    display:grid;
+    grid-column: 1/9;
+    grid-template-columns: repeat(8, 1fr);
+    margin-top: 30px;
+}
+
+.logo-container {
+    grid-column: 1/4;
+    justify-self: center;
+}
+
+.logo-container > img {
+    align-self: center;
+    margin-top: 4px;
+    width: 48px;
+}
+
+.ch-description {
+    align-self: center;
+    color: #A9A9A9;
+    font-size: .9em;
+    grid-column: 4/11;
+    line-height: 19px;
+    padding: 0 0;
+    width: 240px;
+}
+
+.ch-description > a {
+    color: black;
+    font-weight: 700;
+}
+
+.cta-container {
+    display: grid;
+    grid-column: 4/8;
+    margin: -30px 0 40px 0;
+    width: 200px;
+}
+
+.ch-cta > div {
+    color:#A9A9A9;
+    font-size: .9em;
+    letter-spacing: .5px;
+    line-height: 19px;
+    margin: 0 0;
+}
+
+.cta-copy > a {
+    color: black;
+    font-weight: 700;
+}

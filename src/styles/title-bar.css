@@ -1,0 +1,127 @@
+.title-bar {
+    background: #551A8B;
+    transition: all .5s ease;
+}
+.title-bar-container {
+    align-items: center;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    color: white;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.toggle-switch-container {
+    grid-column: 1/2;
+}
+.toggle-switch.switch {
+    position: absolute;
+    background: #E1E8F4;
+    width: 50px;
+}
+.toggle-switch.switch.on {
+    background: #4d0092;;
+}
+.toggle-switch.switch.on > .switch-toggle {
+    left: 23px;
+    -webkit-transition: left .2s ease-in-out;
+    transition: left .2s ease-in-out;
+}
+.role {
+    display: inline-flex;
+    color: #999999;
+    padding-top: 30px;
+    font-size: 13px;
+    font-weight: 200;
+    font-style: italic;
+    letter-spacing: .02rem;
+}
+.role.patient {
+    color: #999999;
+    padding-top: 30px;
+    font-size: 13px;
+    font-weight: 200;
+    font-style: italic;
+    letter-spacing: .02rem;
+}
+
+.title-dropdown-container {
+    grid-column: 2/5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.title-dropdown {
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Muli';
+    font-size: 24px;
+    font-weight: 900;
+    text-align: center;
+    text-align-last: center;
+}
+
+.share-container {
+    grid-column: 8/8;
+    position: relative;
+    text-align: right;
+}
+
+.ribbon {
+    width: 30px;
+    height: 80px;
+}
+
+.share-button {
+    width: 30px;
+}
+.share-button-transparent {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+@media screen and (max-width: 480px) {
+    .toggle-switch.switch {
+        position: absolute;
+        background: #E1E8F4;
+        width: 50px;
+    }
+    .toggle-switch.switch.on {
+        background: #4d0092;;
+    }
+    .toggle-switch.switch.on > .switch-toggle {
+        left: 23px;
+        -webkit-transition: left .2s ease-in-out;
+        transition: left .2s ease-in-out;
+    }
+    .title-dropdown-container {
+        text-align: center;
+    }
+    .title-dropdown {
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: -0.2px;
+        max-width: 40vw;
+    }
+    .role {
+        display: inline-flex;
+        color: #999999;
+        padding-top: 30px;
+        font-size: 13px;
+        font-weight: 200;
+        font-style: italic;
+        letter-spacing: .02rem;
+    }
+    .role.patient {
+        color: #999999;
+        padding-top: 30px;
+        font-size: 13px;
+        font-weight: 200;
+        font-style: italic;
+        letter-spacing: .02rem;
+    }
+}
