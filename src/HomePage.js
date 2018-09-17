@@ -41,11 +41,22 @@ class HomePage extends React.Component {
         selectedCancerType: CancerTypes[_.random(0, CancerTypes.length - 1)].id,
         selectedPeopleType: PeopleTypes[0],
     }
+
+    goToSurvey = () => {
+        const { isPatient, selectedCancerType } = this.state
+        this.props.history.push({
+            pathname: '/card',
+            state: {
+                isPatient,
+                selectedCancerType,
+            }
+        })
+    }
     
     render () {
-        const { isPatient, selectedCancerType, selectedPeopleType } = this.state
+        const { history, isPatient, selectedCancerType, selectedPeopleType } = this.state
         const selectedCancer = _.find(CancerTypes, { id: selectedCancerType })
-        
+
         return (
             <div className="home-page-container">
                 <div className="home-page content-container">
@@ -60,7 +71,7 @@ class HomePage extends React.Component {
                         selectedItem={selectedCancer.name}
                     />
                     <div>
-                        <div className="go-button">Go</div>
+                        <div className="go-button" onClick={() => this.goToSurvey()}>Go</div>
                     </div>
 
                     <h3>Heathcare professional?</h3>
