@@ -43,7 +43,6 @@ class CardTitleBar extends React.Component {
                             <object
                                 className="ribbon"
                                 data={`/assets/${ribbon}`}
-                                style={{ background: 'rgba(255,255,255,.2)', padding: 10 }}
                                 type="image/svg+xml"
                             />
                         }
