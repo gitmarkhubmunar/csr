@@ -1,45 +1,75 @@
 import React from 'react'
 
-class FaqDoctor extends React.Component {
-    render () {
-        return (
-          <div className="faq doctor-bg-color">
-            <h3>Questions to ask your patient</h3>
-            <div className="question-row">
-              <div className="faq-question flex-row nowrap">
-                <div className="number-bullet">1</div>
-                <div className="suggestions">Best practices in talking to patients about life expectancy</div>
-                <div className="expand-icon">+</div>
-              </div>
-            </div>
-            <div className="faq-question flex-row nowrap">
-              <div className="number-bullet">2</div>
-              <div className="suggestions">About CancerSurvivalRates.Org data and models</div>
-              <div className="expand-icon">+</div>
-            </div>
-            <div className="faq-question flex-row nowrap">
-              <div className="number-bullet">3</div>
-              <div className="suggestions">Question? Suggestion?</div>
-              <div className="expand-icon">+</div>
-            </div>
+import ExpandedContent from './ExpandedContent'
+import FaqQuestion from './FaqQuestion'
 
-            <h3 className="question-header">Questions for you to think about & discuss</h3>
-            <div className="faq-question flex-row nowrap">
-              <div className="number-bullet">1</div>
-              <div className="suggestions">What’s important to me? What are my priorities?</div>
-              <div className="expand-icon">+</div>
-            </div>
-            <div className="faq-question flex-row nowrap">
-              <div className="number-bullet">2</div>
-              <div className="suggestions">Do I want my wishes for end of life known in writing (advanced directive?)</div>
-              <div className="expand-icon">+</div>
-            </div>
-            <div className="faq-question flex-row nowrap">
-              <div className="number-bullet">3</div>
-              <div className="suggestions">Should I have a will or a living trust?</div>
-              <div className="expand-icon">+</div>
-            </div>
-            </div>
+class FaqDoctor extends React.Component {
+	render () {
+		return (
+			<div className="faq doctor-bg-color">
+				<div className="topic-cell">
+					<h3>Additional resources</h3>
+					<FaqQuestion
+						className="border-bottom-white"
+						number={1}
+						title="Best practices in talking to patients about life expectancy" 
+						content={
+							<div>
+								<div className="expanded-container">
+									<ExpandedContent
+									siteRef="vitaltalk.org"
+									time="2 min" 
+									className="expanded-content"
+									content="How to Offer Prognostic Information to a Patient" 
+									image={<img src="../assets/prog.talk.png" />} />
+								</div>
+								<div className="expanded-container">
+									<ExpandedContent
+									siteRef="vitaltalk.org"
+									time="10 min"  
+									className="expanded-content"
+									content="Quick Guide for Discussing Prognosis" 
+									image={<img className="prog-icon" src="../assets/icon.prognosis-chart.svg" />} />
+								</div>
+							</div>
+
+
+						}
+					/>
+					<FaqQuestion
+						className=""
+						number={2}
+						title="About CancerSurvivalRates.Org data and models" 
+						content={
+							<div>
+								<div className="expanded-container">
+									<ExpandedContent
+									siteRef="Visit our website at:"
+									className="expanded-content"
+									content="www.courage.health" 
+									 />
+								</div>
+							</div>
+						}
+					/>
+					<FaqQuestion
+						className=""
+						number={3}
+						title="Question? Suggestion?" 
+						content={
+							<div>
+								<div className="expanded-container">
+									<ExpandedContent
+									siteRef="E-mail us at:"
+									className="expanded-content"
+									content="info@cancersurvivalrates.org" 
+									 />
+								</div>
+							</div>
+						}
+					/>
+				</div>
+			</div>
         )
     }
 }

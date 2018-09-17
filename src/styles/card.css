@@ -1,0 +1,99 @@
+.card {
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .5);
+    flex: 1 auto;
+    margin: 0 auto;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 11;
+}
+.statistics-container {
+    align-items: center;
+    display: grid;
+    grid-gap: 5%;
+    grid-template-columns: 25% auto 10%;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+.statistics-copy {
+    font-size: 1em;
+    font-weight: 200;
+    letter-spacing: -.25px;
+    line-height: 1.2em;
+}
+.statistics-copy.big {
+    font-size: 1.7em;
+    line-height: 1.05;
+}
+.percentage {
+    font-size: 3.5em;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    line-height: 0.9;
+}
+.icon-array-row {
+    margin-bottom: -0.5em;
+    white-space: nowrap;
+}
+.heart-container {
+    display: inline-block;
+}
+.heart-container svg {
+    width: 3.5em;
+    height: 3.5em;
+}
+.bold-line {
+    font-weight: 700;
+    color: black;
+}
+.share-now {
+    align-items: center;
+    background: #E1E8F4;
+    border-radius: 14px;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 900;
+    grid-column: 3/3;
+    justify-content: center;
+    letter-spacing: -.1px;
+    margin: 4px 0 0 0;
+    padding: 1em 1em;
+    position: relative;
+    text-align: center;
+}
+.ribbon {
+    align-self: self-end;
+    width: 100%;
+    max-height: 50px;
+}
+
+@media screen and (max-width: 480px) {
+    .share-now {
+        font-size: .6em;
+        margin: 4px 0 0 0;
+        padding: 5px 3px;
+    }
+    .statistics-container {
+        grid-template-columns: 30% auto 10%;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+    .statistics-copy {
+        font-size: 14px;
+    }
+    .statistics-copy.big {
+        font-size: 20px;
+        line-height: 1.05;
+    }
+    .percentage {
+      font-size: 3em;
+    }
+    .heart-container svg {
+        width: 2.1em;
+        height: 2.1em;
+    }
+}

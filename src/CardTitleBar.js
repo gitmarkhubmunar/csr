@@ -1,3 +1,4 @@
+import 'react-tippy/dist/tippy.css'
 import _ from 'lodash'
 import Icon from 'react-ionicons'
 import React from 'react'
@@ -7,34 +8,42 @@ import CancerTypes from './data/CancerTypes'
 import Dropdown from './Dropdown'
 
 class CardTitleBar extends React.Component {
-    state = { isPatient: true }
-
-	render () {
-		const { changeValue, selectedCancerType } = this.props
-        const { isPatient } = this.state
+    render () {
+		const { changeValue, isPatient, selectedCancerType, toggleShareCard } = this.props
         const selectedCancer = _.find(CancerTypes, { id: selectedCancerType })
         const color = selectedCancer.colors[0]
+        const contrastColor = selectedCancer.contrastColor || 'white'
+        const ribbon = selectedCancer.ribbonFile
         return (
-            <div className="title-bar padding-2" style={{ background: color }}>
-                <div className="toggle-container">
-                	<div className="toggle" >
-                		<Switch className="patient-switch" onClick={() => this.setState({ isPatient: !isPatient })} on={isPatient === true} />
-                        <div className={isPatient === true ? 'role patient' : 'role'}>{isPatient === true ? 'Patient' : 'Doctor'}</div>
-                	</div> 
-                </div>
-                <div className="title-dropdown">
-                    <Dropdown
-                        className="third-dropdown text-center cancer-title"
-                        list={CancerTypes.map(type => type.name)}
-                        onSelect={name => {
-                            const id = _.find(CancerTypes, { name: name }).id
-                            changeValue('selectedCancerType', id)
-                        }}
-                        selectedItem={selectedCancer.name}
-                    />
-                </div>
-                <div className="share-container" style={{ }}>
-                  <object className="share-button" data="/assets/share.svg" type="image/svg+xml" />
+            <div className="title-bar bg-blue">
+                <div className="title-bar-container content-container">
+                    <div className="toggle-switch-container">
+                        <div className="toggle" >
+                            <Switch
+                                className="toggle-switch" 
+                                onClick={() => changeValue('isPatient', !isPatient)} 
+                                on={isPatient === true}
+                            />
+                            <div style={{ color: contrastColor }}  className={isPatient === true ? 'role patient' : 'role'}>
+                                {isPatient === true ? 'Patient' : 'Doctor'}
+                            </div>
+                        </div>
+                    </div>
+                    <div className="title-dropdown-container relative">
+                        <Dropdown
+                            className="title-dropdown text-center cancer-title"
+                            list={CancerTypes.map(type => type.name)}
+                            onSelect={name => {
+                                const id = _.find(CancerTypes, { name: name }).id
+                                changeValue('selectedCancerType', id)
+                            }}
+                            selectedItem={selectedCancer.name}
+                        />
+                    </div>
+                    <div className="share-container">
+                        <Icon icon="ios-open-outline" fontSize="2rem" style={{ fill: 'white' }}/>
+                        <div className="share-button-transparent" onClick={() => toggleShareCard()} />
+                    </div>
                 </div>
             </div>
         )

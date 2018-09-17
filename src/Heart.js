@@ -21,11 +21,13 @@ class Heart extends React.Component {
         //     </div>
         // )
 
+   
+
         return (
             <div className="heart-container">
-                {kind === 'full' && <Icon icon="ios-man"  fontSize="35px" color={color} />}
-                {kind === 'empty' && <Icon icon="ios-man" fontSize="35px" color={color} />}
-                {kind === 'half' && <Icon icon="ios-man"  fontSize="35px" color={color} />}
+                {kind === 'full' && <Icon icon="md-heart"  fontSize="32px" color={color} />}
+                {kind === 'empty' && <Icon icon="md-heart-outline" fontSize="32px" color={color} />}
+                {kind === 'half' && <Icon icon="ios-man"  fontSize="32px" color={color} />}
             </div>
         )
     }
