@@ -1,98 +1,51 @@
 .faq {
     background: #542e89;
     color: white;
-    display: grid;
-    grid-template-columns: 1em 1fr 16fr 1fr 1em;
 }
-
-.topic-cell {
-    grid-column: 2/5;
-    padding: 0 0 60px 0;
+.faq-content {
+    padding-top: 4em;
+    padding-bottom: 3em;
 }
-
-.topic-cell > h3{
+.faq-content h3 {
     color: white;
-    font-size: 1.6em;
+    font-size: 1.8em;
     font-weight: 800;
     line-height: 1.1em;
-    margin: 0px 0;
-    padding-bottom: 12px;
-    padding-top: 40px;
+    margin: 0 0 1.5em 0;
     text-align: center;
 }
-
-/*expanded container mobile*/
-
-
-.collapsible-img {
-    grid-column: 6/9;
-    height: 82px;
-    max-height: 100%;
-    max-width: 100%;
-    object-fit: cover;
-    width: 140px;
-}
-
-.expanded-container {
-    display: flex;
-    flex: 1;
-    grid-column: 1/12;
-}
-
-.expanded-content {
-    /*keep just as container*/
-    display: flex;
-    flex-direction: row;
-}
-
-.collapsible-content {
-    /*mobile*/
-    grid-column: 1/2;
-    font-size: 1.05em;
-    font-weight: 700;
-    color: white;
-    /*margin: 1em 0;*/
-    line-height: 1.3em;
-    /*flex: 1;*/
-    margin: .75em .5em;
-/*    border: 1px dotted yellow;*/
-}
-
-.prog-icon {
-    float: right;
-    width: 80px;
-}
-
-.site-time-container {
+.site-reference {
     color: #b3b3b3;
-    display: flex;
-}
-
-.site-ref {
     font-size: .8em;
-    font-style: italic;
     font-weight: 600;
-    letter-spacing: .4px;
 }
-
 .time {
-    font-size: .8em;
-    margin-left: .9em;
-    font-weight: 300;
+    font-weight: lighter;
     font-style: italic;
-    letter-spacing: -.05px;
 }
-
-.collapsible-img {
-    align-self: flex-end;
+.expanded-image {
+    float: right;
+    padding-left: 1.5em;
+    padding-bottom: 1.5em;
 }
-.collapsible-img img {
-    max-width: 110px;
+.expanded-image img {
+    max-width: 170px;
 }
-
-
+.alternate-section {
+    background: #7f62a7;
+    display: grid;
+    width: 100%;
+}
+.secondary-purple {
+    background: #7f62a7;
+}
+.doctor-bg-color {
+    background: #508fcc;
+}
+.survey-doctor-color {
+    background: #B3CCD3;
+}
 .faq-question {
-    /* border-bottom: 1px solid white;*/
     align-items: center;
     font-size: 1.2em;
     font-weight: 600;
@@ -100,91 +53,50 @@
     padding: 15px 0;
 }
 
-.collapsible-container {
-    /* grid-template-columns: 1em 1fr 1fr 1fr 1fr 1em 1fr 1em;*/
-    display: grid;
-}
+/* FAQ row */
 
-.alternate-section {
-    background: #7f62a7;
-    display: grid;
-    width: 100%;
-}
-
-
-.secondary-purple {
-    background: #7f62a7;
-}
-
-.doctor-bg-color {
-    background: #508fcc;
-}
-
-.survey-doctor-color {
-    background: #B3CCD3;
-}
-
-/*.faq > h3 {
-    font-weight: 600;
-    font-size: 22px;
-    text-align: center;
-    margin: 0px 0 20px 0;
-}*/
-
-.number-bullet {
-    flex: .25;
-    text-align: center
-}
-
-.content-margin {
-    flex: .25;
-    text-align: center;
-}
-
-.element-container {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.active, .suggestions:hover {
-    color: white;
-}
-
-.expand-icon {
-    flex: .25;
-    font-size: 1.2em;
-    text-align: center;
-}
-
-.question-header {
-    color: white;
-    font-size: 1.6em;
-    font-weight: 800;
-    line-height: 1.1em;
-    margin: 0px 0;
-    padding-bottom: 12px;
-    padding-top: 40px;
-    padding-top: 50px;
-    text-align: center;
-}
-
-/*iphone*/
-/*.faq-question {
-    padding: 1em 0;
-    border-bottom: 1px solid white;
-    align-items: center;
-}*/
-.faq-question:nth-of-type(1) {
-    /*border-top: 1px solid white;*/
-}
+/* Column with number in it. */
 .faq-question > div:nth-of-type(1) {
-    /*font-weight: bold;
-    font-size: 26px;*/
+    flex-shrink: 0;
+    text-align: center;
+    width: 15%;
 }
+/* Column with actual question in it. */
 .faq-question > div:nth-of-type(2) {
     flex: 1;
-    padding: 0 0;
 }
+/* Column with + in it. */
 .faq-question > div:nth-of-type(3) {
-    /*font-size: 30px;*/
+    cursor: pointer;
+    flex-shrink: 0;
+    text-align: center;
+    width: 15%;
+}
+
+.faq-expanded {
+    padding-top: 1em;
+    padding-bottom: 2em;
+}
+.faq-expanded > div:nth-of-type(1) {
+    width: 15%;
+    flex-shrink: 0;
+}
+.faq-expanded > div:nth-of-type(2) {
+    flex: 1 0;
+}
+
+@media screen and (max-width: 570px) {
+    .faq {
+        font-size: 80%;
+    }
+    .faq-expanded > div:nth-of-type(2) {
+        padding-right: 15%;
+    }
+    .expanded-image {
+        clear: both;
+        padding: 0;
+    }
+    .expanded-image img {
+        max-width: 100%;
+    }
 }
