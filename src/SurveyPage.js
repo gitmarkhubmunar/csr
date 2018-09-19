@@ -4,6 +4,7 @@ import Card from './Card'
 import CourageHealthPanel from './CourageHealthPanel'
 import CourageVoice from './CourageVoice'
 import Faq from './Faq'
+import FaqTwo from './FaqTwo'
 import FaqDoctor from './FaqDoctor'
 import Footer from './Footer'
 import QuestionDrawer from './QuestionDrawer'
@@ -83,6 +84,7 @@ class SurveyPage extends React.Component {
                 </div>
                 {isPatient === false && <FaqDoctor />}
                 {isPatient === true && <Faq />}
+                {isPatient === true && <FaqTwo />}
                 <CourageHealthPanel />
                 <Footer />
             </div>
