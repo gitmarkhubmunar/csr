@@ -12,9 +12,10 @@
     align-items: center;
     display: grid;
     grid-gap: 5%;
-    grid-template-columns: 25% auto 10%;
+    grid-template-columns: 5% 25% auto 5%;
     padding-bottom: 1em;
     padding-top: 1em;
+
 }
 .statistics-copy {
     font-size: 1em;
@@ -23,14 +24,21 @@
     line-height: 1.2em;
 }
 .statistics-copy.big {
-    font-size: 1.7em;
-    line-height: 1.05;
+    font-size: 1.8em;
+    line-height: 1;
+    font-weight: 700;
+    color: #4D4D4D;
 }
 .percentage {
-    font-size: 3.5em;
+    font-size: 4em;
     font-weight: 900;
     letter-spacing: -0.01em;
     line-height: 0.9;
+    grid-column: 2/2;
+}
+
+.secondary-sub-copy {
+    grid-column: 2/2;
 }
 .icon-array-row {
     margin-bottom: -0.5em;
@@ -40,8 +48,8 @@
     display: inline-block;
 }
 .heart-container svg {
-    width: 3.5em;
-    height: 3.5em;
+    width: 3.2em;
+    height: 3.2em;
 }
 .bold-line {
     font-weight: 700;
@@ -66,9 +74,8 @@
     text-align: center;
 }
 .ribbon {
-    align-self: self-end;
-    width: 100%;
-    max-height: 50px;
+    width: 2em;
+    max-height: 18px;
 }
 
 @media screen and (max-width: 480px) {
@@ -78,7 +85,6 @@
         padding: 5px 3px;
     }
     .statistics-container {
-        grid-template-columns: 30% auto 10%;
         padding-bottom: 20px;
         padding-top: 20px;
     }

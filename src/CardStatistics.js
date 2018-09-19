@@ -106,12 +106,13 @@ class CardStatistics extends React.Component {
 							{rate && <span>{rate}%</span>}
 						</div>
 						<div className="statistics-copy big">
-							5 year conditional survival rate
+							5 Year Conditional Survival Rate
+							<Ribbon selectedCancerType={selectedCancerType} />
 						</div>
-						<Ribbon selectedCancerType={selectedCancerType} />
+						
 					</div>
 					<div className="statistics-container statistics-viz border-top-alt">
-						<div  className="statistics-copy">
+						<div  className="statistics-copy secondary-sub-copy">
 							Given a <a className="bold-line">group of ten people</a> with the same type of cancer and profile
 						</div>
 						{this.renderIconArray()}
