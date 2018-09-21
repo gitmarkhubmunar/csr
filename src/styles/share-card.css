@@ -1,0 +1,71 @@
+.blackout {
+    background: rgba(0, 0, 0, .8);
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.share-card {
+    background: #E6F0F2;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 20%;
+}
+.share-card-content-container {
+    padding-bottom: 20%;
+}
+.share-card-close-button {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.share-card h2 {
+    color: #4d0092;
+    font-size: 1.6em;
+    font-weight: 800;
+    padding: 1em 2em;
+    text-align: center;
+}
+.share-card p {
+    font-size: 1.1em;
+    font-weight: 500;
+    letter-spacing: .009em;
+    line-height: 1.3em;
+    text-align: center;
+}
+.share-link-box {
+    background: white;
+    border: 1px solid #CED6D9;
+    color: #9DA4A6;
+    font-size: .7em;
+    padding: 2em;
+    text-align: center;
+}
+.share-link-copy-button {
+    background: #CED6D9;
+    color: #4d0092;
+    cursor: pointer;
+    font-size: 1.3em;
+    font-weight: 800;
+    letter-spacing: .07em;
+    padding: 0 1em;
+}
+.share-card-copied-message {
+    color: #4d0092;
+    font-size: .7em;
+    position: absolute;
+    text-align: center;
+    top: 2em;
+    width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+    .share-card {
+        font-size: .8em;
+    }
+}

@@ -1,45 +1,60 @@
 import React from 'react'
 
-class FaqDoctor extends React.Component {
-    render () {
-        return (
-          <div className="faq doctor-bg-color">
-            <h3>Questions to ask your patient</h3>
-            <div className="question-row">
-              <div className="faq-question flex-row nowrap">
-                <div className="number-bullet">1</div>
-                <div className="suggestions">Best practices in talking to patients about life expectancy</div>
-                <div className="expand-icon">+</div>
-              </div>
-            </div>
-            <div className="faq-question flex-row nowrap">
-              <div className="number-bullet">2</div>
-              <div className="suggestions">About CancerSurvivalRates.Org data and models</div>
-              <div className="expand-icon">+</div>
-            </div>
-            <div className="faq-question flex-row nowrap">
-              <div className="number-bullet">3</div>
-              <div className="suggestions">Question? Suggestion?</div>
-              <div className="expand-icon">+</div>
-            </div>
+import ExpandedContent from './ExpandedContent'
+import FaqQuestion from './FaqQuestion'
 
-            <h3 className="question-header">Questions for you to think about & discuss</h3>
-            <div className="faq-question flex-row nowrap">
-              <div className="number-bullet">1</div>
-              <div className="suggestions">What’s important to me? What are my priorities?</div>
-              <div className="expand-icon">+</div>
-            </div>
-            <div className="faq-question flex-row nowrap">
-              <div className="number-bullet">2</div>
-              <div className="suggestions">Do I want my wishes for end of life known in writing (advanced directive?)</div>
-              <div className="expand-icon">+</div>
-            </div>
-            <div className="faq-question flex-row nowrap">
-              <div className="number-bullet">3</div>
-              <div className="suggestions">Should I have a will or a living trust?</div>
-              <div className="expand-icon">+</div>
-            </div>
-            </div>
+class FaqDoctor extends React.Component {
+	render () {
+		return (
+			<div className="faq doctor-bg-color">
+				<div className="content-container">
+					<div className="faq-content">
+						<h3>Additional resources</h3>
+						<FaqQuestion
+							className="border-top-white"
+							number={1}
+							title="Best practices in talking to patients about life expectancy" 
+							content={
+								<div>
+									<ExpandedContent
+										content="How to Offer Prognostic Information to a Patient" 
+										image={<img src="../assets/prog.talk.png" />}
+										siteRef="vitaltalk.org"
+										time="2 min" 
+									/>
+									<ExpandedContent
+										content="Quick Guide for Discussing Prognosis" 
+										image={<img className="prog-icon" src="../assets/icon.prognosis-chart.svg" />}
+										siteRef="vitaltalk.org"
+										style={{ marginTop: '1em' }}
+										time="10 min"  
+									/>
+								</div>
+							}
+						/>
+						<FaqQuestion
+							number={2}
+							title="About CancerSurvivalRates.Org data and models" 
+							content={
+								<ExpandedContent
+									siteRef="Visit our website at:"
+									content="www.courage.health" 
+								/>
+							}
+						/>
+						<FaqQuestion
+							number={3}
+							title="Question? Suggestion?" 
+							content={
+								<ExpandedContent
+									siteRef="E-mail us at:"
+									content="info@cancersurvivalrates.org" 
+								/>
+							}
+						/>
+					</div>
+				</div>
+			</div>
         )
     }
 }

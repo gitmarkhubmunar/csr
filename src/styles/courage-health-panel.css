@@ -1,0 +1,65 @@
+.courage-panel {
+    background: #f0f0f0;
+    display: grid;
+    grid-template-columns: 1fr 540px 1fr;
+}
+.ch-elements {
+grid-column: 2/2;
+margin: 3em 0;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.cta-container {
+  display: grid;
+  width: 130px;
+}
+
+/*.ch-cta > div {
+  font-size: 1rem;
+  letter-spacing: .5px;
+  background: green;
+}*/
+
+
+.logo-container {
+/*    grid-column: 2/3;*/
+    justify-self: center;
+}
+
+.logo-container > img {
+    align-self: center;
+    width: 36px;
+}
+
+.ch-description {
+    color: #A9A9A9;
+    font-size: .9em;
+    line-height: 19px;
+    width: 400px;
+    margin-left: 2em;
+    width: 330px;
+}
+
+.ch-description > a {
+    color: black;
+    font-weight: 700;
+}
+
+.cta-container {
+    padding: 0 0 0 1.5em;
+}
+
+.ch-cta > div {
+    color:#A9A9A9;
+    font-size: .9em;
+    letter-spacing: .5px;
+    line-height: 19px;
+    margin: 0 0;
+}
+
+.cta-copy > a {
+    color: black;
+    font-weight: 700;
+}

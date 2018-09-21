@@ -1,0 +1,102 @@
+.faq {
+    background: #542e89;
+    color: white;
+}
+.faq-content {
+    padding-top: 4em;
+    padding-bottom: 3em;
+}
+.faq-content h3 {
+    color: white;
+    font-size: 1.8em;
+    font-weight: 800;
+    line-height: 1.1em;
+    margin: 0 0 1.5em 0;
+    text-align: center;
+}
+.site-reference {
+    color: #b3b3b3;
+    font-size: .8em;
+    font-weight: 600;
+}
+.time {
+    font-weight: lighter;
+    font-style: italic;
+}
+.expanded-image {
+    float: right;
+    padding-left: 1.5em;
+    padding-bottom: 1.5em;
+}
+.expanded-image img {
+    max-width: 170px;
+}
+.alternate-section {
+    background: #7f62a7;
+    display: grid;
+    width: 100%;
+}
+.secondary-purple {
+    background: #7f62a7;
+}
+.doctor-bg-color {
+    background: #508fcc;
+}
+.survey-doctor-color {
+    background: #B3CCD3;
+}
+.faq-question {
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: 600;
+    line-height: 1.3em;
+    padding: 15px 0;
+}
+
+/* FAQ row */
+
+/* Column with number in it. */
+.faq-question > div:nth-of-type(1) {
+    flex-shrink: 0;
+    text-align: center;
+    width: 15%;
+}
+/* Column with actual question in it. */
+.faq-question > div:nth-of-type(2) {
+    flex: 1;
+}
+/* Column with + in it. */
+.faq-question > div:nth-of-type(3) {
+    cursor: pointer;
+    flex-shrink: 0;
+    text-align: center;
+    width: 15%;
+}
+
+.faq-expanded {
+    padding-top: 1em;
+    padding-bottom: 2em;
+}
+.faq-expanded > div:nth-of-type(1) {
+    width: 15%;
+    flex-shrink: 0;
+}
+.faq-expanded > div:nth-of-type(2) {
+    flex: 1 0;
+}
+
+@media screen and (max-width: 570px) {
+    .faq {
+        font-size: 80%;
+    }
+    .faq-expanded > div:nth-of-type(2) {
+        padding-right: 15%;
+    }
+    .expanded-image {
+        clear: both;
+        padding: 0;
+    }
+    .expanded-image img {
+        max-width: 100%;
+    }
+}

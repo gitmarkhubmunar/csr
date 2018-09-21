@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Catamaran');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
+@import url('https://fonts.googleapis.com/css?family=Muli');
+@import url('https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i');
+
+@font-face {
+    font-family: 'Kiro';
+    src: url(/fonts/Kiro-Extra-Bold.otf);
+    font-style: normal;
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'Kiro';
+    src: url(/fonts/Kiro-Extra-Bold-Italic.otf);
+    font-style: italic;
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'Kiro';
+    src: url(/fonts/Kiro-Bold.otf);
+    font-style: normal;
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Kiro';
+    src: url(/fonts/Kiro-light.otf);
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Kiro';
+    src: url(/fonts/Kiro-Thin.otf);
+    font-style: normal;
+    font-weight: 100;
+}
+
+.text-center {
+    text-align: center;
+}
+.font-size-1 {
+    font-size: 16px;
+}
+.font-size-2 {
+    font-size: 20px;
+}
+.font-size-3 {
+    font-size: 14px;
+}
+.font-size-4 {
+    font-size: 30px;
+}

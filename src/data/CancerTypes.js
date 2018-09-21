@@ -1,100 +1,210 @@
-// Bladder 
-// Breast  
-// Colon     
-// Lung    
-// Melanoma    
-// Pancreas    
-// Prostate    
-// Rectal  
-// Stomach Ovary
-// Uterine
-
-
 const CancerTypes = [
     {
         id: 'bladder',
-        name: 'Bladder Cancer',
+        name: 'Bladder cancer',
         colors: ['#FABC3C', '#740070', '#0F1B47'],
+        contrastColor: 'black',
+        ribbonFile: ['ribbon.bladder.svg'],
+    },
+    {
+        id: 'bone-joint',
+        name: 'Bone & joint cancer',
+        colors: ['#508fcc, FFFF00'],
+        contrastColor: 'black',
+        ribbonFile: ['ribbon.bonejoint.svg'],
     },
     {
         id: 'brain',
-        name: 'Brain Cancer',
+        name: 'Brain cancer',
         colors: ['#444444'],
+        ribbonFile: ['ribbon.brain.svg'],
     },
     {
         id: 'breast',
-        name: 'Breast Cancer',
+        name: 'Breast cancer',
         colors: ['#F87DB3'],
+        ribbonFile: ['ribbon.breast.svg'],
     },
     {
         id: 'colon',
-        name: 'Colon Cancer',
-        colors: ['#23395B'],  
+        name: 'Colon cancer',
+        colors: ['#23395B'],
+        ribbonFile: ['ribbon.colon.svg'],  
+    },
+      {
+        id: 'esophagus',
+        name: 'Esophageal cancer',
+        colors: ['#CCCCFF'],
+        ribbonFile: ['ribbon.esophagus.svg'],   
+    },
+    {
+        id: 'eye',
+        name: 'Eye cancer',
+        colors: ['#23395B'],
+        ribbonFile: ['ribbon.eye.svg'],  
+    },
+    {
+        id: 'hodgkins-lymphoma',
+        name: 'Hodgkins lymphoma',
+        colors: ['#23395B'],
+        ribbonFile: ['ribbon.hodgkinslymphoma.svg'],   
+    },
+    {
+        id: 'kidney',
+        name: 'Kidney cancer',
+        colors: ['#23395B'],
+        ribbonFile: ['ribbon.kidney.svg'],   
+    },
+    {
+        id: 'leukemia',
+        name: 'Leukemia',
+        colors: ['#23395B'], 
+        ribbonFile: ['ribbon.leukemia.svg'], 
     },
     {
         id: 'liver',
-        name: 'Liver Cancer',
-        colors: ['#0E402D'],    
+        name: 'Liver cancer',
+        colors: ['#0E402D'],
+        ribbonFile: ['ribbon.liver.svg'],    
+    },
+    {
+        id: 'lung',
+        name: 'Lung cancer',
+        colors: ['#white'],
+        ribbonFile: ['ribbon.lung.svg'],    
+    },
+    {
+        id: 'Lymphoma',
+        name: 'Lymphoma',
+        contrastColor: 'black', 
+        ribbonFile: ['ribbon.hodgkinslymphoma.svg'],    
     },
     {
         id: 'melanoma',
         name: 'Melanoma',
+        colors: ['black'],  
+        ribbonFile: ['ribbon.melanoma.svg'], 
+    },
+    {
+        id: 'myeloma',
+        name: 'Myeloma',
+        colors: ['#800020'],  
+        ribbonFile: ['ribbon.myeloma.svg'], 
+    },
+    {
+        id: 'non-hodgkins-lymphoma',
+        name: 'Non-Hodgkins lymphoma',
+        colors: ['black'],  
+        ribbonFile: ['ribbon.hodgkinslymphoma.svg'],  
+    },
+    {
+        id: 'Oral',
+        name: 'Oral cancer',
+        colors: ['black'],  
+        ribbonFile: ['ribbon.oral.svg'], 
+    },
+    {
+        id: 'other-digestive',
+        name: 'Other digestive cancer',
+        colors: ['black'],  
+        ribbonFile: ['ribbon.oral.svg'], 
+    },
+    {
+        id: 'other-endocrine',
+        name: 'Endocrine cancer',
+        colors: ['zebra'],  
+        ribbonFile: ['ribbon.oral.svg'], 
+    },
+    {
+        id: 'other-genital',
+        name: 'Genital cancer',
+        colors: ['#B163A3'],  
+        ribbonFile: ['ribbon.genital.svg'], 
+    },
+    {
+        id: 'other-respiratory',
+        name: 'Respiratory cancer',
+        colors: ['black'],  
+        ribbonFile: ['ribbon.respitory.svg'],
+    },
+    {
+        id: 'other-skin',
+        name: 'Skin cancer',
         colors: ['black'],   
+        ribbonFile: ['ribbon.respiratory.svg'], 
+    },
+    {
+        id: 'other',
+        name: 'Other cancer',
+        colors: ['black'],  
+        ribbonFile: ['ribbon.respiratory.svg'], 
     },
     {
         id: 'ovarian',
-        name: 'Ovarian Cancer',
+        name: 'Ovarian cancer',
         colors: ['#3ECFCD'],
+        ribbonFile: ['ribbon.ovarian.svg'],
     },
-     {
+    {
         id: 'pancreatic',
-        name: 'Pancreatic Cancer',
+        name: 'Pancreatic cancer',
         colors: ['#4E2572'],
+        ribbonFile: ['ribbon.pancreas.svg'],
     },
     {
         id: 'prostate',
-        name: 'Prostate Cancer',
+        name: 'Prostate cancer',
         colors: ['#4FCAFF'],
+        ribbonFile: ['ribbon.prostate.svg'],
     },
     {
         id: 'rectal',
-        name: 'Rectal Cancer',
+        name: 'Rectal cancer',
         colors: ['#4F759B'],
+        ribbonFile: ['ribbon.rectal.svg'],
     },
     {
-        id: 'lymphoma',
-        name: 'Lymphoma',
-        colors: ['#D7FF75'],  
+        id: 'soft-tissue',
+        name: 'Soft tissue cancer',
+        colors: ['#3ECFCD'],
+        ribbonFile: ['ribbon.softtissue.svg'],
     },
     {
         id: 'stomach',
-        name: 'Stomach Cancer',
-        colors: ['#CACFE3'],    
+        name: 'Stomach cancer',
+        colors: ['#3ECFCD'],
+        ribbonFile: ['ribbon.stomach.svg'],
     },
     {
         id: 'thyroid',
-        name: 'Thyroid Cancer',
+        name: 'Thyroid cancer',
         colors: ['#008080', '#FFC0CB', '0000FF'],   
+        ribbonFile: ['ribbon.thyroid.svg'],
     },
     {
-        id: 'uterine corpus',
-        name: 'Uterine Cancer',
+        id: 'ureter-urinary',
+        name: 'Ureter & urinary cancer',
+        colors: ['#3ECFCD'],
+        ribbonFile: ['ribbon.ureterurinary.svg'],
+    },
+    {
+        id: 'uterine-cervix',
+        name: 'Uterine cervical cancer',
+        colors: ['#3ECFCD'],
+        ribbonFile: ['ribbon.uterine.cervix.svg'],
+    },
+    {
+        id: 'uterine-corpus',
+        name: 'Uterine corpus cancer',
         colors: ['#F99768'],
+        ribbonFile: ['ribbon.uterinecorpus.svg'],
     },
     {
         id: 'generic',
-        name: 'Unspecified Cancer',
+        name: 'Other cancers',
         colors: ['purple'],
+        ribbonFile: ['ribbon.uterinecorpus.svg'],
     },
 ]
 
 export default CancerTypes
-
-
-// To use this, in your component, import lodash, then use this kind of id
-// to get the name, colors, etc. from the cancer type.
-
-// const currentCancerTypes = _.find(CancerTypes, { id: 'uterine' })
-// const colorPrimary = currentCancerType.colorPrimary
-// const colorSecondary = currentCancerType.colorSecondary
-// const name = currentCancerType.name

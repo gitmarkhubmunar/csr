@@ -1,795 +1,39 @@
-@import url('https://fonts.googleapis.com/css?family=Catamaran');
 @import '~react-toggle-switch/dist/css/switch.min.css';
-@import url('https://fonts.googleapis.com/css?family=Work+Sans');
-@import url('https://fonts.googleapis.com/css?family=Muli');
+@import url('./styles/animate.css');
 
+@import url('./styles/type.css');
+@import url('./styles/card.css');
+@import url('./styles/courage-health-panel.css');
+@import url('./styles/faq.css');
+@import url('./styles/feedback-slot.css');
+@import url('./styles/footer.css');
+@import url('./styles/home-page.css');
+@import url('./styles/question-drawer.css');
+@import url('./styles/share-card.css');
+@import url('./styles/slider.css');
+@import url('./styles/dropdown.css');
+@import url('./styles/title-bar.css');
 
-
-@font-face {
-  font-family: 'Kiro';
-  src: url(/fonts/Kiro-Extra-Bold.otf);
-  font-style: normal;
-  font-weight: 800;
+html {
+    overflow-x: hidden;
 }
-
-@font-face {
-  font-family: 'Kiro';
-  src: url(/fonts/Kiro-Extra-Bold-Italic.otf);
-  font-style: italic;
-  font-weight: 800;
-}
-
-@font-face {
-  font-family: 'Kiro';
-  src: url(/fonts/Kiro-Bold.otf);
-  font-style: normal;
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: 'Kiro';
-  src: url(/fonts/Kiro-light.otf);
-  font-style: normal;
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: 'Kiro';
-  src: url(/fonts/Kiro-Thin.otf);
-  font-style: normal;
-  font-weight: 100;
-}
-
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Muli','Kiro','Catamaran', 'SF UI Text', 'Arial';
-  color: #4C4C4C;
+    color: #4C4C4C;
+    font-family: 'Muli','Kiro','Catamaran', 'SF UI Text', 'Arial';
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+    position: relative;
 }
-
-.app {
-  height: 100vh;
-}
-
-.home-page {
-  background: white;
-  padding-bottom: 100px;
-}
-
-.card {
-  flex: 1 auto;
-  /*border-radius: 8px;*/
-  box-shadow: 0 2px 8px rgba(0, 0, 0, .5);
-  margin: 0 auto;
-  width: 100%;
-  background: white;
-}
-
-.courage-voice {
-  color: #551A8B;
-  font-size: 18px;
-  font-weight: 600;
-  text-align: center;
-  padding: 70px 0 0 0;
-  letter-spacing: 0.03em;
-}
-
-.title-bar {
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-gap: 1em;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  color: white;
-  align-items: center;
-}
-
-.patient-switch.switch {
-  position: absolute;
-  background: #E1E8F4;
-  width: 50px;
-  background: grey;
-
-}
-.patient-switch.switch.on {
-  background: yellow;
-}
-.patient-switch.switch.on > .switch-toggle {
-  left: 23px;
-    -webkit-transition: left .2s ease-in-out;
-    transition: left .2s ease-in-out;
-}
-
-.drawer-tooltip {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.variables {
-    font-weight: 200;
-    margin: 28px 0;
-    color: #666;
-    font-size: 12px;
-    letter-spacing: -.4px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #E1E8F4;
-}
-
-.variable-row {
-    width: 400px;
-    margin-top: 16px;
-}
-
-.unanswered-row {
-  margin: 0 5px;
-  background: grey;
-  border: 2px solid green;
-}
-
-.customized-panel {
-  display: flex;
-  border: 3px solid green;
-}
-
-.input-panel {
-  display: flex;
-  border: 2px solid blue;
-  width: 100%;
-}
-
-.button-u {
-  border: 3px solid grey;
-  border-radius: 14px;
-  padding: 14px 0;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 4px;
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-}
-
-.button-u:hover {
-    background-position: 100% 0;
-    moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-    border: 3px solid purple;
-    border-radius: 14px;
-
-}
-
-.button-u:focus {
-    outline: none;
-    background: red;
-}
-
-.button-u ~ .button-u {
-}
-
-.button-survey {
-  border: 3px solid grey;
-  border-radius: 14px;
-  padding: 14px 0;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 4px;
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  font-style: normal;
-}
-
-.button-survey:hover{
-  background-position: 100% 0;
-  moz-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
-  border: 3px solid purple;
-  border-radius: 14px;
-}
-
-.button-survey.active {
-  color: white;
-}
-
-.icon-label {
-    max-width: 25%;
-    min-width: 15%;
-    padding: 15px 0;
-    flex-grow: 1;
-    align-items: center;
-}
-
-.heart-parent-container {
-  height: 0px;
-}
-
-.heart-first-row {
-  height: 44px;
-}
-
-.heart-container {
-  width: 45px;
-  height: 45px;
-  display: inline-block;
-}
-
-.heart-parent-container {
-  height: 0px;
-}
-
-.heart-first-row {
-  height: 44px;
-}
-
-.heart-container {
-  width: 45px;
-  height: 45px;
-  display: inline-block;
-}
-.heart-container svg {
-  height: 45px;
-}
-
-.input-area {
-    align-items: center;
-    background: light gray;
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.unanswered-button {
-  height: 24px;
-  display: flex;
-}
-
-/*.variable-switch-unanswered  {
-  padding-top: 0px;
-  display: flex;
-  flex: 0 1 auto;
-
-}*/
-.variable-icon {
-  display: flex ;
-  width: 20px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  opacity: .3;
-  transition: opacity .3s ease;
-}
-.variable-icon.answered {
-  opacity: 1;
-}
-.variable-name {
-  align-items: center;
-  color: black;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: .3;
-  transition: opacity .3s ease;
-}
-.variable-name.answered {
-  opacity: 1;
-}
-
-./*variable-switch {
-  border-radius: 90px;
-  background-color: #4d0092;
-  border-radius: 24px;
-  display: flex;
-  flex: 1 0 0;
-  height: 100%;
-  margin: 6px;
-  padding: 10px;
-  text-align: center;
-  width: 130px;
-}*/
-
-.variable-switch > div {
-  display: flex;
-  flex: 1 1 auto;
-  justify-content: center;
-  align-items: center;
-}
-
-.answered-bubble {
-  stroke: red;
-}
-
-.topic {
-  color: white;
-  text-align: center;
-}
-
-.input {
-  color: #FC4D97;
-  text-align: center;
-}
-
-.input-unanswered {
-    display: flex;
-    border: 1px solid red;
-    width: 100%;
-}
-
-.toggle-container {
-  display: flex;
-  flex: .5 0;
-  flex-direction: row-reverse;
-}
-
-.toggle2 {
-  height: 35px;
-  width: 100px;
-}
-
-.toggle2 {
-  height: 35px;
-  width: 120px;
-  
-}
-
-.role {
-display: inline-flex;
-color: #999999;
-padding-top: 30px;
-font-size: 13px;
-font-weight: 200;
-font-style: italic;
-letter-spacing: .02rem;
-}
-
-.role.patient {
-  color: #999999;
-  padding-top: 30px;
-  font-size: 13px;
-  font-weight: 200;
-  font-style: italic;
-  letter-spacing: .02rem;
-}
-
-.share-container {
-  flex: .45;
-}
-
-.share-button {
-  flex: 2;
-  width: 30px;
-}
-
-/* Dropdown */
-
-.dropdown-container {
-  display: inline-block;
-  position: relative;
-  user-select: none;
-  white-space: nowrap;
-}
-.dropdown {
-  background: white;
-  border-radius: 2px;
-  border: 1px solid transparent;
-  cursor: pointer;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  /*margin: 0 0 0 -40px;*/
-  /*padding: 0 40px;*/
-  position: absolute;
-  top: 73px;
-  text-align: left;
-  background-color: #3B0082;
-  min-width: 100px;
-  width: 99%;
-  max-width: 60vw;
-}
-.dropdown.open {
-  border-color: #eaeaea;
-  z-index: 1;
-  /*width: 100%;*/
-}
-.dropdown-container .selected {
-  font-weight:400;
-}
-
-.dropdown-container .selected:before {
-  /*border-bottom: 8px solid #E5D9E8;*/
-  bottom: 0px;
-  content: '';
-  height: 0;
-  left: 0;
-  position: absolute;
-  width: 100%;
-}
-.dropdown li {
-  padding: 0px 16px;
-  color: #DFD0E3;
-  /*font-size: 20px;*/
-  letter-spacing: 0em;
-  line-height: 1.4em;
-  font-weight: 100;
-  white-space: normal;
-}
-
-.title-dropdown {
-  display: inline-flex;
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.third-dropdown {
-  display: inline-block;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 22px;
-  font-weight: 900;
-}
-
-.cancer-title {
-  flex: 0 0 auto;
-
+a {
+    text-decoration: none;
 }
 
-/*.dropdown li:nth-of-type(1) {
-}
-.dropdown li:nth-of-type(2) {
-}
-.dropdown li:nth-of-type(3) {
-}*/
-.caret {
-  display: inline-block;
-  width: 18px;
-  height: 50px;
-  margin-top: 0px;
-  margin-left: 15px;
-
-}
-.variable-icon {
-  width: 20px;
-}
-
-.input-field {
-    height: 35px;
-    width: 100%;
-    border:none;
-    outline: 0;
-}
-
-.suggestion label {
-  display: block;
-  cursor: pointer;
-  background: red no-repeat;
-}
-
-input#menu {
- display: none;
-}
-
-/*Toggle effect /*/
-
-.links {
-  font-weight: bolder;
-}
-.links a {
-  display: inline-block;
-  margin: 20px 15%;
-}
-
-input:checked ~ drop-menu menu1 {
-  max-height: 100%;
-}
-
-/* Home page */
-
-.cancer-survival-rates-header {
-
-  color: #4d0092;
-  font-size: 33px;
-  text-align: center;
-  padding: 0 0;
-  font-family: kiro;
-}
-
-.home-page-intro {
-  font-size: 65px;
-  font-weight: 800;
-  color: #4C4C4C;
-  margin: 10% auto 80px auto;
-  width: 66%;
-  text-align: center;
-  max-width: 60%;
-  letter-spacing: -.02em;
-  line-height: 1.2em;
-
-}
-
-.home-page-blurb {
-  font-size: 22px;
-  margin: 0 auto;
-  width: 30%;
-  text-align: center;
-  padding-bottom: 6%;
-}
-
-.margin {
-  display: inline-flex;
-  background: yellow;
-  width: 100%;
-}
-
-.survey-page{
-  background: #E1E8F4;
-}
-
-.stage-row{
-  display: inline-block;
-}
-
-
-.question-panel {
-  flex: 1 auto;
-  /*background: yellow;*/
-  margin: 3% auto 0 auto;
- /* width: 382px;*/
-  text-align: center;
-  height: 100%;
-  background: #8B8B8B;
-}
-
-.key-questions {
-  background: #551A8B;
-  height: 200px;
-}
-
-.statistics {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.stat-header {
-  width: 400px;
-}
-
-.stat-viz {
-    width: 400px;
-}
-
-.statistic-line {
-  flex: 1;
-  background: white;
-
-}
-
-.percentage {
-  font-size: 55px;
-  letter-spacing: -0.01em;
-  font-weight: 500;
-  padding: 20px;
-  text-align: center;
-  flex: 1;
-  font-weight: 700;
-}
-
-.survival-line {
-    flex: 2;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: 24px;
-    width: 100%;
-    flex-wrap: nowrap;
-    font-weight: 500;
-    letter-spacing: -0.02em;
-    font-style: normal;
-}
-
-.stat-copy {
-  font-size: 14px;
-  max-width: 100%;
-  line-height: 1.4;
-  padding: 15px;
-  font-weight: 100;
-  letter-spacing: -.75px;
-  font-style: normal;
-  color: grey;
-}
-
-.bold-line{
-  font-weight: 700;
-  color: black;
-}
-
-.icon-array {
-  padding-top: 22px;
-  /*display: flex;*/
-  /*align-items: center;*/
-}
-.heart-icon {
-  width: 42px;
-}
-
-.question-controls {
-  margin: 0 auto;
-  width: 382px;
-}
-
-.input-button1 {
-  padding: 1em 1.5em;
-  flex: 1 0 auto;
-  margin: 0px;
-  font-weight: 400;
-  font-size: 16pt;
-  color: white;
-  letter-spacing: 2px;
-}
-
-.input-button-age {
-  color: white;
-  font-size: 16pt;
-  margin-top: 4px;
-  padding: 1em 5em;
-  flex: 1 0 40%;
-  border-bottom: 1px solid white;
-}
-
-.input-button-stage {
-  flex-wrap: nowrap;
-  color: white;
-  padding: 1em 0em;
-  flex: 1 0 auto;
-  margin: 10px;
-  font-weight: 500;
-  font-size: 16pt;
-}
-
-.input-button-grade {
-  flex-wrap: nowrap;
-  color: white;
-  padding: 1em 0em;
-  flex: 1 0 auto;
-  margin: 0px 50px;
-  font-weight: 500;
-  font-size: 15pt;
-}
-
-.input-button2 {
-  background-color:blue;
-  stroke: red;
-  color: white;
-  margin: 5px;
-}
-
-.input-button-diagnosed {
- /*background: blue;*/
- color: white;
- padding: .5em 2em;
- margin: 0 auto;
- /*background: blue;*/
- width: 15%;
-}
-
-.diagnosed-number {
-  font-size: 18px;
-  font-weight: 600; 
-}
-
-.time-unit {
- font-size: 10pt;
- color: white;
- border: dotted 1px red;
- width: 100%;
- margin-top: -2px;
- font-weight: 400;
- letter-spacing: .08em
-}
-
-.message {
-  width: 100%;
-  background: blue;
-}
-
-.survey-hairline {
-  margin: 4% 0px;
-}
-
-.container {
-  display: flex;
-  flex-direction: row;
-}
-
-.patient-type > li{
-  display: none;
-}
-
-.messaging-panel {
-    background: #551A8B;
-}
-
-.faq {
-    background: #542e89;
-    color: white;
-    padding: 5% 18%;
-}
-
-.doctor-bg-color {
-    background: #508fcc;
-}
-
-.faq > h3 {
-    font-weight: 600;
-    font-size: 22px;
-    text-align: center;
-    margin: 0px 0 20px 0;
-}
-
-.question-row {
-  flex-direction: row;
-}
+/* Position and display */
 
-.number-bullet{
-  flex: .25;
-  text-align: center
+.full-height {
+    height: 100%;
 }
-
-.suggestions {
-  flex: 3;
-  /*background: grey;*/
-}
-
-.expand-icon {
-  /*background: red;*/
-  flex: .25;
-  text-align: center
-}
-
-.question-header {
-  padding-top: 50px;
-}
-
-.faq-question {
-    padding: 4px 0;
-    border-bottom: 1px solid white;
-    align-items: center;
-}
-.faq-question:nth-of-type(1) {
-    border-top: 1px solid white;
-}
-.faq-question > div:nth-of-type(1) {
-    font-weight: bold;
-    font-size: 26px;
-}
-.faq-question > div:nth-of-type(2) {
-    flex: 1;
-    padding: 0 20px;
-}
-.faq-question > div:nth-of-type(3) {
-    font-size: 30px;
-}
-
-/* Re-usable styles */
-
 .relative {
     position: relative;
 }
@@ -800,7 +44,16 @@ input:checked ~ drop-menu menu1 {
 .flex-row {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+}
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.center-all {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .nowrap {
     flex-wrap: nowrap;
@@ -812,38 +65,112 @@ input:checked ~ drop-menu menu1 {
     flex-wrap: wrap;
 }
 
+/* Margins, padding, and spacing */
+
+.padding-1 {
+    padding: 5px;
+}
+.padding-2 {
+    padding: .5em 1em;
+}
+.padding-3 {
+    padding: 0 auto;
+}
+.padding-4 {
+    padding: 9% 3%;
+}
+
+/* Borders */
+
+.border-bottom {
+    border-bottom: 1px solid black;
+}
+.border-grey-bottom {
+    border-bottom: 1px solid #f0eaf6;
+    margin-bottom: 24px;
+}
+.border-bottom-alt {
+    border-bottom: 1px solid #aaaaaa;
+}
+.border-top-alt {
+    border-top: 1px solid #aaaaaa;
+}
+.border-bottom-white {
+    border-bottom: 1px solid white;
+}
+.border-top-white {
+    border-top: 1px solid white;
+}
+
+/* Colors */
+
+.white {
+    color: white;
+}
+.grey {
+    color: #999999;
+}
+.purple {
+    color: #4d0092;
+}
+.blue {
+    color: #508fcc;
+}
+.bg-white {
+    background-color: white;
+}
+.bg-grey {
+    background-color: #999999;
+}
+.bg-purple {
+    background-color: #4d0092;
+}
+.bg-blue {
+    background-color: #508fcc;
+}
+
+/* General Courage and component styles */
+
+.app {
+    -webkit-overflow-scrolling: touch;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 100%;
+}
+.cancer-survival-rates-header {
+    color: #4d0092;
+    font-size: 1.1em;
+    text-align: center;
+    font-family: kiro;
+}
+.courage-voice {
+    color: #551A8B;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    padding: 70px 0 0 0;
+    letter-spacing: 0.03em;
+}
+.content-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* MessagingPanel */
+
+.messaging-panel {
+    background: #551A8B;
+}
 .messaging {
-  font-weight: 600;
-  color: white;
-  padding: 16px 0 0 0;
-  margin: 0 auto;
-  width: 50%;
-  text-align: center;
-  letter-spacing: 0.0625em;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.0625em;
+    margin: 0 auto;
+    padding: 16px 0 0 0;
+    text-align: center;
+    width: 50%;
 }
-
-.flex-body {
-  display: flex;
-}
-
-.display-block{
-  display: block;
-}
-
-.share-wrapper {
-    display: flex;
-    margin: 20px 0;
-}
-
-.messaging-body-copy {
-  flex: 6;
-  font-weight: 100;
-  margin: 0 2% 0 25%;
-  text-align: center;
-  letter-spacing: 0.63px;
-  line-height: 18px;
-}
-
 .messaging-button {
     flex: 2;
     font-size: 1.25em;
@@ -864,743 +191,34 @@ input:checked ~ drop-menu menu1 {
     transition: all .5s ease 0;
     width: auto;
 }
-
-.five-year {
-    letter-spacing: .2px;
-    white-space: nowrap;
-    font-weight: 600;
-    font-size: 28px;
-    flex: 0 0 auto;
-    /*border: 1px solid green;*/
-    color: black;
-    align-items: center;
-    line-height: .9;
+.display-block {
+    display: block;
 }
-.text-center {
-  text-align: center;
-    /*border: 1px solid red;*/
-  /*font-size: 22px;*/
-  letter-spacing: 1px;
-}
-.font-size-1 {
-  font-size: 16px;
-}
-.font-size-2 {
-  font-size: 20px;
-}
-.font-size-3 {
-  font-size: 14px;
-}
-.font-size-4 {
-    font-size: 30px;
-}
-.padding-1 {
-  padding: 5px;
-}
-.padding-2 {
-  padding: 10px;
-}
-.padding-3 {
-  padding: 0 auto;
-}
-.padding-4 {
-    padding: 9% 3%;
-}
-.border-bottom {
-  border-bottom: 1px solid #dadada;
-}
-
-.white {
-  color: white;
-}
-.blue {
-  color: #4A90E2;
-}
-.grey {
-  color: #999;
-}
-.purple {
-  color: #4d0092;
-}
-
-.title-cancer-color {
-  background: green;
-}
-.bg-white {
-    background: white;
-}
-
-.full-height {
-    height: 100%;
-}
-
-.slider-container{
-  background: red;
-}
- 
-.courage-panel {
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-gap: 1em;
-  padding: 4% 10%;
-  background: #f0f0f0;
-}
-
-.courage-panel > div:nth-child(odd){
-  background:#ddd;
-  })
-
-.logo-container {
-  flex: 1;
-}
-
-.logo-container img {
-  width: 70px;
-  float: right;
-}
-
-.ch-description {
-  max-width: 480px;
-  font-size: 11px;
-  line-height: 20px;
-}
-
-.description-container {
-  flex: 3;
-}
-
-.cta-container {
-  flex: 2;
-}
-
-.ch-cta {
-  font-size: 11px;
-  letter-spacing: .5px;
-  line-height: 1.5;
-
-}
-
-.footer-container {
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  background: grey;
-  padding: 2% 10%;
-  font-size: 14px;
-}
-
-.footer-links {
-  display: flex;
-}
-
-.footer-container div {
-  /*border: 1px dotted red;*/
-}
-
-.links-container {
-  display: flex;
-  flex: 4;
-  margin: 6px 0;
-}
-
-.box-1 {
-  flex-direction: column;
-  flex:2;
-}
-
-.box-2 {
-  margin-right: 16px
-  /*flex:1;*/
-}
-
-.box-3 {
-  margin-right: 16px
-  /*flex:1;*/
-}
-
-.box-4 {
-  margin-right: 16px
-  /*flex:1;*/
-}
-
-.flex-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.c-blue {
-  color: #508fcc;
-}
-
-
-
-.footer-button {
-  flex: 2;
-  width: 200px;
-  height: 40px;
-}
-
-.test-square {
-  width: 800px;
-  background: yellow;
-}
-
-.patient-alt-container {
-}
-
-.patient-alt-container-grid {
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-}
-
-.patient-alt-container-grid > div{
-  background: #eee;
-  padding: 1em;
-}
-
-.nested > div {
-  display: grid;
-  border: 1px red solid;
-  margin: 30px 0 0 0;
-  font-size: 28px;
-  font-weight: 600;
-}
-
-.patient-alt-container-grid > div:nth-child(odd){
-  background:#ddd;
-  })
-
-.alt-header {
-  margin: 30px 0 0 0;
-  font-size: 28px;
-  font-weight: 600;
-  background: red;
-}
-
-.alt-copy {
-  margin: 10px 0 0 0;
-  max-width: 420px;
-  text-align: center;
-  color: #737373;
-}
-
-.alt-image {
-  margin: 20px 0 30px 0;
-}
-
-/*------------- // Media Queries // ------------*/
-
-/*@media screen and (max-width: 900px) {
-  .home-page-intro {
-    font-size: 100px;
-    margin: 40px 0 10% 10%;
-    text-align: left;
-    /*border: 1px solid red;*/
-/*    width: 90%;
-    max-width: 90%;
-    letter-spacing: .1em;
-    line-height: 1.2em;
-  }
-
-  .home-page-blurb {
-    position: absolute;
-    font-size: 25px;
-    width: 60%;
-    text-align: center;
-    margin: 0 20% -70px 20%;
-    /*border: 1px solid red;*/
-/*  }
-}*/
-
-/*@media screen and (max-width: 750px){
-
-  .home-page-intro {
-    font-size: 10px;
-    margin: 0px 0px 0px 0px;
-    text-align: left;
-    /*border: 1px solid red;
-    width: 100%;
-    max-width: 100%;
-    /*letter-spacing: .1em;
-    line-height: 1.2em;
-  }*/
-
-@media screen and (max-width: 1050px) {
-  .home-page {
-      margin: auto;
-  }
-
-  .home-page-intro {
-        font-size: 65px;
-        font-weight: 800;
-        color: #4C4C4C;
-        text-align: center;
-        max-width: 80%;
-        letter-spacing: -.02em;
-        line-height: 1.2em;
-  }
-
-  .home-page-blurb {
-        font-size: 22px;
-        margin: 0 auto;
-        width: 40%;
-        text-align: center;
-        padding-bottom: 6%;
-    }
-}
-
-@media screen and (max-width: 800px) {
-  .home-page {
-        margin: auto;
-  }
-
-  .home-page-intro {
-        font-size: 65px;
-        font-weight: 800;
-        color: #4C4C4C;
-        text-align: center;
-        max-width: 90%;
-        letter-spacing: -.02em;
-        line-height: 1.2em;
-  }
-
-  .home-page-blurb {
-        font-size: 22px;
-        margin: 0 auto;
-        width: 60%;
-        text-align: center;
-        padding-bottom: 6%;
-    }
-}
-
-@media screen and (max-width: 500px) {
-  .home-page-intro {
-        /*border: 1px solid red;*/
-        /*letter-spacing: .1em;*/
-        font-size: 42px;
-        line-height: 1.2em;
-        margin: 0px 0 0 15px;
-        max-width: 100%;
-        text-align: left;
-        width: 100%;
-  }
-
-  .break {
-    word-wrap: break-word;
-    margin-top: 0px;
-    border: 1px solid white;
-    display: table;
-  }
-
-  .break2 {
-    word-wrap: break-word;
-    margin-top: 0px ;
-    /*color: blue;*/
-    /*border: 1px solid white;*/
-    display: table;
-  }
-
-  .home-page-blurb {
-    font-size: 13px;
-    width: 70%;
-    text-align: center;
-    margin-top: 20px;
-  }
-
-  .cancer-survival-rates-header {
-    color: #4d0092;
-    text-align: center;
-    padding: 0 0;
-    font-size: 26px;
-    }
-}
-
-@media screen and (max-width: 0px){
-  .home-page-intro {
-    font-size: 58px;
-    margin: 20% 0 0 15px;
-    text-align: left;
-    max-width: 100%;
-    /*border: 1px solid red;*/
-    /*letter-spacing: .1em;*/
-    line-height: 1.1em;
-  } 
-
-  .cancer-survival-rates-header {
-    font-size: 20px;
-    text-align: center;
-    font-family: kiro;
-  }
-}
-
-
-
-@media screen and (max-width: 414px) {
-  .cancer-survival-rates-header {
-    color: #4d0092;
-    font-size: 22px;
-    text-align: center;
-    padding: 0 0 0 0;
-    font-family: kiro;
-  }
-
-    .home-page-intro {
-        font-size: 65px;
-        margin: 8% 0 20px 16px;
-        text-align: left;
-        max-width: 100%;
-        /*border: 1px solid red;*/
-        /*letter-spacing: .1em;*/
-        line-height: 1.1em;
-  }
- 
-  .home-page-blurb {
-    font-size: 20px;
-    text-align: center;
-    position: relative;
-    margin: 60px auto;
-    line-height: 1.4em;
-  }
-
-    .share-wrapper {
-       display: flex;
-       margin: 20px 0;
-    }
-
-    .messaging {
-      width: 90%;
-    }
-
-    .messaging-body-copy {
-      flex: 6;
-      font-weight: 100;
-      margin: 0 2% 0 3%;
-      text-align: center;
-      letter-spacing: 0.63px;
-      line-height: 18px;
-    }
-
-    .messaging-button {
-        background-color: #D8D8D8;
-        background-image: none;
-        border-radius: 3px;
-        border: none;
-        color: black;
-        cursor: pointer;
-        display: inline-block;
-        flex: 3;
-        font-size: 14px;
-        font-weight: 600;
-        height: 50px;
-        line-height: 50px;
-        margin: 0 4% 0 0;
-        outline: none;
-        padding: 0 0;
-        transition: all .5s ease 0;
-        vertical-align: middle;
-        width: auto;
-    }
-
-    .messaging-panel {
-        background: #551A8B;
-    }
-}
-
-@media screen and (max-width: 384px) {
-  .home-page-intro {
-    font-size: 60px;
-    margin: 8% 0 0 18px;
-    text-align: left;
-    max-width: 100%;
-    /*border: 1px solid red;*/
-    /*letter-spacing: .1em;*/
-    line-height: 1.1em;
-  }
-
-  .percentage {
-  font-size: 55px;
-  letter-spacing: -0.01em;
-  font-weight: 600;
-  padding: 2px 0 0 30px;
-  text-align: center;
-  flex: 1;
-  font-weight: 400;
-
-}
-
-.survival-line {
-    flex: 2;
+.share-wrapper {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: 30px;
-    width: 100%;
-    flex-wrap: nowrap;
-    margin-left: 10px;
-
+    margin: 20px 0;
 }
-
-  .home-page-blurb {
-    font-size: 18px;
+.messaging-body-copy {
+    flex: 6;
+    font-weight: 100;
+    letter-spacing: 0.63px;
+    line-height: 18px;
+    margin: 0 2% 0 25%;
     text-align: center;
-    position: relative;
-    margin: 25px auto;
-    line-height: 1.4em;
-  }
-
-  .variable-row {
-    width: 375px;
-    margin-top: 16px;
+}
+.key-questions {
+    background: #551A8B;
+    height: 200px;
 }
 
-.icon-label {
-    max-width: 18%;
-    min-width: 15%;
-    padding: 15px 0;
-    flex-grow: 1;
-    align-items: center;
-}
-
-.input-field {
-    height: 35px;
-    width: 91%;
-}
-
-.stat-copy {
-  font-size: 14px;
-  max-width: 100%;
-  line-height: 1.4;
-  padding: 15px;
-  margin-left: 10px;
-  font-weight: 500;
-  letter-spacing: -0.01em;
-  font-style: normal;
-
-}
-
-.border-bottom {
-border-bottom: 1px solid #BABABA;
-width:100%;
-}
-
-
-}
-
-@media screen and (max-width: 375px) {
-  .home-page-intro {
-    font-size: 57px;
-    margin: 8% 0 0 18px;
-    text-align: left;
-    max-width: 100%;
-    /*border: 1px solid red;*/
-    /*letter-spacing: .1em;*/
-    line-height: 1em;
-  }
-
-  .second-dropdown{
-    margin-top: -20px;
-  }
-
-   .home-page-blurb {
-    font-size: 18px;
-    text-align: center;
-    position: relative;
-    max-width: 100%;
-    line-height: 1.4em;
-
-  }
-
-
-
-}
-
-@media screen and (max-width: 360px) {
-  .home-page-intro {
-    font-size: 56px;
-    margin: 0 0 0 12px;
-    text-align: left;
-    max-width: 100%;
-    /*border: 1px solid red;*/
-    /*letter-spacing: .1em;*/
-    line-height: 1.1em;
-  }
-
-   .home-page-blurb {
-    font-size: 18px;
-    text-align: center;
-    margin: 45px auto;
-    max-width: 100%;
-    line-height: 1.4em;
-  }
-
-  .second-dropdown{
-    margin-top: -20px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .cancer-survival-rates-header {
-    color: #4d0092;
-    font-size: 16px;
-    text-align: center;
-    padding: 0 0 0 0;
-    font-family: kiro;
-  }
-
-  .home-page-intro {
-    font-size: 49px;
-    margin: 0 0 0 12px;
-    text-align: left;
-    max-width: 100%;
-    /*border: 1px solid red;*/
-    /*letter-spacing: .1em;*/
-    line-height: 1em;
-  }
-
-  .break2 {
-    word-wrap: break-word;
-    margin-top: 0px ;
-    /*color: blue;*/
-    /*border: 1px solid white;*/
-    display: table;
-  }
-
-    .home-page-blurb {
-    font-size: 14px;
-    text-align: center;
-    margin: 25px 16%;
-    line-height: 1.4em;
-  }
-    .second-dropdown {
-      margin-top: -16px;
+@media screen and (max-width: 570px) {
+    .content-container {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
-
-.vertical-slider {
-    height: 380px;
-    width: 50px;
-    border: 1px solid grey;
+@media screen and (min-width: 570px) {
+    .content-container {
+        max-width: 540px;
+    }
 }
-
-.handle {
-  font-size: 0.9em;
-  text-align: center;
-  background-color: black;
-  color: white;
-  cursor: pointer;
-}
-
-.handle.active {
-  background-color: grey;
-}
-
-.bar {
-  position: relative;
-  background: #ddd;
-}
-
-.bar.bar-1 {
-  background: #f00;
-}
-
-.bar.bar-2 {
-  background: #0f0;
-}
-
-.horizontal-slider {
-  width: 100%;
-  max-width: 500px;
-  height: 50px;
-  border: 1px solid grey;
-}
-
-.vertical-slider {
-  height: 380px;
-  width: 50px;
-  border: 1px solid grey;
-}
-
-.handle {
-  font-size: 0.9em;
-  text-align: center;
-  color: grey;
-  cursor: pointer;
-  border: 3px solid grey;
-  border-radius: 14px;
-  flex: 1;
-  margin: -3px;
-}
-
-.handle.active {
-  background-color: green;
-  color: white;
-}
-
-.bar {
-  position: relative;
-  background: #efefef;
-}
-
-.bar.bar-1 {
-  background: #f00;
-}
-
-.bar.bar-2 {
-  background: #0f0;
-}
-
-.horizontal-slider .bar {
-  top: 20px;
-  height: 10px;
-}
-
-.horizontal-slider .handle {
-  top: 1px;
-  width: 50px;
-  height: 48px;
-  line-height: 48px;
-}
-
-.slider-tick-button {
-  display: flex;
-  cursor: pointer;
-  position: absolute;
-  text-align: center;
-  width: 50px;
-  margin-left: -20px;
-
-}
-
-.slider-tick-button::before {
-  position: absolute;
-  content: ' ';
-  height: 4px;
-  cursor: pointer;
-  position: absolute;
-  text-align: center;
-  width: 40px;
-  margin-left: -20px;
-}
-.slider-tick-button::before {
-  position: absolute;
-  content: ' ';
-  height: 7px;
-  width: 1px;
-  background: #777;
-  left: 50%;
-  top: -6px;
-}
-
-
-
-/*.diagnosed-container {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-    margin: 40px 15px;
-    border: 1px solid blue;
-}*/
-
-
-
