@@ -1,55 +1,68 @@
 .home-page h2 {
-    color: #4d0092;
-    font-size: 33px;
-    font-weight: 800;
+    color: #4c4c4c;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-top: 2.5em;
+    margin-bottom: .25em;
+    line-height: 1.1;
 }
 .home-page h3 {
-    font-size: .8em;
+    font-size: 1.3em;
     grid-column: 2/2;
     grid-row: 3/3;
-    margin: 5em 0 0 0;
+    margin: 1.5em 0 0 0;
     display: flex;
+    color: #4c4c4c;
 }
+
 .home-page .dropdown {
-    color: black;
-    font-size: 2.6em;
+    color: #508fcc;
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -.5px;
 }
+
 .home-page .dropdown .caret {
-    font-size: 2.4em;
+    font-size: 2.2em;
+}
+
+.toggle-copy {
+    font-weight: 600;
+    
 }
 .go-button {
-    background: #4d0092;
-    border-radius: 22px;
+    background: #508fcc;
+    border-radius: 8px;
     color: white;
     cursor: pointer;
-    display: inline-block;
-    font-size: 1.5em;
+ /*   display: inline-block;*/
+    font-size: 2.5rem;
     font-weight: 700;
     letter-spacing: .2px;
-    margin: .5em 0 0 0;
-    padding: 0 2em;
+    margin: 0 0 0 0;
+    padding: .15em 2.1em;
     text-align: center;
+    margin: 0 auto;
 }
 .toggle-container {
     align-items: center;
     display: flex;
     flex-direction: row;
-    margin-top: .5em;
+    margin: .5em 0 3em 0;
 }
 .toggle-container .role {
     padding: 0 0 0 .5em;
 }
 .home-page-blurb {
-    margin-top: 5em;
     grid-column: 1/4;
     grid-row: 6/6;
 }
 .home-page-blurb > div {
     color: #9f9f9f;
-    font-size: .8rem;
+    font-size: 1rem;
     letter-spacing: -.01em;
     line-height: 1.4em;
-    margin: 0 18%;
+    margin: 0 10%;
     text-align: center;
 }
 .links {
@@ -63,27 +76,84 @@
     color: #ccc;
     grid-column: 1/4;
     grid-row: 1/1;
-    padding-top: 20px;
+    padding-top: 32px;
 }
 
-@media screen and (max-width: 570px) {
+.weight-700 {
+    font-weight: 700;
+}
+
+/*iphone x*/
+@media screen and (max-width: 370pt) {
     .home-page h2 {
-        font-size: 1.5em;
+        font-size: 3em;
+        margin-top: .5em;
     }
-    .home-page h3 {
-        font-size: .8em;
-    }
+
     .home-page .dropdown {
-        font-size: 1.5em;
-        width: calc(100% + 10px);
-        text-align-last: left;
-        text-align: left;
-        border-bottom: 1px solid #bababa;
-        padding: 5px 0;
-        border-radius: 0;
-        margin-left: -5px;
+    font-size: 3em;
+}
+
+    .home-page h3 {
+        font-size: 1.4em;
     }
+}
+
+
+
+@media screen and (max-width: 320px) {
+    .home-page h2 {
+        font-size: 2.1em;
+    }
+
+    .home-page .dropdown {
+    font-size: 2.1em;
+}
+
+    .home-page h3 {
+        font-size: 1.2em;
+    }
+
+    .toggle-container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin: .5em 0 3em 0;
+}
+
     .go-button {
-        font-size: 1.5em;
-    }
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+ /*   display: inline-block;*/
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: .2px;
+    margin: 0 0 0 0;
+    padding: .15em 2.1em;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+.home-page-blurb {
+    margin-top: 0em;
+}
+
+.home-page-blurb > div {
+    color: #9f9f9f;
+    font-size: .8rem;
+    letter-spacing: -.01em;
+    line-height: 1.4em;
+    margin: -1.5em 4%;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
 }

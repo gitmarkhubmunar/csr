@@ -70,11 +70,7 @@ class HomePage extends React.Component {
                         }}
                         selectedItem={selectedCancer.name}
                     />
-                    <div>
-                        <div className="go-button" onClick={() => this.goToSurvey()}>Go</div>
-                    </div>
-
-                    <h3>Heathcare professional?</h3>
+                    <h3 className="toggle-copy">Healthcare Professional?</h3>
                     <div className="toggle-container">
                         <Switch
                             onClick={() => this.setState({ isPatient: !isPatient })} 
@@ -83,12 +79,15 @@ class HomePage extends React.Component {
                         <div className="role">{isPatient === true ? 'No' : 'Yes'}</div>
                     </div>
 
+                    <div>
+                        <div className="go-button" onClick={() => this.goToSurvey()}>Go</div>
+                    </div>
+
+                    
+
                     <div className="home-page-blurb">
                         <div className="blurb-copy">
-                            Personalized cancer survival rates from the experts at <a href="http://courage.health">Courage Health</a>
-                        </div>
-                        <div className="links">
-                            <a className="about-link">About</a> <a className="blog-link">Blog</a>
+                            Personalized cancer survival rates from the experts at <a className="weight-700" href="http://courage.health">Courage Health</a>
                         </div>
                     </div>
                 </div>

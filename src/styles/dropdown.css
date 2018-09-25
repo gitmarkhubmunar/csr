@@ -25,12 +25,13 @@
     width: 100%;
 }
 .dropdown ul {
-    border: 1px solid #fafafa;
+    border: 3px solid #fafafa;
     box-shadow: 0 3px rgba(230, 230, 230, .7);
     list-style-type: none;
     max-height: 375px;
     overflow: scroll;
     padding: 15px;
+
 }
 .dropdown ul.open {
     background: white;
@@ -38,6 +39,7 @@
     position: absolute;
     top: 5px;
     z-index: 1001;
+    background: #F2F2F2;
 }
 .dropdown ul li {
     color: #999;

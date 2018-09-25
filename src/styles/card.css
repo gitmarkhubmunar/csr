@@ -15,7 +15,6 @@
     grid-template-columns: 10% auto auto 10%;
     padding-bottom: 1em;
     padding-top: 1em;
-
 }
 .statistics-copy {
     font-size: 1em;
@@ -39,9 +38,7 @@
     text-align: center;
     grid-column: 2/2;
 }
-.secondary-sub-copy {
-    grid-column: 2/2;
-}
+
 .icon-array-row {
     margin-bottom: -0.5em;
     white-space: nowrap;
