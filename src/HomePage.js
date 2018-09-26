@@ -76,7 +76,7 @@ class HomePage extends React.Component {
                             onClick={() => this.setState({ isPatient: !isPatient })} 
                             on={isPatient === false}
                         />
-                        <div className="role">{isPatient === true ? 'No' : 'Yes'}</div>
+                        <div className="role yes-no">{isPatient === true ? 'No' : 'Yes'}</div>
                     </div>
 
                     <div>

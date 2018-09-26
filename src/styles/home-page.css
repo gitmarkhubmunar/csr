@@ -51,8 +51,10 @@
     margin: .5em 0 3em 0;
 }
 .toggle-container .role {
-    padding: 0 0 0 .5em;
+    margin-left: .5em;
 }
+
+
 .home-page-blurb {
     grid-column: 1/4;
     grid-row: 6/6;
