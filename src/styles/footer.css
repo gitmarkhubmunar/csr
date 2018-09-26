@@ -36,23 +36,12 @@
 
 .box-1 {
     /*background: yellow;*/
-    grid-column: 3/6;
+    grid-column: 3/7;
+    text-align: center;
+    color: #CCCCCC;
+
 }
 
-.box-2 {
-    /*flex:1;*/
-    margin-right: 16px
-}
-
-.box-3 {
-    /*flex:1;*/
-    margin-right: 16px
-}
-
-.box-4 {
-    /*flex:1;*/
-    margin-right: 16px
-}
 
 @media screen and (max-width: 480px) {
     .footer-container {
