@@ -13,13 +13,8 @@ class Footer extends React.Component {
         return (
             <div className="footer-container">   
                 <div className="footer-links-container">
-                    <div className="box-1">© 2018 Courage Health.
-                        <div className="footer-links">
-                            <div className="links-container">
-                                <div className="box-3">Privacy Policy</div>
-                                <div className="box-4">Terms of Use</div>
-                            </div>
-                        </div>
+                    <div className="box-1">Personalized cancer survival rates from the experts at Courage Health.
+                        
                     </div>
                 </div>
             </div>
