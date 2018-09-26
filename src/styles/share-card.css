@@ -1,5 +1,5 @@
 .blackout {
-    background: rgba(0, 0, 0, .8);
+    background: rgba(0, 0, 0, .6);
     bottom: 0;
     left: 0;
     position: fixed;
@@ -13,7 +13,7 @@
     bottom: 0;
     right: 0;
     left: 0;
-    top: 20%;
+    top: 30%;
 }
 .share-card-content-container {
     padding-bottom: 20%;
@@ -64,8 +64,14 @@
     width: 100%;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 750px) {
     .share-card {
-        font-size: .8em;
+    font-size: .8em;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 45%;
     }
+
 }
