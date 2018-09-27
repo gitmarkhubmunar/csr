@@ -133,12 +133,7 @@ const CancerTypes = [
         colors: ['black'],   
         ribbonFile: ['ribbon.respiratory.svg'], 
     },
-    {
-        id: 'other',
-        name: 'Other ',
-        colors: ['black'],  
-        ribbonFile: ['ribbon.respiratory.svg'], 
-    },
+    
     {
         id: 'ovarian',
         name: 'Ovarian ',
