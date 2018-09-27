@@ -87,7 +87,7 @@ class HomePage extends React.Component {
 
                     <div className="home-page-blurb">
                         <div className="blurb-copy">
-                            Personalized cancer survival rates from the experts at <a className="weight-700" href="http://courage.health">Courage Health</a>
+                            Personalized cancer survival rates from the experts at <a className="weight-700" href="http://courage.health" target="_blank">Courage Health</a>
                         </div>
                     </div>
                 </div>
