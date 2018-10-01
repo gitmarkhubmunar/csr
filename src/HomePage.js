@@ -78,13 +78,9 @@ class HomePage extends React.Component {
                         />
                         <div className="role">{isPatient === true ? 'No' : 'Yes'}</div>
                     </div>
-
                     <div>
                         <div className="go-button" onClick={() => this.goToSurvey()}>Go</div>
                     </div>
-
-                    
-
                     <div className="home-page-blurb">
                         <div className="blurb-copy">
                             Personalized cancer survival rates from the experts at <a className="weight-700" href="http://courage.health" target="_blank">Courage Health</a>
