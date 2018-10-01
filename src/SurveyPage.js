@@ -20,7 +20,7 @@ class SurveyPage extends React.Component {
             isPatient: historyState.isPatient || true,
             rate: null,
             selectedCancerType: historyState.selectedCancerType || 'liver',
-            sex: null,
+            sex: 'female',
             stage: '1',
         }
     }
