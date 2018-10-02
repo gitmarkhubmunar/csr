@@ -1,4 +1,5 @@
 import _ from 'lodash'
+import CountUp from 'react-countup'
 import Icon from 'react-ionicons'
 import React from 'react'
 
@@ -44,6 +45,20 @@ class CardStatistics extends React.Component {
 	// 					<CardMessaging />
 	// 				}
 	// 			</div>
+
+	componentWillMount () {
+		this.setState({
+			lastRate: 0,
+			nextRate: this.props.rate,
+		})
+	}
+
+	componentWillReceiveProps (nextProps) {
+		this.setState({
+			lastRate: this.props.rate,
+			nextRate: nextProps.rate,
+		});
+	}
 
 	renderIconArray = () => {
 		const { rate, selectedCancerType } = this.props
@@ -94,6 +109,7 @@ class CardStatistics extends React.Component {
 	        stage,
 	        toggleShareCard,
 	    } = this.props
+	    const { lastRate, nextRate } = this.state
 		const selectedCancer = _.find(CancerTypes, { id: selectedCancerType })
 		const color = selectedCancer.colors[0]
 		const hasAnsweredAnyQuestion = age || diagnosed || grade || sex || stage
@@ -103,7 +119,15 @@ class CardStatistics extends React.Component {
 				<div className="content-container">
 					<div className="statistics-container statistics-header relative">						
 						<div className="percentage" style={{ color: color }}>
-							{rate && <span>{rate}%</span>}
+							{rate &&
+								<CountUp
+									duration={1}
+									end={nextRate}
+									start={lastRate}
+									suffix="%"
+									useEasing={false}
+								/>
+							}
 						</div>
 						<div className="statistics-copy big">
 							5 Year Conditional Survival Rate
