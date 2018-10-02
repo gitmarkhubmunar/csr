@@ -11,7 +11,7 @@
     user-select: none;
     white-space: nowrap;
 }
-.dropdown.desktop {
+.dropdown.center {
     display: inline-flex;
     flex-direction: row;
     position: relative;

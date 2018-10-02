@@ -34,7 +34,7 @@ class Dropdown extends React.Component {
             )
         }
         return (
-            <div className={combinedClassName + ' desktop'} onClick={this.toggleMenu}>
+            <div className={combinedClassName + ' center'} onClick={this.toggleMenu}>
                 {isOpen &&
                     <ul className={isOpen ? 'open' : 'closed'}>
                         {list.map((item, i) => {

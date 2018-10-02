@@ -31,19 +31,21 @@
 .role {
     display: inline-flex;
     color: #999999;
-    padding-top: 30px;
     font-size: 13px;
     font-weight: 200;
     font-style: italic;
     letter-spacing: .02rem;
+    margin-top: 6px;
+    margin-left: 64px;
 }
 .role.patient {
     color: #999999;
-    padding-top: 30px;
     font-size: 13px;
     font-weight: 200;
     font-style: italic;
     letter-spacing: .02rem;
+    margin-left: 64px;
+    margin-top: 6px;
 }
 .title-dropdown-container {
     grid-column: 2 / span 6;
@@ -82,7 +84,7 @@ select.title-dropdown {
     top: 0;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 800px) {
     .toggle-switch.switch {
         position: absolute;
         background: #E1E8F4;
@@ -96,16 +98,31 @@ select.title-dropdown {
         -webkit-transition: left .2s ease-in-out;
         transition: left .2s ease-in-out;
     }
+
+    .title-dropdown-container {
+    grid-column: 2 / span 6;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    }
+    .title-dropdown {
+    font-size: 24px;
+    font-weight: 900;
+    }
     select.title-dropdown {
         font-size: 16px;
         font-weight: 700;
         letter-spacing: -0.2px;
         margin: 0 auto;
     }
+
+    .title-bar .dropdown .caret {
+    fill: white;
+}
     .role {
         display: inline-flex;
         color: #999999;
-        padding-top: 30px;
         font-size: 13px;
         font-weight: 200;
         font-style: italic;
@@ -113,7 +130,6 @@ select.title-dropdown {
     }
     .role.patient {
         color: #999999;
-        padding-top: 30px;
         font-size: 13px;
         font-weight: 200;
         font-style: italic;

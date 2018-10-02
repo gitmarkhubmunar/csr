@@ -118,7 +118,7 @@ class QuestionDrawer extends React.Component {
                                     type="image/svg+xml"
                                 />
                             </div>
-                            <div className={diagnosed === 0 ? 'variable-name' : 'variable-name answered'}>diagnosis<br />date</div>
+                            <div className={diagnosed === 0 ? 'variable-name' : 'variable-name answered'}>diagnosed</div>
                         </div>
                         <div className="input-area diagnosis">
                             <ReactSlider
