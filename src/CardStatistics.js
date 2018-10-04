@@ -139,7 +139,9 @@ class CardStatistics extends React.Component {
 						<div  className="statistics-copy secondary-sub-copy">
 							Given a <a className="bold-line">group of ten people</a> with the same type of cancer and profile
 						</div>
+						<div className="icon-array-container">
 						{this.renderIconArray()}
+						</div>
 					</div>
 				</div>
 			</div>
