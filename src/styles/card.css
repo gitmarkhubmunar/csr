@@ -127,9 +127,45 @@
 
 @media screen and (max-width: 400px) {
 
+.percentage {
+    font-size: 3.6em;
+}
+
+.statistics-copy.big {
+    font-size: 1.3em;
+    line-height: 1;
+    font-weight: 700;
+    color: #4D4D4D;
+    grid-column: 3/3;
+    width: 180px;
+}
+
+.secondary-sub-copy {
+    grid-column: 1/4;
+    text-align: center;
+    padding: 0 0;
+    margin: -.5em 1.4em;
+}
+
+.icon-array-container {
+    grid-column: 1/4;
+}
+
+.icon-array-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 320px) {
+
+.percentage {
+    font-size: 3em;
 }
 
 
 
 
+}
+}
 }
