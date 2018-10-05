@@ -31,20 +31,20 @@
 .role {
     display: inline-flex;
     color: #999999;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 200;
     font-style: italic;
     letter-spacing: .02rem;
     margin-top: 6px;
-    margin-left: 64px;
+    margin-left: 56px;
 }
 .role.patient {
     color: #999999;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 200;
     font-style: italic;
     letter-spacing: .02rem;
-    margin-left: 64px;
+    margin-left: 56px;
     margin-top: 6px;
 }
 .title-dropdown-container {
@@ -109,12 +109,15 @@ select.title-dropdown {
     .title-dropdown {
     font-size: 24px;
     font-weight: 900;
+    width: 200px;
+    background: red;
     }
     select.title-dropdown {
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 700;
         letter-spacing: -0.2px;
         margin: 0 auto;
+        padding-left: .7em;
     }
 
     .title-bar .dropdown .caret {
