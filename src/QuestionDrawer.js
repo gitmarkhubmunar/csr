@@ -76,8 +76,8 @@ class QuestionDrawer extends React.Component {
                                 <div>{nextAge}</div>
                             </ReactSlider>
                             <div style={{ position: 'relative', width: '100%' }}>
-                                <div className="slider-tick-button" style={{ left: '5%' }} onClick={() => changeValue('diagnosed', 0)}>18</div>
-                                <div className="slider-tick-button" style={{ left: '94%' }} onClick={() => changeValue('diagnosed', 24)}>92</div>
+                                <div className="slider-tick-button marker-start" style={{ left: '5%' }} onClick={() => changeValue('diagnosed', 0)}>18</div>
+                                <div className="slider-tick-button marker-end" style={{ left: '105%' }} onClick={() => changeValue('diagnosed', 24)}>92</div>
                             </div>
                         </div>
                     </div>
@@ -136,8 +136,8 @@ class QuestionDrawer extends React.Component {
                                 </div>
                             </ReactSlider>
                             <div style={{ position: 'relative', width: '100%' }}>
-                                <div className="slider-tick-button" style={{ left: '0%' }} onClick={() => changeValue('diagnosed', 0)}>Within past month</div>
-                                <div className="slider-tick-button" style={{ left: '90%' }} onClick={() => changeValue('diagnosed', 24)}>3 years ago</div>
+                                <div className="slider-tick-button marker-start" style={{ left: '4%' }} onClick={() => changeValue('diagnosed', 0)}>Within past month</div>
+                                <div className="slider-tick-button marker-end-diagnosed" style={{ left: '104%' }} onClick={() => changeValue('diagnosed', 24)}>3 years ago</div>
                             </div>
                         </div>
                     </div>
