@@ -64,33 +64,52 @@
     height: 10px;
     top: 20px;
 }
+
+.ticker-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 .slider-tick-button {
     cursor: pointer;
-    display: flex;
-    margin-left: -20px;
     position: absolute;
-    text-align: center;
-    width: 50px;
+    text-align: left;
+    width: 100%;
+
 }
-.slider-tick-button::before {
+/*.slider-tick-button::before {
     content: ' ';
     cursor: pointer;
     height: 4px;
-    margin-left: -20px;
+    margin-left: 0;
     position: absolute;
     position: absolute;
     text-align: center;
-    width: 40px;
-}
-.slider-tick-button::before {
+}*/
+
+/*.slider-tick-button::before {
     background: #777;
     content: ' ';
     height: 7px;
-    left: 50%;
+    left: 100%;
     position: absolute;
-    top: -6px;
+    top: 0;
     width: 1px;
 }
+*/
+.marker-start {
+    margin-top: 20px;
+    margin-left: -20px;
+}
+
+.marker-end {
+    margin-top: 20px;
+    margin-left: -38px;
+}
+
+ .marker-end-diagnosed {
+    margin-top: 20px;
+    margin-left: -100px;  
+ }
 
 @media screen and (max-width: 480px) {
     .vertical-slider {
