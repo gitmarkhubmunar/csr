@@ -64,6 +64,7 @@ select.title-dropdown {
     font-family: 'Muli';
     text-align-last: center;
     text-align: center;
+    width: 100%;
 }
 .title-bar .dropdown .caret {
     fill: white;
@@ -109,8 +110,7 @@ select.title-dropdown {
     .title-dropdown {
     font-size: 24px;
     font-weight: 900;
-    width: 200px;
-    background: red;
+
     }
     select.title-dropdown {
         font-size: 15px;
