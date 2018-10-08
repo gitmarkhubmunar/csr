@@ -136,8 +136,8 @@ class QuestionDrawer extends React.Component {
                                 </div>
                             </ReactSlider>
                             <div style={{ position: 'relative', width: '100%' }}>
-                                <div className="slider-tick-button marker-start" style={{ left: '4%' }} onClick={() => changeValue('diagnosed', 0)}>Within past month</div>
-                                <div className="slider-tick-button marker-end-diagnosed" style={{ left: '104%' }} onClick={() => changeValue('diagnosed', 24)}>3 years ago</div>
+                                <div className="slider-tick-button marker-start slider-mobile-l" style={{ left: '4%' }} onClick={() => changeValue('diagnosed', 0)}>Within past month</div>
+                                <div className="slider-tick-button marker-end-diagnosed slider-mobile-r" style={{ left: '104%' }} onClick={() => changeValue('diagnosed', 24)}>3 years ago</div>
                             </div>
                         </div>
                     </div>
