@@ -184,7 +184,6 @@
     grid-template-columns: 18% auto;
     padding-bottom: 2em;
     padding-top: 2em;
-    border: 1px solid red;
 }
 
     .icon-label {
@@ -194,7 +193,6 @@
 
 @media screen and (max-width: 410px) {
      .variable-row {
-        border: 1px solid black;
         grid-template-columns: 20% auto;
       
     }
