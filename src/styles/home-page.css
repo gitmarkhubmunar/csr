@@ -51,9 +51,44 @@
     margin: .5em 0 3em 0;
 }
 .toggle-container .role {
-    margin-left: .5em;
+    margin-left: .3em;
 }
 
+
+/*/++*/
+
+.switch {
+    border: 1px solid #bbb;
+    width: 50px;
+    height: 26px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.switch-toggle {
+    border: 3px solid #9f9f9f;
+    box-shadow: 1px 1px 1px #ccc;
+    width: 25px;
+    height: 25px;
+    left: -.2em;
+    bottom: 2px;
+    border-radius: 20px;
+    background: white;
+    position: relative;
+    transition: left .2s ease-in-out;
+}
+
+.switch.on {
+    background: #508fcc;
+}
+
+.switch.on .switch-toggle {
+    left: 21px;
+    bottom: 2px;
+}
+
+/*++*/
 
 .home-page-blurb {
     grid-column: 1/4;

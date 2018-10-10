@@ -16,36 +16,29 @@
     grid-column: 1/2;
 }
 .toggle-switch.switch {
-    position: absolute;
-    background: #E1E8F4;
+    border: 1px solid #bbb;
     width: 50px;
+    height: 26px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-block;
 }
 .toggle-switch.switch.on {
-    background: #4d0092;;
+    background: #542e89;
+
 }
+
 .toggle-switch.switch.on > .switch-toggle {
     left: 23px;
     -webkit-transition: left .2s ease-in-out;
     transition: left .2s ease-in-out;
 }
 .role {
-    display: inline-flex;
-    color: #999999;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 200;
     font-style: italic;
-    letter-spacing: .02rem;
-    margin-top: 6px;
-    margin-left: 64px;
 }
 .role.patient {
-    color: #999999;
-    font-size: 13px;
-    font-weight: 200;
-    font-style: italic;
-    letter-spacing: .02rem;
-    margin-left: 64px;
-    margin-top: 6px;
 }
 .title-dropdown-container {
     grid-column: 2 / span 6;
@@ -64,6 +57,7 @@ select.title-dropdown {
     font-family: 'Muli';
     text-align-last: center;
     text-align: center;
+    width: 100%;
 }
 .title-bar .dropdown .caret {
     fill: white;
@@ -85,19 +79,19 @@ select.title-dropdown {
 }
 
 @media screen and (max-width: 800px) {
-    .toggle-switch.switch {
+/*    .toggle-switch.switch {
         position: absolute;
         background: #E1E8F4;
         width: 50px;
     }
-    .toggle-switch.switch.on {
-        background: #4d0092;;
-    }
+
     .toggle-switch.switch.on > .switch-toggle {
         left: 23px;
         -webkit-transition: left .2s ease-in-out;
         transition: left .2s ease-in-out;
     }
+
+
 
     .title-dropdown-container {
     grid-column: 2 / span 6;
@@ -109,30 +103,28 @@ select.title-dropdown {
     .title-dropdown {
     font-size: 24px;
     font-weight: 900;
+
     }
     select.title-dropdown {
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 700;
         letter-spacing: -0.2px;
         margin: 0 auto;
+        padding-left: .7emß
     }
 
     .title-bar .dropdown .caret {
     fill: white;
+}*/
+
+@media screen and (max-width: 400px) {
+.title-dropdown {
+    font-size: 13px;
+    font-weight: 900;
+    align-self: center;
 }
-    .role {
-        display: inline-flex;
-        color: #999999;
-        font-size: 13px;
-        font-weight: 200;
-        font-style: italic;
-        letter-spacing: .02rem;
-    }
-    .role.patient {
-        color: #999999;
-        font-size: 13px;
-        font-weight: 200;
-        font-style: italic;
-        letter-spacing: .02rem;
-    }
+
+
+
+}
 }

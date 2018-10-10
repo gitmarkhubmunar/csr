@@ -178,7 +178,7 @@ const CancerTypes = [
     },
     {
         id: 'ureter-urinary',
-        name: 'Ureter & urinary ',
+        name: 'Ureter and urinary ',
         colors: ['#3ECFCD'],
         ribbonFile: ['ribbon.ureterurinary.svg'],
     },
