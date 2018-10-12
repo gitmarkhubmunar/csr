@@ -120,27 +120,57 @@
     font-weight: 700;
 }
 
-/*iphone x*/
-@media screen and (max-width: 370pt) {
+@media screen and (max-width: 750px) {
     .home-page h2 {
-        font-size: 3em;
+        font-size: 2.5em;
         margin-top: .5em;
     }
 
     .home-page .dropdown {
-    font-size: 3em;
+    font-size: 2.5em;
 }
 
     .home-page h3 {
-        font-size: 1.4em;
+        font-size: 1em;
+    }
+}
+
+/*iphone x*/
+@media screen and (max-width: 667px) {
+    .home-page h2 {
+        font-size: 2.5em;
+        margin-top: .5em;
+    }
+
+    .home-page .dropdown {
+    font-size: 2.5em;
+}
+
+    .home-page h3 {
+        font-size: 1em;
     }
 }
 
 
+@media screen and (max-width: 414pt) {
+    .home-page h2 {
+        font-size: 2.5em;
+        margin-top: .5em;
+    }
+
+    .home-page .dropdown {
+    font-size: 2.5em;
+}
+
+    .home-page h3 {
+        font-size: 1em;
+    }
+}
 
 @media screen and (max-width: 320px) {
     .home-page h2 {
         font-size: 2.1em;
+        margin-top: .3em;
     }
 
     .home-page .dropdown {

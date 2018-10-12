@@ -105,7 +105,7 @@ const CancerTypes = [
     },
     {
         id: 'other-digestive',
-        name: 'Other digestive ',
+        name: 'Other digestive Cancer ',
         colors: ['black'],  
         ribbonFile: ['ribbon.oral.svg'], 
     },
