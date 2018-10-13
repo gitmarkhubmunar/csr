@@ -94,7 +94,7 @@ const CancerTypes = [
     {
         id: 'non-hodgkins-lymphoma',
         name: 'Non-Hodgkins lymphoma',
-        colors: ['black'],  
+        colors: ['#30C400'],  
         ribbonFile: ['ribbon.hodgkinslymphoma.svg'],  
     },
     {
