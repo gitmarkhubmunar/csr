@@ -20,6 +20,8 @@
     font-size: 3.5rem;
     font-weight: 800;
     letter-spacing: -.5px;
+    text-align: left;
+    justify-content: left;
 }
 
 .home-page .dropdown .caret {
@@ -52,6 +54,14 @@
 }
 .toggle-container .role {
     margin-left: .3em;
+}
+
+.mobile-dropdown-home {
+    text-align: left;
+    color: #508fcc;
+    font-size: 2.4em;
+    font-weight: 700;
+
 }
 
 
@@ -90,6 +100,8 @@
 
 /*++*/
 
+
+
 .home-page-blurb {
     grid-column: 1/4;
     grid-row: 6/6;
@@ -120,6 +132,8 @@
     font-weight: 700;
 }
 
+
+
 @media screen and (max-width: 750px) {
     .home-page h2 {
         font-size: 2.5em;
@@ -128,6 +142,7 @@
 
     .home-page .dropdown {
     font-size: 2.5em;
+
 }
 
     .home-page h3 {
@@ -215,6 +230,14 @@
     margin: -1.5em 4%;
     text-align: center;
 }
+
+
+@supports not (-webkit-overflow-scrolling: touch) {
+    .mobile-dropdown {
+        display: none;
+    }
+
+    }
 
 
 

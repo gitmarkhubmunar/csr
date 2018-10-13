@@ -60,16 +60,18 @@ class HomePage extends React.Component {
         return (
             <div className="home-page-container">
                 <div className="home-page content-container">
-                    <h2>I’m looking for answers on cancer survival rates for</h2>     
-                    <Dropdown
-                        className="title-dropdown text-center cancer-title"
-                        list={CancerTypes.map(type => type.name)}
-                        onSelect={name => {
-                            const id = _.find(CancerTypes, { name: name }).id
-                            this.setState({ selectedCancerType: id })
-                        }}
-                        selectedItem={selectedCancer.name}
-                    />
+                    <h2>I’m looking for answers on cancer survival rates for</h2> 
+                     <div className="dropdown-home mobile-dropdown-container-home mobile-dropdown-home">
+                        <Dropdown
+                            className="title-dropdown text-center cancer-title"
+                            list={CancerTypes.map(type => type.name)}
+                            onSelect={name => {
+                                const id = _.find(CancerTypes, { name: name }).id
+                                this.setState({ selectedCancerType: id })
+                            }}
+                            selectedItem={selectedCancer.name}
+                        />
+                    </div>
                     <h3 className="toggle-copy">Healthcare Professional?</h3>
                     <div className="toggle-container">
                         <Switch

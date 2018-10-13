@@ -29,9 +29,9 @@ class CardTitleBar extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className="title-dropdown-container relative">
+                    <div className="title-dropdown-container relative mobile-dropdown-center">
                         <Dropdown
-                            className="title-dropdown text-center cancer-title"
+                            className="title-dropdown text-center cancer-title mobile-dropdown-titlebar"
                             list={CancerTypes.map(type => type.name)}
                             onSelect={name => {
                                 const id = _.find(CancerTypes, { name: name }).id

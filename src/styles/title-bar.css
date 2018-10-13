@@ -13,7 +13,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 .toggle-switch-container {
-    grid-column: 1/2;
+    grid-column: 1/1;
 }
 .toggle-switch.switch {
     border: 1px solid #bbb;
@@ -48,14 +48,19 @@
     justify-content: center;
 }
 .title-dropdown {
-    font-size: 24px;
+    font-size: 1.4em;
     font-weight: 900;
     display: inline-block;
     min-width: 100%;
+    text-align: left;
+    justify-content: left;
+}
+
+.center {
     text-align: center;
     justify-content: center;
-
 }
+
 select.title-dropdown {
     box-sizing: border-box;
     color: white;
@@ -64,6 +69,7 @@ select.title-dropdown {
     text-align: center;
     width: 100%;
 }
+
 .title-bar .dropdown .caret {
     fill: white;
 }
@@ -83,11 +89,24 @@ select.title-dropdown {
     top: 0;
 }
 
+ .mobile-dropdown-center {
+    text-align: center;
+    font-weight: 900;
+    width: 100%;
+    margin-left: .5em;
+    font-size: .9em;
+ }
+
+ .center {
+    text-align: center;
+ }
+
 @media screen and (max-width: 800px) {
 /*    .toggle-switch.switch {
         position: absolute;
         background: #E1E8F4;
         width: 50px;
+
     }
 
     .toggle-switch.switch.on > .switch-toggle {
@@ -95,8 +114,6 @@ select.title-dropdown {
         -webkit-transition: left .2s ease-in-out;
         transition: left .2s ease-in-out;
     }
-
-
 
     .title-dropdown-container {
     grid-column: 2 / span 6;
@@ -115,18 +132,24 @@ select.title-dropdown {
         font-weight: 700;
         letter-spacing: -0.2px;
         margin: 0 auto;
-        padding-left: .7emß
+        padding-left: .7em;
     }
 
     .title-bar .dropdown .caret {
     fill: white;
+}
+
+.role.patient {
+    background: red;
+    display: grid;
 }*/
 
 @media screen and (max-width: 400px) {
-.title-dropdown {
-    font-size: 13px;
-    font-weight: 900;
-}
+/*    .role.patient {
+    background: black;
+    display: flex;
+}*/
+
 
 
 
