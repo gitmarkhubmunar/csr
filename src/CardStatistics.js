@@ -118,7 +118,7 @@ class CardStatistics extends React.Component {
 			<div className="statistics">
 				<div className="content-container">
 					<div className="statistics-container statistics-header relative">						
-						<div className="percentage" style={{ color: color }}>
+						<div className="percentage" style={{ color: 'black' }}>
 							{rate &&
 								<CountUp
 									duration={1}

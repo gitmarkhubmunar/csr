@@ -2,6 +2,7 @@ const CancerTypes = [
     {
         id: 'bladder',
         name: 'Bladder',
+        // colors: ['#FABC3C', '#740070', '#0F1B47'],
         colors: ['#FABC3C', '#740070', '#0F1B47'],
         contrastColor: 'white',
         ribbonFile: ['ribbon.bladder.svg'],

@@ -102,6 +102,8 @@ select.title-dropdown {
  }
 
 @media screen and (max-width: 800px) {
+
+
 /*    .toggle-switch.switch {
         position: absolute;
         background: #E1E8F4;
@@ -143,15 +145,21 @@ select.title-dropdown {
     background: red;
     display: grid;
 }*/
+}
+
+@media screen and (max-width: 640px) {
+    .title-dropdown-container {
+    font-size: .75em;
+
+}
+
+}
 
 @media screen and (max-width: 400px) {
 /*    .role.patient {
     background: black;
     display: flex;
 }*/
-
-
-
-
 }
-}
+
+
