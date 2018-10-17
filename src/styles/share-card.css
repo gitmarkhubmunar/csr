@@ -13,10 +13,11 @@
     bottom: 0;
     right: 0;
     left: 0;
-    top: 30%;
+    top: 60%;
 }
+
 .share-card-content-container {
-    padding-bottom: 20%;
+    padding-bottom: 5%;
 }
 .share-card-close-button {
     cursor: pointer;
@@ -45,7 +46,6 @@
     font-size: 1em;
     padding: 1em;
     text-align: center;
-    color: red;
 }
 .share-link-copy-button {
     background: #CED6D9;
@@ -64,6 +64,14 @@
     top: 2em;
     width: 100%;
 }
+
+@media screen and (max-width: 800px) {
+    .share-card {
+    top: 80%;
+}
+
+}
+
 
 @media screen and (max-width: 750px) {
     .share-card {
