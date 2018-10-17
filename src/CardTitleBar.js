@@ -22,7 +22,7 @@ class CardTitleBar extends React.Component {
                             <Switch
                                 className="toggle-switch" 
                                 onClick={() => changeValue('isPatient', !isPatient)} 
-                                on={isPatient === true}
+                                on={isPatient === false}
                             />
                             <div style={{ color: contrastColor }}  className={isPatient === true ? 'role patient' : 'role'}>
                                 {isPatient === true ? 'Patient' : 'Doctor'}

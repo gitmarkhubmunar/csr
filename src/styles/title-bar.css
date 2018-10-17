@@ -22,9 +22,10 @@
     border-radius: 20px;
     cursor: pointer;
     display: inline-block;
+    background: #542e89;
 }
 .toggle-switch.switch.on {
-    background: #542e89;
+    background: #508fcc;
 
 }
 
