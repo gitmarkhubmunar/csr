@@ -1,3 +1,4 @@
+import _ from 'lodash'
 import React from 'react'
 
 import Card from './Card'
@@ -12,12 +13,13 @@ import QuestionDrawer from './QuestionDrawer'
 class SurveyPage extends React.Component {
     constructor (props) {
         super(props)
-        const historyState = this.props.history.location.state || {}
+        const isPatient = _.get(props, 'history.location.state.isPatient', true)
+        const selectedCancerType = _.get(props, 'history.location.state.selectedCancerType', 'liver')
         this.state = {
             age: 30,
             diagnosed: 3, // Assuming this is time since diagnosis in months.
             grade: '1',
-            isPatient: historyState.isPatient || true,
+            isPatient,
             rate: null,
             selectedCancerType: historyState.selectedCancerType || 'liver',
             sex: 'female',
@@ -25,7 +27,7 @@ class SurveyPage extends React.Component {
         }
     }
 
-    componentDidMount = () => {
+    componentDidMount () {
         this.calculateCsr()
     }
 

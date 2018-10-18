@@ -1,4 +1,3 @@
-import isMobile from 'is-mobile'
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
@@ -12,6 +11,7 @@ import HomePage from './HomePage'
 import SurveyPage from './SurveyPage'
 
 class App extends React.Component {
+
 	render () {
 		const props = this.props
 		//<AlternateMessage />

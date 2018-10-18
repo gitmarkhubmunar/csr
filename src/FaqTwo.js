@@ -10,7 +10,7 @@ class FaqTwo extends React.Component {
             <div className="faq secondary-purple">
                 <div className="content-container">
                     <div className="faq-content">
-                        <h3 className="question-header">Questions for you to think about</h3>
+                        <h3 className="question-header">Questions to think about</h3>
                         <FaqQuestion
                             className="border-top-white"
                             number={1}

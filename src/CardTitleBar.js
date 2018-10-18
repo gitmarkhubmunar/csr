@@ -22,16 +22,16 @@ class CardTitleBar extends React.Component {
                             <Switch
                                 className="toggle-switch" 
                                 onClick={() => changeValue('isPatient', !isPatient)} 
-                                on={isPatient === true}
+                                on={isPatient === false}
                             />
                             <div style={{ color: contrastColor }}  className={isPatient === true ? 'role patient' : 'role'}>
                                 {isPatient === true ? 'Patient' : 'Doctor'}
                             </div>
                         </div>
                     </div>
-                    <div className="title-dropdown-container relative">
+                    <div className="title-dropdown-container relative mobile-dropdown-center">
                         <Dropdown
-                            className="title-dropdown text-center cancer-title"
+                            className="title-dropdown text-center cancer-title mobile-dropdown-titlebar"
                             list={CancerTypes.map(type => type.name)}
                             onSelect={name => {
                                 const id = _.find(CancerTypes, { name: name }).id
@@ -41,7 +41,7 @@ class CardTitleBar extends React.Component {
                         />
                     </div>
                     <div className="share-container">
-                        <Icon icon="ios-open-outline" fontSize="2rem" style={{ fill: 'white' }}/>
+                        <Icon icon="ios-share-alt" fontSize="2rem" style={{ fill: 'white' }}/>
                         <div className="share-button-transparent" onClick={() => toggleShareCard()} />
                     </div>
                 </div>

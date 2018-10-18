@@ -176,4 +176,25 @@
         width: 18px;
         height: 18px;
     }
+
+    .variable-row {
+    align-items: center;
+    display: grid;
+    grid-gap: 5%;
+    grid-template-columns: 18% auto;
+    padding-bottom: 2em;
+    padding-top: 2em;
+}
+
+    .icon-label {
+    align-items: center;
+    width: 60px;
+}
+
+@media screen and (max-width: 410px) {
+     .variable-row {
+        grid-template-columns: 20% auto;
+      
+    }
+}
 }

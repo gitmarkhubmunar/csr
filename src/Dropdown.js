@@ -22,19 +22,23 @@ class Dropdown extends React.Component {
 
         if (isMobile) {
             return (
-                <select
-                    className={combinedClassName}
-                    defaultValue={selectedItem}
-                    onChange={event => this.selectItem(event.target.value)}
-                >
-                    {list.map((item, i) => {
-                        return <option key={i} value={item}>{item}</option>
-                    })}
-                </select>
+                <div className="mobile-dropdown-container relative">
+                    <br />
+                    <div className="mobile-dropdown">{selectedItem}</div>
+                    <select
+                        className={combinedClassName}
+                        defaultValue={selectedItem}
+                        onChange={event => this.selectItem(event.target.value)}
+                    >
+                        {list.map((item, i) => {
+                            return <option key={i} value={item}>{item}</option>
+                        })}
+                    </select>
+                </div>
             )
         }
         return (
-            <div className={combinedClassName + ' desktop'} onClick={this.toggleMenu}>
+            <div className={combinedClassName + ' center'} onClick={this.toggleMenu}>
                 {isOpen &&
                     <ul className={isOpen ? 'open' : 'closed'}>
                         {list.map((item, i) => {

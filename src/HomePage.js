@@ -60,31 +60,29 @@ class HomePage extends React.Component {
         return (
             <div className="home-page-container">
                 <div className="home-page content-container">
-                    <h2>I’m looking for answers on survival rates for</h2>     
-                    <Dropdown
-                        className="title-dropdown text-center cancer-title"
-                        list={CancerTypes.map(type => type.name)}
-                        onSelect={name => {
-                            const id = _.find(CancerTypes, { name: name }).id
-                            this.setState({ selectedCancerType: id })
-                        }}
-                        selectedItem={selectedCancer.name}
-                    />
+                    <h2>I’m looking for answers on cancer survival rates for</h2> 
+                     <div className="dropdown-home mobile-dropdown-container-home mobile-dropdown-home">
+                        <Dropdown
+                            className="title-dropdown text-center cancer-title"
+                            list={CancerTypes.map(type => type.name)}
+                            onSelect={name => {
+                                const id = _.find(CancerTypes, { name: name }).id
+                                this.setState({ selectedCancerType: id })
+                            }}
+                            selectedItem={selectedCancer.name}
+                        />
+                    </div>
                     <h3 className="toggle-copy">Healthcare Professional?</h3>
                     <div className="toggle-container">
                         <Switch
                             onClick={() => this.setState({ isPatient: !isPatient })} 
                             on={isPatient === false}
                         />
-                        <div className="role">{isPatient === true ? 'No' : 'Yes'}</div>
+                        <div className="role yes-no">{isPatient === true ? 'No' : 'Yes'}</div>
                     </div>
-
                     <div>
                         <div className="go-button" onClick={() => this.goToSurvey()}>Go</div>
                     </div>
-
-                    
-
                     <div className="home-page-blurb">
                         <div className="blurb-copy">
                             Personalized cancer survival rates from the experts at <a className="weight-700" href="http://courage.health" target="_blank">Courage Health</a>
