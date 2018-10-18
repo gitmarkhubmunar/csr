@@ -9,7 +9,14 @@ import Dropdown from './Dropdown'
 
 class CardTitleBar extends React.Component {
     render () {
-		const { changeValue, isPatient, selectedCancerType, toggleShareCard } = this.props
+		const {
+            changeCancerType,
+            changeMode,
+            changeValue,
+            isPatient,
+            selectedCancerType,
+            toggleShareCard
+        } = this.props
         const selectedCancer = _.find(CancerTypes, { id: selectedCancerType })
         const color = selectedCancer.colors[0]
         const contrastColor = selectedCancer.contrastColor || 'white'
@@ -21,7 +28,7 @@ class CardTitleBar extends React.Component {
                         <div className="toggle" >
                             <Switch
                                 className="toggle-switch" 
-                                onClick={() => changeValue('isPatient', !isPatient)} 
+                                onClick={() => changeMode(!isPatient)}
                                 on={isPatient === false}
                             />
                             <div style={{ color: contrastColor }}  className={isPatient === true ? 'role patient' : 'role'}>
@@ -35,7 +42,7 @@ class CardTitleBar extends React.Component {
                             list={CancerTypes.map(type => type.name)}
                             onSelect={name => {
                                 const id = _.find(CancerTypes, { name: name }).id
-                                changeValue('selectedCancerType', id)
+                                changeCancerType(id)
                             }}
                             selectedItem={selectedCancer.name}
                         />
