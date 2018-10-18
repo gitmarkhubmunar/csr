@@ -10,42 +10,6 @@ import Heart from './Heart'
 import Ribbon from './Ribbon'
 
 class CardStatistics extends React.Component {
-
-	// <div className="desktop-grid-container">
-	// 				{hasAnsweredAnyQuestion ?
-	// 					<div className="feedback-row">
-	// 				{ hasAnsweredAllQuestions ? 
-	// 					<div className="share-now" onClick={() => toggleShareCard()}>SHARE</div>
-	// 					:
-	// 					<div className="profile">your profile</div>
-					
-	// 				}
-	// 						<FeedbackSlot
-	// 							variable="sex"
-	// 							input={sex}
-	// 						/>
-	// 						<FeedbackSlot
-	// 							variable="age"
-	// 							input={age}
-	// 						/>
-	// 						<FeedbackSlot
-	// 							variable="stage"
-	// 							input={stage}
-	// 						/>
-	// 						<FeedbackSlot
-	// 							variable="grade"
-	// 							input={grade}
-	// 						/>
-	// 						<FeedbackSlot
-	// 							variable="diagnosed"
-	// 							input={diagnosed}
-	// 						/>
-	// 					</div>
-	// 					:
-	// 					<CardMessaging />
-	// 				}
-	// 			</div>
-
 	componentWillMount () {
 		this.setState({
 			lastRate: 0,
@@ -57,7 +21,7 @@ class CardStatistics extends React.Component {
 		this.setState({
 			lastRate: this.props.rate,
 			nextRate: nextProps.rate,
-		});
+		})
 	}
 
 	renderIconArray = () => {
@@ -97,19 +61,9 @@ class CardStatistics extends React.Component {
 	}
 
 	render () {
-		const {
-	        age,
-	        changeValue,
-	        diagnosed,
-	        grade,
-	        isPatient,
-	        rate,
-	        selectedCancerType,
-	        sex,
-	        stage,
-	        toggleShareCard,
-	    } = this.props
-	    const { lastRate, nextRate } = this.state
+		const { isPatient, rate, selectedCancerType, toggleShareCard, userData} = this.props
+    	const { age, diagnosed, grade, sex, stage } = userData
+		const { lastRate, nextRate } = this.state
 		const selectedCancer = _.find(CancerTypes, { id: selectedCancerType })
 		const color = selectedCancer.colors[0]
 		const hasAnsweredAnyQuestion = age || diagnosed || grade || sex || stage

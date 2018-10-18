@@ -45,10 +45,10 @@ const CancerTypes = [
         extraVariables: [
             {
                 id: 'subtype',
-                icon: 'variable-breast-subtype',
+                icon: 'variable-breast-subtype.svg',
                 kind: 'radio',
                 name: 'Breast cancer subtype',
-                values: [
+                options: [
                     {
                         name: 'Her2+/HR+',
                         value: 'her2plus_hrplus',
@@ -190,10 +190,10 @@ const CancerTypes = [
         extraVariables: [
             {
                 id: 'histology',
-                icon: 'variable-histology-lung',
+                icon: 'variable-histology-lung.svg',
                 kind: 'radio',
                 name: 'Histology',
-                values: [
+                options: [
                     {
                         name: 'Small cell carcinoma',
                         value: 'smallcellcarcinoma',
@@ -374,7 +374,7 @@ const CancerTypes = [
                 id: 'histology',
                 kind: 'radio',
                 name: 'Histology group',
-                values: [
+                options: [
                     {
                         name: 'Type I epithelial',
                         value: 'typeiepithelial',
@@ -422,10 +422,10 @@ const CancerTypes = [
         extraVariables: [
             {
                 id: 'gleason',
-                icon: 'variable-gleason-score',
+                icon: 'variable-gleason-score.svg',
                 kind: 'radio',
                 name: 'Gleason score',
-                values: [
+                options: [
                     {
                         name: 'Well differentiated',
                         value: 'well',
@@ -550,7 +550,7 @@ const CancerTypes = [
                 id: 'histology',
                 kind: 'radio',
                 name: 'Histology',
-                values: [
+                options: [
                     {
                         name: 'Endometrioid',
                         value: 'endometrioid',

@@ -6,6 +6,7 @@ import ReactSlider from 'react-slider'
 import ButtonSurvey from './ButtonSurvey'
 import CancerTypes from './data/CancerTypes'
 import QuestionAge from './QuestionAge'
+import QuestionCustom from './QuestionCustom'
 import QuestionDiagnosed from './QuestionDiagnosed'
 import QuestionGrade from './QuestionGrade'
 import QuestionSex from './QuestionSex'
@@ -13,11 +14,13 @@ import QuestionStage from './QuestionStage'
 
 class QuestionDrawer extends React.Component {
     render () {
-        const { age, changeValue, diagnosed, grade, selectedCancerType, sex, stage } = this.props
+        const { changeValue, selectedCancerType, userData } = this.props
+        const { age, diagnosed, grade, sex, stage } = userData
         const selectedCancer = _.find(CancerTypes, { id: selectedCancerType })
         const color = _.get(selectedCancer, 'colors.[0]', 'black')
+        const extraVariables = _.get(selectedCancer, 'extraVariables', null)
 
-        // Customize questions based on each cancer type’s 'showStandardVariables' key;
+        // Customize standard questions based on each cancer type’s 'showStandardVariables' key;
         // if unavailable, show the default set.
         const defaultStandardVariables = {
             age: true,
@@ -70,6 +73,16 @@ class QuestionDrawer extends React.Component {
                         diagnosed={diagnosed}
                     />
                 }
+                {extraVariables && extraVariables.map((extraVariable, e) => (
+                    <QuestionCustom
+                        changeValue={changeValue}
+                        className="variable-row"
+                        color={color}
+                        key={e}
+                        userData={userData}
+                        variable={extraVariable}
+                    />
+                ))}
             </div>
         )
     }

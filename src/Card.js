@@ -18,36 +18,29 @@ class Card extends React.Component {
 
     render () {
         const {
-            age,
-            changeValue,
-            diagnosed,
-            grade,
+            changeCancerType,
+            changeMode,
             isPatient,
             rate,
-            sex,
             selectedCancerType,
-            stage
+            userData
         } = this.props
         const { showShareCard } = this.state
         return (
             <div className="card">
                 <CardTitleBar
-                    changeValue={changeValue}
+                    changeCancerType={changeCancerType}
+                    changeMode={changeMode}
                     isPatient={isPatient}
                     selectedCancerType={selectedCancerType}
                     toggleShareCard={this.toggleShareCard}
                 />
         		<CardStatistics
-                    age={age}
-                    changeValue={this.changeValue}
-                    diagnosed={diagnosed}
-                    grade={grade} 
                     isPatient={isPatient}
                     rate={rate}
                     selectedCancerType={selectedCancerType}
-                    sex={sex}
-                    stage={stage}
                     toggleShareCard={this.toggleShareCard}
+                    userData={userData}
                 />
                 {showShareCard && <ShareCard onClose={this.toggleShareCard} />}
             </div>  
