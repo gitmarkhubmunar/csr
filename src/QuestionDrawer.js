@@ -5,27 +5,24 @@ import ReactSlider from 'react-slider'
 
 import ButtonSurvey from './ButtonSurvey'
 
-
 // import ReactSliderAge from './ReactSliderAge'
 import CancerTypes from './data/CancerTypes'
 
-
 class QuestionDrawer extends React.Component {
     componentWillMount () {
-        this.setState({ nextDiagnosed: this.props.diagnosed })
+        this.setState({
+            nextAge: this.props.age,
+            nextDiagnosed: this.props.diagnosed,
+        })
     }
 
     componentWillReceiveProps (nextProps) {
-        this.setState({ nextDiagnosed: nextProps.diagnosed })
+        this.setState({
+            nextAge: nextProps.age,
+            nextDiagnosed: nextProps.diagnosed,
+        })
     }
 
-     componentWillMount () {
-        this.setState({ nextAge: this.props.age })
-    }
-
-    componentWillReceiveProps (nextProps) {
-        this.setState({ nextAge: nextProps.age })
-    }
     // <div className="input-area">
     //                     <input className="input-field" onBlur={(event) => changeValue('age', event.target.value)} defaultValue={age} />
     //                 </div>
@@ -42,6 +39,7 @@ class QuestionDrawer extends React.Component {
         const { nextAge } = this.state
         const selectedCancer = _.find(CancerTypes, { id: selectedCancerType })
         const color = selectedCancer.colors[0]
+
         return (
             <div className="question-drawer variables">
                 <div className="content-container">

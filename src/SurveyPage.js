@@ -21,8 +21,8 @@ class SurveyPage extends React.Component {
             grade: '1',
             isPatient,
             rate: null,
-            selectedCancerType,
-            sex: null,
+            selectedCancerType: historyState.selectedCancerType || 'liver',
+            sex: 'female',
             stage: '1',
         }
     }
