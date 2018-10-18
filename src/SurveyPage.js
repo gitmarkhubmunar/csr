@@ -1,13 +1,16 @@
 import _ from 'lodash'
 import React from 'react'
 
+import CancerTypes from './data/CancerTypes'
 import Card from './Card'
 import CourageHealthPanel from './CourageHealthPanel'
 import CourageVoice from './CourageVoice'
 import Faq from './Faq'
-import FaqTwo from './FaqTwo'
 import FaqDoctor from './FaqDoctor'
+import FaqTwo from './FaqTwo'
 import Footer from './Footer'
+import NoCalcDoctor from './NoCalcDoctor'
+import NoCalcPatient from './NoCalcPatient'
 import QuestionDrawer from './QuestionDrawer'
 
 class SurveyPage extends React.Component {
@@ -61,11 +64,13 @@ class SurveyPage extends React.Component {
 
     render () {
         const { isPatient, rate, selectedCancerType, userData } = this.state
+        const selectedCancer = _.find(CancerTypes, { id: selectedCancerType })
+        const hasCalculator = _.get(selectedCancer, 'hasCalculator', false)
         let questionDrawerContainerClassName = 'question-drawer-container'
         if (isPatient === false) {
             questionDrawerContainerClassName = 'question-drawer-container survey-doctor-color'
         }
-        
+
         return (
             <div className="survey-page">
                 <Card
@@ -73,16 +78,27 @@ class SurveyPage extends React.Component {
                     changeMode={this.changeMode}
                     isPatient={isPatient}
                     rate={rate}
+                    hasCalculator={hasCalculator}
                     selectedCancerType={selectedCancerType}
                     userData={userData}
                 />
-                <div className={questionDrawerContainerClassName}> 
-                    <QuestionDrawer
-                        changeValue={this.changeValue}
-                        selectedCancerType={selectedCancerType}
-                        userData={userData}
-                    />
-                </div>
+                {hasCalculator ?
+                    <div className={questionDrawerContainerClassName}> 
+                        <QuestionDrawer
+                            changeValue={this.changeValue}
+                            selectedCancerType={selectedCancerType}
+                            userData={userData}
+                        />
+                    </div>
+                    :
+                    <div>
+                        {isPatient ?
+                            <NoCalcPatient selectedCancer={selectedCancer} />
+                            :
+                            <NoCalcDoctor selectedCancer={selectedCancer} />
+                        }
+                    </div>
+                }
                 {isPatient === false && <FaqDoctor />}
                 {isPatient === true && <Faq />}
                 {isPatient === true && <FaqTwo />}

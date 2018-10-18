@@ -3,9 +3,6 @@ import { Tooltip } from 'react-tippy';
 
 import CardStatistics from './CardStatistics'
 import CardTitleBar from './CardTitleBar'
-import NoCalcPatient from './NoCalcPatient'
-import NoCalcPatientGrid from './NoCalcPatientGrid'
-import NoCalcDoctor from './NoCalcDoctor'
 import ShareCard from './ShareCard'
 
 class Card extends React.Component {
@@ -20,6 +17,7 @@ class Card extends React.Component {
         const {
             changeCancerType,
             changeMode,
+            hasCalculator,
             isPatient,
             rate,
             selectedCancerType,
@@ -35,13 +33,15 @@ class Card extends React.Component {
                     selectedCancerType={selectedCancerType}
                     toggleShareCard={this.toggleShareCard}
                 />
-        		<CardStatistics
-                    isPatient={isPatient}
-                    rate={rate}
-                    selectedCancerType={selectedCancerType}
-                    toggleShareCard={this.toggleShareCard}
-                    userData={userData}
-                />
+                {hasCalculator &&
+            		<CardStatistics
+                        isPatient={isPatient}
+                        rate={rate}
+                        selectedCancerType={selectedCancerType}
+                        toggleShareCard={this.toggleShareCard}
+                        userData={userData}
+                    />
+                }
                 {showShareCard && <ShareCard onClose={this.toggleShareCard} />}
             </div>  
         )
