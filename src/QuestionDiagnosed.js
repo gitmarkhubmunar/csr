@@ -82,7 +82,7 @@ class QuestionDiagnosed extends React.Component {
                         </ReactSlider>
                         <div className="slider-ticks">
                             <div className="slider-tick-button" style={{ left: 0 }} onClick={() => changeValue('diagnosed', 0)}>Within past month</div>
-                            <div className="slider-tick-button" style={{ right: 0 }} onClick={() => changeValue('diagnosed', 24)}>3 years ago</div>
+                            <div className="slider-tick-button" style={{ right: 0 }} onClick={() => changeValue('diagnosed', 24)}>2 years ago</div>
                         </div>
                     </div>
                 </div>
