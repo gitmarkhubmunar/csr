@@ -9,7 +9,7 @@ const CancerTypes = [
         ribbonFile: 'ribbon.bladder.svg',
         showStandardVariables: {
             age: true,
-            diagnosis: true,
+            diagnosed: true,
             grade: true,
             sex: true,
             stage: true,
@@ -25,7 +25,7 @@ const CancerTypes = [
         ribbonFile: 'ribbon.bonejoint.svg',
         showStandardVariables: {
             age: true,
-            diagnosis: true,
+            diagnosed: true,
             grade: true,
             sex: true,
             stage: true,
@@ -73,7 +73,7 @@ const CancerTypes = [
         ribbonFile: 'ribbon.breast.svg',
         showStandardVariables: {
             age: true,
-            diagnosis: true,
+            diagnosed: true,
             grade: true,
             sex: true,
             stage: true,
@@ -88,7 +88,7 @@ const CancerTypes = [
         ribbonFile: 'ribbon.colon.svg',
         showStandardVariables: {
             age: true,
-            diagnosis: true,
+            diagnosed: true,
             grade: true,
             sex: true,
             stage: true,
@@ -103,7 +103,7 @@ const CancerTypes = [
         ribbonFile: 'ribbon.esophagus.svg',
         showStandardVariables: {
             age: true,
-            diagnosis: true,
+            diagnosed: true,
             grade: true,
             sex: true,
             stage: true,
@@ -118,7 +118,7 @@ const CancerTypes = [
         ribbonFile: 'ribbon.eye.svg',
         showStandardVariables: {
             age: true,
-            diagnosis: true,
+            diagnosed: true,
             grade: true,
             sex: true,
             stage: true,
@@ -133,7 +133,7 @@ const CancerTypes = [
         ribbonFile: 'ribbon.hodgkinslymphoma.svg',
         showStandardVariables: {
             age: true,
-            diagnosis: true,
+            diagnosed: true,
             grade: true,
             sex: true,
             stage: true,
@@ -148,7 +148,7 @@ const CancerTypes = [
         ribbonFile: 'ribbon.kidney.svg',
         showStandardVariables: {
             age: true,
-            diagnosis: true,
+            diagnosed: true,
             grade: true,
             sex: true,
             stage: true,
@@ -163,7 +163,7 @@ const CancerTypes = [
         ribbonFile: 'ribbon.leukemia.svg',
         showStandardVariables: {
             age: true,
-            diagnosis: true,
+            diagnosed: true,
             grade: true,
             sex: true,
             stage: true,
@@ -178,7 +178,7 @@ const CancerTypes = [
         ribbonFile: 'ribbon.liver.svg',
         showStandardVariables: {
             age: true,
-            diagnosis: true,
+            diagnosed: true,
             grade: true,
             sex: true,
             stage: true,
@@ -210,7 +210,7 @@ const CancerTypes = [
         ribbonFile: 'ribbon.lung.svg',
         showStandardVariables: {
             age: true,
-            diagnosis: true,
+            diagnosed: true,
             grade: true,
             sex: true,
             stage: true,
@@ -225,7 +225,7 @@ const CancerTypes = [
         ribbonFile: 'ribbon.hodgkinslymphoma.svg',
         showStandardVariables: {
             age: true,
-            diagnosis: true,
+            diagnosed: true,
             grade: true,
             sex: true,
             stage: true,
@@ -240,7 +240,7 @@ const CancerTypes = [
         ribbonFile: 'ribbon.melanoma.svg',
         showStandardVariables: {
             age: true,
-            diagnosis: true,
+            diagnosed: true,
             grade: false,
             sex: true,
             stage: true,
@@ -255,7 +255,7 @@ const CancerTypes = [
         ribbonFile: 'ribbon.myeloma.svg',
         showStandardVariables: {
             age: true,
-            diagnosis: true,
+            diagnosed: true,
             grade: true,
             sex: true,
             stage: true,
@@ -270,7 +270,7 @@ const CancerTypes = [
         ribbonFile: 'ribbon.hodgkinslymphoma.svg',
         showStandardVariables: {
             age: true,
-            diagnosis: true,
+            diagnosed: true,
             grade: true,
             sex: true,
             stage: true,
@@ -285,7 +285,7 @@ const CancerTypes = [
         ribbonFile: 'ribbon.oral.svg',
         showStandardVariables: {
             age: true,
-            diagnosis: true,
+            diagnosed: true,
             grade: true,
             sex: true,
             stage: true,
@@ -300,7 +300,7 @@ const CancerTypes = [
         ribbonFile: 'ribbon.oral.svg',
         showStandardVariables: {
             age: true,
-            diagnosis: true,
+            diagnosed: true,
             grade: true,
             sex: true,
             stage: true,
@@ -315,7 +315,7 @@ const CancerTypes = [
         ribbonFile: 'ribbon.endocrine.svg',
         showStandardVariables: {
             age: true,
-            diagnosis: true,
+            diagnosed: true,
             grade: true,
             sex: true,
             stage: true,
@@ -330,7 +330,7 @@ const CancerTypes = [
         ribbonFile: 'ribbon.genital.svg',
         showStandardVariables: {
             age: true,
-            diagnosis: true,
+            diagnosed: true,
             grade: true,
             sex: true,
             stage: true,
@@ -345,7 +345,7 @@ const CancerTypes = [
         ribbonFile: 'ribbon.respitory.svg',
         showStandardVariables: {
             age: true,
-            diagnosis: true,
+            diagnosed: true,
             grade: true,
             sex: true,
             stage: true,
@@ -360,7 +360,7 @@ const CancerTypes = [
         ribbonFile: 'ribbon.skin.svg',
         showStandardVariables: {
             age: true,
-            diagnosis: true,
+            diagnosed: true,
             grade: true,
             sex: true,
             stage: true,
@@ -395,7 +395,7 @@ const CancerTypes = [
         ribbonFile: 'ribbon.ovarian.svg',
         showStandardVariables: {
             age: true,
-            diagnosis: true,
+            diagnosed: true,
             grade: true,
             sex: false,
             stage: true,
@@ -410,7 +410,7 @@ const CancerTypes = [
         ribbonFile: 'ribbon.pancreas.svg',
         showStandardVariables: {
             age: true,
-            diagnosis: true,
+            diagnosed: true,
             grade: true,
             sex: true,
             stage: true,
@@ -446,7 +446,7 @@ const CancerTypes = [
         ribbonFile: 'ribbon.prostate.svg',
         showStandardVariables: {
             age: true,
-            diagnosis: true,
+            diagnosed: true,
             grade: false,
             sex: false,
             stage: true,
@@ -461,7 +461,7 @@ const CancerTypes = [
         ribbonFile: 'ribbon.rectal.svg',
         showStandardVariables: {
             age: true,
-            diagnosis: true,
+            diagnosed: true,
             grade: true,
             sex: true,
             stage: true,
@@ -476,7 +476,7 @@ const CancerTypes = [
         ribbonFile: 'ribbon.softtissue.svg',
         showStandardVariables: {
             age: true,
-            diagnosis: true,
+            diagnosed: true,
             grade: true,
             sex: true,
             stage: true,
@@ -491,7 +491,7 @@ const CancerTypes = [
         ribbonFile: 'ribbon.stomach.svg',
         showStandardVariables: {
             age: true,
-            diagnosis: true,
+            diagnosed: true,
             grade: true,
             sex: true,
             stage: true,
@@ -506,7 +506,7 @@ const CancerTypes = [
         ribbonFile: 'ribbon.thyroid.svg',
         showStandardVariables: {
             age: true,
-            diagnosis: true,
+            diagnosed: true,
             grade: true,
             sex: true,
             stage: true,
@@ -521,7 +521,7 @@ const CancerTypes = [
         ribbonFile: 'ribbon.ureterurinary.svg',
         showStandardVariables: {
             age: true,
-            diagnosis: true,
+            diagnosed: true,
             grade: true,
             sex: true,
             stage: true,
@@ -536,7 +536,7 @@ const CancerTypes = [
         ribbonFile: 'ribbon.uterine.cervix.svg',
         showStandardVariables: {
             age: true,
-            diagnosis: true,
+            diagnosed: true,
             grade: true,
             sex: false,
             stage: true,
@@ -579,7 +579,7 @@ const CancerTypes = [
         ribbonFile: 'ribbon.uterinecorpus.svg',
         showStandardVariables: {
             age: true,
-            diagnosis: true,
+            diagnosed: true,
             grade: true,
             sex: false,
             stage: true,
