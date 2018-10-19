@@ -5,7 +5,6 @@
 .question-drawer {
     padding-bottom: 3em;
     max-width: 540px;
-    margin: 0 auto;
 }
 
 .unanswered-row {
@@ -22,7 +21,6 @@
 }
 .icon-label {
     align-items: center;
-    margin-left: 0em;
 }
 .variable-icon.answered {
     opacity: 1;

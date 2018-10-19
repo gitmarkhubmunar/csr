@@ -159,7 +159,6 @@
     margin-top: 20px;
     margin-left: -44px;
     width: 40px;
-
     }
 
 
@@ -174,14 +173,11 @@
     font-size: .6em;
     padding-left: 30px;
     width: 80px;
-
- }
-
- .slider-mobile-r {
+}
+.slider-mobile-r {
     margin-left:-70px;
     font-size: .6em;
     width: 80px;
-
- }
+}
 
 }

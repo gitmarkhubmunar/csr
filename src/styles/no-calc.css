@@ -2,28 +2,22 @@
 .patient-alt-container-grid {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
-
 }
-
 .wifi {
     background: red;
 }
 .patient-alt-container-grid > div{
     background: #eee;
     padding: 1em;
-
 }
 .nested > div {
-
     display: grid;
     font-size: 28px;
     font-weight: 600;
     margin: 30px 0 0 0;
-
 }
 .patient-alt-container-grid > div:nth-child(odd){
     background:#ddd;
-
 }
 .alt-header {
     background: red;
