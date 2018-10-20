@@ -46,7 +46,8 @@
     flex-wrap: wrap;
     grid-column: 2;
     justify-content: center;
-    width: 98%;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 .variable-icon {
     display: block;
@@ -145,14 +146,18 @@
 }
 
 @media screen and (max-width: 480px) {
+    .input-area {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
     .variable-row {
         align-items: center;
         display: grid;
-        grid-gap: 5%;
-        grid-template-columns: 30% auto;
-        padding-top: 25px;
-        padding-bottom: 25px;
         font-size: 14px;
+        grid-gap: 5%;
+        grid-template-columns: 18% auto;
+        padding-bottom: 2em;
+        padding-top: 2em;
     }
     .icon-label {
         align-items: center;
@@ -180,28 +185,18 @@
         width: 18px;
         height: 18px;
     }
-
-    .variable-row {
-    align-items: center;
-    display: grid;
-    grid-gap: 5%;
-    grid-template-columns: 18% auto;
-    padding-bottom: 2em;
-    padding-top: 2em;
-}
-
     .icon-label {
-    align-items: center;
-    width: 60px;
+        align-items: center;
+        width: 60px;
+    }
 }
 
 @media screen and (max-width: 410px) {
-     .variable-row {
+    .variable-row {
         grid-template-columns: 18% auto;
-}
+    }
     .icon-label {
-    align-items: center;
-    margin-left: .5em;
-}
-}
+        align-items: center;
+        margin-left: .5em;
+    }
 }

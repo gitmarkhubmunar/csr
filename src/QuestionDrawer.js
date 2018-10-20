@@ -32,7 +32,7 @@ class QuestionDrawer extends React.Component {
         const shouldShow = _.get(selectedCancer, 'showStandardVariables', defaultStandardVariables)
 
         return (
-            <div className="question-drawer variables">
+            <div className="question-drawer variables content-container">
                 {shouldShow['sex'] &&
                     <QuestionSex
                         changeValue={changeValue}
