@@ -15,7 +15,7 @@
     justify-self: center;
     width: 30px;
     margin-top: 2em;
-}
+}  
 
 .logo-container > img {
    /* align-self: center;*/
@@ -52,6 +52,35 @@
     color: black;
     font-weight: 700;
 }
+
+.margin{
+    max-width: 540px;
+    margin: 0 auto;
+}
+
+.alt-headline{
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 1.5em 0 .5em 0;
+}
+
+.alt-sub{
+    text-align: center;
+    padding: 0 3em;
+}
+
+.alt-cta{
+    text-align: center;
+    margin: 1em 0;
+
+}
+
+.alt-image{
+    display: block;
+    margin: 2em auto;
+}
+
+
 
 
 /*@media screen and (max-width: 480px) {

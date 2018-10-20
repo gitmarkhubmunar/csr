@@ -91,14 +91,4 @@
         height: 380px;
         width: 50px;
     }
-    .slider-mobile-l {
-        font-size: .6em;
-        padding-left: 30px;
-        width: 80px;
-    }
-    .slider-mobile-r {
-        margin-left:-70px;
-        font-size: .6em;
-        width: 80px;
-    }
 }
