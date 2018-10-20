@@ -4,8 +4,6 @@ import Icon from 'react-ionicons'
 import React from 'react'
 
 import CancerTypes from './data/CancerTypes'
-import CardMessaging from './CardMessaging'
-import FeedbackSlot from './FeedbackSlot'
 import Heart from './Heart'
 import Ribbon from './Ribbon'
 
