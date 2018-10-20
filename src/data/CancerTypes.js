@@ -1,10 +1,28 @@
 const CancerTypes = [
     {
+        id: 'test',
+        colors: ['#FABC3C', '#740070', '#0F1B47'],
+        contrastColor: 'white',
+        extraVariables: null,
+        hasCalculator: true,
+        isRelativeRate: true,
+        name: 'Test cancer',
+        ribbonFile: 'ribbon.bladder.svg',
+        showStandardVariables: {
+            age: true,
+            diagnosed: false,
+            grade: false,
+            sex: false,
+            stage: true,
+        },
+    },
+    {
         id: 'bladder',
         colors: ['#FABC3C', '#740070', '#0F1B47'],
         contrastColor: 'white',
         extraVariables: null,
         hasCalculator: true,
+        isRelativeRate: false,
         name: 'Bladder cancer',
         ribbonFile: 'ribbon.bladder.svg',
         showStandardVariables: {
@@ -21,6 +39,7 @@ const CancerTypes = [
         contrastColor: 'black',
         extraVariables: null,
         hasCalculator: false,
+        isRelativeRate: false,
         name: 'Bone and joint cancer',
         ribbonFile: 'ribbon.bonejoint.svg',
         showStandardVariables: {
@@ -36,6 +55,7 @@ const CancerTypes = [
         colors: ['#444444'],
         extraVariables: null,
         hasCalculator: false,
+        isRelativeRate: false,
         name: 'Brain cancer',
         ribbonFile: 'ribbon.brain.svg',
     },
@@ -69,6 +89,7 @@ const CancerTypes = [
             }
         ],
         hasCalculator: true,
+        isRelativeRate: false,
         name: 'Breast cancer',
         ribbonFile: 'ribbon.breast.svg',
         showStandardVariables: {
@@ -84,6 +105,7 @@ const CancerTypes = [
         colors: ['#23395B'],
         extraVariables: null,
         hasCalculator: true,
+        isRelativeRate: false,
         name: 'Colon cancer',
         ribbonFile: 'ribbon.colon.svg',
         showStandardVariables: {
@@ -99,6 +121,7 @@ const CancerTypes = [
         colors: ['#CCCCFF'],
         extraVariables: null,
         hasCalculator: false,
+        isRelativeRate: false,
         name: 'Esophageal cancer',
         ribbonFile: 'ribbon.esophagus.svg',
         showStandardVariables: {
@@ -114,6 +137,7 @@ const CancerTypes = [
         colors: ['#23395B'],
         extraVariables: null,
         hasCalculator: false,
+        isRelativeRate: false,
         name: 'Eye cancer',
         ribbonFile: 'ribbon.eye.svg',
         showStandardVariables: {
@@ -129,6 +153,7 @@ const CancerTypes = [
         colors: ['#23395B'],
         extraVariables: null,
         hasCalculator: false,
+        isRelativeRate: false,
         name: 'Hodgkins lymphoma',
         ribbonFile: 'ribbon.hodgkinslymphoma.svg',
         showStandardVariables: {
@@ -144,6 +169,7 @@ const CancerTypes = [
         colors: ['#23395B'],
         extraVariables: null,
         hasCalculator: false,
+        isRelativeRate: false,
         name: 'Kidney cancer',
         ribbonFile: 'ribbon.kidney.svg',
         showStandardVariables: {
@@ -159,6 +185,7 @@ const CancerTypes = [
         colors: ['#23395B'],
         extraVariables: null,
         hasCalculator: false,
+        isRelativeRate: false,
         name: 'Leukemia',
         ribbonFile: 'ribbon.leukemia.svg',
         showStandardVariables: {
@@ -174,6 +201,7 @@ const CancerTypes = [
         colors: ['#0E402D'],
         extraVariables: null,
         hasCalculator: false,
+        isRelativeRate: false,
         name: 'Liver cancer',
         ribbonFile: 'ribbon.liver.svg',
         showStandardVariables: {
@@ -206,6 +234,7 @@ const CancerTypes = [
             }
         ],
         hasCalculator: true,
+        isRelativeRate: false,
         name: 'Lung cancer',
         ribbonFile: 'ribbon.lung.svg',
         showStandardVariables: {
@@ -220,7 +249,8 @@ const CancerTypes = [
         id: 'Lymphoma',
         colors: ['black'],
         extraVariables: null,
-        hasCalculator: false, 
+        hasCalculator: false,
+        isRelativeRate: false, 
         name: 'Lymphoma',
         ribbonFile: 'ribbon.hodgkinslymphoma.svg',
         showStandardVariables: {
@@ -235,7 +265,8 @@ const CancerTypes = [
         id: 'melanoma',
         colors: ['black'],
         extraVariables: null,
-        hasCalculator: true,  
+        hasCalculator: true,
+        isRelativeRate: false,  
         name: 'Melanoma',
         ribbonFile: 'ribbon.melanoma.svg',
         showStandardVariables: {
@@ -251,6 +282,7 @@ const CancerTypes = [
         colors: ['#800020'],
         extraVariables: null,
         hasCalculator: false,
+        isRelativeRate: false,
         name: 'Myeloma',
         ribbonFile: 'ribbon.myeloma.svg',
         showStandardVariables: {
@@ -266,6 +298,7 @@ const CancerTypes = [
         colors: ['#30C400'],  
         extraVariables: null,
         hasCalculator: false,
+        isRelativeRate: false,
         name: 'Non-Hodgkins lymphoma',
         ribbonFile: 'ribbon.hodgkinslymphoma.svg',
         showStandardVariables: {
@@ -280,7 +313,8 @@ const CancerTypes = [
         id: 'oral',
         colors: ['black'],
         extraVariables: null,
-        hasCalculator: false, 
+        hasCalculator: false,
+        isRelativeRate: false, 
         name: 'Oral cancer',
         ribbonFile: 'ribbon.oral.svg',
         showStandardVariables: {
@@ -296,6 +330,7 @@ const CancerTypes = [
         colors: ['black'],  
         extraVariables: null,
         hasCalculator: false,
+        isRelativeRate: false,
         name: 'Other digestive cancer',
         ribbonFile: 'ribbon.oral.svg',
         showStandardVariables: {
@@ -311,6 +346,7 @@ const CancerTypes = [
         colors: ['zebra'],  
         extraVariables: null,
         hasCalculator: false,
+        isRelativeRate: false,
         name: 'Endocrine cancer',
         ribbonFile: 'ribbon.endocrine.svg',
         showStandardVariables: {
@@ -326,6 +362,7 @@ const CancerTypes = [
         colors: ['#B163A3'],  
         extraVariables: null,
         hasCalculator: false,
+        isRelativeRate: false,
         name: 'Genital cancer',
         ribbonFile: 'ribbon.genital.svg',
         showStandardVariables: {
@@ -341,6 +378,7 @@ const CancerTypes = [
         colors: ['black'],  
         extraVariables: null,
         hasCalculator: false,
+        isRelativeRate: false,
         name: 'Respiratory cancer',
         ribbonFile: 'ribbon.respitory.svg',
         showStandardVariables: {
@@ -356,6 +394,7 @@ const CancerTypes = [
         colors: ['black'],   
         extraVariables: null,
         hasCalculator: false,
+        isRelativeRate: false,
         name: 'Skin cancer',
         ribbonFile: 'ribbon.skin.svg',
         showStandardVariables: {
@@ -391,6 +430,7 @@ const CancerTypes = [
             }
         ],
         hasCalculator: true,
+        isRelativeRate: false,
         name: 'Ovarian cancer',
         ribbonFile: 'ribbon.ovarian.svg',
         showStandardVariables: {
@@ -406,6 +446,7 @@ const CancerTypes = [
         colors: ['#4E2572'],
         extraVariables: null,
         hasCalculator: true,
+        isRelativeRate: false,
         name: 'Pancreatic cancer',
         ribbonFile: 'ribbon.pancreas.svg',
         showStandardVariables: {
@@ -442,6 +483,7 @@ const CancerTypes = [
             }
         ],
         hasCalculator: true,
+        isRelativeRate: false,
         name: 'Prostate cancer',
         ribbonFile: 'ribbon.prostate.svg',
         showStandardVariables: {
@@ -457,6 +499,7 @@ const CancerTypes = [
         colors: ['#4F759B'],
         extraVariables: null,
         hasCalculator: true,
+        isRelativeRate: false,
         name: 'Rectal cancer',
         ribbonFile: 'ribbon.rectal.svg',
         showStandardVariables: {
@@ -472,6 +515,7 @@ const CancerTypes = [
         colors: ['#3ECFCD'],
         extraVariables: null,
         hasCalculator: false,
+        isRelativeRate: false,
         name: 'Soft tissue cancer',
         ribbonFile: 'ribbon.softtissue.svg',
         showStandardVariables: {
@@ -487,6 +531,7 @@ const CancerTypes = [
         colors: ['#3ECFCD'],
         extraVariables: null,
         hasCalculator: true,
+        isRelativeRate: false,
         name: 'Stomach cancer',
         ribbonFile: 'ribbon.stomach.svg',
         showStandardVariables: {
@@ -502,6 +547,7 @@ const CancerTypes = [
         colors: ['#008080', '#FFC0CB', '0000FF'],   
         extraVariables: null,
         hasCalculator: false,
+        isRelativeRate: false,
         name: 'Thyroid cancer',
         ribbonFile: 'ribbon.thyroid.svg',
         showStandardVariables: {
@@ -517,6 +563,7 @@ const CancerTypes = [
         colors: ['#3ECFCD'],
         extraVariables: null,
         hasCalculator: false,
+        isRelativeRate: false,
         name: 'Ureter and urinary cancer',
         ribbonFile: 'ribbon.ureterurinary.svg',
         showStandardVariables: {
@@ -532,6 +579,7 @@ const CancerTypes = [
         colors: ['#3ECFCD'],
         extraVariables: null,
         hasCalculator: false,
+        isRelativeRate: false,
         name: 'Uterine cervical cancer',
         ribbonFile: 'ribbon.uterine.cervix.svg',
         showStandardVariables: {
@@ -575,6 +623,7 @@ const CancerTypes = [
             }
         ],
         hasCalculator: true,
+        isRelativeRate: false,
         name: 'Uterine corpus cancer',
         ribbonFile: 'ribbon.uterinecorpus.svg',
         showStandardVariables: {

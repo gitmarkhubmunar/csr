@@ -68,6 +68,7 @@ class CardStatistics extends React.Component {
 		const color = selectedCancer.colors[0]
 		const hasAnsweredAnyQuestion = age || diagnosed || grade || sex || stage
 		const hasAnsweredAllQuestions = age && diagnosed && grade && sex && stage
+		const showRelativeRate = selectedCancer.isRelativeRate || false
 		return (
 			<div className="statistics">
 				<div className="content-container">
@@ -84,7 +85,7 @@ class CardStatistics extends React.Component {
 							}
 						</div>
 						<div className="statistics-copy big">
-							5 Year Conditional Survival Rate
+							5 Year {showRelativeRate ? 'Relative' : 'Conditional'} Survival Rate
 							<Ribbon selectedCancerType={selectedCancerType} />
 						</div>
 						
