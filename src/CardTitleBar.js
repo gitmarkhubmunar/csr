@@ -46,6 +46,8 @@ class CardTitleBar extends React.Component {
                             }}
                             selectedItem={selectedCancer.name}
                         />
+                        <img className="survey-caret" src="../assets/white.dropdown.caret.svg" />
+
                     </div>
                     <div className="share-container">
                         <Icon icon="ios-share-alt" fontSize="2rem" style={{ fill: 'white' }}/>

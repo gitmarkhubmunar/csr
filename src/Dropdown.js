@@ -51,7 +51,6 @@ class Dropdown extends React.Component {
                     </ul>
                 }
                 <div className="selected">{selectedItem}</div>
-                <Icon className="caret" icon="ios-arrow-down" />
             </div>        
         )
     }

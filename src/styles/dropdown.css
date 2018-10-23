@@ -9,7 +9,8 @@
     padding: 0;
     position: relative;
     user-select: none;
-    white-space: nowrap;
+/*    white-space: nowrap;*/
+    line-height: 1.2;
 }
 .dropdown.center {
     display: inline-flex;
@@ -22,7 +23,7 @@
     height: 0;
     left: 0;
     position: absolute;
-    width: 100%;
+   /* width: 100%;*/
 }
 .dropdown ul {
     border: 3px solid #fafafa;
@@ -31,7 +32,6 @@
     max-height: 375px;
     overflow: scroll;
     padding: 15px;
-
 }
 .dropdown ul.open {
     background: white;
@@ -53,6 +53,9 @@
     margin-left: .25em;
     margin-top: .15em;
     fill: #bbb;
+    width: 24px;
+    height: 24px;
+   /* margin-top: 30px;*/
 }
 @supports (-webkit-overflow-scrolling: touch) {
     .mobile-dropdown-container {

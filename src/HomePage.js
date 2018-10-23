@@ -71,6 +71,7 @@ class HomePage extends React.Component {
                             }}
                             selectedItem={selectedCancer.name}
                         />
+                        <img className="caret home-page-caret" src="../assets/blue.dropdown.caret.svg" />
                     </div>
                     <h3 className="toggle-copy">Healthcare Professional?</h3>
                     <div className="toggle-container">
