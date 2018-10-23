@@ -13,17 +13,20 @@
     bottom: 0;
     right: 0;
     left: 0;
-    top: 60%;
+    top: 35%;
 }
 
 .share-card-content-container {
-    padding-bottom: 5%;
+    padding-bottom: 100%;
 }
 .share-card-close-button {
     cursor: pointer;
     position: absolute;
     right: 0;
     top: 0;
+    margin-top: -205px;
+  /*  bottom: 0;*/
+    /*border: 1px solid grey;*/
 }
 .share-card h2 {
     color: #4d0092;
@@ -65,12 +68,12 @@
     width: 100%;
 }
 
-@media screen and (max-width: 800px) {
+/*@media screen and (max-width: 800px) {
     .share-card {
     top: 80%;
 }
 
-}
+}*/
 
 
 @media screen and (max-width: 750px) {
@@ -82,5 +85,12 @@
     left: 0;
     top: 45%;
     }
+
+    .share-card-close-button {
+   width: 15%;
+
+}
+
+
 
 }
