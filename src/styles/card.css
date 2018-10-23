@@ -25,6 +25,8 @@
 
 .secondary-sub-copy {
     grid-column: 2/3;
+    width: 184px;
+    margin-left: 10px;
 }
 
 .statistics-copy.big {
@@ -41,7 +43,7 @@
     line-height: 0.9;
     text-align: center;
     grid-column: 2/3;
-    width:200px;
+    width: 200px;
 }
 
 .icon-array-row {
