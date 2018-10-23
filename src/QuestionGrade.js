@@ -14,9 +14,9 @@ class QuestionGrade extends React.Component {
                     <div className={grade === null ? 'variable-name' : 'variable-name answered'}>grade</div>
                 </div>
                 <div className="input-area">
-                    <ButtonSurvey color={color} handleClick={() => changeValue('grade', '1')} className="button-u" name="well" turnedOn={grade === '1'} />
-                    <ButtonSurvey color={color} handleClick={() => changeValue('grade', '2')} className="button-u" name="moderately" turnedOn={grade === '2'} />
-                    <ButtonSurvey color={color} handleClick={() => changeValue('grade', '3')} className="button-u" name="poorly" turnedOn={grade === '3'} />
+                    <ButtonSurvey color={color} handleClick={() => changeValue('grade', '1')} className="button-u" name="grade 1" turnedOn={grade === '1'} />
+                    <ButtonSurvey color={color} handleClick={() => changeValue('grade', '2')} className="button-u" name="grade 2" turnedOn={grade === '2'} />
+                    <ButtonSurvey color={color} handleClick={() => changeValue('grade', '3')} className="button-u" name="grade 3/4" turnedOn={grade === '3'} />
                 </div> 
             </div>
         )

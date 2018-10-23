@@ -167,19 +167,28 @@ select.title-dropdown {
 }*/
 }
 
-@media screen and (max-width: 640px) {
-    .title-dropdown-container {
-    font-size: .75em;
-
+@media screen and (max-width: 700px) {
+.title-dropdown-container {
+    font-size: .96em;
+}
+.survey-caret {
+    background: red;
+    display: none;
+}
+.title-dropdown-container {
+    grid-column: 2 / span 7;
+}
 }
 
-}
-
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 360px) {
 /*    .role.patient {
     background: black;
     display: flex;
 }*/
+
+.title-dropdown-container {
+    font-size: .71em;
+}
 }
 
 
