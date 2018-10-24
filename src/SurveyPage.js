@@ -102,7 +102,6 @@ class SurveyPage extends React.Component {
                 {isPatient === false && <FaqDoctor />}
                 {isPatient === true && <Faq />}
                 {isPatient === true && <FaqTwo />}
-                <CourageHealthPanel />
                 <Footer />
             </div>
         )
