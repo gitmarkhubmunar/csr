@@ -33,7 +33,7 @@ class Card extends React.Component {
                     selectedCancerType={selectedCancerType}
                     toggleShareCard={this.toggleShareCard}
                 />
-                {hasCalculator &&
+                {isPatient === false || hasCalculator &&
             		<CardStatistics
                         isPatient={isPatient}
                         rate={rate}
