@@ -74,8 +74,8 @@ class QuestionDiagnosed extends React.Component {
                                     left: -30,
                                     position: 'absolute',
                                     right: -30,
-                                    bottom: 40,
-                                    textAlign: 'center',
+                                    bottom: 30,
+                                    textAlign: 'left',
                                 }}
                             >
                                 {diagnosedLabels[nextDiagnosed.toString()]}

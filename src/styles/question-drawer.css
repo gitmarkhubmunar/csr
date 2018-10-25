@@ -23,6 +23,7 @@
 .icon-label {
     align-items: center;
     margin-left: 0em;
+
 }
 .variable-icon.answered {
     opacity: 1;
@@ -36,6 +37,7 @@
     opacity: .3;
     text-align: center;
     transition: opacity .3s ease;
+    margin-top: .25em;
 }
 .variable-name.answered {
     opacity: 1;
@@ -46,8 +48,8 @@
     flex-wrap: wrap;
     grid-column: 2;
     justify-content: center;
-    padding-left: 2em;
-    padding-right: 2em;
+    padding-left: 3.5em;
+/*    padding-right: 1em;*/
 }
 .variable-icon {
     display: block;
@@ -92,7 +94,6 @@
 }
 .button-u:focus {
     outline: none;
-    background: red;
 }
 .button-survey {
     align-items: center;
@@ -102,17 +103,16 @@
     display: flex;
     flex: 1;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 800;
     justify-content: center;
     letter-spacing: -0.01em;
-    padding: 1rem 2rem;
+    padding: 1.2rem 2rem;
     margin: .2em;
     position: relative;
     text-align: center;
     min-width:  0px;
     max-width: auto;
     max-height: 16px;
-
 }
 
 .button-survey:hover{
@@ -148,7 +148,37 @@
     position: absolute;
     text-align: center;
     width: 7em;
+    background: red;
 }
+
+@media screen and (max-width: 468px) {
+   
+   .variable-row {
+    grid-template-columns: 20% auto;
+    }
+
+    .input-area {
+    padding-left: 2.5em;
+    padding-right: 0em;
+    }
+
+    .button-survey {
+    font-size: .65em;
+    padding: 1rem 4rem;
+    align-items: center;
+    letter-spacing: -0.01em;
+    padding: 1rem 0rem;
+/*  margin: .4em;*/
+    text-align: center;
+/*  min-width:  120px;*/
+    max-width: auto;
+    max-height: 16px;
+    }
+
+
+
+}
+
 /*
 @media screen and (max-width: 1200px) {
     .input-area {
