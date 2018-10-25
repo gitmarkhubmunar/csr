@@ -30,8 +30,10 @@
     width: 10px;
 }
 .handle div {
-    font-size: 1.4em;
+    font-size: 1.2em;
     margin-top: -28px;
+    width: 60px;
+
 }
 .handle.active {
     background-color: grey;
@@ -52,7 +54,7 @@
     font-size: .7em;
     font-weight: 800;
     margin-top: -24px;
-    text-align: center;
+    text-align: left;
 }
 .bar.bar-1 {
     background: #f00;
