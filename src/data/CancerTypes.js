@@ -101,7 +101,7 @@ const CancerTypes = [
         ribbonFile: 'ribbon.breast.svg',
         showStandardVariables: {
             age: true,
-            diagnosed: true,
+            diagnosed: 'within this month',
             grade: true,
             sex: false,
             stage: true,
