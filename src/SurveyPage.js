@@ -23,7 +23,7 @@ class SurveyPage extends React.Component {
             selectedCancerType,
             userData: {
                 age: 30,
-                diagnosed: 3, // Assuming this is time since diagnosis in months.
+                diagnosed: 1, // Assuming this is time since diagnosis in months.
                 grade: '1',
                 rate: null,
                 sex: 'female',
@@ -82,7 +82,7 @@ class SurveyPage extends React.Component {
                     selectedCancerType={selectedCancerType}
                     userData={userData}
                 />
-                {hasCalculator ?
+                 {isPatient === false || hasCalculator ?
                     <div className={questionDrawerContainerClassName}> 
                         <QuestionDrawer
                             changeValue={this.changeValue}
