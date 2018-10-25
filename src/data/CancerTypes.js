@@ -1,21 +1,21 @@
 const CancerTypes = [
-    {
-        id: 'test',
-        colors: ['#FABC3C', '#740070', '#0F1B47'],
-        contrastColor: 'white',
-        extraVariables: null,
-        hasCalculator: true,
-        isRelativeRate: true,
-        name: 'Test cancer',
-        ribbonFile: 'ribbon.bladder.svg',
-        showStandardVariables: {
-            age: true,
-            diagnosed: false,
-            grade: false,
-            sex: false,
-            stage: true,
-        },
-    },
+    // {
+    //     id: 'test',
+    //     colors: ['#FABC3C', '#740070', '#0F1B47'],
+    //     contrastColor: 'white',
+    //     extraVariables: null,
+    //     hasCalculator: true,
+    //     isRelativeRate: true,
+    //     name: 'Test cancer',
+    //     ribbonFile: 'ribbon.bladder.svg',
+    //     showStandardVariables: {
+    //         age: true,
+    //         diagnosed: false,
+    //         grade: false,
+    //         sex: false,
+    //         stage: true,
+    //     },
+    // },
     {
         id: 'bladder',
         colors: ['#FABC3C', '#740070', '#0F1B47'],
