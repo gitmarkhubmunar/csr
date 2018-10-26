@@ -163,10 +163,11 @@
     }
 
     .button-survey {
-    font-size: .65em;
+    font-size: .9rem;
+    line-height: .9rem;
     padding: 1rem 4rem;
     align-items: center;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.03em;
     padding: 1rem 0rem;
 /*  margin: .4em;*/
     text-align: center;
