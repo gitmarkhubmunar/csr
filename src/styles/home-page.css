@@ -18,7 +18,7 @@
 .home-page .dropdown {
     color: #508fcc;
     font-size: 3.5rem;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: -.5px;
     text-align: left;
     justify-content: left;
@@ -46,7 +46,11 @@
 
 .toggle-copy {
     font-weight: 600;
-    
+
+}
+
+.toggle-copy-container{
+    background: red;
 }
 .go-button {
     background: #508fcc;
@@ -77,7 +81,7 @@
     color: #508fcc;
     font-size: 2.4em;
     font-weight: 700;
-
+    height: 3em;
 }
 
 
@@ -154,11 +158,12 @@
     .home-page h2 {
         font-size: 2.5em;
         margin-top: .5em;
+        background: red;
     }
 
     .home-page .dropdown {
-    font-size: 2.5em;
-
+    font-size: 2.5rem;
+    font-weight: 700;
 }
 
     .home-page h3 {
@@ -171,10 +176,11 @@
     .home-page h2 {
         font-size: 2.5em;
         margin-top: .5em;
+        background: yellow;
     }
 
     .home-page .dropdown {
-    font-size: 2.5em;
+    font-size: 1em;
 }
 
     .home-page h3 {
@@ -187,10 +193,11 @@
     .home-page h2 {
         font-size: 2.5em;
         margin-top: .5em;
+        background: blue;
     }
 
     .home-page .dropdown {
-    font-size: 2.5em;
+    font-size: 1em;
 }
 
     .home-page h3 {
@@ -205,11 +212,16 @@
     }
 
     .home-page .dropdown {
-    font-size: 2.1em;
+    font-size: 1em;
 }
 
     .home-page h3 {
         font-size: 1.2em;
+    }
+
+    .toggle-copy {
+        background: teal;
+
     }
 
     .toggle-container {
@@ -245,6 +257,14 @@
     line-height: 1.4em;
     margin: -1.5em 4%;
     text-align: center;
+}
+
+.mobile-dropdown-home {
+    text-align: left;
+    color: #508fcc;
+    font-size: 2.1em;
+    font-weight: 700;
+    line-height: 1.2em;
 }
 
 

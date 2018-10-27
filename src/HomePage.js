@@ -73,14 +73,16 @@ class HomePage extends React.Component {
                         />
                         <img className="caret home-page-caret" src="../assets/blue.dropdown.caret.svg" />
                     </div>
-                    <h3 className="toggle-copy">Healthcare Professional?</h3>
-                    <div className="toggle-container">
-                        <Switch
-                            onClick={() => this.setState({ isPatient: !isPatient })} 
-                            on={isPatient === false}
-                        />
-                        <div className="role yes-no">{isPatient === true ? 'No' : 'Yes'}</div>
-                    </div>
+                        <div className="toggle-copy-container">
+                            <h3 className="toggle-copy">Healthcare Professional?</h3>
+                            <div className="toggle-container">
+                                <Switch
+                                    onClick={() => this.setState({ isPatient: !isPatient })} 
+                                    on={isPatient === false}
+                                />
+                                <div className="role yes-no">{isPatient === true ? 'No' : 'Yes'}</div>
+                            </div>
+                        </div>
                     <div>
                         <div className="go-button" onClick={() => this.goToSurvey()}>Go</div>
                     </div>
