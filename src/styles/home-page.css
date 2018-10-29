@@ -260,6 +260,72 @@
 
 }
 
+@media screen and (max-width: 470px) {
+
+    .home-page h2 {
+    font-size: 2.4em;
+     margin-top: 1.5em;
+} 
+
+.home-page .dropdown {
+    font-size: 2.4rem;
+    line-height: 2.2rem;
+}
+
+.mobile-dropdown-home {
+    text-align: left;
+    color: #508fcc;
+    font-size: 2.4em;
+    font-weight: 700;
+    line-height: 1.1em;
+}
+
+.home-page-blurb {
+    display: inline-block;
+    color: #9f9f9f;
+    font-size: .8rem;
+    letter-spacing: -.01em;
+    line-height: 1.4em;
+    margin: 10% 0em;
+    text-align: center;
+}
+
+.go-button {
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: .2px;
+    margin: 0 0 0 0;
+    padding: .4em 2.1em;
+    text-align: center;
+    margin: 0 auto;
+}
+
+    .toggle-container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin: .5em 0 3rem 0;
+}
+
+.home-page-blurb > div {
+    color: #9f9f9f;
+    font-size: .9rem;
+    letter-spacing: -.01em;
+    line-height: 1.4em;
+    margin: 1.5em 0em;
+    text-align: center;
+}
+.blurb-copy {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    padding: 0 3em;
+}
+}
+
+
 @media screen and (max-width: 350px) {
     .home-page h2 {
     font-size: 2.1em;
@@ -268,6 +334,13 @@
 
     .home-page .dropdown {
     font-size: 1em;
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: .2px;
+    margin: 0 0 0 0;
+    padding: .6em 2.1em;
+    text-align: center;
+    margin: 0 auto;
 }
   
     .toggle-container {
@@ -282,6 +355,170 @@
     height: 2rem;
 }
 /*   .home-page h3 {
+    font-size: 1.2em;
+    margin: 2rem 0 0 0;
+    display: inline-block;
+    color: #4c4c4c;
+    position: relative;
+}*/
+    .toggle-copy {
+    }
+/*
+    .toggle-container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin: 0em 0 3em 0;
+}*/
+
+    .go-container {
+        padding-top: 1em;
+        height: 0px;
+    }
+
+    .go-button {
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: .2px;
+    margin: 0 0 0 0;
+    padding: .6em 2.1em;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+.home-page-blurb {
+    display: inline-block;
+}
+
+.home-page-blurb > div {
+    /*color: #9f9f9f;
+    font-size: .8rem;
+    letter-spacing: -.01em;
+    line-height: 1.4em;
+    margin: 5em 0em;
+    text-align: center;*/
+    margin: 0em 0em 3em 0;
+    text-align: center;
+}
+
+.blurb-copy {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    padding: 0 3em;
+}
+
+.mobile-dropdown-home {
+    text-align: left;
+    color: #508fcc;
+    font-size: 2.1em;
+    font-weight: 700;
+    line-height: 1.2em;
+}
+
+
+.toggle-container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin: 0em 0 0rem 0;
+}
+
+.toggle-copy {
+    padding-top: 2.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    height: .6em;
+}
+
+@supports not (-webkit-overflow-scrolling: touch) {
+    .mobile-dropdown {
+        display: none;
+    }
+
+    }
+}
+@media screen and (max-width: 410px) {
+
+    .home-page h2 {
+    font-size: 2.1em;
+    margin-top: 1.5em;  
+    }
+
+    .home-page .dropdown {
+    font-size: 2.2rem;
+}
+
+.mobile-dropdown-home {
+    text-align: left;
+    color: #508fcc;
+    font-size: 2.1em;
+    font-weight: 700;
+    line-height: 1.1em;
+}
+    .go-button {
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: .2px;
+    margin: 0 0 0 0;
+    padding: .7em 2.1em;
+    text-align: center;
+    margin: 0 auto;
+}
+
+    .toggle-container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 0 0;
+}
+
+.toggle-copy {
+    font-size: 1.1em;
+    padding-top: 50px;
+    font-weight: 600;
+}
+
+.home-page-blurb > div {
+    color: #9f9f9f;
+    font-size: .9rem;
+    letter-spacing: -.01em;
+    line-height: 1.4em;
+    margin: 1.2em 0em;
+    text-align: center;
+}
+
+.blurb-copy {
+    padding: 0 3em;
+}
+
+}
+
+@media screen and (max-width: 350px) {
+    .home-page h2 {
+    font-size: 2.1em;
+     margin-top: .3em;
+    }
+
+    .home-page .dropdown {
+    font-size: 1em;
+}
+
+    .toggle-copy-container{
+    height: 2rem;
+}
+
+    .toggle-copy-container{
+    height: 2rem;
+}
+
+  .home-page h3 {
     font-size: 1.2em;
     margin: 2rem 0 0 0;
     display: inline-block;
@@ -357,5 +594,10 @@
     .mobile-dropdown {
         display: none;
     }
-  }
+
+    }
+
 }
+
+
+
