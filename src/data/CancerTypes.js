@@ -74,7 +74,7 @@ const CancerTypes = [
                 id: 'subtype',
                 icon: 'variable-breast-subtype.svg',
                 kind: 'radio',
-                name: 'cancer subtype',
+                name: 'subtype',
                 options: [
                     {
                         name: 'her2-/HR+',

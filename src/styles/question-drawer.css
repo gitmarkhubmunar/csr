@@ -23,6 +23,7 @@
 .icon-label {
     align-items: center;
     margin-left: 0em;
+
 }
 .variable-icon.answered {
     opacity: 1;
@@ -36,6 +37,7 @@
     opacity: .3;
     text-align: center;
     transition: opacity .3s ease;
+    margin-top: .25em;
 }
 .variable-name.answered {
     opacity: 1;
@@ -46,8 +48,8 @@
     flex-wrap: wrap;
     grid-column: 2;
     justify-content: center;
-    padding-left: 2em;
-    padding-right: 2em;
+    padding-left: 3.5em;
+/*    padding-right: 1em;*/
 }
 .variable-icon {
     display: block;
@@ -92,24 +94,27 @@
 }
 .button-u:focus {
     outline: none;
-    background: red;
 }
 .button-survey {
     align-items: center;
     border-radius: 14px;
     border: 3px solid #CCCCCC;
     cursor: pointer;
-    display: inline-block;
+    display: flex;
     flex: 1;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 800;
     justify-content: center;
     letter-spacing: -0.01em;
-    margin: 4px;
-    padding: 14px 0;
+    padding: 1.2rem 2rem;
+    margin: .2em;
     position: relative;
     text-align: center;
+    min-width:  0px;
+    max-width: auto;
+    max-height: 16px;
 }
+
 .button-survey:hover{
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
@@ -143,9 +148,40 @@
     position: absolute;
     text-align: center;
     width: 7em;
+    background: red;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 468px) {
+   
+   .variable-row {
+    grid-template-columns: 20% auto;
+    }
+
+    .input-area {
+    padding-left: 2.5em;
+    padding-right: 0em;
+    }
+
+    .button-survey {
+    font-size: .9rem;
+    line-height: .9rem;
+    padding: 1rem 4rem;
+    align-items: center;
+    letter-spacing: -0.03em;
+    padding: 1rem 0rem;
+/*  margin: .4em;*/
+    text-align: center;
+/*  min-width:  120px;*/
+    max-width: auto;
+    max-height: 16px;
+    }
+
+
+
+}
+
+/*
+@media screen and (max-width: 1200px) {
     .input-area {
         padding-left: 1em;
         padding-right: 1em;
@@ -179,7 +215,8 @@
         opacity: 1;
     }
     .button-survey {
-        padding: 8px 10px;
+        padding: 20px em;
+        margin: .4em;
     }
     .variable-icon {
         width: 18px;
@@ -189,9 +226,9 @@
         align-items: center;
         width: 60px;
     }
-}
+}*/
 
-@media screen and (max-width: 410px) {
+/*@media screen and (max-width: 410px) {
     .variable-row {
         grid-template-columns: 18% auto;
     }
@@ -199,4 +236,4 @@
         align-items: center;
         margin-left: .5em;
     }
-}
+}*/

@@ -58,7 +58,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .survey-caret {
@@ -167,9 +166,9 @@ select.title-dropdown {
 }*/
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 500px) {
 .title-dropdown-container {
-    font-size: .96em;
+    font-size: 1.1rem;
 }
 .survey-caret {
     background: red;
@@ -181,13 +180,9 @@ select.title-dropdown {
 }
 
 @media screen and (max-width: 360px) {
-/*    .role.patient {
-    background: black;
-    display: flex;
-}*/
-
 .title-dropdown-container {
-    font-size: .71em;
+    font-size: 1.12rem;
+    line-height: 1.3rem;
 }
 }
 

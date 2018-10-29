@@ -71,21 +71,23 @@ class HomePage extends React.Component {
                             }}
                             selectedItem={selectedCancer.name}
                         />
-                        <img className="caret home-page-caret" src="../assets/blue.dropdown.caret.svg" />
+                        <img className="caret home-page-caret" src="../assets/dropdown.svg" />
                     </div>
-                    <h3 className="toggle-copy">Healthcare Professional?</h3>
-                    <div className="toggle-container">
-                        <Switch
-                            onClick={() => this.setState({ isPatient: !isPatient })} 
-                            on={isPatient === false}
-                        />
-                        <div className="role yes-no">{isPatient === true ? 'No' : 'Yes'}</div>
-                    </div>
-                    <div>
+                        <div className="toggle-copy-container">
+                            <h3 className="toggle-copy">Healthcare Professional?</h3>
+                            <div className="toggle-container">
+                                <Switch
+                                    onClick={() => this.setState({ isPatient: !isPatient })} 
+                                    on={isPatient === false}
+                                />
+                                <div className="role yes-no">{isPatient === true ? 'No' : 'Yes'}</div>
+                            </div>
+                        </div>
+                    <div className="home-page-blurb">
+                    <div className="go-container">
                         <div className="go-button" onClick={() => this.goToSurvey()}>Go</div>
                     </div>
-                    <div className="home-page-blurb">
-                        <div className="blurb-copy">
+                         <div className="blurb-copy">
                             Personalized cancer survival rates from the experts at <a className="weight-700" href="http://courage.health" target="_blank">Courage Health</a>
                         </div>
                     </div>
