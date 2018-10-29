@@ -122,10 +122,10 @@
         background-image: url('http://localhost/public/assets/dropdown.svg');
         background-size: 0.5em 0.5em;
         background-repeat: no-repeat;
-        background-position: right 60%;
+
+        background-position: right 90%;
         width: 1em;
         height: 1em;
-
     }
 }
 @supports not (-webkit-overflow-scrolling: touch) {
@@ -135,6 +135,4 @@
 }
 
 @media screen and (max-width: 570px) {
-
-
 }
