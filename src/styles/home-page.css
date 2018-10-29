@@ -45,7 +45,7 @@
 }
 
 .home-page-caret {
-    padding-top: 20px;
+    padding-top: 10px;
     padding-left: 10px;
 }
 
@@ -118,6 +118,18 @@
 .switch.on .switch-toggle {
     left: 21px;
     bottom: 2px;
+}
+
+.home-page-blurb > div {
+    margin: 0em 0em 30% 0;
+    text-align: center;
+}
+
+.blurb-copy {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    padding: 0 3em;
+    color: #9f9f9f;
 }
 
 /*++*/
@@ -207,10 +219,84 @@
     }
 }*/
 
+@media screen and (max-width: 470px) {
+      .home-page h2 {
+    font-size: 2.4em;
+     margin-top: 1.5em;
+} 
+
+.home-page .dropdown {
+    font-size: 2.4rem;
+    line-height: 2.2rem;
+}
+
+.mobile-dropdown-home {
+    text-align: left;
+    color: #508fcc;
+    font-size: 2.4em;
+    font-weight: 700;
+    line-height: 1.1em;
+}
+
+.home-page-blurb {
+    display: inline-block;
+    color: #9f9f9f;
+    font-size: .8rem;
+    letter-spacing: -.01em;
+    line-height: 1.4em;
+    margin: 10% 0em;
+    text-align: center;
+}
+
+    .go-button {
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: .2px;
+    margin: 0 0 0 0;
+    padding: .6em 2.1em;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.home-page-blurb > div {
+    margin: 0em 0em 3em 0;
+    text-align: center;
+}
+
+.blurb-copy {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    padding: 0 3em;
+}
+
+
+
+
+
+
+
+}
+
+
 @media screen and (max-width: 410px) {
     .home-page h2 {
-    font-size: 2.5em;
-     margin-top: .3em;
+    font-size: 2.1em;
+     margin-top: 1.5em;
+}
+
+.home-page .dropdown {
+    font-size: 2.2rem;
+}
+
+.mobile-dropdown-home {
+    text-align: left;
+    color: #508fcc;
+    font-size: 2.1em;
+    font-weight: 700;
+    line-height: 1.1em;
 }
     .go-button {
     border-radius: 8px;
@@ -220,7 +306,7 @@
     font-weight: 700;
     letter-spacing: .2px;
     margin: 0 0 0 0;
-    padding: .4em 2.1em;
+    padding: .7em 2.1em;
     text-align: center;
     margin: 0 auto;
 }
@@ -229,7 +315,13 @@
     align-items: center;
     display: flex;
     flex-direction: row;
-    margin: .5em 0 3rem 0;
+    margin: 0 0 0 0;
+}
+
+.toggle-copy {
+    font-size: 1.1em;
+    padding-top: 50px;
+    font-weight: 600;
 }
 
 .home-page-blurb > div {
@@ -237,12 +329,12 @@
     font-size: .9rem;
     letter-spacing: -.01em;
     line-height: 1.4em;
-    margin: 1.5em 0em;
+    margin: 1.2em 0em;
     text-align: center;
 }
 
 .blurb-copy {
-    padding: 0 2em;
+    padding: 0 3em;
 }
 
 }
