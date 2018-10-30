@@ -52,7 +52,7 @@
 }
 
 .dropdown::after {
-        /*content: '  ▾';*/
+        /* content: '  ▾';*/
         content: " ";
         display: inline-block;
         background-image: url('http://localhost/public/assets/dropdown.svg');
@@ -102,7 +102,6 @@
         display: block;
         opacity: 0.001;
         z-index: 100;
-        color: red;
     }
     .mobile-dropdown {
         position: absolute;
