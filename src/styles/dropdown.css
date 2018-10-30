@@ -70,8 +70,11 @@
     width: 24px;
     height: 24px;
    /* margin-top: 30px;*/
-   display: none;
+    background: red;
+    display: none;
 }
+
+
 @supports (-webkit-overflow-scrolling: touch) {
     .mobile-dropdown-container {
         position: relative;
@@ -126,11 +129,22 @@
         width: 1em;
         height: 1em;
     }
+
+
 }
 @supports not (-webkit-overflow-scrolling: touch) {
     .mobile-dropdown {
         display: none;
+
     }
+
+@media screen and (max-width: 200px) {
+
+    /*.mobile-dropdown {
+        display: none;
+        }*/
+
+}
 }
 
 @media screen and (max-width: 570px) {
