@@ -1,14 +1,24 @@
 .home-page {
+    margin-top: 8%;
 }
 
 
 .home-page h2 {
     color: #4c4c4c;
-    font-size: 3.5rem;
+    font-size: 3.1rem;
     font-weight: 700;
-    margin-top: 1em;
-    margin-bottom: .25em;
+/*    margin-top: 1em;
+    margin-bottom: .25em;*/
     line-height: 1.1;
+    margin: 0 0 0 0;
+}
+
+.headline-container {
+    display: block;
+}
+
+.headline {
+    display: flex;
 }
 
 
@@ -22,12 +32,21 @@
 
 .home-page .dropdown {
     color: #508fcc;
-    font-size: 3.5rem;
+    font-size: 3.1rem;
     font-weight: 700;
     letter-spacing: -.5px;
     text-align: left;
     justify-content: left;
-    line-height: 3rem;
+    line-height: 3.4rem;
+    margin: 0 0 0 0;
+    height: 100%;
+}
+
+
+.cancer-word {
+    margin: 0 0 0 0;
+    display: inline-block;
+    position: relative;
 }
 
 .dropdown-home {
@@ -130,9 +149,12 @@
 
 @media screen and (max-width: 470px) {
 
+.home-page {
+    margin-top: 10%;
+}
+
 .home-page h2 {
     font-size: 2.4em;
-     margin-top: 1.6em;
 } 
 
 .home-page .dropdown {
@@ -145,13 +167,16 @@
     color: #508fcc;
     font-size: 2.4em;
     font-weight: 700;
-    line-height: 1.1em;
+    display: block;
 }
 
 .toggle-copy-container{
     height: 9rem;
 }
 
+  .mobile-dropdown {
+        line-height: 2.3rem;
+    }
 
 
     .toggle-container {
@@ -204,7 +229,7 @@
 
     .home-page h2 {
     font-size: 2.1em;
-    margin-top: 1.7em;  
+ /*   margin-top: 1.7em; */ 
     }
 
     .home-page .dropdown {
@@ -263,9 +288,14 @@
 }
 
 @media screen and (max-width: 350px) {
+
+.home-page {
+    margin-top: 5%;
+}
+
     .home-page h2 {
     font-size: 2em;
-     margin-top: 1em;
+/*     margin-top: 1em;*/
     }
 
     .toggle-copy-container{
@@ -275,7 +305,6 @@
   .home-page h3 {
     font-size: 1em;
     margin: 2rem 0 1.5rem 0;
-
     display: inline-block;
     color: #4c4c4c;
     position: relative;
