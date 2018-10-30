@@ -132,8 +132,6 @@
     color: #9f9f9f;
 }
 
-
-
 @media screen and (max-width: 470px) {
 
 .home-page h2 {
@@ -206,7 +204,6 @@
 }
 }
 
-
 @media screen and (max-width: 410px) {
 
     .home-page h2 {
@@ -233,6 +230,7 @@
     color: #4c4c4c;
     position: relative;
 }
+
     .go-button {
     border-radius: 8px;
     color: white;
@@ -241,7 +239,7 @@
     font-weight: 700;
     letter-spacing: .2px;
     margin: 0 0 0 0;
-    padding: .7em 2.1em;
+    padding: .4em 2.1em;
     text-align: center;
     margin: 0 auto;
 }
@@ -250,13 +248,7 @@
     align-items: center;
     display: flex;
     flex-direction: row;
-    margin: 0 0 0 0;
-}
-
-.toggle-copy {
-    font-size: 1.1em;
-    padding-top: 50px;
-    font-weight: 600;
+    margin: .5em 0 3rem 0;
 }
 
 .home-page-blurb > div {
@@ -264,12 +256,12 @@
     font-size: .9rem;
     letter-spacing: -.01em;
     line-height: 1.4em;
-    margin: 1.2em 0em;
+    margin: 1.5em 0em;
     text-align: center;
 }
 
 .blurb-copy {
-    padding: 0 3em;
+    padding: 0 2em;
 }
 
 }
@@ -280,7 +272,6 @@
      margin-top: 1em;
     }
 
-
     .toggle-copy-container{
     height: 3rem;
 }
@@ -288,6 +279,7 @@
   .home-page h3 {
     font-size: 1em;
     margin: 2rem 0 1.5rem 0;
+
     display: inline-block;
     color: #4c4c4c;
     position: relative;
@@ -356,6 +348,7 @@
     }
 
 }
+
 
 
 
