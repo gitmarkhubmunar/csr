@@ -132,139 +132,13 @@
     color: #9f9f9f;
 }
 
-/*++*/
 
-
-
-/*.home-page-blurb {
-    grid-column: 1/4;
-    grid-row: 6/6;
-}
-.home-page-blurb > div {
-    color: #9f9f9f;
-    font-size: 1rem;
-    letter-spacing: -.01em;
-    line-height: 1.4em;
-    margin: 0 10%;
-    text-align: center;
-}
-.links {
-    font-weight: 700;
-    grid-column: 1/3;
-    grid-gap: 25%;
-    grid-template-columns: 1fr 1fr;
-    padding: 1em;
-}
-.blurb-copy {
-    color: #ccc;
-    grid-column: 1/4;
-    grid-row: 1/1;
-    padding-top: 32px;
-}
-
-.weight-700 {
-    font-weight: 700;
-}*/
-
-
-
-/*@media screen and (max-width: 750px) {
-    .home-page h2 {
-        font-size: 2.5em;
-        margin-top: .5em;
-    }
-
-    .home-page .dropdown {
-    font-size: 2.5rem;
-    justify-content: left;
-    font-weight: 700;
-}
-
-    .home-page h3 {
-        font-size: 1em;
-    }
-}*/
-
-/*iphone x*/
-/*@media screen and (max-width: 667px) {
-    .home-page h2 {
-        font-size: 2.3em;
-        margin-top: .5em;
-    }
-
-    .home-page .dropdown {
-    font-size: 1em;
-
-}
-
-    .home-page h3 {
-        font-size: 1em;
-    }
-}
-*/
-
-/*@media screen and (max-width: 414pt) {
-    .home-page h2 {
-        font-size: 2em;
-        margin-top: .5em;
-     }
-
-    .home-page .dropdown {
-        font-size: 2rem;
-        text-align: left;
-}
-
-    .home-page h3 {
-        font-size: 1em;
-    }
-}*/
-
-@media screen and (max-width: 410px) {
-    .home-page h2 {
-    font-size: 2.5em;
-    margin-top: .3em;
-}
-
-    .go-button {
-    border-radius: 8px;
-    color: white;
-    cursor: pointer;
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: .2px;
-    margin: 0 0 0 0;
-    padding: .4em 2.1em;
-    text-align: center;
-    margin: 0 auto;
-}
-
-    .toggle-container {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    margin: .5em 0 3rem 0;
-}
-
-.home-page-blurb > div {
-    color: #9f9f9f;
-    font-size: .9rem;
-    letter-spacing: -.01em;
-    line-height: 1.4em;
-    margin: 1.5em 0em;
-    text-align: center;
-}
-
-.blurb-copy {
-    padding: 0 2em;
-}
-
-}
 
 @media screen and (max-width: 470px) {
 
-    .home-page h2 {
+.home-page h2 {
     font-size: 2.4em;
-     margin-top: 1.5em;
+     margin-top: 2em;
 } 
 
 .home-page .dropdown {
@@ -280,6 +154,32 @@
     line-height: 1.1em;
 }
 
+.toggle-copy-container{
+    height: 9rem;
+}
+
+
+
+    .toggle-container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin: .5em 0 3rem 0;
+}
+
+.go-button {
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: .2px;
+    margin: 0 0 0 0;
+    padding: 1.5rem 2.1em;
+    text-align: center;
+    margin: 0 auto;
+}
+
 .home-page-blurb {
     display: inline-block;
     color: #9f9f9f;
@@ -290,25 +190,6 @@
     text-align: center;
 }
 
-.go-button {
-    border-radius: 8px;
-    color: white;
-    cursor: pointer;
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: .2px;
-    margin: 0 0 0 0;
-    padding: .4em 2.1em;
-    text-align: center;
-    margin: 0 auto;
-}
-
-    .toggle-container {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    margin: .5em 0 3rem 0;
-}
 
 .home-page-blurb > div {
     color: #9f9f9f;
@@ -326,126 +207,11 @@
 }
 
 
-@media screen and (max-width: 350px) {
-    .home-page h2 {
-    font-size: 2.1em;
-     margin-top: .3em;
-    }
-
-    .home-page .dropdown {
-    font-size: 1em;
-    font-size: 2.4rem;
-    font-weight: 700;
-    letter-spacing: .2px;
-    margin: 0 0 0 0;
-    padding: .6em 2.1em;
-    text-align: center;
-    margin: 0 auto;
-}
-  
-    .toggle-container {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    margin: 0em 0 1rem 0;
-
-}
-
-.toggle-copy-container{
-    height: 2rem;
-}
-/*   .home-page h3 {
-    font-size: 1.2em;
-    margin: 2rem 0 0 0;
-    display: inline-block;
-    color: #4c4c4c;
-    position: relative;
-}*/
-    .toggle-copy {
-    }
-/*
-    .toggle-container {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    margin: 0em 0 3em 0;
-}*/
-
-    .go-container {
-        padding-top: 1em;
-        height: 0px;
-    }
-
-    .go-button {
-    border-radius: 8px;
-    color: white;
-    cursor: pointer;
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: .2px;
-    margin: 0 0 0 0;
-    padding: .6em 2.1em;
-    text-align: center;
-    margin: 0 auto;
-}
-
-
-.home-page-blurb {
-    display: inline-block;
-}
-
-.home-page-blurb > div {
-    /*color: #9f9f9f;
-    font-size: .8rem;
-    letter-spacing: -.01em;
-    line-height: 1.4em;
-    margin: 5em 0em;
-    text-align: center;*/
-    margin: 0em 0em 3em 0;
-    text-align: center;
-}
-
-.blurb-copy {
-    font-size: 1rem;
-    line-height: 1.4rem;
-    padding: 0 3em;
-}
-
-.mobile-dropdown-home {
-    text-align: left;
-    color: #508fcc;
-    font-size: 2.1em;
-    font-weight: 700;
-    line-height: 1.2em;
-}
-
-
-.toggle-container {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    margin: 0em 0 0rem 0;
-}
-
-.toggle-copy {
-    padding-top: 2.5rem;
-    font-weight: 600;
-    font-size: 1rem;
-    height: .6em;
-}
-
-@supports not (-webkit-overflow-scrolling: touch) {
-    .mobile-dropdown {
-        display: none;
-    }
-
-    }
-}
 @media screen and (max-width: 410px) {
 
     .home-page h2 {
     font-size: 2.1em;
-    margin-top: 1.5em;  
+    margin-top: 1.1em;  
     }
 
     .home-page .dropdown {
@@ -458,6 +224,14 @@
     font-size: 2.1em;
     font-weight: 700;
     line-height: 1.1em;
+}
+
+  .home-page h3 {
+    font-size: 1.1em;
+    margin: 3rem 0 1rem 0;
+    display: inline-block;
+    color: #4c4c4c;
+    position: relative;
 }
     .go-button {
     border-radius: 8px;
@@ -502,38 +276,22 @@
 
 @media screen and (max-width: 350px) {
     .home-page h2 {
-    font-size: 2.1em;
-     margin-top: .3em;
+    font-size: 2em;
+     margin-top: 1em;
     }
 
-    .home-page .dropdown {
-    font-size: 1em;
-}
 
     .toggle-copy-container{
-    height: 2rem;
-}
-
-    .toggle-copy-container{
-    height: 2rem;
+    height: 3rem;
 }
 
   .home-page h3 {
-    font-size: 1.2em;
-    margin: 2rem 0 0 0;
+    font-size: 1em;
+    margin: 2rem 0 1.5rem 0;
     display: inline-block;
     color: #4c4c4c;
     position: relative;
-}*/
-    .toggle-copy {
-    }
-/*
-    .toggle-container {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    margin: 0em 0 3em 0;
-}*/
+}
 
     .go-container {
         padding-top: 1em;
@@ -563,16 +321,17 @@
     font-size: .8rem;
     letter-spacing: -.01em;
     line-height: 1.4em;
-    margin: 5em 0em;
+    margin: 5em 0 0 0em;
     text-align: center;
 }
+
 
 .mobile-dropdown-home {
     text-align: left;
     color: #508fcc;
-    font-size: 2.1em;
+    font-size: 2em;
     font-weight: 700;
-    line-height: 1.2em;
+    line-height: 1em;
 }
 
 
@@ -584,9 +343,8 @@
 }
 
 .toggle-copy {
-    padding-top: 2.5rem;
+    padding-top: 1.8rem;
     font-weight: 600;
-    font-size: 1rem;
     height: .6em;
 }
 
