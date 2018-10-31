@@ -86,8 +86,6 @@
     margin: 1em auto;
 }
 
-
-
 .mobile-dropdown-home {
     text-align: left;
     color: #508fcc;
@@ -140,5 +138,132 @@
 }
 
 /*Desktop End*/
+
+@media screen and (max-width: 470px) {
+
+    .home-page {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 3em auto;
+
+}
+    .headline-container {
+    grid-row: 2/2;
+}
+
+    .home-page h2 {
+    font-size: 2.5em;
+} 
+
+    .mobile-dropdown-home {
+    color: #508fcc;
+    font-size: 2.5em;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin-top: -0.3em;
+}
+
+    .toggle-copy {
+    font-weight: 600;
+    margin: 10% 0 0 0;
+}
+
+    .go-button {
+    margin: 1em 0 1em 0;
+}
+
+    .home-page-blurb > div {
+    margin: 0 0 0 0;
+    text-align: center;
+
+}
+    .blurb-copy {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    padding: 0 2em;
+
+}
+}
+
+@media screen and (max-width: 410px) {
+    .home-page h2 {
+    font-size: 2.3em;
+    }
+
+    .mobile-dropdown-home {
+    text-align: left;
+    color: #508fcc;
+    font-size: 2.3em;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin-top: 0;
+}
+    .toggle-copy {
+    font-weight: 600;
+    margin: 16% 0 0 0;
+}
+
+    .go-button {
+    margin: .8em 0 .5em 0;
+}
+    .blurb-copy {
+    font-size: .8rem;
+    line-height: 1.1rem;
+    padding: 0 2em;
+
+}
+}
+
+@media screen and (max-width: 350px) {
+
+     .home-page {
+    grid-template-rows: 1.7em auto;
+
+}
+     .home-page h2 {
+    font-size: 1.8rem;
+    }
+
+    .mobile-dropdown-home {
+    text-align: left;
+    color: #508fcc;
+    font-size: 1.8em;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin-top: .25em;
+}
+
+    .toggle-container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding: .8em 0 0 0;
+}
+
+    .toggle-container .role {
+    margin-left: .8em;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+    .toggle-copy {
+    font-size: 1em;
+    font-weight: 600;
+    margin: 8% 0 0 0;
+}
+
+    .go-button {
+    font-size: 2rem;
+    font-weight: 700;
+    padding: .15em 2.1em;
+    text-align: center;
+    margin: .8em 0 .6em 0;
+}
+
+
+
+
+
+}
 
 
