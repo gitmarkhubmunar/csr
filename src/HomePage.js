@@ -52,6 +52,8 @@ class HomePage extends React.Component {
             }
         })
     }
+
+
     
     render () {
         const { history, isPatient, selectedCancerType, selectedPeopleType } = this.state
@@ -62,7 +64,7 @@ class HomePage extends React.Component {
                 <div className="home-page content-container">
                     <h2>I’m looking for answers on cancer survival rates for</h2> 
                      <div className="dropdown-home mobile-dropdown-container-home mobile-dropdown-home">
-                        <Dropdown
+                        <Dropdown 
                             className="title-dropdown text-center cancer-title"
                             list={CancerTypes.map(type => type.name)}
                             onSelect={name => {
@@ -70,8 +72,9 @@ class HomePage extends React.Component {
                                 this.setState({ selectedCancerType: id })
                             }}
                             selectedItem={selectedCancer.name}
+                            bgColor={'#939393'}
                         />
-                        <img className="caret home-page-caret" src="../assets/dropdown.svg" />
+                        
                     </div>
                         <div className="toggle-copy-container">
                             <h3 className="toggle-copy">Healthcare Professional?</h3>

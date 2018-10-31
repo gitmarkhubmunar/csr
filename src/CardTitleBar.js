@@ -38,16 +38,15 @@ class CardTitleBar extends React.Component {
                     </div>
                     <div className="title-dropdown-container relative mobile-dropdown-center">
                         <Dropdown
-                            className="title-dropdown text-center cancer-title mobile-dropdown-titlebar"
+                            className="title-dropdown text-center cancer-title "
                             list={CancerTypes.map(type => type.name)}
                             onSelect={name => {
                                 const id = _.find(CancerTypes, { name: name }).id
                                 changeCancerType(id)
                             }}
                             selectedItem={selectedCancer.name}
+                            bgColor={'white'}
                         />
-                        <img className="survey-caret" src="../assets/white.dropdown.caret.svg" />
-
                     </div>
                     <div className="share-container">
                         <Icon icon="ios-share-alt" fontSize="2rem" style={{ fill: 'white' }}/>
