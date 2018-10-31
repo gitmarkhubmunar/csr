@@ -15,16 +15,18 @@ class Dropdown extends React.Component {
     }
 
     render () {
-        const { className, list, selectedItem } = this.props
+        const { className, list, selectedItem,backgroundColor } = this.props
         const { isOpen } = this.state
         const combinedClassName = 'dropdown ' + className
         const isMobile = CheckMobile()
+
+
 
         if (isMobile) {
             return (
                 <div className="mobile-dropdown-container relative">
                     <br />
-                    <div className="mobile-dropdown">{selectedItem}</div>
+                    <div className="mobile-dropdown">{selectedItem}<Icon icon="ios-arrow-down" fontSize="1em" style={{ fill: '' }}/></div>
                     <select
                         className={combinedClassName}
                         defaultValue={selectedItem}
@@ -50,7 +52,8 @@ class Dropdown extends React.Component {
                         })}
                     </ul>
                 }
-                <div className="selected">{selectedItem}</div>
+                <div className="selected">{selectedItem}<Icon icon="ios-arrow-down" fontSize="1em" style={{ fill: '' }}/></div>
+
             </div>        
         )
     }
