@@ -23,7 +23,7 @@ const CancerTypes = [
         extraVariables: null,
         hasCalculator: true,
         isRelativeRate: false,
-        name: 'Bladder cancer',
+        name: 'Bladder',
         ribbonFile: 'ribbon.bladder.svg',
         showStandardVariables: {
             age: true,
@@ -40,7 +40,7 @@ const CancerTypes = [
         extraVariables: null,
         hasCalculator: true,
         isRelativeRate: true,
-        name: 'Bone and joint cancer',
+        name: 'Bone and joint',
         ribbonFile: 'ribbon.bonejoint.svg',
         showStandardVariables: {
             age: true,
@@ -56,7 +56,7 @@ const CancerTypes = [
         extraVariables: null,
         hasCalculator: true,
         isRelativeRate: true,
-        name: 'Brain cancer',
+        name: 'Brain',
         ribbonFile: 'ribbon.brain.svg',
         showStandardVariables: {
             age: true,
@@ -97,7 +97,7 @@ const CancerTypes = [
         ],
         hasCalculator: true,
         isRelativeRate: false,
-        name: 'Breast cancer',
+        name: 'Breast',
         ribbonFile: 'ribbon.breast.svg',
         showStandardVariables: {
             age: true,
@@ -113,7 +113,7 @@ const CancerTypes = [
         extraVariables: null,
         hasCalculator: true,
         isRelativeRate: false,
-        name: 'Colon cancer',
+        name: 'Colon',
         ribbonFile: 'ribbon.colon.svg',
         showStandardVariables: {
             age: true,
@@ -129,7 +129,7 @@ const CancerTypes = [
         extraVariables: null,
         hasCalculator: true,
         isRelativeRate: true,
-        name: 'Esophageal cancer',
+        name: 'Esophageal',
         ribbonFile: 'ribbon.esophagus.svg',
         showStandardVariables: {
             age: true,
@@ -145,7 +145,7 @@ const CancerTypes = [
         extraVariables: null,
         hasCalculator: true,
         isRelativeRate: true,
-        name: 'Eye cancer',
+        name: 'Eye',
         ribbonFile: 'ribbon.eye.svg',
         showStandardVariables: {
             age: true,
@@ -161,7 +161,7 @@ const CancerTypes = [
         extraVariables: null,
         hasCalculator: true,
         isRelativeRate: true,
-        name: 'Floor of mouth cancer',
+        name: 'Floor of mouth',
         ribbonFile: 'ribbon.floorofmouth.svg',
         showStandardVariables: {
             age: true,
@@ -176,7 +176,7 @@ const CancerTypes = [
         extraVariables: null,
         hasCalculator: true,
         isRelativeRate: true,
-        name: 'Gum of other mouth cancer',
+        name: 'Gum of other mouth',
         ribbonFile: 'ribbon.floorofmouth.svg',
         showStandardVariables: {
             age: true,
@@ -224,7 +224,7 @@ const CancerTypes = [
         extraVariables: null,
         hasCalculator: true,
         isRelativeRate: true,
-        name: 'Kidney cancer',
+        name: 'Kidney',
         ribbonFile: 'ribbon.kidney.svg',
         showStandardVariables: {
             age: true,
@@ -256,7 +256,7 @@ const CancerTypes = [
         extraVariables: null,
         hasCalculator: true,
         isRelativeRate: true,
-        name: 'Liver cancer',
+        name: 'Liver',
         ribbonFile: 'ribbon.liver.svg',
         showStandardVariables: {
             age: true,
@@ -272,7 +272,7 @@ const CancerTypes = [
         extraVariables: null,
         hasCalculator: true,
         isRelativeRate: true,
-        name: 'Lip Cancer',
+        name: 'Lip',
         ribbonFile: 'ribbon.lip.svg',
         showStandardVariables: {
             age: true,
@@ -305,7 +305,7 @@ const CancerTypes = [
         ],
         hasCalculator: true,
         isRelativeRate: false,
-        name: 'Lung cancer',
+        name: 'Lung',
         ribbonFile: 'ribbon.lung.svg',
         showStandardVariables: {
             age: true,
@@ -385,7 +385,7 @@ const CancerTypes = [
         extraVariables: null,
         hasCalculator: true,
         isRelativeRate: true, 
-        name: 'Nasopharynx cancer',
+        name: 'Nasopharynx',
         ribbonFile: 'ribbon.oral.svg',
         showStandardVariables: {
             age: true,
@@ -417,7 +417,7 @@ const CancerTypes = [
         extraVariables: null,
         hasCalculator: false,
         isRelativeRate: false, 
-        name: 'Oral cancer',
+        name: 'Oral',
         ribbonFile: 'ribbon.oral.svg',
         showStandardVariables: {
             age: true,
@@ -433,7 +433,7 @@ const CancerTypes = [
         extraVariables: null,
         hasCalculator: true,
         isRelativeRate: true, 
-        name: 'Oropharynx cancer',
+        name: 'Oropharynx',
         ribbonFile: 'ribbon.oral.svg',
         showStandardVariables: {
             age: true,
@@ -449,7 +449,7 @@ const CancerTypes = [
         extraVariables: null,
         hasCalculator: true,
         isRelativeRate: true,
-        name: 'Other digestive cancer',
+        name: 'Other digestive',
         ribbonFile: 'ribbon.oral.svg',
         showStandardVariables: {
             age: true,
@@ -465,7 +465,7 @@ const CancerTypes = [
         extraVariables: null,
         hasCalculator: false,
         isRelativeRate: true,
-        name: 'Endocrine cancer',
+        name: 'Endocrine',
         ribbonFile: 'ribbon.endocrine.svg',
         showStandardVariables: {
             age: true,
@@ -497,7 +497,7 @@ const CancerTypes = [
         extraVariables: null,
         hasCalculator: false,
         isRelativeRate: false,
-        name: 'Genital cancer',
+        name: 'Genital',
         ribbonFile: 'ribbon.genital.svg',
         showStandardVariables: {
             age: true,
@@ -513,7 +513,7 @@ const CancerTypes = [
         extraVariables: null,
         hasCalculator: false,
         isRelativeRate: false,
-        name: 'Respiratory cancer',
+        name: 'Respiratory',
         ribbonFile: 'ribbon.respitory.svg',
         showStandardVariables: {
             age: true,
@@ -545,7 +545,7 @@ const CancerTypes = [
         extraVariables: null,
         hasCalculator: true,
         isRelativeRate: true,
-        name: 'Skin cancer',
+        name: 'Skin',
         ribbonFile: 'ribbon.melanoma.svg',
         showStandardVariables: {
             age: true,
@@ -598,7 +598,7 @@ const CancerTypes = [
         extraVariables: null,
         hasCalculator: true,
         isRelativeRate: false,
-        name: 'Pancreatic cancer',
+        name: 'Pancreatic',
         ribbonFile: 'ribbon.pancreas.svg',
         showStandardVariables: {
             age: true,
@@ -635,7 +635,7 @@ const CancerTypes = [
         ],
         hasCalculator: true,
         isRelativeRate: false,
-        name: 'Prostate cancer',
+        name: 'Prostate',
         ribbonFile: 'ribbon.prostate.svg',
         showStandardVariables: {
             age: true,
@@ -651,7 +651,7 @@ const CancerTypes = [
         extraVariables: null,
         hasCalculator: true,
         isRelativeRate: false,
-        name: 'Rectal cancer',
+        name: 'Rectal',
         ribbonFile: 'ribbon.rectal.svg',
         showStandardVariables: {
             age: true,
@@ -667,7 +667,7 @@ const CancerTypes = [
         extraVariables: null,
         hasCalculator: true,
         isRelativeRate: false,
-        name: 'salivary gland cancer',
+        name: 'salivary gland',
         ribbonFile: 'ribbon.oral.svg',
         showStandardVariables: {
             age: true,
@@ -683,7 +683,7 @@ const CancerTypes = [
         extraVariables: null,
         hasCalculator: true,
         isRelativeRate: true,
-        name: 'Soft tissue cancer',
+        name: 'Soft tissue',
         ribbonFile: 'ribbon.softtissue.svg',
         showStandardVariables: {
             age: true,
@@ -699,7 +699,7 @@ const CancerTypes = [
         extraVariables: null,
         hasCalculator: true,
         isRelativeRate: false,
-        name: 'Stomach cancer',
+        name: 'Stomach',
         ribbonFile: 'ribbon.stomach.svg',
         showStandardVariables: {
             age: true,
@@ -715,7 +715,7 @@ const CancerTypes = [
         extraVariables: null,
         hasCalculator: true,
         isRelativeRate: true,
-        name: 'Thyroid cancer',
+        name: 'Thyroid',
         ribbonFile: 'ribbon.thyroid.svg',
         showStandardVariables: {
             age: true,
@@ -731,7 +731,7 @@ const CancerTypes = [
         extraVariables: null,
         hasCalculator: true,
         isRelativeRate: true,
-        name: 'tongue cancer',
+        name: 'tongue',
         ribbonFile: 'ribbon.oral.svg',
         showStandardVariables: {
             age: true,
@@ -747,7 +747,7 @@ const CancerTypes = [
         extraVariables: null,
         hasCalculator: true,
         isRelativeRate: true,
-        name: 'tonsil cancer',
+        name: 'tonsil',
         ribbonFile: 'ribbon.oral.svg',
         showStandardVariables: {
             age: true,
@@ -763,7 +763,7 @@ const CancerTypes = [
         extraVariables: null,
         hasCalculator: true,
         isRelativeRate: true,
-        name: 'Ureter cancer',
+        name: 'Ureter',
         ribbonFile: 'ribbon.ureterurinary.svg',
         showStandardVariables: {
             age: true,
@@ -779,7 +779,7 @@ const CancerTypes = [
         extraVariables: null,
         hasCalculator: true,
         isRelativeRate: true,
-        name: 'Uterine cervical cancer',
+        name: 'Uterine cervical',
         ribbonFile: 'ribbon.uterine.cervix.svg',
         showStandardVariables: {
             age: true,
@@ -824,7 +824,7 @@ const CancerTypes = [
         ],
         hasCalculator: true,
         isRelativeRate: false,
-        name: 'Uterine corpus cancer',
+        name: 'Uterine corpus',
         ribbonFile: 'ribbon.uterinecorpus.svg',
         showStandardVariables: {
             age: true,
