@@ -9,9 +9,10 @@
     border-top-right-radius: 0px;
     color: white;
     display: grid;
-    grid-gap: 1em;
+    grid-gap: .1em;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
+
 .toggle-switch-container {
     grid-column: 1/1;
 }
@@ -41,18 +42,19 @@
 }
 .role.patient {
 }
+
 .title-dropdown-container {
-    grid-column: 3 / span 6;
+    grid-column: 2 / span 8;
     display: inline-flex;
-    /*flex-direction: row;*/
     align-items: center;
     justify-content: center;
+    position: absolute;
 }
-.title-dropdown {
-/*    font-size: 1rem;*/
+.card-dropdown {
+    font-size: 1.5rem;
     font-weight: 900;
     display: inline-block;
-    max-width: 100%;
+    width: 100%;
     text-align: left;
     justify-content: left;
     display: flex;
@@ -84,7 +86,7 @@ select.title-dropdown {
     fill: white;
 }
 .share-container {
-    grid-column: 9/9;
+    grid-column: 10/10;
     position: relative;
     text-align: right;
 }
