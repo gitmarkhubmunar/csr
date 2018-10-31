@@ -1,14 +1,18 @@
 .home-page {
 }
 
+.headline-container {
+    position: ;
+}
+
 
 .home-page h2 {
     color: #4c4c4c;
     font-size: 3.5rem;
     font-weight: 700;
-    margin-top: 1em;
-    margin-bottom: .25em;
     line-height: 1.1;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -132,7 +136,9 @@
 
 .home-page h2 {
     font-size: 2.4em;
-     margin-top: 1.6em;
+   /*  margin-top: 1.6em;*/
+    margin: 0;
+    padding: 0;
 } 
 
 .home-page .dropdown {
@@ -204,7 +210,9 @@
 
     .home-page h2 {
     font-size: 2.1em;
-    margin-top: 1.7em;  
+/*    margin-top: 1.7em; */
+    margin: 0;
+    padding: 0; 
     }
 
     .home-page .dropdown {
@@ -265,7 +273,9 @@
 @media screen and (max-width: 350px) {
     .home-page h2 {
     font-size: 2em;
-     margin-top: 1em;
+     /*margin-top: 1em;*/
+    margin: 0;
+    padding: 0;
     }
 
     .toggle-copy-container{

@@ -83,9 +83,7 @@
 
 @supports (-webkit-overflow-scrolling: touch) {
     .mobile-dropdown-container {
-        position: relative;
         width: 100%;
-
     }
     .dropdown {
         position: absolute;
@@ -98,6 +96,7 @@
         display: block;
         opacity: 0.001;
         z-index: 100;
+
     }
 
        .dropdown {
@@ -113,7 +112,7 @@
         z-index: 100;
     }
     .mobile-dropdown {
-        position: absolute;
+        position: relative;
         top: 0;
         left: 0;
         right: 0;
@@ -122,6 +121,7 @@
         height: 100%;
         display: block;
         z-index: 99;
+        margin-top: -37px;
     }
     .mobile-dropdown::after {
    /*      content: '  ▾'; */
