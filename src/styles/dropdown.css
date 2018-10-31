@@ -74,6 +74,11 @@
     display: none;
 }
 
+.selected svg {
+    position: absolute;
+    padding-top: 1px;
+    padding-left: .2em;
+}
 
 
 @supports (-webkit-overflow-scrolling: touch) {
@@ -131,17 +136,10 @@
         height: 1em;*/
     }
 
-    .m-ios-arrow {
-        fill: red;
-    }
-
-    .hp-1 {
-        fill: teal;
-    }
-
-    .title2 {
-        fill: white;
-        background: red;
+    .mobile-dropdown > svg {
+        position: absolute;
+        padding-top: .125em;
+        padding-left: .1em;
     }
 
 

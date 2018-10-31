@@ -52,6 +52,8 @@ class HomePage extends React.Component {
             }
         })
     }
+
+
     
     render () {
         const { history, isPatient, selectedCancerType, selectedPeopleType } = this.state
@@ -70,7 +72,7 @@ class HomePage extends React.Component {
                                 this.setState({ selectedCancerType: id })
                             }}
                             selectedItem={selectedCancer.name}
-                            backgroundColor="yellow"
+                            bgColor={'#939393'}
                         />
                         
                     </div>
