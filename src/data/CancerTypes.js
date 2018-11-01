@@ -129,7 +129,7 @@ const CancerTypes = [
         extraVariables: null,
         hasCalculator: true,
         isRelativeRate: true,
-        name: 'esophageal cancer',
+        name: 'esophageal',
         ribbonFile: 'ribbon.esophagus.svg',
         showStandardVariables: {
             age: true,

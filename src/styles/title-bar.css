@@ -1,3 +1,5 @@
+/*desktop*/
+
 .title-bar {
     background: #551A8B;
     transition: all .5s ease;
@@ -9,9 +11,10 @@
     border-top-right-radius: 0px;
     color: white;
     display: grid;
-    grid-gap: 1em;
+    grid-gap: .1em;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
+
 .toggle-switch-container {
     grid-column: 1/1;
 }
@@ -41,18 +44,19 @@
 }
 .role.patient {
 }
+
 .title-dropdown-container {
-    grid-column: 3 / span 6;
+    grid-column: 2 / span 8;
     display: inline-flex;
-    /*flex-direction: row;*/
     align-items: center;
     justify-content: center;
+    position: absolute;
 }
-.title-dropdown {
-/*    font-size: 1rem;*/
+.card-dropdown {
+    font-size: 1.5rem;
     font-weight: 900;
     display: inline-block;
-    max-width: 100%;
+    width: 100%;
     text-align: left;
     justify-content: left;
     display: flex;
@@ -84,7 +88,7 @@ select.title-dropdown {
     fill: white;
 }
 .share-container {
-    grid-column: 9/9;
+    grid-column: 10/10;
     position: relative;
     text-align: right;
 }
@@ -103,11 +107,10 @@ select.title-dropdown {
     text-align: center;
     font-weight: 900;
     width: 100%;
-    margin-left: .5em;
-    font-size: .9em;
- }
+    margin: 0 0 0 0;
+}
 
- .center {
+.center {
     text-align: center;
  }
 
@@ -120,59 +123,19 @@ select.title-dropdown {
    /* margin-top: 30px;*/
 }
 
+.title-caret .selected svg {
+    font-size: 1.3em;
+    margin-top: 0px;
+}
+
+/*Desktop end*/
+
+
 @media screen and (max-width: 800px) {
-
-
-/*    .toggle-switch.switch {
-        position: absolute;
-        background: #E1E8F4;
-        width: 50px;
-
-    }
-
-    .toggle-switch.switch.on > .switch-toggle {
-        left: 23px;
-        -webkit-transition: left .2s ease-in-out;
-        transition: left .2s ease-in-out;
-    }
-
-    .title-dropdown-container {
-    grid-column: 2 / span 6;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    }
-    .title-dropdown {
-    font-size: 24px;
-    font-weight: 900;
-
-    }
-    select.title-dropdown {
-        font-size: 15px;
-        font-weight: 700;
-        letter-spacing: -0.2px;
-        margin: 0 auto;
-        padding-left: .7em;
-    }
-
-    .title-bar .dropdown .caret {
-    fill: white;
-}
-
-.role.patient {
-    background: red;
-    display: grid;
-}*/
-}
-
-@media screen and (max-width: 500px) {
-.title-dropdown-container {
-    font-size: 1.1rem;
-}
-.survey-caret {
-    background: red;
-    display: none;
+.mobile-dropdown-center {
+    font-size: 1.5rem;
+    line-height: 1em;
+    padding: .35em 0em 0 .5em;
 }
 .title-dropdown-container {
     grid-column: 2 / span 7;
@@ -180,9 +143,11 @@ select.title-dropdown {
 }
 
 @media screen and (max-width: 360px) {
-.title-dropdown-container {
-    font-size: 1.12rem;
-    line-height: 1.3rem;
+.mobile-dropdown-center {
+    font-size: 1.3rem;
+    line-height: 1em;
+    padding: .5em 0em 0 .5em;
+    margin-left: -.25em;
 }
 }
 
