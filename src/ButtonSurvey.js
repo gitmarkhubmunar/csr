@@ -1,4 +1,5 @@
 import React from 'react'
+import DeselectButton from './DeselectButton'
 
 class ButtonSurvey extends React.Component {
     render () {
@@ -16,7 +17,9 @@ class ButtonSurvey extends React.Component {
                 }}
             >
                 {name}
-            </div>  
+            </div> 
+
+
         )
     }
 }
