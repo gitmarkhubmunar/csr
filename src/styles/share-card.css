@@ -49,6 +49,8 @@
     font-size: 1em;
     padding: 1em;
     text-align: center;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 .share-link-copy-button {
     background: #CED6D9;
