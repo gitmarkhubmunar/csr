@@ -1,7 +1,8 @@
 const CancerTypes = [
     // {
     //     id: 'test',
-    //     colors: ['#FABC3C', '#740070', '#0F1B47'],
+    // addCancerSuffix: true,    
+    // colors: ['#FABC3C', '#740070', '#0F1B47'],
     //     contrastColor: 'white',
     //     extraVariables: null,
     //     hasCalculator: true,
@@ -18,6 +19,7 @@ const CancerTypes = [
     // },
     {
         id: 'bladder',
+        addCancerSuffix: true,
         colors: ['#FABC3C', '#740070', '#0F1B47'],
         contrastColor: 'white',
         extraVariables: null,
@@ -35,6 +37,7 @@ const CancerTypes = [
     },
     {
         id: 'bone-joint',
+        addCancerSuffix: true,
         colors: ['#508fcc, FFFF00'],
         contrastColor: 'black',
         extraVariables: null,
@@ -52,11 +55,12 @@ const CancerTypes = [
     },
     {
         id: 'brain',
+        addCancerSuffix: true,
         colors: ['#444444'],
         extraVariables: null,
         hasCalculator: true,
         isRelativeRate: true,
-        name: 'brain cancer',
+        name: 'brain',
         ribbonFile: 'ribbon.brain.svg',
         showStandardVariables: {
             age: true,
@@ -68,6 +72,7 @@ const CancerTypes = [
     },
     {
         id: 'breast',
+        addCancerSuffix: true,
         colors: ['#F87DB3'],
         extraVariables: [
             {
@@ -98,7 +103,7 @@ const CancerTypes = [
         ],
         hasCalculator: true,
         isRelativeRate: false,
-        name: 'breast cancer',
+        name: 'breast',
         ribbonFile: 'ribbon.breast.svg',
         showStandardVariables: {
             age: true,
@@ -110,6 +115,7 @@ const CancerTypes = [
     },
     {
         id: 'colon',
+        addCancerSuffix: true,
         colors: ['#23395B'],
         extraVariables: null,
         hasCalculator: true,
@@ -126,6 +132,7 @@ const CancerTypes = [
     },
       {
         id: 'esophagus',
+        addCancerSuffix: true,
         colors: ['#CCCCFF'],
         extraVariables: null,
         hasCalculator: true,
@@ -142,11 +149,12 @@ const CancerTypes = [
     },
     {
         id: 'eye',
+        addCancerSuffix: true,
         colors: ['#23395B'],
         extraVariables: null,
         hasCalculator: true,
         isRelativeRate: true,
-        name: 'eye cancer',
+        name: 'eye',
         ribbonFile: 'ribbon.eye.svg',
         showStandardVariables: {
             age: true,
@@ -157,7 +165,8 @@ const CancerTypes = [
         },  
     },
         {
-        id: 'floor of mouth',
+        id: 'floor-of-mouth',
+        addCancerSuffix: true,
         colors: ['#23395B'],
         extraVariables: null,
         hasCalculator: true,
@@ -172,12 +181,13 @@ const CancerTypes = [
             stage: true,
         },  
         
-        id: 'gum of other mouth',
+        id: 'gum-or-other-mouth',
+        addCancerSuffix: true,
         colors: ['#23395B'],
         extraVariables: null,
         hasCalculator: true,
         isRelativeRate: true,
-        name: 'gum of other mouth',
+        name: 'gum or other mouth',
         ribbonFile: 'ribbon.floorofmouth.svg',
         showStandardVariables: {
             age: true,
@@ -189,6 +199,7 @@ const CancerTypes = [
     },
     {
         id: 'hodgkins-lymphoma',
+        addCancerSuffix: false,
         colors: ['#23395B'],
         extraVariables: null,
         hasCalculator: true,
@@ -205,12 +216,13 @@ const CancerTypes = [
     },
     {
         id: 'hypopharynx',
+        addCancerSuffix: true,
         colors: ['#23395B'],
         extraVariables: null,
         hasCalculator: true,
         isRelativeRate: true,
-        name: 'hodgkins lymphoma',
-        ribbonFile: 'ribbon.hodgkinslymphoma.svg',
+        name: 'hypopharynx',
+        ribbonFile: 'ribbon.hypopharynx.svg',
         showStandardVariables: {
             age: true,
             diagnosed: false,
@@ -221,6 +233,7 @@ const CancerTypes = [
     },
     {
         id: 'kidney',
+        addCancerSuffix: true,
         colors: ['#23395B'],
         extraVariables: null,
         hasCalculator: true,
@@ -237,6 +250,7 @@ const CancerTypes = [
     },
     {
         id: 'leukemia',
+        addCancerSuffix: false,
         colors: ['#23395B'],
         extraVariables: null,
         hasCalculator: false,
@@ -253,6 +267,7 @@ const CancerTypes = [
     },
     {
         id: 'liver',
+        addCancerSuffix: true,
         colors: ['#0E402D'],
         extraVariables: null,
         hasCalculator: true,
@@ -269,6 +284,7 @@ const CancerTypes = [
     },
     {
         id: 'lip',
+        addCancerSuffix: true,
         colors: ['#23395B'],
         extraVariables: null,
         hasCalculator: true,
@@ -285,6 +301,7 @@ const CancerTypes = [
     },
     {
         id: 'lung',
+        addCancerSuffix: true,
         colors: ['#white'],
         extraVariables: [
             {
@@ -318,7 +335,8 @@ const CancerTypes = [
         },
     },
     {
-        id: 'Lymphoma',
+        id: 'lymphoma',
+        addCancerSuffix: false,
         colors: ['black'],
         extraVariables: null,
         hasCalculator: false,
@@ -335,6 +353,7 @@ const CancerTypes = [
     },
     {
         id: 'melanoma',
+        addCancerSuffix: false,
         colors: ['black'],
         extraVariables: null,
         hasCalculator: true,
@@ -351,6 +370,7 @@ const CancerTypes = [
     },
     {
         id: 'myeloma',
+        addCancerSuffix: false,
         colors: ['#800020'],
         extraVariables: null,
         hasCalculator: true,
@@ -367,6 +387,7 @@ const CancerTypes = [
     },
         {
         id: 'myeloid leukemia',
+        addCancerSuffix: false,
         colors: ['#800020'],
         extraVariables: null,
         hasCalculator: true,
@@ -382,7 +403,8 @@ const CancerTypes = [
         }, 
     },
         {
-        id: 'Nasopharynx',
+        id: 'nasopharynx',
+        addCancerSuffix: true,
         colors: ['black'],
         extraVariables: null,
         hasCalculator: true,
@@ -399,6 +421,7 @@ const CancerTypes = [
     },
     {
         id: 'non-hodgkins-lymphoma',
+        addCancerSuffix: false,
         colors: ['#30C400'],  
         extraVariables: null,
         hasCalculator: false,
@@ -415,6 +438,7 @@ const CancerTypes = [
     },
     {
         id: 'oral',
+        addCancerSuffix: true,
         colors: ['black'],
         extraVariables: null,
         hasCalculator: false,
@@ -430,7 +454,8 @@ const CancerTypes = [
         },
     },
         {
-        id: 'Oropharynx',
+        id: 'oropharynx',
+        addCancerSuffix: true,
         colors: ['black'],
         extraVariables: null,
         hasCalculator: true,
@@ -447,6 +472,7 @@ const CancerTypes = [
     },
     {
         id: 'other-digestive',
+        addCancerSuffix: true,
         colors: ['black'],  
         extraVariables: null,
         hasCalculator: true,
@@ -463,6 +489,7 @@ const CancerTypes = [
     },
     {
         id: 'other-endocrine',
+        addCancerSuffix: true,
         colors: ['zebra'],  
         extraVariables: null,
         hasCalculator: false,
@@ -478,7 +505,8 @@ const CancerTypes = [
         },
     },
     {
-        id: 'Other Leukemia',
+        id: 'other-leukemia',
+        addCancerSuffix: false,
         colors: ['zebra'],  
         extraVariables: null,
         hasCalculator: true,
@@ -495,6 +523,7 @@ const CancerTypes = [
     },
     {
         id: 'other-genital',
+        addCancerSuffix: true,
         colors: ['#B163A3'],  
         extraVariables: null,
         hasCalculator: false,
@@ -511,6 +540,7 @@ const CancerTypes = [
     },
     {
         id: 'other-respiratory',
+        addCancerSuffix: true,
         colors: ['black'],  
         extraVariables: null,
         hasCalculator: false,
@@ -526,7 +556,8 @@ const CancerTypes = [
         },
     },
     {
-        id: 'Other oral pharynx',
+        id: 'other-oral-pharynx',
+        addCancerSuffix: true,
         colors: ['zebra'],  
         extraVariables: null,
         hasCalculator: true,
@@ -543,6 +574,7 @@ const CancerTypes = [
     },
     {
         id: 'other-skin',
+        addCancerSuffix: true,
         colors: ['black'],   
         extraVariables: null,
         hasCalculator: true,
@@ -559,6 +591,7 @@ const CancerTypes = [
     },
     {
         id: 'ovarian',
+        addCancerSuffix: true,
         colors: ['#3ECFCD'],
         extraVariables: [
             {
@@ -597,6 +630,7 @@ const CancerTypes = [
     },
     {
         id: 'pancreatic',
+        addCancerSuffix: true,
         colors: ['#4E2572'],
         extraVariables: null,
         hasCalculator: true,
@@ -613,6 +647,7 @@ const CancerTypes = [
     },
     {
         id: 'prostate',
+        addCancerSuffix: true,
         colors: ['#4FCAFF'],
         extraVariables: [
             {
@@ -651,6 +686,7 @@ const CancerTypes = [
     },
     {
         id: 'rectal',
+        addCancerSuffix: true,
         colors: ['#4F759B'],
         extraVariables: null,
         hasCalculator: true,
@@ -666,7 +702,8 @@ const CancerTypes = [
         },
     },
     {
-        id: 'salivary gland',
+        id: 'salivary-gland',
+        addCancerSuffix: true,
         colors: ['black'],   
         extraVariables: null,
         hasCalculator: true,
@@ -683,6 +720,7 @@ const CancerTypes = [
     },
     {
         id: 'soft-tissue',
+        addCancerSuffix: true,
         colors: ['#3ECFCD'],
         extraVariables: null,
         hasCalculator: true,
@@ -699,6 +737,7 @@ const CancerTypes = [
     },
     {
         id: 'stomach',
+        addCancerSuffix: true,
         colors: ['#3ECFCD'],
         extraVariables: null,
         hasCalculator: true,
@@ -715,11 +754,12 @@ const CancerTypes = [
     },
     {
         id: 'thyroid',
+        addCancerSuffix: true,
         colors: ['#008080', '#FFC0CB', '0000FF'],   
         extraVariables: null,
         hasCalculator: true,
         isRelativeRate: true,
-        name: 'thyroid cancer',
+        name: 'thyroid',
         ribbonFile: 'ribbon.thyroid.svg',
         showStandardVariables: {
             age: true,
@@ -731,11 +771,12 @@ const CancerTypes = [
     },
         {
         id: 'tongue',
+        addCancerSuffix: true,
         colors: ['#008080', '#FFC0CB', '0000FF'],   
         extraVariables: null,
         hasCalculator: true,
         isRelativeRate: true,
-        name: 'tongue cancer',
+        name: 'tongue',
         ribbonFile: 'ribbon.oral.svg',
         showStandardVariables: {
             age: true,
@@ -747,6 +788,7 @@ const CancerTypes = [
     },
             {
         id: 'tonsil',
+        addCancerSuffix: true,
         colors: ['#008080', '#FFC0CB', '0000FF'],   
         extraVariables: null,
         hasCalculator: true,
@@ -763,6 +805,7 @@ const CancerTypes = [
     },
     {
         id: 'ureter',
+        addCancerSuffix: true,
         colors: ['#3ECFCD'],
         extraVariables: null,
         hasCalculator: true,
@@ -779,6 +822,7 @@ const CancerTypes = [
     },
     {
         id: 'uterine-cervix',
+        addCancerSuffix: true,
         colors: ['#3ECFCD'],
         extraVariables: null,
         hasCalculator: true,
@@ -795,6 +839,7 @@ const CancerTypes = [
     },
     {
         id: 'uterine-corpus',
+        addCancerSuffix: true,
         colors: ['#F99768'],
         extraVariables: [
             {
