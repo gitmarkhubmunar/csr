@@ -1,19 +1,19 @@
 import React from 'react'
+import cx from 'classnames'
 
 class ButtonSurvey extends React.Component {
     render () {
-        const { turnedOn, handleClick, name, color, } = this.props
-        let buttonClassName = 'button-survey'
-        if (turnedOn === true) {
-            buttonClassName = 'button-survey active'
-        }
+        const { className, color, handleClick, turnedOn, name, style } = this.props
+        const buttonClassName = cx({
+            'button-survey': true,
+            'active': turnedOn,
+            [className]: className
+        });
         return (
             <div
-                onClick={handleClick}
                 className={buttonClassName}
-                style={{
-                    
-                }}
+                onClick={handleClick}
+                style={style}
             >
                 {name}
             </div>  
