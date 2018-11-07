@@ -1,5 +1,7 @@
 import _ from 'lodash'
 import React from 'react'
+import QS from 'query-string'
+import { withRouter } from 'react-router-dom'
 
 import CancerTypes from './data/CancerTypes'
 import Card from './Card'
@@ -20,16 +22,33 @@ class SurveyPage extends React.Component {
         const selectedCancerType = _.get(props, 'history.location.state.selectedCancerType', 'liver')
         this.state = {
             isPatient,
+            rate: null,
             selectedCancerType,
             userData: {
                 age: 30,
                 diagnosed: 1, // Assuming this is time since diagnosis in months.
                 grade: '1',
-                rate: null,
                 sex: 'female',
                 stage: '1',
             },
         }
+    }
+
+    componentWillMount () {
+        const urlSearch = _.get(this.props.history, 'location.search', null)
+        const urlState = QS.parse(urlSearch)
+        const { isPatient, selectedCancerType } = urlState
+        const urlUserData = _.omit(urlState, ['isPatient', 'selectedCancerType'])
+        this.setState({
+            isPatient: isPatient || this.state.isPatient,
+            selectedCancerType: selectedCancerType || this.state.selectedCancerType,
+            userData: {
+                ...this.state.userData,
+                ...urlUserData,
+            }
+        }, () => {
+            this.updateQueryString()
+        })
     }
 
     componentDidMount () {
@@ -43,23 +62,42 @@ class SurveyPage extends React.Component {
     }
 
     changeCancerType = (selectedCancerType) => {
-        this.setState({ selectedCancerType })
-        this.calculateCsr()
+        this.setState({ selectedCancerType }, () => {
+            this.calculateCsr()
+            this.updateQueryString()
+        })
     }
 
     changeMode = (isPatient: boolean) => {
-        this.setState({ isPatient })
+        this.setState({ isPatient }, () => {
+            this.updateQueryString()
+        })
     }
 
-    changeValue = (key, value) => {
+    changeValue = (key: string, value: any) => {
         this.setState({
             ...this.state,
             userData: {
                 ...this.state.userData,
                 [key]: value,
-            }
+            },
+        }, () => {
+            this.calculateCsr()
+            this.updateQueryString()
         })
-        this.calculateCsr()
+    }
+
+    updateQueryString = () => {
+        const { isPatient, selectedCancerType, userData } = this.state
+        const searchString = QS.stringify({
+            isPatient,
+            selectedCancerType,
+            ...userData,
+        });
+        this.props.history.push({
+            location: this.props.location.pathname,
+            search: searchString
+        })
     }
 
     render () {
@@ -108,4 +146,4 @@ class SurveyPage extends React.Component {
     }
 }
 
-export default SurveyPage
+export default withRouter(SurveyPage)

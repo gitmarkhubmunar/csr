@@ -1,16 +1,17 @@
+import _ from 'lodash'
 import React from 'react'
 import ReactSlider from 'react-slider'
 
 class QuestionAge extends React.Component {
     componentWillMount () {
         this.setState({
-            nextAge: this.props.age,
+            nextAge: _.toNumber(this.props.age),
         })
     }
 
     componentWillReceiveProps (nextProps) {
         this.setState({
-            nextAge: nextProps.age,
+            nextAge: _.toNumber(nextProps.age),
         })
     }
 

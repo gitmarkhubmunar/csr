@@ -1,7 +1,6 @@
 import _ from 'lodash'
 import Icon from 'react-ionicons'
 import React from 'react'
-import ReactSlider from 'react-slider'
 
 import ButtonSurvey from './ButtonSurvey'
 import CancerTypes from './data/CancerTypes'
