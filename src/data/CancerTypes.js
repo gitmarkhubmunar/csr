@@ -60,7 +60,7 @@ const CancerTypes = [
         extraVariables: null,
         hasCalculator: true,
         isRelativeRate: true,
-        name: 'brain cancer',
+        name: 'brain',
         ribbonFile: 'ribbon.brain.svg',
         showStandardVariables: {
             age: true,
@@ -102,7 +102,7 @@ const CancerTypes = [
         ],
         hasCalculator: true,
         isRelativeRate: false,
-        name: 'breast cancer',
+        name: 'breast',
         ribbonFile: 'ribbon.breast.svg',
         showStandardVariables: {
             age: true,
@@ -755,7 +755,7 @@ const CancerTypes = [
         extraVariables: null,
         hasCalculator: true,
         isRelativeRate: true,
-        name: 'thyroid cancer',
+        name: 'thyroid',
         ribbonFile: 'ribbon.thyroid.svg',
         showStandardVariables: {
             age: true,

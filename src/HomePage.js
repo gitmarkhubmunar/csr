@@ -52,13 +52,11 @@ class HomePage extends React.Component {
             }
         })
     }
-
-
     
     render () {
         const { history, isPatient, selectedCancerType, selectedPeopleType } = this.state
         const selectedCancer = _.find(CancerTypes, { id: selectedCancerType })
-
+        const shouldShowSuffix = selectedCancer.addCancerSuffix === true || false
         return (
             <div className="home-page-container">
                 <div className="home-page content-container">
@@ -76,7 +74,7 @@ class HomePage extends React.Component {
                                 bgColor={'#939393'}
                             />
                             </div>
-                            <h2>cancer.</h2>
+                            {shouldShowSuffix && <h2>cancer.</h2>}
                         </div>
                         <div className="toggle-copy-container">
                             <h3 className="toggle-copy">Healthcare Professional?</h3>
