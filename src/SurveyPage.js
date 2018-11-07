@@ -89,7 +89,6 @@ class SurveyPage extends React.Component {
     // URL takes precedence over local store.
     getVariablesFromLocalStoreAndUrl = () => {
         const localIsPatient = getLocalStoreItem('isPatient')
-        const localSelectedCancerType = getLocalStoreItem('selectedCancerType')
         const localUserData = getLocalStoreItem('userData')
 
         const urlSearch = _.get(this.props.history, 'location.search', null)
@@ -99,8 +98,8 @@ class SurveyPage extends React.Component {
         const urlUserData = _.omit(urlState, ['isPatient', 'selectedCancerType'])
 
         return {
-            isPatient: urlIsPatient || localIsPatient,
-            selectedCancerType: urlSelectedCancerType || localSelectedCancerType,
+            isPatient: urlIsPatient,
+            selectedCancerType: urlSelectedCancerType,
             userData: {
                 ...localUserData,
                 ...urlUserData,
@@ -123,7 +122,6 @@ class SurveyPage extends React.Component {
 
         setLocalStoreItems([
             ['isPatient', isPatient],
-            ['selectedCancerType', selectedCancerType],
             ['userData', userData],
         ])
     }
