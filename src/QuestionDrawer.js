@@ -13,7 +13,7 @@ import QuestionStage from './QuestionStage'
 
 class QuestionDrawer extends React.Component {
     render () {
-        const { changeValue, selectedCancerType, userData } = this.props
+        const { changeValue, isPatient, selectedCancerType, userData } = this.props
         const { age, diagnosed, grade, sex, stage } = userData
         const selectedCancer = _.find(CancerTypes, { id: selectedCancerType })
         const color = _.get(selectedCancer, 'colors.[0]', 'black')
@@ -72,16 +72,22 @@ class QuestionDrawer extends React.Component {
                         diagnosed={diagnosed}
                     />
                 }
-                {extraVariables && extraVariables.map((extraVariable, e) => (
-                    <QuestionCustom
-                        changeValue={changeValue}
-                        className="variable-row"
-                        color={color}
-                        key={e}
-                        userData={userData}
-                        variable={extraVariable}
-                    />
-                ))}
+                {extraVariables && extraVariables.map((extraVariable, e) => {
+                    const shouldShowExtraVariableToPatient = extraVariable.showToPatient === true && isPatient === true
+                    if (!isPatient || shouldShowExtraVariableToPatient) {
+                        return (
+                            <QuestionCustom
+                                changeValue={changeValue}
+                                className="variable-row"
+                                color={color}
+                                key={e}
+                                userData={userData}
+                                variable={extraVariable}
+                            />
+                        )
+                    }
+                    return null
+                })}
             </div>
         )
     }
