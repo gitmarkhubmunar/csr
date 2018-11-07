@@ -35,7 +35,20 @@ class SurveyPage extends React.Component {
     }
 
     componentWillMount () {
-        this.updateQueryString()
+        const urlSearch = _.get(this.props.history, 'location.search', null)
+        const urlState = QS.parse(urlSearch)
+        const { isPatient, selectedCancerType } = urlState
+        const urlUserData = _.omit(urlState, ['isPatient', 'selectedCancerType'])
+        this.setState({
+            isPatient: isPatient || this.state.isPatient,
+            selectedCancerType: selectedCancerType || this.state.selectedCancerType,
+            userData: {
+                ...this.state.userData,
+                ...urlUserData,
+            }
+        }, () => {
+            this.updateQueryString()
+        })
     }
 
     componentDidMount () {
