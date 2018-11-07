@@ -92,7 +92,8 @@ const CancerTypes = [
                         name: 'triple negative',
                         value: 'triplenegative',
                     },
-                ]
+                ],
+                showToPatient: true,
             }
         ],
         hasCalculator: true,
@@ -300,7 +301,8 @@ const CancerTypes = [
                         name: 'non-small cell carcinoma',
                         value: 'nonsmallcellcarcinoma',
                     },
-                ]
+                ],
+                showToPatient: true,
             }
         ],
         hasCalculator: true,
@@ -577,7 +579,8 @@ const CancerTypes = [
                         name: 'germ type',
                         value: 'germtype',
                     },
-                ]
+                ],
+                showToPatient: true,
             }
         ],
         hasCalculator: true,
@@ -630,7 +633,8 @@ const CancerTypes = [
                         name: 'poorly differentiated',
                         value: 'poorly',
                     },
-                ]
+                ],
+                showToPatient: false,
             }
         ],
         hasCalculator: true,
@@ -819,7 +823,8 @@ const CancerTypes = [
                         name: 'leiomyosarcoma',
                         value: 'leiomyosarcoma',
                     },
-                ]
+                ],
+                showToPatient: true,
             }
         ],
         hasCalculator: true,

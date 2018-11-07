@@ -152,6 +152,7 @@ class SurveyPage extends React.Component {
                     <div className={questionDrawerContainerClassName}> 
                         <QuestionDrawer
                             changeValue={this.changeValue}
+                            isPatient={isPatient}
                             selectedCancerType={selectedCancerType}
                             userData={userData}
                         />
