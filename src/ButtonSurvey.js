@@ -1,4 +1,5 @@
 import React from 'react'
+
 import cx from 'classnames'
 
 class ButtonSurvey extends React.Component {
@@ -16,7 +17,9 @@ class ButtonSurvey extends React.Component {
                 style={style}
             >
                 {name}
-            </div>  
+            </div> 
+
+
         )
     }
 }

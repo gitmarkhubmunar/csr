@@ -2,6 +2,9 @@ import _ from 'lodash'
 import React from 'react'
 import ReactSlider from 'react-slider'
 
+import DeselectButton from './DeselectButton'
+import ButtonSurvey from './ButtonSurvey'
+
 class QuestionAge extends React.Component {
     componentWillMount () {
         this.setState({
@@ -25,6 +28,7 @@ class QuestionAge extends React.Component {
                         <object className={age === null ? 'variable-icon' : 'variable-icon answered'} data="/assets/age.svg" type="image/svg+xml" />
                     </div>
                     <div className={age === null ? 'variable-name' : 'variable-name answered'}>age</div>
+                    <DeselectButton />
                 </div>
                 <div className="input-area">
                     <div className="slider-container">
