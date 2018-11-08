@@ -1,6 +1,7 @@
 import Icon from 'react-ionicons'
 import React from 'react'
-import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { CopyToClipboard } from 'react-copy-to-clipboard'
+import { withRouter } from 'react-router-dom'
 
 import ExpandedContent from './ExpandedContent'
 import FaqQuestion from './FaqQuestion'
@@ -9,9 +10,10 @@ class ShareCard extends React.Component {
     state = { copied: false }
 
     render () {
-        const { onClose, shareableUrl } = this.props
+        const { location, onClose } = this.props
         const { copied } = this.state
-
+        const domain = 'http://cancersurivalrates.org'
+        const shareableUrl = `${domain}${location.pathname}${location.search}`
         return ( 
             <div className="blackout">
                 <div className="share-card center-all">
@@ -45,8 +47,4 @@ class ShareCard extends React.Component {
     }
 }
 
-ShareCard.defaultProps = {
-    shareableUrl: 'https://this.stat.card/4cfmEgpOOZk',
-}
-
-export default ShareCard
+export default withRouter(ShareCard)

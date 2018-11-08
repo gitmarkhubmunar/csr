@@ -1,3 +1,4 @@
+import _ from 'lodash'
 import React from 'react'
 import ReactSlider from 'react-slider'
 
@@ -35,13 +36,13 @@ const diagnosedLabels = {
 class QuestionDiagnosed extends React.Component {
     componentWillMount () {
         this.setState({
-            nextDiagnosed: this.props.diagnosed,
+            nextDiagnosed: _.toNumber(this.props.diagnosed),
         })
     }
 
     componentWillReceiveProps (nextProps) {
         this.setState({
-            nextDiagnosed: nextProps.diagnosed,
+            nextDiagnosed: _.toNumber(nextProps.diagnosed),
         })
     }
 

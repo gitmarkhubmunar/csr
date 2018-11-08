@@ -10,7 +10,7 @@ class QuestionCustom extends React.Component {
             return null
         }
         const { id, icon, kind, name, options } = variable
-        
+
         if (kind === 'radio') {
             return (
                 <div className={className}>
@@ -28,16 +28,26 @@ class QuestionCustom extends React.Component {
                         <DeselectButton />
                     </div>
                     <div className="input-area">
-                        {options.map((option, o) => (
-                            <ButtonSurvey
-                                className="button-u"
-                                color={color}
-                                handleClick={() => changeValue(id, option.value)}
-                                key={o}
-                                name={option.name}
-                                turnedOn={userData[id] === option.value}
-                            />
-                        ))}
+                        {options.map((option, o) => {
+                            const turnedOn = userData[id] === option.value;
+                            return (
+                                <ButtonSurvey
+                                    className="button-u"
+                                    color={color}
+                                    handleClick={() => {
+                                        if (turnedOn) {
+                                            changeValue(id, null)
+                                        }
+                                        else {
+                                            changeValue(id, option.value)
+                                        }
+                                    }}
+                                    key={o}
+                                    name={option.name}
+                                    turnedOn={turnedOn}
+                                />
+                            )
+                        })}
                     </div> 
                 </div>
             )
