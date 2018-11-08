@@ -2,7 +2,6 @@ import _ from 'lodash'
 import React from 'react'
 import ReactSlider from 'react-slider'
 
-import DeselectButton from './DeselectButton'
 
 const diagnosedLabels = {
     '0': 'null',
@@ -61,7 +60,6 @@ class QuestionDiagnosed extends React.Component {
                         />
                     </div>
                     <div className={diagnosed === 0 ? 'variable-name' : 'variable-name answered'}>diagnosed</div>
-                    <DeselectButton />
                 </div>
                 <div className="input-area">
                     <div className="slider-container">

@@ -1,6 +1,5 @@
 import React from 'react'
 
-import DeselectButton from './DeselectButton'
 import ButtonSurvey from './ButtonSurvey'
 
 class QuestionSex extends React.Component {
@@ -13,7 +12,6 @@ class QuestionSex extends React.Component {
                         <object className={sex === null ? 'variable-icon' : 'variable-icon answered'} data="/assets/sex.svg" type="image/svg+xml" />
                     </div>
                     <div className={sex === null ? 'variable-name' : 'variable-name answered'}>sex</div>
-                    <DeselectButton />
                 </div>
                 <div className="input-area">
                     <ButtonSurvey
