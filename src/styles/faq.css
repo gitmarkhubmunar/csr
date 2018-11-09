@@ -85,6 +85,15 @@
     flex: 1 0;
 }
 
+.imbed-margins {
+    margin: 2em 0 1em 0;
+}
+
+.snapshot {
+    width: 417px;
+    margin: 2em 0 0 0;
+}
+
 @media screen and (max-width: 570px) {
     .faq {
         font-size: 80%;

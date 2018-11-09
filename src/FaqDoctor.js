@@ -15,21 +15,33 @@ class FaqDoctor extends React.Component {
 							number={1}
 							title="Best practices in talking to patients about life expectancy" 
 							content={
-								<div>
+								<div className="link-styling">
 									<ExpandedContent
 										content="How to Offer Prognostic Information to a Patient" 
-										image={<img src="../assets/prog.talk.png" />}
+										// image={<img src="../assets/prog.talk.png" />}
 										siteRef="vitaltalk.org"
-										time="2 min" 
+										time="2:49 m" 
 									/>
+									<iframe 
+									className="imbed-margins"
+									width="416" height="234" 
+									src="https://player.vimeo.com/video/85771692" 
+									frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+									allowfullscreen>
+									</iframe>
 									<ExpandedContent
 										content="Quick Guide for Discussing Prognosis" 
-										image={<img className="prog-icon" src="../assets/icon.prognosis-chart.svg" />}
+										content={<a href="https://vitaltalk.org/resources/quick-guides/" target="_blank">Quick Guide for Discussing Prognosis</a>}
+										// image={<img className="prog-icon" src="../assets/quickguide.snapshot" />}
+										// image={<img src="../assets/prog.talk.png" />}
 										siteRef="vitaltalk.org"
 										style={{ marginTop: '1em' }}
-										time="10 min"  
+										time="10 min"
 									/>
+									<img className="snapshot" src="../assets/quickguide.snapshot.png" />
 								</div>
+
+
 							}
 						/>
 						<FaqQuestion
