@@ -16,12 +16,14 @@ class FaqTwo extends React.Component {
                             number={1}
                             title="Do I want my wishes for end of life known in writing? (Advanced Directive?)" 
                             content={
+                                <div className="link-styling">
                                 <ExpandedContent
                                     content={<a href="https://www.cancer.org/treatment/finding-and-paying-for-treatment/understanding-financial-and-legal-matters/advance-directives/advance-health-care-directive-formats.html" target="_blank">"How to set up an advance directive so that it works when you need it"</a>}
                                     image={<img src="../assets/advanced.directive.jpg" />}
                                     siteRef="cancer.org"
                                     time="10 min"
                                 />
+                                </div>
                             }
                         />
                         <FaqQuestion
