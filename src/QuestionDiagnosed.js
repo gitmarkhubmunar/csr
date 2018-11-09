@@ -63,7 +63,7 @@ class QuestionDiagnosed extends React.Component {
                     <div className={diagnosed === 0 ? 'variable-name' : 'variable-name answered'}>diagnosed</div>
                     <DeselectButton />
                 </div>
-                <div className="input-area">
+                <div className="input-area input-mobile">
                     <div className="slider-container">
                         <ReactSlider
                             className="horizontal-slider bar"

@@ -71,7 +71,6 @@
     grid-column: 2;
     justify-content: center;
     padding-left: 3.5em;
-/*    padding-right: 1em;*/
 }
 .variable-icon {
     display: block;
@@ -170,7 +169,6 @@
     position: absolute;
     text-align: center;
     width: 7em;
-    background: red;
 }
 
 @media screen and (max-width: 468px) {
@@ -179,9 +177,14 @@
     grid-template-columns: 20% auto;
     }
 
-    .input-area {
-    padding-left: 2.5em;
-    padding-right: 0em;
+/*    .input-area {
+    display: block;
+    grid-column: 2;
+    margin-left: -5%;
+    }*/
+
+    .stack-buttons {
+    display: block;
     }
 
     .button-survey {
@@ -198,6 +201,16 @@
     max-height: 16px;
     }
 
+/*    .button-mobile {
+    padding: 1.2rem 100%;
+
+
+    position: relative;
+    text-align: center;
+    min-width:  0px;
+    max-width: auto;
+    max-height: 16px;
+    }*/
 
 
 }
