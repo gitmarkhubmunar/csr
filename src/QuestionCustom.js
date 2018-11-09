@@ -1,6 +1,5 @@
 import React from 'react'
 
-import DeselectButton from './DeselectButton'
 import ButtonSurvey from './ButtonSurvey'
 
 class QuestionCustom extends React.Component {
@@ -25,7 +24,7 @@ class QuestionCustom extends React.Component {
                             </div>
                         }
                         <div className={userData[id] === null ? 'variable-name' : 'variable-name answered'}>{name}</div>
-                        <DeselectButton />
+
                     </div>
                     <div className="input-area stack-buttons">
 
