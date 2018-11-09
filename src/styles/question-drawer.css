@@ -201,6 +201,7 @@
 /*  min-width:  120px;*/
     max-width: auto;
     max-height: 16px;
+    margin: 1em .25em;
     }
 
     .stack-buttons {
