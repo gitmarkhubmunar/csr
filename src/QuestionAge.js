@@ -1,16 +1,19 @@
+import _ from 'lodash'
 import React from 'react'
 import ReactSlider from 'react-slider'
+
+import ButtonSurvey from './ButtonSurvey'
 
 class QuestionAge extends React.Component {
     componentWillMount () {
         this.setState({
-            nextAge: this.props.age,
+            nextAge: _.toNumber(this.props.age),
         })
     }
 
     componentWillReceiveProps (nextProps) {
         this.setState({
-            nextAge: nextProps.age,
+            nextAge: _.toNumber(nextProps.age),
         })
     }
 
@@ -24,6 +27,7 @@ class QuestionAge extends React.Component {
                         <object className={age === null ? 'variable-icon' : 'variable-icon answered'} data="/assets/age.svg" type="image/svg+xml" />
                     </div>
                     <div className={age === null ? 'variable-name' : 'variable-name answered'}>age</div>
+
                 </div>
                 <div className="input-area">
                     <div className="slider-container">
