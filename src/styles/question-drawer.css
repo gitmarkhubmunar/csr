@@ -80,7 +80,6 @@
     margin-right: auto;
     opacity: .3;
     transition: opacity .3s ease;
-    width: 20px;
 }
 .customized-panel {
     border: 3px solid green;
@@ -156,7 +155,7 @@
     display: flex;
 }
 .variable-icon {
-    width: 28px;
+    width: 40px;
 }
 .input-field {
     border:none;
@@ -201,6 +200,15 @@
     .stack-buttons {
     display: block;
     }
+
+    .icon-label {
+    align-items: center;
+    margin-left: 0em;
+}
+
+.variable-icon {
+    width: 36px;
+}
 
 
 
