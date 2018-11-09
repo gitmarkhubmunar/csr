@@ -52,7 +52,7 @@
 
 .variable-name {
     align-items: center;
-    color: black;
+    color: #508fcc;
     display: flex;
     font-weight: 600;
     justify-content: center;
@@ -196,6 +196,10 @@
 /*  min-width:  120px;*/
     max-width: auto;
     max-height: 16px;
+    }
+
+    .stack-buttons {
+    display: block;
     }
 
 
