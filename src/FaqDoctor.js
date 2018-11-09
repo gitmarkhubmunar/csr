@@ -23,7 +23,7 @@ class FaqDoctor extends React.Component {
 										time="2:49 m" 
 									/>
 									<iframe 
-									className="imbed-margins"
+									className="imbed-margins imbed-mobile"
 									width="416" height="234" 
 									src="https://player.vimeo.com/video/85771692" 
 									frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 

@@ -86,7 +86,7 @@
 }
 
 .imbed-margins {
-    margin: 2em 0 1em 0;
+    margin: 1em 0 3em 0;
 }
 
 .snapshot {
@@ -107,5 +107,15 @@
     }
     .expanded-image img {
         max-width: 100%;
+    }
+
+    .snapshot {
+    margin: 2em 0 0 0;
+    width: 100%;
+}
+
+    .imbed-mobile {
+        margin: -2em 0;
+        width: 100%;
     }
 }
