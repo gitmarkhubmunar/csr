@@ -27,7 +27,8 @@ class QuestionCustom extends React.Component {
                         <div className={userData[id] === null ? 'variable-name' : 'variable-name answered'}>{name}</div>
                         <DeselectButton />
                     </div>
-                    <div className="input-area">
+                    <div className="input-area stack-buttons">
+
                         {options.map((option, o) => {
                             const turnedOn = userData[id] === option.value;
                             return (
