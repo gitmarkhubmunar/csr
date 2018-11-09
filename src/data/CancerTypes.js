@@ -222,7 +222,7 @@ const CancerTypes = [
         hasCalculator: true,
         isRelativeRate: true,
         name: 'hypopharynx',
-        ribbonFile: 'ribbon.hypopharynx.svg',
+        ribbonFile: 'ribbon.oral.svg',
         showStandardVariables: {
             age: true,
             diagnosed: false,
