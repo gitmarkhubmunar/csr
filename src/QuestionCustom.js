@@ -28,6 +28,7 @@ class QuestionCustom extends React.Component {
                         <DeselectButton />
                     </div>
                     <div className="input-area stack-buttons">
+
                         {options.map((option, o) => {
                             const turnedOn = userData[id] === option.value;
                             return (
