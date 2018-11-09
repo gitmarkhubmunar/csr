@@ -76,6 +76,12 @@
     font-weight: 600; 
 }
 
+.tippy-touch { cursor: pointer !important; }
+
+.tippy {
+    background: red;
+}
+
 @media screen and (max-width: 480px) {
     .question-panel {
         background: #8B8B8B;
