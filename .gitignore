@@ -5,3 +5,5 @@ csr.sublime-workspace
 node_modules/
 package-lock.json
 build/
+build/*.svg
+build/assets/*.svg
