@@ -26,7 +26,7 @@ class QuestionGrade extends React.Component {
                       size="big"
                     > 
                       <p>
-                            <ButtonSurvey color={color} handleClick={() => changeValue('grade', '1')} className="button-u" name="well" turnedOn={grade === '1'} />
+                            <ButtonSurvey color={color} handleClick={() => changeValue('grade', '1')} className="" name="well" turnedOn={grade === '1'} />
                       </p>
                     </Tooltip>
                 </div>
@@ -39,7 +39,7 @@ class QuestionGrade extends React.Component {
                       size="big"
                     > 
                       <p>
-                            <ButtonSurvey color={color} handleClick={() => changeValue('grade', '2')} className="button-u" name="moderately" turnedOn={grade === '2'} />
+                            <ButtonSurvey color={color} handleClick={() => changeValue('grade', '2')} className="" name="moderately" turnedOn={grade === '2'} />
                       </p>
                     </Tooltip>
                 </div>
@@ -52,7 +52,7 @@ class QuestionGrade extends React.Component {
                       size="big"
                     > 
                       <p>
-                            <ButtonSurvey color={color} handleClick={() => changeValue('grade', '3')} className="button-u" name="poorly" turnedOn={grade === '3'} />
+                            <ButtonSurvey color={color} handleClick={() => changeValue('grade', '3')} className="" name="poorly" turnedOn={grade === '3'} />
                       </p>
                     </Tooltip>
                 </div>
