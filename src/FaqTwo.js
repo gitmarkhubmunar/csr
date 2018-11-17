@@ -12,8 +12,20 @@ class FaqTwo extends React.Component {
                     <div className="faq-content">
                         <h3 className="question-header">Questions to think about</h3>
                         <FaqQuestion
-                            className="border-top-white"
                             number={1}
+                            title="What’s important to me?" 
+                            content={
+                                <ExpandedContent
+                                    content="These are personal questions best discussed with your family, friends, and care providers.  But it is your life, so thinking about how you want to live it is something we believe we all have the right to do.  Even if survival rates are good, stopping to think about what we want to do, who we want to be, and how we want to live is a perfectly good thing to do, no matter the diagnosis." 
+                                    image={<img src="../assets/advanced.directive.jpg" />}
+                                    siteRef="faucibus a in"
+                                    time="1 min" 
+                                />
+                            }
+                        />
+                        <FaqQuestion
+                            className="border-top-white"
+                            number={2}
                             title="Do I want my wishes for end of life known in writing? (Advanced Directive?)" 
                             content={
                                 <div className="link-styling">
@@ -24,18 +36,6 @@ class FaqTwo extends React.Component {
                                     time="10 min"
                                 />
                                 </div>
-                            }
-                        />
-                        <FaqQuestion
-                            number={2}
-                            title="What's important to me? What are my priorities?" 
-                            content={
-                                <ExpandedContent
-                                    content="Praesent in felis lacinia eros." 
-                                    image={<img src="../assets/advanced.directive.jpg" />}
-                                    siteRef="faucibus a in"
-                                    time="1 min" 
-                                />
                             }
                         />
                     </div>
