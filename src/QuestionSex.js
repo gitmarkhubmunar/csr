@@ -15,13 +15,11 @@ class QuestionSex extends React.Component {
                 </div>
                 <div className="input-area">
                     <ButtonSurvey
-                        className="button-u" name="male"
                         color={color}
                         handleClick={() => changeValue('sex', 'male')}
                         turnedOn={sex === 'male'}
                     />
                     <ButtonSurvey
-                        className="button-u" name="female"
                         color={color}
                         handleClick={() => changeValue('sex', 'female')}
                         turnedOn={sex === 'female'}

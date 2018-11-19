@@ -14,10 +14,10 @@ class QuestionStage extends React.Component {
                     <div className={stage === null ? 'variable-name' : 'variable-name answered'}>stage</div>
                 </div>
                 <div className="input-area">
-                    <ButtonSurvey color={color} handleClick={() => changeValue('stage', '1')} className="button-u" name="1" turnedOn={stage === '1'} />
-                    <ButtonSurvey color={color} handleClick={() => changeValue('stage', '2')} className="button-u" name="2" turnedOn={stage === '2'} />
-                    <ButtonSurvey color={color} handleClick={() => changeValue('stage', '3')} className="button-u" name="3" turnedOn={stage === '3'} />
-                    <ButtonSurvey color={color} handleClick={() => changeValue('stage', '4')} className="button-u" name="4" turnedOn={stage === '4'} />
+                    <ButtonSurvey color={color} handleClick={() => changeValue('stage', '1')} name="1" turnedOn={stage === '1'} />
+                    <ButtonSurvey color={color} handleClick={() => changeValue('stage', '2')} name="2" turnedOn={stage === '2'} />
+                    <ButtonSurvey color={color} handleClick={() => changeValue('stage', '3')} name="3" turnedOn={stage === '3'} />
+                    <ButtonSurvey color={color} handleClick={() => changeValue('stage', '4')} name="4" turnedOn={stage === '4'} />
                 </div>
             </div>
         )

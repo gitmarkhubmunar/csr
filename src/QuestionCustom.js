@@ -24,15 +24,12 @@ class QuestionCustom extends React.Component {
                             </div>
                         }
                         <div className={userData[id] === null ? 'variable-name' : 'variable-name answered'}>{name}</div>
-
                     </div>
-                    <div className="input-area stack-buttons">
-
+                    <div className="input-area question-custom">
                         {options.map((option, o) => {
-                            const turnedOn = userData[id] === option.value;
+                            const turnedOn = userData[id] === option.value
                             return (
                                 <ButtonSurvey
-                                    className="button-u"
                                     color={color}
                                     handleClick={() => {
                                         if (turnedOn) {

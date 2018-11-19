@@ -20,10 +20,6 @@ class Dropdown extends React.Component {
         const combinedClassName = 'dropdown ' + className
         const isMobile = CheckMobile()
 
-
-
-
-
         if (isMobile) {
             return (
                 <div className="mobile-dropdown-container relative">
@@ -35,7 +31,7 @@ class Dropdown extends React.Component {
                         defaultValue={selectedItem}
                         onChange={event => this.selectItem(event.target.value)}
                     >
-                        {list.map((item, i) => {
+                        {_.orderBy(list, 'name').map((item, i) => {
                             return <option key={i} value={item}>{item}</option>
                         })}
                     </select>
@@ -46,7 +42,7 @@ class Dropdown extends React.Component {
             <div className={combinedClassName + ' center'} onClick={this.toggleMenu}>
                 {isOpen &&
                     <ul className={isOpen ? 'open' : 'closed'}>
-                        {list.map((item, i) => {
+                        {_.orderBy(list, 'name').map((item, i) => {
                             return (
                                 <li key={i} onClick={() => this.selectItem(item)}>
                                     <nobr>{item}</nobr>
